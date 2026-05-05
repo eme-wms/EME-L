@@ -88,8 +88,8 @@
 ### ТСД и складские операции
 
 - [TSD_Operations_and_Settings.md](docs/TSD_Operations_and_Settings.md): Операции ТСД — HTTP-обмен, GetListOrdersKeys, Batch-обработка, Document_OnBatchRespond
-- [TSD_WDC_Measurement.md](docs/TSD_WDC_Measurement.md): Измерение WDC
-- [TSD_WDC_Cell_Routing.md](docs/TSD_WDC_Cell_Routing.md): Маршрутизация ячеек WDC
+- [TSD_WDC_Measurement.md](docs/TSD_WDC_Measurement.md): Измерение ВГХ
+- [TSD_WDC_Cell_Routing.md](docs/TSD_WDC_Cell_Routing.md): Маршрутизация ячеек ВГХ
 - [AI_Programming_Assistant.md](docs/AI_Programming_Assistant.md): AI-ассистент программиста — LibreChat + Qwen2.5-14B, RAG на ~3200 методов, Android Studio ProxyAI + Qwen3-coder
 
 ### Платформа и спецмодули
