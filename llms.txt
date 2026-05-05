@@ -11,8 +11,6 @@
 - `SetSkipMode` устанавливается один раз перед циклом — нельзя внутри цикла
 - В EME-SQL использовать `WITH` вместо `WHERE` для фильтрации данных
 - Только подтверждённые примеры из документации — не выдумывать код
-- `As "Invariant"` предпочтительнее `As "Dynamic"` для IClass (поиск при первом вызове, быстрее)
-- `FindMethod`/`CallMethod` запрещены — использовать статическую линковку
 - Не создавать объекты `Object("ClassName")` внутри циклов и в параметрах методов — утечка памяти
 - Префикс `m_` обязателен для полей класса, запрещён для локальных переменных
 - Инициализация Object-полей только в конструкторе
@@ -25,7 +23,7 @@
 ### Язык EME-L — Основы
 
 - [EME_L_Syntax.md](docs/EME_L_Syntax.md): Переменные, 9 типов данных, операторы, управляющие конструкции (If, For, While, Loop, Switch, Try, Select, Procedure), встроенные константы, приоритет операций, неявное приведение типов
-- [EME_L_Classes.md](docs/EME_L_Classes.md): Объектная модель — Object(), IClass, песочница, apartment threading, интерфейсы CEME (FindMethod, CallMethod, EnumProperties), статическая линковка
+- [EME_L_Classes.md](docs/EME_L_Classes.md): Объектная модель — Object(), IClass, песочница, apartment threading, интерфейсы CEME (FindMethod, CallMethod, EnumProperties)
 - [EME_L_Events.md](docs/EME_L_Events.md): Все обработчики событий — 24 диалоговых, 16 органов, 7 таблиц, 11 браузеров, 20 интегратора, 3 отчёта, 5 элементов отчёта, 2 бэнда
 - [EME_L_Constants.md](docs/EME_L_Constants.md): 13 групп констант — типы документов (DOCUMENT_TYPE_*), статусы заказов (os*), типы приказов (MO_TYPE_*), зоны склада (ZONE_*), типы ячеек (CELL_TYPE_*), типы доставки, JSON-узлы
 - [EME_L_IS_Functions.md](docs/EME_L_IS_Functions.md): is-функции групп Bit, Browser, Context — битовые операции, работа с браузером, контекст диалогов
@@ -40,7 +38,7 @@
 
 ### Язык EME-L — Продвинутые
 
-- [EME_L_Advanced_Features.md](docs/EME_L_Advanced_Features.md): Компоненты (Selections), внешние устройства (сканер), календарь дат, статическая линковка, ByRef/ByVal/RefOf/ValOf, tr() локализация, серверные vs GUI классы
+- [EME_L_Advanced_Features.md](docs/EME_L_Advanced_Features.md): Компоненты (Selections), внешние устройства (сканер), календарь дат, ByRef/ByVal/RefOf/ValOf, tr() локализация, серверные vs GUI классы
 - [EME_L_Advanced_API_and_Patterns.md](docs/EME_L_Advanced_API_and_Patterns.md): String (40+ методов), PropertyTree/JSON (Put, Get, AddChild, PushBack, GetJSON), класс Parameters, создание ботов (7 шагов), BotRec API
 - [EME_L_HTTP_Integration.md](docs/EME_L_HTTP_Integration.md): HTTP-архитектура, ТСД-коммуникация, пакетная обработка (Batch), CEMEHttp, CHttpData, SendWebRequest
 - [EME_L_Query_Reports.md](docs/EME_L_Query_Reports.md): Отчёты и печатные формы — визуальный редактор, бэнды (горизонтальный, вертикальный, скрытый, динамический), BindBand/BindCell, редактируемые отчёты на диалоге
@@ -160,7 +158,6 @@ obj.OnInit(m_Doc, m_bGetListOrdersKeys, m_TerminalRef);
 Конструктор: `IClass(ИмяОбъекта, КлассИЛИСсылка, ПризнакОкна)`
 - ПризнакОкна = `TRUE` (по умолчанию) — окно обязано существовать
 - ПризнакОкна = `FALSE` — глобальный объект, apartment id = NULL
-- Использовать `As "Invariant"` вместо `As "Dynamic"` (поиск один раз, быстрее)
 
 ---
 
@@ -728,9 +725,7 @@ r_Doc As "Document" = Const(Object("dsDB", "Document"));
 GetStamps(obj As "CEMERec") { ... }  ' компилятор проверяет типы и методы
 ```
 
-90% базовых классов используют статическую линковку (2032 статических vs 222 динамических). `FindMethod`/`CallMethod` запрещены.
-
-Для IClass: `As "Dynamic"` (поиск при каждом вызове, медленнее) или `As "Invariant"` (поиск при первом вызове, предпочтительно).
+---
 
 ---
 

@@ -7,7 +7,7 @@
 ### Язык EME-L — Основы
 
 - **docs/EME_L_Syntax.md** — переменные, 9 типов данных, операторы, управляющие конструкции
-- **docs/EME_L_Classes.md** — объектная модель, Object(), IClass, статическая линковка
+- **docs/EME_L_Classes.md** — объектная модель, Object(), IClass, интерфейсы CEME
 - **docs/EME_L_Events.md** — все обработчики событий (24 диалог + таблицы + браузеры + интегратор + отчёты)
 - **docs/EME_L_Constants.md** — 13 групп констант (DOCUMENT_TYPE_*, os*, MO_TYPE_*, ZONE_*)
 - **docs/EME_L_IS_Functions.md** — is-функции групп Bit, Browser, Context
@@ -22,7 +22,7 @@
 
 ### Язык EME-L — Продвинутые
 
-- **docs/EME_L_Advanced_Features.md** — компоненты, статическая линковка, ByRef/ByVal, tr()
+- **docs/EME_L_Advanced_Features.md** — компоненты, ByRef/ByVal, tr()
 - **docs/EME_L_Advanced_API_and_Patterns.md** — String (40+ методов), PropertyTree, боты
 - **docs/EME_L_HTTP_Integration.md** — HTTP-архитектура, ТСД-коммуникация, Batch
 - **docs/EME_L_Query_Reports.md** — отчёты, печатные формы, бэнды
