@@ -199,7 +199,32 @@ BandCall_OnBeforeDynamicOpen()
 }
 ```
 
-### Механизм сохранения данных из редактируемого отчёта в БД
+### Механизм сохранения данных из редактируемого отчета на диалоге в БД
+
+Сначала добавим в конструкторе класса BuyerReport служебную переменную Parameters и объекты наших записей базы данных:
+
+```EME-SQL
+Select (HourQuery)
+    SELECT
+        {
+            Hour = is_time(8 + is_line(), 0);
+            Return Hour;
+        }:TIME AS [Час]
+    FROM
+        NEW{11}
+End Select
+
+Query AS "Query";
+CallQuery AS "Query";
+
+Date AsExternal;
+Buyer AsExternal;
+
+Parameters = Object("Parameters");
+CallRec = Object("dsDB", "ClientsCalls");
+BuyerRec = Object("dsDB", "Clients");
+BuyerRec.SetSkipMode();
+```
 
 Для сохранения изменений реализуются следующие методы в EME-L:
 
