@@ -618,7 +618,7 @@ DefaultStock_OnBeforeUpdate()
 FileName_OnAfterUpdate()
 {
     FileNameControl = Object("Control");
-    FileRecord = Object("dsDB", "Файловая система");
+    FileRecord = Object("dsDB", "FileSystem");
     FileRecord.SetLine(Object("Dialog").GetLine());
     If (FileRecord.IsValidLine())
         FilePath = FileRecord.GetFullPath();
@@ -771,7 +771,7 @@ PONoTable_OnCheckDelete()
 {
     PONoTable = Object("Table", "PONoTable");
     colPO = Object("Control", , "PO");
-    r_PO = Object("dsDB", "Предварительные заказы товаров");
+    r_PO = Object("dsDB", "PurchaseOrder");
     row = PONoTable.GetCurrentRow();
     r_PO.SetLine(colPO.GetFromRow(row));
     If (~r_PO.IsValidLine())
@@ -791,7 +791,7 @@ PONoTable_OnCheckDelete()
 Timer_OnTimer()
 {
     is_ws_align_data();
-    r_MailFolder = Object("dsDB","Почта папки");
+    r_MailFolder = Object("dsDB","MailFolder");
     r_MailFolder.SetLine(ActiveFolder);
     If (r_MailFolder.IsValidLine() & r_MailFolder.IsFolderInbox())
         LoadMailData();
@@ -1649,7 +1649,7 @@ Report_OnCloseReport()
 ```EME-L
 Client_OnPut()
 {
-    MatrixRec = Object("dsDB", "Матрица заказа");
+    MatrixRec = Object("dsDB", "OrderMatrix");
     MatrixRec.SetLine(is_report_line());
     If (MatrixRec.IsValidLine())
         Object("Control").Put(MatrixRec.GetClient().GetName());
@@ -1668,7 +1668,7 @@ MU_OnCommand()
 {
     GoodsItemRef = is_cell_data("Report.GoodsItemRef");
     MUArray = Object("Array");
-    r_MU = Object("dsDB", "Единицы измерения товара");
+    r_MU = Object("dsDB", "GoodsItemMU");
     r_MU.SetChain("@Товарная единица", GoodsItemRef);
     For (r_MU.SetFirstLine(); r_MU.IsValidLine(); r_MU.SetNextLine())
         MUArray.Add(r_MU.GetName());
