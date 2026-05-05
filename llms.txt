@@ -42,7 +42,7 @@
 
 - [EME_L_Advanced_Features.md](docs/EME_L_Advanced_Features.md): Компоненты (Selections), внешние устройства (сканер), календарь дат, статическая линковка, ByRef/ByVal/RefOf/ValOf, tr() локализация, серверные vs GUI классы
 - [EME_L_Advanced_API_and_Patterns.md](docs/EME_L_Advanced_API_and_Patterns.md): String (40+ методов), PropertyTree/JSON (Put, Get, AddChild, PushBack, GetJSON), класс Parameters, создание ботов (7 шагов), BotRec API
-- [EME_L_HTTP_Integration.md](docs/EME_L_HTTP_Integration.md): HTTP-архитектура, TSD-коммуникация, пакетная обработка (Batch), CEMEHttp, CHttpData, SendWebRequest
+- [EME_L_HTTP_Integration.md](docs/EME_L_HTTP_Integration.md): HTTP-архитектура, ТСД-коммуникация, пакетная обработка (Batch), CEMEHttp, CHttpData, SendWebRequest
 - [EME_L_Query_Reports.md](docs/EME_L_Query_Reports.md): Отчёты и печатные формы — визуальный редактор, бэнды (горизонтальный, вертикальный, скрытый, динамический), BindBand/BindCell, редактируемые отчёты на диалоге
 - [EME_L_Misc_and_Localization.md](docs/EME_L_Misc_and_Localization.md): UI-тестирование (is_ui_test_mode), робот-тестеры, локализация, ENG.txt, LocalizationUtilities
 
@@ -713,7 +713,7 @@ LoadClient(treeRequest, treeAnswer)
 
 ---
 
-## TSD-коммуникация
+## ТСД-коммуникация
 
 Запросы ТСД идут в виртуальный каталог `terminals.html`, класс `Terminals`. Поток: `CThreadData::UpdateData()` → `CheckTerminal()` → `CheckOperator()` → `DrawListOrdersEx()` → `OnRequestDone()` → `SaveServerData()`.
 

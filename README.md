@@ -24,7 +24,7 @@
 
 - **docs/EME_L_Advanced_Features.md** — компоненты, статическая линковка, ByRef/ByVal, tr()
 - **docs/EME_L_Advanced_API_and_Patterns.md** — String (40+ методов), PropertyTree, боты
-- **docs/EME_L_HTTP_Integration.md** — HTTP-архитектура, TSD-коммуникация, Batch
+- **docs/EME_L_HTTP_Integration.md** — HTTP-архитектура, ТСД-коммуникация, Batch
 - **docs/EME_L_Query_Reports.md** — отчёты, печатные формы, бэнды
 - **docs/EME_L_Misc_and_Localization.md** — UI-тестирование, робот-тестеры, локализация
 
