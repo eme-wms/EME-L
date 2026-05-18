@@ -802,3 +802,120 @@ is_format(tr("Строка с %s и %d"), val1, val2);  ' правильно
 
 - is-функции: snake_case (`is_get_data`)
 - Методы и классы: CamelCase (`GetData`, `GetDocumentByRegNo`)
+
+## System Functions (is_System) — справочник
+
+Источник: is_System_documented.cpp (110 функций). Полная документация: docs/EME_L_System_Functions.md.
+
+| Функция | Аргументы | Возвращает | Описание |
+|---------|-----------|------------|----------|
+| is_qhash | (str, [encoding]) | Integer | Хеш строки (qHash Qt) |
+| is_msg | (name) | String | Сообщение проекта |
+| is_message | (title, text, [buttons], [icon], [defbtn], [sysmode], [timer]) | Bool/Int/String | MessageBox |
+| is_message_beep | (type) | Boolean | Звуковой сигнал |
+| is_timer_message | (...см. is_message, timeout=10000) | Bool/Int/String | MessageBox с таймером |
+| is_input | (prompt, default, [title]) | String | Однострочный ввод |
+| is_multiinput | (prompt, default, [title]) | String | Многострочный ввод |
+| is_get_password | (caption, label) | String | Ввод пароля |
+| is_computer_name | () | String | Имя компьютера |
+| is_domain_name | () | String | Домен пользователя ОС |
+| is_domain_dc | () | String | Domain Component |
+| is_domain_username | () | String | Доменное имя пользователя |
+| is_server | () | Boolean | Проверка: выполнение на сервере |
+| is_http_server | ([transaction]) | Boolean | Проверка: HTTP-сервер |
+| is_brain_computer | () | Boolean | Проверка: мозговой компьютер |
+| is_beep | (freq_hz, duration_ms) | — | Звуковой сигнал |
+| is_sleep | (ms) | — | Приостановка потока |
+| is_system | (index) | Any | Системная настройка (0=оператор, 1=флаги, 2=имя, 3=код_запуска, 4=код_филиала, 5=ссылка_филиала, 6=код_проекта, 7=is_ws, 8=is_bc) |
+| is_set_system | (code) | — | Установка кода запуска (ядро < 52.0) |
+| is_administrator | () | Boolean | Проверка: администратор |
+| is_access | (bit_no) | Boolean | Проверка прав доступа |
+| is_sys_param | (name, [type], [mode]) | Any | Параметр настройки (W:// или M://) |
+| is_add_sys_param | (name, value, [help], [vallist], [reload]) | — | Добавление настройки |
+| is_force_standard_export | (warn) | Integer | Стандартный экспорт |
+| is_do_wait_cursor | (direction) | Integer | Песочные часы (1=вкл, -1=выкл, 0=сброс) |
+| is_RGB | (r, g, b) | Integer | Цвет из RGB |
+| is_RGBA | (r, g, b, [a]) или (rgb, [a]) | Integer | Цвет из RGBA |
+| is_blendRGB | (color1, color2, [coeff]) | Integer | Смешивание цветов |
+| is_sys_color | (element_name) | Integer | Системный цвет Windows |
+| is_legend_color | (index) | Integer | Цвет из палитры (0-21) |
+| is_center | () | Boolean | Центральный филиал |
+| is_root_center | () | Boolean | Главный центр |
+| is_node_center | () | Boolean | Локальный центр |
+| is_filial | () | Boolean | Не центр |
+| is_parent_filial_ref | () | Integer | Ссылка на родительский филиал |
+| is_parent_filial_code | () | Integer | Код родительского филиала |
+| is_system_filial | () | Boolean | Системный филиал |
+| is_send_message | (target, msg_no, [hierarchy], [rec], [str]) | — | Сообщение в орган диалога |
+| is_add_history_line | (volume, text, [rec], [line]) | — | Запись в историю операций |
+| is_get_tick_count | () | Integer | Мс с момента старта системы |
+| is_shell_execute | (action, dir, file, [params], [timeout]) | Integer | Запуск внешней программы |
+| is_shell_execute_link | (lnk_path) | Boolean | Запуск по ярлыку |
+| is_check_version | ([ker_major], [ker_minor], [meta_major], [meta_minor]) | Boolean | Проверка версии ядра/метапроекта |
+| is_key_press | (hex_code) | Boolean | Проверка нажатия клавиши |
+| is_set_translate_regim | (regim) | Integer | Установка режима перевода |
+| is_get_translate_regim | () | Integer | Текущий режим перевода |
+| is_set_language | ([code]) | Integer | Установка языка потока |
+| is_get_language | () | String | Текущий язык потока |
+| is_ML | () | — | Локализованная строка |
+| tr | (str, [context]) | String | Перевод строки |
+| is_transliterate | (str) | String | Транслитерация |
+| is_set_method_find_mode | (mode) | — | Режим поиска методов (0/1) |
+| is_show_email_icon | (show) | — | Показать/скрыть иконку email |
+| is_workstation_mode | () | String | Режим рабочей станции |
+| is_workstation_type | () | String | Тип рабочей станции |
+| is_check_text_key | (key_name) | Boolean | Проверка ключа командной строки (/d_) |
+| is_prf | (type, [timer]) | Int/— | Профилирование (0=reset, 1=start, 2=stop, 3=get) |
+| is_DelayedRefNuller | (on_off) | — | Управление отложенным обнулением ссылок |
+| is_mem_dump | () | — | Дамп памяти в катастроф-лог |
+| is_SYS_mem_dump | () | — | Дамп пула SYS |
+| is_exit | ([msg1], [msg2], [text]) | — | Завершение программы |
+| is_generate_NSI_script | ([params...]) | — | Генерация инсталляционного скрипта |
+| is_db_driver_name | () | String | Имя DLL драйвера |
+| is_reg_query_value | (root, subkey, name, [default]) | String/Int | Чтение из реестра Windows |
+| is_OLE_serverbusydelay | ([ms]) | Boolean | Задержка Server Busy |
+| is_process_rpc_over_file_system | () | Any | RPC через файловую систему |
+| is_last_rpc_date | () | DateTime | Дата последнего RPC |
+| is_last_rpc_time | () | DateTime | Время последнего RPC |
+| is_last_rpc_number | () | Integer | Номер последнего RPC |
+| is_reset_last_rpc_info | () | — | Сброс информации RPC |
+| is_type_version | () | Integer | Тип лицензии (0=нет, 1=полная, 2=стандарт) |
+| is_eventer_tick | () | Integer | Запуск планировщика |
+| is_main_thread | () | Boolean | Проверка главного потока |
+| is_managed_thread | ([interval_ms]) | Bool/— | Управляемый поток |
+| is_get_data_path | () | String | Путь к папке данных |
+| is_keycode | () | String | Нажатые клавиши |
+| robot | () | Ref | Ссылка на текущего робота |
+| is_decimal_separator | () | String | Десятичный разделитель |
+| is_locale_info | (locale, type) | String | Информация о локали |
+| is_show_popup_window | (text, dialog, [dialog2], [code]) | — | Всплывающее уведомление |
+| is_message_to_workstations | (user_ref, text, [dialog], [line], [code]) | — | Сообщение на рабочие станции |
+| is_server_transaction_dump | (query, [params...]) | Boolean | Дамп транзакций сервера |
+| is_server_transaction_data | (trans, cmd, [line]) | String | Данные транзакции |
+| is_server_emel | (cmd, params) | String | Вызов серверного EME-L |
+| is_server_first_transaction | (first ByRef, last ByRef, [date], [time]) | Boolean | Границы транзакций |
+| is_impersonate_user | (user_ref) | — | Установка пользователя (ЦУП) |
+| is_get_clipboard_data_type | () | Integer | Тип данных буфера обмена |
+| is_get_clipboard_as_bitmap | () | Any | BMP из буфера обмена |
+| is_put_clipboard_data_as_text | (text) | Boolean | Текст в буфер обмена |
+| is_put_clipboard_data_as_filelist | (path, [copy]) | Boolean | Файл в буфер обмена |
+| is_ui_test_mode | () | Boolean | Режим тестирования UI |
+| is_disconnect_user | (user_ref) | — | Отключение пользователя |
+| is_filial_no | () | Integer | Номер текущего филиала |
+| is_filial_ref | () | Integer | Ссылка на текущий филиал |
+| is_division_no | () | Integer | Номер текущего раздела |
+| is_division_ref | () | Integer | Ссылка на текущий раздел |
+| is_change_division_no | (no) | — | Изменение номера раздела |
+| is_license_param | (name) | String | Параметр лицензии |
+| is_transaction_no | () | Integer | Номер текущей транзакции |
+| is_export_db_structure | (filename) | Integer | Экспорт структуры БД |
+| is_import_db_structure | (filename, [ver ByRef]) | Boolean | Импорт структуры БД |
+| is_password | () | Boolean | Диалог ввода пароля |
+| is_change_password | ([user_ref], [ask_old]) | — | Смена пароля |
+| is_set_user_read_only | () | — | Режим только чтение |
+| is_clr_user_read_only | () | — | Снять режим только чтение |
+| is_security_event | (user_ref, code, desc) | — | Событие безопасности |
+| is_system_family | () | String | Семейство ОС (LINUX/WINDOWS) |
+| is_enable_dataslice | () | Boolean | Включение срезов данных |
+| is_sys_import | (path) | Integer | Системный импорт |
+| is_restart_as_server_request | () | String | Запрос переключения сервера |
