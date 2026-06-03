@@ -499,13 +499,11 @@ is_del_context("MyContext");
 Возвращает `TRUE` или `FALSE`.
 
 ```EME-L
-If (is_check_context("Dialog"))
-    'Текущий контекст — диалог'
-End If
+' Проверить, является ли текущий контекст диалогом '
+Result = is_check_context("Dialog")
 
-If (is_check_context("Dialog", "Clients.Dialog"))
-    'Текущий контекст — диалог Clients.Dialog'
-End If
+' Проверить конкретный диалог '
+Result = is_check_context("Dialog", "Clients.Dialog")
 ```
 
 ### is_get_context — получение текущего контекста
