@@ -1,6 +1,6 @@
 # is-функции языка EME-L: встроенные функции проверки и преобразования
 
-> Синонимы для поиска: is-функции EME-L, is функции, is_bit, is_clear_bit, is_set_bit, is_reverse_bit, is_and, is_or, is_xor, is_not, is_mask, is_shift_left, is_shift_right, is_hewed, is_hew_item, is_empty_hew, is_browse, is_browse_data, is_browser_base_record, is_run_browse, is_keydown_flag, is_put_context, is_get_context, is_del_context, is_check_context, is_get_context_as_string, is_get_context_as_ref, is_office_doc_save, is_office_doc_already_open, is_dos_date, is_dos_time, is_datetime, is_fdatetime, is_leap_year, is_strmonth, is_start_date_week, is_final_date_week, is_day_of_week, is_number_week_of_year, is_week, is_start_date_week_of_number, is_day_count_from_Christ, is_start_date_month, is_final_date_month, is_start_date_decade, is_final_date_decade, is_start_date_quarter, is_final_date_quarter, is_parsing_date, is_parsing_time, is_quarter_number, is_year, is_shortyear, is_month, is_day, is_hour, is_minute, is_second, is_csecond, is_date, is_current_date, is_current_time, is_days_in_month, is_days_in_year, is_null_date, is_null_time, is_time_interval, is_datetime2USDTstring, is_USDTstring2datetime, is_time, is_system_utc_local_bias, is_system_time_to_local_time, is_local_time_to_system_time, is_start_date_period, is_ISO8601_to_datetime, is_datetime_to_ISO8601, is_time_zone, is_date_diff, is_diff_datetime_in_sec, встроенные функции EME-L, битовые операции EME-L, браузер EME-L, контекст EME-L, дата и время EME-L, is-функции Browser, is-функции Context, is-функции Bit, is-функции DateTime
+> Синонимы для поиска: is-функции EME-L, is функции, is_bit, is_clear_bit, is_set_bit, is_reverse_bit, is_and, is_or, is_xor, is_not, is_mask, is_shift_left, is_shift_right, is_hewed, is_hew_item, is_empty_hew, is_browse, is_browse_data, is_browser_base_record, is_run_browse, is_keydown_flag, is_put_context, is_get_context, is_del_context, is_check_context, is_get_context_as_string, is_get_context_as_ref, is_office_doc_save, is_office_doc_already_open, is_dos_date, is_dos_time, is_datetime, is_fdatetime, is_leap_year, is_strmonth, is_start_date_week, is_final_date_week, is_day_of_week, is_number_week_of_year, is_week, is_start_date_week_of_number, is_day_count_from_Christ, is_start_date_month, is_final_date_month, is_start_date_decade, is_final_date_decade, is_start_date_quarter, is_final_date_quarter, is_parsing_date, is_parsing_time, is_quarter_number, is_year, is_shortyear, is_month, is_day, is_hour, is_minute, is_second, is_csecond, is_date, is_current_date, is_current_time, is_days_in_month, is_days_in_year, is_null_date, is_null_time, is_time_interval, is_datetime2USDTstring, is_USDTstring2datetime, is_time, is_system_utc_local_bias, is_system_time_to_local_time, is_local_time_to_system_time, is_start_date_period, is_ISO8601_to_datetime, is_datetime_to_ISO8601, is_time_zone, is_date_diff, is_diff_datetime_in_sec, is_data, is_get_data, is_put_data, is_rec, is_line, is_wrong_line, is_deleted_line, is_modified_line, is_new_item, is_No_of_lines, is_No_of_records, is_No_of_fields, is_No_of_array, is_fld_length, is_fld_type, is_fld_ref_type, is_fld_name_by_number, is_record_narrative, is_field_narrative, is_attribute_narrative, is_line_key, is_equ_data, is_max_value, is_for_rec, is_full_path, is_alias, is_try_find_field, is_try_find_record, is_get_record_by_name, is_get_field_by_name, is_get_record_flags, is_get_field_flags, is_find_string_like_regexp, is_get_db_file_stamp, is_get_field_CRC, is_own_line, is_owner, is_field_file_size, is_field_occupied_size, is_ref_to, is_exist_ref_to, is_referenceed_line, is_ref_to_child, is_ref_rec, is_vvr_rec, is_vvr_line, is_vvr, is_in_ref_array, is_show_author, is_linked, is_prev_line, is_ref_to_subitems, is_check_chain, is_find_reference_field, is_restore_refs, is_relink_ref, is_redirect_referencies, is_clean_refs, is_root, is_parent, is_transaction, is_open_transaction, is_open_master_transaction, is_abort_transaction, is_local_transaction, is_emulate_transaction, is_enable_multiple_transactions, is_modify_record, is_unmodify_record, is_modify_line, is_unmodify_lines, is_delete_record_line, is_delete_records, is_compress_records, is_prune_record, is_compress_vlf, is_empty_vlf, is_ws_align_data, is_disable_align_data, is_reverse_db_data, is_set_header_correction, is_set_check_transaction, is_load_file_to_db, is_open_file_from_db, is_print_file_from_db, is_reduce_storage_to_date, is_sql_client_execute, is_DelayedRefNuller_procedure, is_run_export_ex, is_db_watch, is_check_db_watch, is_get_modified_lines, is_test_references_counter, is_run_dbtest, is_get_data_in_base64, is_put_data_in_base64, встроенные функции EME-L, битовые операции EME-L, браузер EME-L, контекст EME-L, дата и время EME-L, база данных EME-L, is-функции Browser, is-функции Context, is-функции Bit, is-функции DateTime, is-функции DB
 
 ---
 
@@ -1637,4 +1637,357 @@ Diff = is_date_diff("year", StartDt, EndDt)
 ' Разность в секундах '
 DiffSec = is_diff_datetime_in_sec(Dt1, Dt2)
 ```
+
+---
+
+## is-функции группы DB — база данных
+
+is-функции группы DB отвечают за работу с данными базы данных в языке EME-L. в системе EME.WMS эти функции обеспечивают чтение и запись полей, навигацию по записям и строкам, работу со ссылками, управление транзакциями, модификацию данных и работу с файлами.
+
+---
+
+### is_data — чтение данных по реляционному пути
+
+в языке EME-L функция `is_data` читает содержимое поля базы данных по реляционному пути через одну или несколько записей.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Да | Имя записи, физический номер (>= 1000), заголовок структуры БД (>= 2000) или положение объекта |
+| args[1] | Integer | Да | Номер строки в записи |
+| args[2] | String / Integer | Да | Имя или номер первого поля реляционного пути |
+| args[3+] | String / Integer / Integer | Нет | Дополнительные поля пути или индекс массива ссылок |
+
+**Возвращает**: значение последнего поля в пути — `String`, `Integer`, `Boolean`, `Date`, `Time`, `Reference` или `Array`.
+
+```EME-L
+' Прочитать название клиента '
+Name = is_data("Клиенты", 5, "Название")
+' Name = "ООО Ромашка" '
+
+' Чтение через ссылочное поле '
+ClientName = is_data("Заказы", 10, "Клиент", "Название")
+' ClientName = "ООО Ромашка" '
+```
+
+---
+
+### is_get_data — чтение поля по номерам
+
+в системе EME.WMS функция `is_get_data` читает содержимое поля записи по номеру записи, поля и строки.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Номер записи |
+| args[1] | Integer | Да | Номер поля |
+| args[2] | Integer | Да | Номер строки |
+| args[3] | Integer | Нет | Код атрибута для интерпретации данных |
+
+**Возвращает**: содержимое поля — `String`, `Integer`, `Boolean`, `Date`, `Time`, `Reference` или `Array`.
+
+```EME-L
+' Прочитать строковое поле 5 записи 10, строка 3 '
+Value = is_get_data(10, 5, 3)
+' Value = содержимое поля '
+```
+
+---
+
+### is_put_data — запись поля по номерам
+
+в языке EME-L функция `is_put_data` записывает данные в поле записи по номеру записи, поля и строки.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Номер записи |
+| args[1] | Integer | Да | Номер поля |
+| args[2] | Integer | Да | Номер строки |
+| args[3] | Any | Да | Значение для записи |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Записать "Привет" в поле 5 записи 10, строка 3 '
+is_put_data(10, 5, 3, "Привет")
+```
+
+---
+
+### is_rec — номер базовой записи
+
+в системе EME.WMS функция `is_rec` возвращает номер базовой записи объекта в указанном положении иерархии.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Положение объекта: -1 — родитель, 0 — сам объект, 1 — потомок. По умолчанию 0 |
+
+**Возвращает**: `Integer` — номер записи.
+
+```EME-L
+' Получить номер текущей записи '
+RecNo = is_rec()
+' RecNo = 10 '
+```
+
+---
+
+### is_line — номер базовой строки
+
+в языке EME-L функция `is_line` возвращает номер строки базовой записи объекта или значение специальной константы.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Положение объекта: -1 — родитель, 0 — сам объект, 1 — потомок |
+| args[1] | Integer | Нет | Специальное значение: 0 — NEW_LINE_MARK, 2 — номер строки диалога |
+
+**Возвращает**: `Integer` — номер строки или значение константы.
+
+```EME-L
+' Получить номер текущей строки '
+LineNo = is_line()
+' LineNo = 5 '
+```
+
+---
+
+### is_No_of_lines — количество строк в записи
+
+в EME БД функция `is_No_of_lines` возвращает количество строк в указанной записи.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Нет | Имя или номер записи. По умолчанию базовая запись |
+| args[1] | Integer | Нет | Режим: 0 — общее, 1 — неудаленные, 2 — удаленные |
+
+**Возвращает**: `Integer` — количество строк.
+
+```EME-L
+' Общее количество строк в записи Клиенты '
+Total = is_No_of_lines("Клиенты")
+' Total = 100 '
+```
+
+---
+
+### is_equ_data — поиск строки по значению
+
+в системе EME.WMS функция `is_equ_data` ищет строку в записи, в которой содержимое указанного поля равно заданному значению.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Нет | Имя записи, физический номер или положение объекта |
+| args[1] | String / Integer | Да | Имя или номер поля |
+| args[2] | Any | Да | Искомое значение |
+| args[3] | String | Нет | Битовая маска для побитового сравнения |
+| args[4] | String | Нет | Текстовое выражение для дополнительной проверки |
+
+**Возвращает**: `Integer` — номер найденной строки или `NULL_REF`.
+
+```EME-L
+' Найти строку с кодом "C001" '
+Line = is_equ_data("Клиенты", "Код", "C001")
+' Line = 5 '
+```
+
+---
+
+### is_transaction — управление серверной транзакцией
+
+в языке EME-L функция `is_transaction` открывает, закрывает или отменяет серверную транзакцию.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Направление: 1 — открыть, -1 — закрыть, 0 — отменить |
+| args[1] | String / Boolean | Нет | При открытии: название транзакции. При закрытии: `FALSE` — не бросать исключение |
+| args[2] | Integer / String | Нет | Приоритет: 0/"LOW" — низкий, 1/"NORMAL" — нормальный, 2/"HIGH" — высокий |
+| args[3] | Integer | Нет | Таймаут в миллисекундах |
+| args[4] | Boolean | Нет | `TRUE` — бросать исключение при таймауте на рабстанции |
+
+**Возвращает**: `Boolean` — `TRUE` если транзакция открыта после операции.
+
+```EME-L
+' Открыть транзакцию '
+is_transaction(1, "Создание заказа")
+' ... операции ... '
+is_transaction(-1)
+```
+
+---
+
+### is_ref_to — количество ссылок на строку
+
+в EME БД функция `is_ref_to` возвращает общее количество ссылок на указанную строку записи.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Строка с номерами записей и полей для пропуска или учета |
+| args[1] | Integer | Нет | Если 0 — пропускать; если не 0 — учитывать только указанные |
+| args[2] | String / Integer | Нет | Имя или номер записи |
+| args[3] | Integer | Нет | Номер строки |
+
+**Возвращает**: `Integer` — общее количество ссылок.
+
+```EME-L
+' Подсчитать все ссылки на текущую строку '
+Count = is_ref_to()
+' Count = 5 '
+```
+
+---
+
+### is_vvr — формирование мягкой ссылки
+
+в языке EME-L функция `is_vvr` формирует мягкую ссылку по записи и номеру строки.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Да | Имя или номер записи |
+| args[1] | Integer | Да | Номер строки |
+| args[2] | Integer | Нет | Игнорируется |
+
+**Возвращает**: `Reference` — мягкая ссылка.
+
+```EME-L
+' Создать мягкую ссылку '
+SoftRef = is_vvr("Клиенты", 5)
+' SoftRef = мягкая ссылка '
+```
+
+---
+
+### is_max_value — максимальное значение поля
+
+в системе EME.WMS функция `is_max_value` возвращает максимальное значение из заданного поля по всем строкам записи.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Да | Имя или номер записи |
+| args[1] | String / Integer | Да | Имя или номер поля |
+| args[2] | String | Нет | Текстовое выражение для отбора строк |
+
+**Возвращает**: максимальное значение — `Integer`, `Double` или `String`.
+
+```EME-L
+' Максимальная цена в прайс-листе '
+MaxPrice = is_max_value("Прайс", "Цена")
+' MaxPrice = 9999.99 '
+```
+
+---
+
+### is_modify_record — пометка всех строк записи
+
+в языке EME-L функция `is_modify_record` помечает все строки указанных записей как модифицированные.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0+] | String / Integer | Да | Номер или имя записи |
+
+**Возвращает**: `Boolean` — `TRUE`.
+
+```EME-L
+' Пометить все строки записи Клиенты '
+is_modify_record("Клиенты")
+```
+
+---
+
+### is_load_file_to_db — загрузка файла в БД
+
+в EME БД функция `is_load_file_to_db` загружает файл с диска в поле записи базы данных.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+| args[1] | String / Integer | Да | Имя или номер записи |
+| args[2] | String / Integer | Да | Имя или номер поля |
+| args[3] | Integer | Да | Номер строки |
+
+**Возвращает**: `Integer` — ненулевое значение в случае успеха.
+
+```EME-L
+' Загрузить PDF-документ '
+Result = is_load_file_to_db("C:\\Documents\\contract.pdf", "Клиенты", "Документ", 5)
+' Result = 1 '
+```
+
+---
+
+### is_open_file_from_db — открытие файла из БД
+
+в языке EME-L функция `is_open_file_from_db` извлекает файл из поля записи и открывает его в ассоциированном приложении.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Заголовок окна |
+| args[1] | String | Да | Расширение файла |
+| args[2] | String / Integer | Да | Имя или номер записи |
+| args[3] | String / Integer | Да | Имя или номер поля |
+| args[4] | Integer | Да | Номер строки |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Открыть договор в Acrobat Reader '
+is_open_file_from_db("Договор", ".pdf", "Клиенты", "Документ", 5)
+```
+
+---
+
+### is_compress_records — сжатие файлов записей
+
+в системе EME.WMS функция `is_compress_records` выполняет физическое сжатие файлов записей за счет удалённых строк.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Режим: 0 — сохранить последовательность, 1 — оптимизированное |
+| args[1] | Reference | Да | Массив номеров или имён записей |
+
+**Возвращает**: `Boolean` — `TRUE` в случае успеха.
+
+```EME-L
+' Сжать записи '
+RecArray = Object("Array")
+RecArray.Add("Клиенты")
+Result = is_compress_records(1, RecArray)
+' Result = TRUE '
+```
+
+---
+
+### is_find_string_like_regexp — поиск по регулярному выражению
+
+в языке EME-L функция `is_find_string_like_regexp` осуществляет поиск в базе данных по регулярному выражению.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Да | Имя или номер записи |
+| args[1] | String / Integer | Да | Имя или номер поля |
+| args[2] | String | Да | Регулярное выражение |
+| args[3] | Reference | Да | Объект массива для результатов |
+
+**Возвращает**: `Integer` — количество найденных строк.
+
+```EME-L
+' Поиск по регулярному выражению '
+ResultArray = Object("Array")
+Count = is_find_string_like_regexp("Клиенты", "Название", "^ООО", ResultArray)
+' Count = 5 '
+```
+
+---
+
+### is_db_watch — наблюдение за изменениями в БД
+
+в EME БД функция `is_db_watch` управляет наблюдением за изменениями в базе данных.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | 1 — открыть, -1 — закрыть, 0 — отключить |
+
+**Возвращает**: `Integer` — текущий статус: 0 — отключено, 1 — открыто, 2 — закрыто.
+
+```EME-L
+' Открыть наблюдение '
+Status = is_db_watch(1)
+' Status = 1 '
 ```
