@@ -707,15 +707,15 @@ Dt = is_fdatetime("15.03.2025", "%d.%m.%Y")
 ```EME-L
 ' Проверить, високосный ли 2024 год '
 Leap = is_leap_year(2024)
-' Leap = 1
+' Leap = 1 '
 
 ' Проверить 1900 год '
 Leap = is_leap_year(1900)
-' Leap = 0 - 1900 не делится на 400
+' Leap = 0 - 1900 не делится на 400 '
 
 ' Проверить 2000 год '
 Leap = is_leap_year(2000)
-' Leap = 1 - 2000 делится на 400
+' Leap = 1 - 2000 делится на 400 '
 ```
 
 ---
@@ -734,15 +734,15 @@ Leap = is_leap_year(2000)
 ```EME-L
 ' Именительный падеж '
 Month = is_strmonth(3)
-' Month = "март"
+' Month = "март" '
 
 ' Родительный падеж '
 Month = is_strmonth(3, 0)
-' Month = "марта"
+' Month = "марта" '
 
 ' С заглавной буквы '
 Month = is_strmonth(3, 2)
-' Month = "Март"
+' Month = "Март" '
 ```
 
 ---
@@ -761,11 +761,11 @@ Month = is_strmonth(3, 2)
 ```EME-L
 ' Дата начала недели для 15 марта 2025 (суббота) '
 StartWeek = is_start_date_week(Dt)
-' StartWeek = 10.03.2025 - понедельник
+' StartWeek = 10.03.2025 - понедельник '
 
 ' Вернуть строкой '
 StartStr = is_start_date_week(Dt, 0)
-' StartStr = "10.03.2025"
+' StartStr = "10.03.2025" '
 ```
 
 ---
@@ -784,7 +784,7 @@ StartStr = is_start_date_week(Dt, 0)
 ```EME-L
 ' Дата конца недели для 15 марта 2025 '
 EndWeek = is_final_date_week(Dt)
-' EndWeek = 16.03.2025 - воскресенье
+' EndWeek = 16.03.2025 - воскресенье '
 ```
 
 ---
@@ -802,7 +802,7 @@ EndWeek = is_final_date_week(Dt)
 ```EME-L
 ' День недели для 15 марта 2025 (суббота) '
 DayNum = is_day_of_week(Dt)
-' DayNum = 6
+' DayNum = 6 '
 ```
 
 ---
@@ -890,11 +890,11 @@ Days = is_day_count_from_Christ(Dt)
 ```EME-L
 ' Первое число месяца '
 StartMonth = is_start_date_month(Dt)
-' StartMonth = 01.03.2025
+' StartMonth = 01.03.2025 '
 
 ' Строкой '
 StartStr = is_start_date_month(Dt, 0)
-' StartStr = "01.03.2025"
+' StartStr = "01.03.2025" '
 ```
 
 ---
@@ -913,11 +913,11 @@ StartStr = is_start_date_month(Dt, 0)
 ```EME-L
 ' Последнее число марта 2025 '
 EndMonth = is_final_date_month(Dt)
-' EndMonth = 31.03.2025
+' EndMonth = 31.03.2025 '
 
 ' Последнее число февраля 2024 (високосный) '
 EndFeb = is_final_date_month(FebDt)
-' EndFeb = 29.02.2024
+' EndFeb = 29.02.2024 '
 ```
 
 ---
@@ -936,11 +936,11 @@ EndFeb = is_final_date_month(FebDt)
 ```EME-L
 ' Начало декады для 15 марта (третья декада) '
 StartDecade = is_start_date_decade(Dt)
-' StartDecade = 21.03.2025
+' StartDecade = 21.03.2025 '
 
 ' Начало декады для 5 марта (первая декада) '
 StartDecade = is_start_date_decade(EarlyDt)
-' StartDecade = 01.03.2025
+' StartDecade = 01.03.2025 '
 ```
 
 ---
@@ -959,11 +959,11 @@ StartDecade = is_start_date_decade(EarlyDt)
 ```EME-L
 ' Конец декады для 15 марта '
 EndDecade = is_final_date_decade(Dt)
-' EndDecade = 20.03.2025
+' EndDecade = 20.03.2025 '
 
 ' Конец третьей декады февраля 2024 '
 EndDecade = is_final_date_decade(FebDt)
-' EndDecade = 29.02.2024
+' EndDecade = 29.02.2024 '
 ```
 
 ---
@@ -982,11 +982,11 @@ EndDecade = is_final_date_decade(FebDt)
 ```EME-L
 ' Начало квартала для 15 марта (Q1) '
 StartQuarter = is_start_date_quarter(Dt)
-' StartQuarter = 01.01.2025
+' StartQuarter = 01.01.2025 '
 
 ' Начало квартала для 20 июня (Q2) '
 StartQ2 = is_start_date_quarter(SummerDt)
-' StartQ2 = 01.04.2025
+' StartQ2 = 01.04.2025 '
 ```
 
 ---
@@ -1005,11 +1005,11 @@ StartQ2 = is_start_date_quarter(SummerDt)
 ```EME-L
 ' Конец квартала для 15 марта (Q1) '
 EndQuarter = is_final_date_quarter(Dt)
-' EndQuarter = 31.03.2025
+' EndQuarter = 31.03.2025 '
 
 ' Конец квартала для 20 июня (Q2) '
 EndQ2 = is_final_date_quarter(SummerDt)
-' EndQ2 = 30.06.2025
+' EndQ2 = 30.06.2025 '
 ```
 
 ---
@@ -1038,7 +1038,7 @@ Dt = is_parsing_date("15-03-2025", "dd-mm-yyyy")
 
 ' Вернуть строкой '
 Str = is_parsing_date("15032025", "ddmmyyyy", 0)
-' Str = "15.03.2025"
+' Str = "15.03.2025" '
 ```
 
 ---
@@ -1080,11 +1080,11 @@ Tm = is_parsing_time("14:30:45", "hh:mm:ss")
 ```EME-L
 ' Квартал для 15 марта '
 Q = is_quarter_number(Dt)
-' Q = 1
+' Q = 1 '
 
 ' Квартал для 20 июня '
 Q = is_quarter_number(SummerDt)
-' Q = 2
+' Q = 2 '
 ```
 
 ---
@@ -1102,7 +1102,7 @@ Q = is_quarter_number(SummerDt)
 ```EME-L
 ' Извлечь год '
 Year = is_year(Dt)
-' Year = 2025
+' Year = 2025 '
 ```
 
 ---
@@ -1120,7 +1120,7 @@ Year = is_year(Dt)
 ```EME-L
 ' Последние две цифры года '
 Short = is_shortyear(Dt)
-' Short = 25
+' Short = 25 '
 ```
 
 ---
@@ -1138,7 +1138,7 @@ Short = is_shortyear(Dt)
 ```EME-L
 ' Извлечь месяц '
 Month = is_month(Dt)
-' Month = 3
+' Month = 3 '
 ```
 
 ---
@@ -1156,7 +1156,7 @@ Month = is_month(Dt)
 ```EME-L
 ' Извлечь день '
 Day = is_day(Dt)
-' Day = 15
+' Day = 15 '
 ```
 
 ---
@@ -1174,7 +1174,7 @@ Day = is_day(Dt)
 ```EME-L
 ' Извлечь час '
 Hour = is_hour(Dt)
-' Hour = 14
+' Hour = 14 '
 ```
 
 ---
@@ -1192,7 +1192,7 @@ Hour = is_hour(Dt)
 ```EME-L
 ' Извлечь минуты '
 Min = is_minute(Dt)
-' Min = 30
+' Min = 30 '
 ```
 
 ---
@@ -1210,7 +1210,7 @@ Min = is_minute(Dt)
 ```EME-L
 ' Извлечь секунды '
 Sec = is_second(Dt)
-' Sec = 45
+' Sec = 45 '
 ```
 
 ---
@@ -1308,11 +1308,11 @@ BoardTime = is_current_time()
 ```EME-L
 ' Дней в марте '
 Days = is_days_in_month(3)
-' Days = 31
+' Days = 31 '
 
 ' Дней в феврале 2024 (високосный) '
 Days = is_days_in_month(2, 2024)
-' Days = 29
+' Days = 29 '
 
 ' Дней в месяце по дате '
 Days = is_days_in_month(Dt)
@@ -1333,7 +1333,7 @@ Days = is_days_in_month(Dt)
 ```EME-L
 ' Дней в 2024 году '
 Days = is_days_in_year(2024)
-' Days = 366
+' Days = 366 '
 
 ' Дней в году по дате '
 Days = is_days_in_year(Dt)
@@ -1415,7 +1415,7 @@ Text = is_time_interval(Interval, 3)
 ```EME-L
 ' Формирование сортируемой строки '
 USDT = is_datetime2USDTstring(Dt, Tm)
-' USDT = "20250315143000"
+' USDT = "20250315143000" '
 ```
 
 ---
@@ -1478,7 +1478,7 @@ PureTime = is_time(DateTimeValue)
 ```EME-L
 ' Получить смещение UTC '
 Bias = is_system_utc_local_bias()
-' Bias = -180 для Москвы (UTC+3)
+' Bias = -180 для Москвы (UTC+3) '
 ```
 
 ---
@@ -1573,7 +1573,7 @@ Dt = is_ISO8601_to_datetime("2025-03-15T14:30:00+03:00")
 ```EME-L
 ' Преобразовать дату/время в ISO 8601 '
 ISO = is_datetime_to_ISO8601(Dt)
-' ISO = "2025-03-15T14:30:00+03:00"
+' ISO = "2025-03-15T14:30:00+03:00" '
 ```
 
 ---
@@ -1589,7 +1589,7 @@ ISO = is_datetime_to_ISO8601(Dt)
 ```EME-L
 ' Получить текущий часовой пояс '
 Zone = is_time_zone()
-' Zone = "+03:00"
+' Zone = "+03:00" '
 ```
 
 ---
