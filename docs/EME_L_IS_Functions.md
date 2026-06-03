@@ -444,10 +444,11 @@ SelectedLine = is_run_browse(100)
 ' Прочитать флаги клавиатуры '
 Flag = is_keydown_flag()
 
-' Проверить, нажат ли Ctrl '
-If (is_keydown_flag() & 1)
-    ' Ctrl нажат '
-End If
+' Проверить нажатие Ctrl (бит 0) '
+CtrlPressed = (Flag & 1)
+
+' Проверить комбинацию Ctrl+Shift (биты 0 и 2) '
+CtrlShift = (Flag & 5)
 ```
 
 ---
