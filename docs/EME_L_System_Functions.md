@@ -1,6 +1,6 @@
 # Системные функции EME-L (is_System)
 
-> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_path_to_dir, is_path_to_file_title, is_path_to_file_name, is_path_to_file_ext, is_get_temp_file_path, is_make_dir_tree, is_ini_query_setting, is_ini_store_setting, is_copy_file, is_move_file, is_rename_file, is_set_file_creation_date, is_set_file_modify_date, is_valid_filename, is_ensure_last_slash, is_file_exists, is_delete_file, is_directory, is_empty_directory, is_ensure_path_exists, is_path_exists, is_file_size, is_file_inuse, is_file_createdate, is_file_modifydate, is_delete_dir, is_copy_dir, is_create_shortcut, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, is_httptofile, is_inet_ntoa, is_inet_addr, is_email_message, is_test_email_message, is_send_catastrophic_log, is_version, is_send_email_report, is_web_request, is_sms_message, is_set_request_name, is_server_job, is_syslog_msg, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD, is_vendor, is_rounded_week, is_rounded_date, is_production_date, is_default_vendor, is_turn_EANCOM_messages, is_force_document_export, is_base_curr, is_column, is_enter_value_dialog, is_convert_string_to_date, is_save_ware_timer_param, is_transit_ware, is_inventarisation, is_inventarisation_by_vendor, is_vendor_inventarisation, is_user_vendor, is_inventarisation_off, is_run_free_browser, is_run_free_browser_by_str, is_prune_base, is_insert_delimeters_in_string, is_print_docs, is_print_report_indirect, is_EAN13_by_order, is_BARCODE_by_order, is_BARCODE_by_document, is_drag_drop_terminals_dispatcher, is_once_queue_orders_inventarisation, is_queue_orders_inventarisation, is_inventarisation_warehouse, is_get_first_queue_priority, is_set_valid_terminal_ref, is_get_valid_terminal_ref, is_set_first_queue_priority, is_set_orders_type, is_delete_queue_order, is_get_text_info_integrator, is_get_base_icon_color_integrator, is_get_parent_text_info_integrator, is_get_parent_base_icon_color_integrator, is_get_parent_record_for_integrator, is_get_parent_line_for_integrator, is_fill_refs_for_integrator, is_exist_queue_order_with_terminal_for_delete, is_check_both_double_stack_queue, is_undefine_array_to_queue_oders_array, is_add_del_terminals_dispatcher, is_ccd, is_document_line_pallet_ms_up, is_document_pallet_ms_up, is_document_change_mu, is_exists_ext_par, is_extract_picture_from_DB, is_dbref, is_dbref_record, is_dbref_field, is_dbref_line, is_open_sertificate_in_shell, is_print_word_file, is_export_pdf_docs, is_save_image_from_field_to_pdf, is_save_image_from_field_to_pdf2, is_price_in_full, is_bcp_solution_active, is_bcp_solution_sos_turn_on, is_codec, is_keyWGH, is_auto_change_statuses, is_auto_create_moving_in_pickbyline, is_planned_creations_orders, is_future, is_test_block_write, is_check_online_terminals, is_serial_generate_on, is_SHA256_as_base64_string, инвентаризация, склад, терминалы, штрих-код, WMS, HTTP, email, SMS, IP, SYSLOG
+> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_path_to_dir, is_path_to_file_title, is_path_to_file_name, is_path_to_file_ext, is_get_temp_file_path, is_make_dir_tree, is_ini_query_setting, is_ini_store_setting, is_copy_file, is_move_file, is_rename_file, is_set_file_creation_date, is_set_file_modify_date, is_valid_filename, is_ensure_last_slash, is_file_exists, is_delete_file, is_directory, is_empty_directory, is_ensure_path_exists, is_path_exists, is_file_size, is_file_inuse, is_file_createdate, is_file_modifydate, is_delete_dir, is_copy_dir, is_create_shortcut, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, is_httptofile, is_inet_ntoa, is_inet_addr, is_email_message, is_test_email_message, is_send_catastrophic_log, is_version, is_send_email_report, is_web_request, is_sms_message, is_set_request_name, is_server_job, is_syslog_msg, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD, is_vendor, is_rounded_week, is_rounded_date, is_production_date, is_default_vendor, is_turn_EANCOM_messages, is_force_document_export, is_base_curr, is_column, is_enter_value_dialog, is_convert_string_to_date, is_save_ware_timer_param, is_transit_ware, is_inventarisation, is_inventarisation_by_vendor, is_vendor_inventarisation, is_user_vendor, is_inventarisation_off, is_run_free_browser, is_run_free_browser_by_str, is_prune_base, is_insert_delimeters_in_string, is_print_docs, is_print_report_indirect, is_EAN13_by_order, is_BARCODE_by_order, is_BARCODE_by_document, is_drag_drop_terminals_dispatcher, is_once_queue_orders_inventarisation, is_queue_orders_inventarisation, is_inventarisation_warehouse, is_get_first_queue_priority, is_set_valid_terminal_ref, is_get_valid_terminal_ref, is_set_first_queue_priority, is_set_orders_type, is_delete_queue_order, is_get_text_info_integrator, is_get_base_icon_color_integrator, is_get_parent_text_info_integrator, is_get_parent_base_icon_color_integrator, is_get_parent_record_for_integrator, is_get_parent_line_for_integrator, is_fill_refs_for_integrator, is_exist_queue_order_with_terminal_for_delete, is_check_both_double_stack_queue, is_undefine_array_to_queue_oders_array, is_add_del_terminals_dispatcher, is_ccd, is_document_line_pallet_ms_up, is_document_pallet_ms_up, is_document_change_mu, is_exists_ext_par, is_extract_picture_from_DB, is_dbref, is_dbref_record, is_dbref_field, is_dbref_line, is_open_sertificate_in_shell, is_print_word_file, is_export_pdf_docs, is_save_image_from_field_to_pdf, is_save_image_from_field_to_pdf2, is_price_in_full, is_bcp_solution_active, is_bcp_solution_sos_turn_on, is_codec, is_keyWGH, is_auto_change_statuses, is_auto_create_moving_in_pickbyline, is_planned_creations_orders, is_future, is_test_block_write, is_check_online_terminals, is_serial_generate_on, is_SHA256_as_base64_string, инвентаризация, склад, терминалы, штрих-код, WMS, HTTP, email, SMS, IP, SYSLOG, математика, сравнение, тригонометрия, модуль, случайное, округление, is_GT, is_LT, is_GE, is_LE, is_EQ, is_NE, is_abs, is_infinity, is_random, is_random_get_key, is_random_set_key, is_min, is_max, is_eps, is_fpart, is_ipart, is_rounded, is_ceil, is_floor, is_zero, is_finite, is_mod, is_div, is_pow, is_log10, is_control_EAN_13, is_avg, is_in_radians, is_in_degrees, is_cos, is_sin, is_atan, is_atan2, is_sqrt, is_horizontal_angle
 
 в языке EME-L системные функции — это встроенные is-функции, реализованные на уровне ядра (C++) и доступные для вызова из EME-L кода. в системе EME.WMS системные функции обеспечивают доступ к свойствам окружения, управления интерфейсом, работе с цветами, транзакциям, филиалам и другим возможностям платформы.
 
@@ -4208,10 +4208,9 @@ is_SYS_mem_dump()
 **Возвращает**: `Boolean` — TRUE если включён режим тестирования.
 
 ```EME-L
-' В режиме тестирования UI не показывать MessageBox '
-If (is_ui_test_mode())
-    showMsg = FALSE
-End If
+' Проверить, включен ли режим тестирования UI (TRUE — режим тестирования) '
+testMode = is_ui_test_mode()
+' testMode = TRUE или FALSE '
 ```
 
 ---
@@ -5943,12 +5942,7 @@ is_send_email_report("Отчёт по ошибкам", q)
 ```EME-L
 ' Проверить режим кэширования (TRUE — кэширование включено) '
 result = is_web_request()
-
-' Условная логика при отключённом кэшировании '
-If (Not is_web_request())
-    ' Выполнить принудительное обновление данных '
-    is_refresh_data()
-End If
+' result = TRUE или FALSE '
 ```
 
 ---
@@ -6007,15 +6001,7 @@ is_set_request_name("Формирование отчёта по инвентар
 ```EME-L
 ' Проверить, выполняется ли код на сервере заданий (TRUE — сервер заданий) '
 result = is_server_job()
-
-' Разделение логики по контексту выполнения '
-If (is_server_job())
-    ' Логика сервера заданий '
-    is_process_background_task()
-Else
-    ' Логика клиента '
-    is_show_status("Ожидание обработки...")
-End If
+' result = TRUE или FALSE '
 ```
 
 ---
@@ -6042,6 +6028,777 @@ result = is_syslog_msg("EME.WMS", "5.0", 1, "История операций", 1
 
 ' Отправка критического сообщения '
 result = is_syslog_msg("", "", 2, "Безопасность", 3, "Обнаружена попытка несанкционированного доступа")
+```
+
+---
+
+## Математические функции
+
+### is_GT — больше чем
+
+Выполняет сравнение двух чисел с плавающей точкой и возвращает результат проверки "больше чем".
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Первое сравниваемое число |
+| args[1] | Вещественное число | Да | Второе сравниваемое число |
+
+**Возвращает**: `Boolean` — true если arg0 больше arg1, иначе false.
+
+```EME-L
+' Проверить, что 10.5 больше 3.2 (TRUE — больше) '
+result = is_GT(10.5, 3.2)
+' result = TRUE '
+```
+
+---
+
+### is_LT — меньше чем
+
+Выполняет сравнение двух чисел с плавающей точкой и возвращает результат проверки "меньше чем".
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Первое сравниваемое число |
+| args[1] | Вещественное число | Да | Второе сравниваемое число |
+
+**Возвращает**: `Boolean` — true если arg0 меньше arg1, иначе false.
+
+```EME-L
+' Проверить, что 3.2 меньше 10.5 (TRUE — меньше) '
+result = is_LT(3.2, 10.5)
+' result = TRUE '
+```
+
+---
+
+### is_GE — больше или равно
+
+Выполняет сравнение двух чисел с плавающей точкой и возвращает результат проверки "больше или равно".
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Первое сравниваемое число |
+| args[1] | Вещественное число | Да | Второе сравниваемое число |
+
+**Возвращает**: `Boolean` — true если arg0 больше или равно arg1, иначе false.
+
+```EME-L
+' Проверить, что 5.0 больше или равно 5.0 (TRUE — больше или равно) '
+result = is_GE(5.0, 5.0)
+' result = TRUE '
+```
+
+---
+
+### is_LE — меньше или равно
+
+Выполняет сравнение двух чисел с плавающей точкой и возвращает результат проверки "меньше или равно".
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Первое сравниваемое число |
+| args[1] | Вещественное число | Да | Второе сравниваемое число |
+
+**Возвращает**: `Boolean` — true если arg0 меньше или равно arg1, иначе false.
+
+```EME-L
+' Проверить, что 4.5 меньше или равно 5.0 (TRUE — меньше или равно) '
+result = is_LE(4.5, 5.0)
+' result = TRUE '
+```
+
+---
+
+### is_EQ — равно (с учетом EPS)
+
+Выполняет сравнение двух чисел с плавающей точкой на равенство с учетом допустимой погрешности EPS.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Первое сравниваемое число |
+| args[1] | Вещественное число | Да | Второе сравниваемое число |
+
+**Возвращает**: `Boolean` — true если arg0 равно arg1 с учетом погрешности, иначе false.
+
+```EME-L
+' Проверить равенство с учетом погрешности (TRUE — равны) '
+result = is_EQ(0.1 + 0.2, 0.3)
+' result = TRUE '
+```
+
+---
+
+### is_NE — не равно (с учетом EPS)
+
+Выполняет сравнение двух чисел с плавающей точкой на неравенство с учетом допустимой погрешности EPS.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Первое сравниваемое число |
+| args[1] | Вещественное число | Да | Второе сравниваемое число |
+
+**Возвращает**: `Boolean` — true если arg0 не равно arg1 с учетом погрешности, иначе false.
+
+```EME-L
+' Проверить неравенство с учетом погрешности (TRUE — не равны) '
+result = is_NE(1.0, 2.0)
+' result = TRUE '
+```
+
+---
+
+### is_abs — абсолютное значение
+
+Возвращает абсолютное значение (модуль) числа. Поддерживает целые типы (VT_I2, VT_I4, VT_I8) и вещественные типы (VT_R4, VT_R8).
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Целое число или вещественное число | Да | Число для вычисления модуля |
+
+**Возвращает**: `Целое число или вещественное число` — абсолютное значение аргумента. Тип результата соответствует типу входного аргумента. При неподдерживаемом типе данных выдает ошибку и возвращает 0.
+
+```EME-L
+' Вычислить модуль отрицательного числа '
+result = is_abs(-42)
+' result = 42 '
+
+' Вычислить модуль вещественного числа '
+result = is_abs(-3.14)
+' result = 3.14 '
+```
+
+---
+
+### is_infinity — бесконечность
+
+Возвращает специальное значение бесконечности (infinity), используемое для математических операций.
+
+**Параметры**: нет.
+
+**Возвращает**: `Вещественное число` — значение бесконечности.
+
+```EME-L
+' Получить значение бесконечности '
+inf = is_infinity()
+' inf = +infinity '
+```
+
+---
+
+### is_random — случайное число
+
+Генерирует псевдослучайное целое число в заданном диапазоне.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Целое число | Да | Верхняя граница диапазона при вызове с одним аргументом, или нижняя граница при вызове с двумя аргументами |
+| args[1] | Целое число | Нет | Верхняя граница диапазона при вызове с двумя аргументами |
+
+Вызов без аргументов вызывает ошибку too_rare (недостаточно аргументов).
+
+Вызов с одним аргументом возвращает случайное число от 0 до arg0-1.
+
+Вызов с двумя аргументами возвращает случайное число от arg0 до arg1-1.
+
+**Возвращает**: `Целое число` — псевдослучайное целое число в заданном диапазоне.
+
+```EME-L
+' Получить случайное число от 0 до 99 '
+result = is_random(100)
+' result = 42 (случайное значение) '
+
+' Получить случайное число от 10 до 19 '
+result = is_random(10, 20)
+' result = 15 (случайное значение) '
+```
+
+---
+
+### is_random_get_key — ключ генератора случайных чисел
+
+Возвращает текущий ключ генератора псевдослучайных чисел, который можно использовать для воспроизведения последовательности случайных чисел.
+
+**Параметры**: нет.
+
+**Возвращает**: `Целое число` — ключ генератора случайных чисел. 0 означает использование неповторяющегося рандома с временным ключом.
+
+```EME-L
+' Получить текущий ключ генератора '
+key = is_random_get_key()
+' key = 12345 (текущий ключ) '
+```
+
+---
+
+### is_random_set_key — установить ключ генератора
+
+Устанавливает ключ генератора псевдослучайных чисел для воспроизведения последовательности случайных чисел.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Целое число | Да | Ключ генератора случайных чисел. 0 означает использование неповторяющегося рандома с временным ключом |
+
+Примечание: функция не проверяет наличие лишних аргументов. Дополнительные аргументы передаются без ошибки, но игнорируются.
+
+**Возвращает**: `Целое число` — 0.
+
+```EME-L
+' Установить ключ для воспроизводимой последовательности '
+result = is_random_set_key(12345)
+' result = 0 '
+
+' Получить случайное число после установки ключа '
+value = is_random(100)
+' value = фиксированное значение для ключа 12345 '
+```
+
+---
+
+### is_min — минимальное значение
+
+Возвращает минимальное значение из всех переданных аргументов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Любой числовой тип | Да | Первое сравниваемое значение |
+| args[1] | Любой числовой тип | Да | Второе сравниваемое значение |
+| args[N] | Любой числовой тип | Нет | Дополнительные сравниваемые значения |
+
+**Возвращает**: `Любой числовой тип` — минимальное значение из всех аргументов. Тип соответствует типу минимального аргумента.
+
+```EME-L
+' Найти минимум из двух чисел '
+result = is_min(10, 5)
+' result = 5 '
+
+' Найти минимум из нескольких чисел '
+result = is_min(10, 5, 20, 3)
+' result = 3 '
+```
+
+---
+
+### is_max — максимальное значение
+
+Возвращает максимальное значение из всех переданных аргументов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Любой числовой тип | Да | Первое сравниваемое значение |
+| args[1] | Любой числовой тип | Да | Второе сравниваемое значение |
+| args[N] | Любой числовой тип | Нет | Дополнительные сравниваемые значения |
+
+**Возвращает**: `Любой числовой тип` — максимальное значение из всех аргументов. Тип соответствует типу максимального аргумента.
+
+```EME-L
+' Найти максимум из двух чисел '
+result = is_max(10, 5)
+' result = 10 '
+
+' Найти максимум из нескольких чисел '
+result = is_max(10, 5, 20, 3)
+' result = 20 '
+```
+
+---
+
+### is_eps — константа EPS
+
+Возвращает константу EPS (0.00000001), используемую для сравнения чисел с плавающей точкой с учетом допустимой погрешности.
+
+**Параметры**: нет.
+
+**Возвращает**: `Вещественное число` — значение константы EPS 0.00000001.
+
+```EME-L
+' Получить значение константы EPS '
+eps = is_eps()
+' eps = 0.00000001 '
+```
+
+---
+
+### is_fpart — дробная часть
+
+Возвращает дробную часть вещественного числа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Исходное число |
+
+**Возвращает**: `Вещественное число` — дробная часть числа, знак которой совпадает со знаком исходного числа.
+
+```EME-L
+' Получить дробную часть числа '
+result = is_fpart(3.75)
+' result = 0.75 '
+
+' Дробная часть отрицательного числа '
+result = is_fpart(-3.75)
+' result = -0.75 '
+```
+
+---
+
+### is_ipart — целая часть
+
+Возвращает целую часть вещественного числа. При дробной части, близкой к 1.0 (в пределах EPS), выполняет коррекцию целой части для компенсации ошибок округления.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Исходное число |
+
+**Возвращает**: `Вещественное число` — целая часть числа с коррекцией погрешности округления.
+
+```EME-L
+' Получить целую часть числа '
+result = is_ipart(3.75)
+' result = 3 '
+
+' Целая часть с коррекцией округления '
+result = is_ipart(2.999999999)
+' result = 3 '
+```
+
+---
+
+### is_rounded — округление
+
+Округляет вещественное число до заданного количества знаков после запятой по правилам математического округления.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Округляемое число |
+| args[1] | Целое число | Да | Количество знаков после запятой. Положительное значение округляет дробную часть, отрицательное округляет целую часть |
+
+**Возвращает**: `Вещественное число` — округленное число.
+
+```EME-L
+' Округлить до двух знаков после запятой '
+result = is_rounded(3.14159, 2)
+' result = 3.14 '
+
+' Округлить до целых '
+result = is_rounded(3.7, 0)
+' result = 4 '
+
+' Округлить до десятков '
+result = is_rounded(123, -1)
+' result = 120 '
+```
+
+---
+
+### is_ceil — округление вверх
+
+Округляет вещественное число вверх до ближайшего целого числа, большего или равного исходному.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Округляемое число |
+
+Примечание: функция не выполняет проверку количества переданных аргументов. Вызов без аргументов приводит к неопределенному поведению. Лишние аргументы игнорируются.
+
+**Возвращает**: `Целое число` — наименьшее целое число, большее или равное arg0.
+
+```EME-L
+' Округлить вверх до ближайшего целого '
+result = is_ceil(3.2)
+' result = 4 '
+
+' Округлить вверх отрицательное число '
+result = is_ceil(-3.2)
+' result = -3 '
+```
+
+---
+
+### is_floor — округление вниз
+
+Округляет вещественное число вниз до ближайшего целого числа, меньшего или равного исходному.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Округляемое число |
+
+**Возвращает**: `Вещественное число` — наибольшее целое число, меньшее или равное arg0.
+
+```EME-L
+' Округлить вниз до ближайшего целого '
+result = is_floor(3.8)
+' result = 3 '
+
+' Округлить вниз отрицательное число '
+result = is_floor(-3.2)
+' result = -4 '
+```
+
+---
+
+### is_zero — проверка на ноль
+
+Проверяет, является ли число нулем или близким к нулю в пределах заданной погрешности.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Проверяемое число |
+| args[1] | Вещественное число | Нет | Порог сравнения. По умолчанию равно EPS (0.00000001) |
+
+**Возвращает**: `Boolean` — true если модуль arg0 меньше заданного порога, иначе false.
+
+```EME-L
+' Проверить, что число близко к нулю (TRUE — близко к нулю) '
+result = is_zero(0.000000001)
+' result = TRUE '
+
+' Проверить с заданным порогом '
+result = is_zero(0.01, 0.1)
+' result = TRUE '
+```
+
+---
+
+### is_finite — проверка на конечность
+
+Проверяет, является ли вещественное число конечным (не бесконечностью и не NaN).
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Проверяемое число |
+
+**Возвращает**: `Boolean` — true если число является конечным нормализованным значением, false если число является бесконечностью, NaN или денормализованным.
+
+```EME-L
+' Проверить, что число конечно (TRUE — конечно) '
+result = is_finite(3.14)
+' result = TRUE '
+
+' Проверить бесконечность '
+result = is_finite(is_infinity())
+' result = FALSE '
+```
+
+---
+
+### is_mod — остаток от деления
+
+Вычисляет остаток от целочисленного деления первого аргумента на второй. При делении на ноль возвращает 0.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Целое число | Да | Делимое |
+| args[1] | Целое число | Да | Делитель |
+
+**Возвращает**: `Целое число` — остаток от деления arg0 на arg1. При arg1 равном 0 возвращает 0.
+
+```EME-L
+' Вычислить остаток от деления '
+result = is_mod(17, 5)
+' result = 2 '
+
+' Остаток при делении на ноль '
+result = is_mod(10, 0)
+' result = 0 '
+```
+
+---
+
+### is_div — целочисленное деление
+
+Выполняет целочисленное деление первого аргумента на второй. При делении на ноль возвращает 0.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Целое число | Да | Делимое |
+| args[1] | Целое число | Да | Делитель |
+
+**Возвращает**: `Целое число` — целая часть от деления arg0 на arg1. При arg1 равном 0 возвращает 0.
+
+```EME-L
+' Выполнить целочисленное деление '
+result = is_div(17, 5)
+' result = 3 '
+
+' Целочисленное деление на ноль '
+result = is_div(10, 0)
+' result = 0 '
+```
+
+---
+
+### is_pow — возведение в степень
+
+Возводит число в заданную степень. Если оба аргумента имеют целый тип (VT_I4), возвращает целый результат, иначе вещественный.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Целое число или вещественное число | Да | Основание степени |
+| args[1] | Целое число или вещественное число | Да | Показатель степени |
+
+**Возвращает**: `Целое число или вещественное число` — результат возведения arg0 в степень arg1. Тип результата целое число если оба аргумента целые, иначе вещественное число.
+
+```EME-L
+' Возвести число в степень '
+result = is_pow(2, 10)
+' result = 1024 '
+
+' Возвести вещественное число в степень '
+result = is_pow(2.0, 3.0)
+' result = 8.0 '
+```
+
+---
+
+### is_log10 — десятичный логарифм
+
+Вычисляет десятичный логарифм числа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Число для вычисления логарифма. Должно быть положительным |
+
+**Возвращает**: `Вещественное число` — десятичный логарифм arg0.
+
+```EME-L
+' Вычислить десятичный логарифм '
+result = is_log10(100)
+' result = 2 '
+
+' Логарифм числа 10 '
+result = is_log10(10)
+' result = 1 '
+```
+
+---
+
+### is_control_EAN_13 — контрольная цифра EAN-13
+
+Вычисляет контрольную цифру штрих-кода EAN-13 по первым 12 цифрам кода.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Строка | Да | Строка из 12 цифр штрих-кода EAN-13 |
+
+**Возвращает**: `Целое число` — контрольная цифра EAN-13, вычисленная по алгоритму взвешенного суммирования (от 0 до 9).
+
+```EME-L
+' Вычислить контрольную цифру EAN-13 '
+result = is_control_EAN_13("460123456789")
+' result = 2 '
+```
+
+---
+
+### is_avg — среднее арифметическое
+
+Вычисляет среднее арифметическое положительных (больше 0) значений из переданных аргументов. Аргумент arg0 игнорируется (требуется минимум 2 аргумента всего).
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Любой числовой тип | Да | Первый аргумент, игнорируется при вычислении |
+| args[1] | Вещественное число | Да | Первое учитываемое значение |
+| args[N] | Вещественное число | Нет | Дополнительные учитываемые значения |
+
+Возвращаемое значение зависит от количества положительных значений среди arg1...argN:
+
+- При count > 1: среднее арифметическое всех положительных значений (вещественное число)
+- При count == 1: единственное положительное значение (вещественное число)
+- При count == 0: 0 (вещественное число)
+
+**Возвращает**: `Вещественное число` — среднее арифметическое положительных значений.
+
+```EME-L
+' Вычислить среднее положительных значений '
+result = is_avg(0, 10, 20, 30)
+' result = 20 '
+
+' Среднее с одним положительным значением '
+result = is_avg(0, 5, -1)
+' result = 5 '
+
+' Среднее без положительных значений '
+result = is_avg(0, -1, -2)
+' result = 0 '
+```
+
+---
+
+### is_in_radians — градусы в радианы
+
+Преобразует угол из градусов в радианы.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Угол в градусах |
+
+**Возвращает**: `Вещественное число` — угол в радианах, вычисленный по формуле M_PI * arg0 / 180.
+
+```EME-L
+' Преобразовать 180 градусов в радианы '
+result = is_in_radians(180)
+' result = 3.14159... '
+
+' Преобразовать 90 градусов в радианы '
+result = is_in_radians(90)
+' result = 1.57079... '
+```
+
+---
+
+### is_in_degrees — радианы в градусы
+
+Преобразует угол из радианов в градусы.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Угол в радианах |
+
+**Возвращает**: `Вещественное число` — угол в градусы, вычисленный по формуле 180 * arg0 / M_PI.
+
+```EME-L
+' Преобразовать PI радиан в градусы '
+result = is_in_degrees(3.14159)
+' result = 180 '
+
+' Преобразовать PI/2 радиан в градусы '
+result = is_in_degrees(1.57079)
+' result = 90 '
+```
+
+---
+
+### is_cos — косинус
+
+Вычисляет косинус угла.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Угол в радианах |
+
+**Возвращает**: `Вещественное число` — косинус угла arg0 (в диапазоне от -1 до 1).
+
+```EME-L
+' Вычислить косинус 0 радиан '
+result = is_cos(0)
+' result = 1 '
+
+' Вычислить косинус PI радиан '
+result = is_cos(3.14159)
+' result = -1 '
+```
+
+---
+
+### is_sin — синус
+
+Вычисляет синус угла.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Угол в радианах |
+
+**Возвращает**: `Вещественное число` — синус угла arg0 (в диапазоне от -1 до 1).
+
+```EME-L
+' Вычислить синус 0 радиан '
+result = is_sin(0)
+' result = 0 '
+
+' Вычислить синус PI/2 радиан '
+result = is_sin(1.57079)
+' result = 1 '
+```
+
+---
+
+### is_atan — арктангенс
+
+Вычисляет арктангенс числа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Значение для вычисления арктангенса |
+
+**Возвращает**: `Вещественное число` — арктангенс arg0 в радианах (в диапазоне от -M_PI/2 до M_PI/2).
+
+```EME-L
+' Вычислить арктангенс 0 '
+result = is_atan(0)
+' result = 0 '
+
+' Вычислить арктангенс 1 '
+result = is_atan(1)
+' result = 0.78539... '
+```
+
+---
+
+### is_atan2 — арктангенс с учетом квадранта
+
+Вычисляет арктангенс частного двух чисел с учетом знаков обоих аргументов, что позволяет определить квадрант результата.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Числитель Y |
+| args[1] | Вещественное число | Да | Знаменатель X |
+
+**Возвращает**: `Вещественное число` — арктангенс Y/X в радианах с учетом квадранта (в диапазоне от -M_PI до M_PI).
+
+```EME-L
+' Вычислить арктангенс с учетом квадранта '
+result = is_atan2(1, 1)
+' result = 0.78539... (45 градусов) '
+
+' Арктангенс во втором квадранте '
+result = is_atan2(1, -1)
+' result = 2.35619... (135 градусов) '
+```
+
+---
+
+### is_sqrt — квадратный корень
+
+Вычисляет квадратный корень из числа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Вещественное число | Да | Число для извлечения квадратного корня. Должно быть неотрицательным |
+
+**Возвращает**: `Вещественное число` — квадратный корень из arg0.
+
+```EME-L
+' Вычислить квадратный корень '
+result = is_sqrt(16)
+' result = 4 '
+
+' Квадратный корень из 2 '
+result = is_sqrt(2)
+' result = 1.41421... '
+```
+
+---
+
+### is_horizontal_angle — горизонтальные углы поворота
+
+Вычисляет горизонтальные углы поворота (Euler angles) для 3D вектора направления. Модифицирует переданный массив, записывая в него углы поворота.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Ссылка на массив | Да | Ссылка на массив из трех элементов, содержащий компоненты 3D вектора разницы между целью и узлом [X, Y, Z] |
+
+Побочный эффект: модифицирует массив arg0, заменяя его содержимое на углы Эйлера [X, Y, Z] в градусах, где X — горизонтальное вращение (pitch), Y — вертикальное вращение (yaw), Z — крен (roll).
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Вычислить углы поворота для 3D вектора '
+arr = is_array()
+is_add(arr, 1)
+is_add(arr, 0)
+is_add(arr, 0)
+is_horizontal_angle(arr)
+' arr теперь содержит [0, 90, 0] — углы Эйлера в градусах '
 ```
 
 ---
