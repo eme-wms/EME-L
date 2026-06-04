@@ -2098,9 +2098,10 @@ is_eximport("C:\\Temp", "data.bin", Arr, 1)
 **Возвращает**: `Boolean` — `TRUE` в debug-режиме.
 
 ```EME-L
-' Проверить режим '
+' В debug-режиме включить профилирование '
 If (is_debug())
-    is_catastrophic_log("Debug-режим")
+    is_profile_name("Отладочная_сессия")
+    is_profile_point("Старт_обработки")
 End If
 ```
 
