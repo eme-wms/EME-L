@@ -1,6 +1,6 @@
 # Системные функции EME-L (is_System)
 
-> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_path_to_dir, is_path_to_file_title, is_path_to_file_name, is_path_to_file_ext, is_get_temp_file_path, is_make_dir_tree, is_ini_query_setting, is_ini_store_setting, is_copy_file, is_move_file, is_rename_file, is_set_file_creation_date, is_set_file_modify_date, is_valid_filename, is_ensure_last_slash, is_file_exists, is_delete_file, is_directory, is_empty_directory, is_ensure_path_exists, is_path_exists, is_file_size, is_file_inuse, is_file_createdate, is_file_modifydate, is_delete_dir, is_copy_dir, is_create_shortcut, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD, is_vendor, is_rounded_week, is_rounded_date, is_production_date, is_default_vendor, is_turn_EANCOM_messages, is_force_document_export, is_base_curr, is_column, is_enter_value_dialog, is_convert_string_to_date, is_save_ware_timer_param, is_transit_ware, is_inventarisation, is_inventarisation_by_vendor, is_vendor_inventarisation, is_user_vendor, is_inventarisation_off, is_run_free_browser, is_run_free_browser_by_str, is_prune_base, is_insert_delimeters_in_string, is_print_docs, is_print_report_indirect, is_EAN13_by_order, is_BARCODE_by_order, is_BARCODE_by_document, is_drag_drop_terminals_dispatcher, is_once_queue_orders_inventarisation, is_queue_orders_inventarisation, is_inventarisation_warehouse, is_get_first_queue_priority, is_set_valid_terminal_ref, is_get_valid_terminal_ref, is_set_first_queue_priority, is_set_orders_type, is_delete_queue_order, is_get_text_info_integrator, is_get_base_icon_color_integrator, is_get_parent_text_info_integrator, is_get_parent_base_icon_color_integrator, is_get_parent_record_for_integrator, is_get_parent_line_for_integrator, is_fill_refs_for_integrator, is_exist_queue_order_with_terminal_for_delete, is_check_both_double_stack_queue, is_undefine_array_to_queue_oders_array, is_add_del_terminals_dispatcher, is_ccd, is_document_line_pallet_ms_up, is_document_pallet_ms_up, is_document_change_mu, is_exists_ext_par, is_extract_picture_from_DB, is_dbref, is_dbref_record, is_dbref_field, is_dbref_line, is_open_sertificate_in_shell, is_print_word_file, is_export_pdf_docs, is_save_image_from_field_to_pdf, is_save_image_from_field_to_pdf2, is_price_in_full, is_bcp_solution_active, is_bcp_solution_sos_turn_on, is_codec, is_keyWGH, is_auto_change_statuses, is_auto_create_moving_in_pickbyline, is_planned_creations_orders, is_future, is_test_block_write, is_check_online_terminals, is_serial_generate_on, is_SHA256_as_base64_string, инвентаризация, склад, терминалы, штрих-код, WMS
+> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_path_to_dir, is_path_to_file_title, is_path_to_file_name, is_path_to_file_ext, is_get_temp_file_path, is_make_dir_tree, is_ini_query_setting, is_ini_store_setting, is_copy_file, is_move_file, is_rename_file, is_set_file_creation_date, is_set_file_modify_date, is_valid_filename, is_ensure_last_slash, is_file_exists, is_delete_file, is_directory, is_empty_directory, is_ensure_path_exists, is_path_exists, is_file_size, is_file_inuse, is_file_createdate, is_file_modifydate, is_delete_dir, is_copy_dir, is_create_shortcut, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, is_httptofile, is_inet_ntoa, is_inet_addr, is_email_message, is_test_email_message, is_send_catastrophic_log, is_version, is_send_email_report, is_web_request, is_sms_message, is_set_request_name, is_server_job, is_syslog_msg, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD, is_vendor, is_rounded_week, is_rounded_date, is_production_date, is_default_vendor, is_turn_EANCOM_messages, is_force_document_export, is_base_curr, is_column, is_enter_value_dialog, is_convert_string_to_date, is_save_ware_timer_param, is_transit_ware, is_inventarisation, is_inventarisation_by_vendor, is_vendor_inventarisation, is_user_vendor, is_inventarisation_off, is_run_free_browser, is_run_free_browser_by_str, is_prune_base, is_insert_delimeters_in_string, is_print_docs, is_print_report_indirect, is_EAN13_by_order, is_BARCODE_by_order, is_BARCODE_by_document, is_drag_drop_terminals_dispatcher, is_once_queue_orders_inventarisation, is_queue_orders_inventarisation, is_inventarisation_warehouse, is_get_first_queue_priority, is_set_valid_terminal_ref, is_get_valid_terminal_ref, is_set_first_queue_priority, is_set_orders_type, is_delete_queue_order, is_get_text_info_integrator, is_get_base_icon_color_integrator, is_get_parent_text_info_integrator, is_get_parent_base_icon_color_integrator, is_get_parent_record_for_integrator, is_get_parent_line_for_integrator, is_fill_refs_for_integrator, is_exist_queue_order_with_terminal_for_delete, is_check_both_double_stack_queue, is_undefine_array_to_queue_oders_array, is_add_del_terminals_dispatcher, is_ccd, is_document_line_pallet_ms_up, is_document_pallet_ms_up, is_document_change_mu, is_exists_ext_par, is_extract_picture_from_DB, is_dbref, is_dbref_record, is_dbref_field, is_dbref_line, is_open_sertificate_in_shell, is_print_word_file, is_export_pdf_docs, is_save_image_from_field_to_pdf, is_save_image_from_field_to_pdf2, is_price_in_full, is_bcp_solution_active, is_bcp_solution_sos_turn_on, is_codec, is_keyWGH, is_auto_change_statuses, is_auto_create_moving_in_pickbyline, is_planned_creations_orders, is_future, is_test_block_write, is_check_online_terminals, is_serial_generate_on, is_SHA256_as_base64_string, инвентаризация, склад, терминалы, штрих-код, WMS, HTTP, email, SMS, IP, SYSLOG
 
 в языке EME-L системные функции — это встроенные is-функции, реализованные на уровне ядра (C++) и доступные для вызова из EME-L кода. в системе EME.WMS системные функции обеспечивают доступ к свойствам окружения, управления интерфейсом, работе с цветами, транзакциям, филиалам и другим возможностям платформы.
 
@@ -5729,6 +5729,319 @@ is_future(0, Date(2025, 1, 1))
 ```EME-L
 ' Проверить генератор '
 genOn = is_serial_generate_on()
+```
+
+---
+
+## Интернет и коммуникации
+
+### is_httptofile — HTTP-запрос с записью в файл
+
+выполняет HTTP-запрос к указанному серверу и записывает ответ сервера в заданный файл. в системе EME.WMS используется для загрузки данных с внешних HTTP-серверов и сохранения результата на диск.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Адрес HTTP-сервера (IP или доменное имя) |
+| args[1] | Integer | Да | Порт прослушивания сервера |
+| args[2] | String | Да | Ресурс на HTTP-сервере (URL) |
+| args[3] | Integer | Да | Тайм-аут ожидания отклика в секундах. `0` или пустое значение — тайм-аут по умолчанию, задаваемый ядром |
+| args[4] | String | Да | Полное имя файла для записи ответа сервера. Если пустое — генерируется ошибка |
+| args[5+] | String | Нет | Дополнительные параметры запроса в формате `"имя=значение"`. Можно указать произвольное количество |
+
+**Возвращает**: `String` — результат выполнения запроса:
+- `"Ok"` — запрос выполнен успешно, данные записаны в файл
+- `"Ошибка при обращении к HTTP серверу"` — общая ошибка HTTP-запроса
+- `"Не найден HTTP сервер"` — сервер не найден
+- `"На HTTP сервере не найдена запрашиваемая страница"` — запрашиваемый URL не найден
+- `"Истек timeout при обращении к HTTP-серверу"` — превышен тайм-аут ожидания ответа
+- `<строка_перенаправления>` — адрес перенаправления (при редиректе)
+- `"Неизвестная ошибка при обращении к HTTP серверу"` — неизвестная ошибка
+
+```EME-L
+' Выполнить HTTP-запрос и сохранить ответ в файл '
+result = is_httptofile("192.168.1.10", 8080, "/api/data", 30, "C:\\Temp\\response.xml")
+' result = "Ok" при успехе '
+
+' Запрос с дополнительными параметрами '
+result = is_httptofile("api.example.com", 80, "/export", 60, "C:\\Data\\export.csv", "format=csv", "date=today")
+```
+
+---
+
+### is_inet_ntoa — преобразование IP-числа в строку
+
+преобразует IP-адрес, представленный в виде 32-битного целого числа, в строковое представление в точечно-десятичной нотации. в языке EME-L используется для форматирования IP-адресов, полученных из числовых полей базы данных.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | IP-адрес в виде целого числа |
+
+**Возвращает**: `String` — строковое представление IP-адреса. Например, при передаче значения `2130706433` (`0x7F000001`) возвращается `"127.0.0.1"`.
+
+```EME-L
+' Преобразовать IP-число в строку (result = "127.0.0.1") '
+result = is_inet_ntoa(2130706433)
+
+' Преобразовать локальный адрес '
+result = is_inet_ntoa(3232235777)
+' result = "192.168.1.1" '
+```
+
+---
+
+### is_inet_addr — преобразование IP-строки в число
+
+преобразует строковое представление IP-адреса или доменное имя в 32-битное целое число. в языке EME-L используется для преобразования текстовых IP-адресов в числовой формат для сетевых операций.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | IP-адрес в строковом виде (например, `"192.168.1.1"`) или доменное имя |
+
+**Возвращает**: `Integer` — IP-адрес в виде целого числа. Если передан недопустимый адрес или не удалось разрешить доменное имя, возвращается `-1`.
+
+```EME-L
+' Преобразовать строку IP в число (result = 3232235777) '
+result = is_inet_addr("192.168.1.1")
+
+' Преобразовать доменное имя '
+result = is_inet_addr("localhost")
+' result = 2130706433 '
+
+' Ошибочный адрес '
+result = is_inet_addr("invalid")
+' result = -1 '
+```
+
+---
+
+### is_email_message — асинхронная отправка email
+
+отправляет электронное письмо. Отправка всегда выполняется асинхронно (в отдельном потоке), независимо от значения параметра "игнорируется". в системе EME.WMS используется для уведомлений и автоматической рассылки отчётов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Адрес электронной почты отправителя |
+| args[1] | String | Нет | Отображаемое имя отправителя. Если не задано или пустое — `"Без имени"` |
+| args[2] | String | Да | Адрес электронной почты получателя. Если пустой — отправка не выполняется |
+| args[3] | String | Нет | Отображаемое имя получателя. Если не задано — используется значение `args[2]` |
+| args[4] | String | Нет | Тема письма. Если не задана или пустая — `"Без темы"` |
+| args[5] | String | Да | Текстовое содержимое письма |
+| args[6] | Boolean | Нет | Признак формата текста: `FALSE` — простой текст (по умолчанию), `TRUE` — HTML-формат |
+| args[7] | String | Нет | Путь к прикреплённому файлу или несколько путей, разделённых символом `"|"`. По умолчанию пустая строка (вложения отсутствуют) |
+| args[8] | Boolean | Нет | Параметр зарезервирован и игнорируется. Принудительно устанавливается в `1` (асинхронный режим) |
+| args[9] | Boolean | Нет | Разрешить отправку в любом режиме работы: `FALSE` — только в сетевом режиме (по умолчанию), `TRUE` — отправка выполняется всегда |
+
+**Возвращает**: `Integer` — `1` — отправка успешно поставлена в очередь (асинхронный поток запущен); `0` — отправка не выполнена (адрес получателя пуст или ошибка выделения памяти).
+
+```EME-L
+' Отправить простое письмо '
+result = is_email_message("sender@example.com", "Система", "admin@example.com", "Администратор", "Отчёт", "Текст отчёта")
+' result = 1 при успешной постановке в очередь '
+
+' Отправить HTML-письмо с вложением '
+result = is_email_message("noreply@wms.local", "EME.WMS", "user@company.ru", "", "Уведомление", "<h1>Важно</h1>", TRUE, "C:\\Reports\\daily.pdf")
+```
+
+---
+
+### is_test_email_message — отправка email с выбором режима
+
+отправляет электронное письмо с возможностью выбора режима отправки (синхронного или асинхронного). в языке EME-L используется для отладки и тестирования почтовой подсистемы, когда требуется гарантированный результат отправки.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Адрес электронной почты отправителя |
+| args[1] | String | Нет | Отображаемое имя отправителя. Если не задано или пустое — `"Без имени"` |
+| args[2] | String | Да | Адрес электронной почты получателя. Если пустой — отправка не выполняется |
+| args[3] | String | Нет | Отображаемое имя получателя. Если не задано — используется значение `args[2]` |
+| args[4] | String | Нет | Тема письма. Если не задана или пустая — `"Без темы"` |
+| args[5] | String | Да | Текстовое содержимое письма |
+| args[6] | Boolean | Нет | Признак формата текста: `FALSE` — простой текст (по умолчанию), `TRUE` — HTML-формат |
+| args[7] | String | Нет | Путь к прикреплённому файлу или несколько путей, разделённых символом `"|"`. По умолчанию пустая строка |
+| args[8] | Boolean | Нет | Режим отправки: `FALSE` — синхронная отправка с ожиданием результата; `TRUE` — асинхронная отправка в отдельном потоке (по умолчанию) |
+| args[9] | Boolean | Нет | Разрешить отправку в любом режиме работы: `FALSE` — только в сетевом режиме (по умолчанию), `TRUE` — отправка выполняется всегда |
+
+**Возвращает**: `Integer` — при асинхронной отправке: `1` — задача поставлена в очередь, `0` — отправка не выполнена; при синхронной отправке: `1` — письмо успешно отправлено, `0` — отправка не удалась.
+
+```EME-L
+' Синхронная отправка для проверки соединения '
+result = is_test_email_message("test@local", "", "admin@local", "", "Тест", "Проверка связи", FALSE, "", FALSE)
+' result = 1 при успешной отправке '
+
+' Асинхронная отправка с HTML '
+result = is_test_email_message("system@wms", "EME.WMS", "operator@company.ru", "", "Статус", "<b>Готово</b>", TRUE, "", TRUE)
+```
+
+---
+
+### is_send_catastrophic_log — отправка катастрофического сообщения
+
+отправляет катастрофическое сообщение разработчику системы. в системе EME.WMS используется для экстренного уведомления о критических ошибках и сбоях, требующих немедленного вмешательства.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Тема сообщения |
+| args[1] | String | Нет | Текст сообщения. Если не задан — используется значение параметра `args[0]` |
+
+**Возвращает**: `Integer` — `1` — сообщение отправлено; `0` — отправка не выполнена.
+
+```EME-L
+' Отправить катастрофическое сообщение '
+result = is_send_catastrophic_log("Критическая ошибка БД", "Потеряно соединение с сервером базы данных")
+' result = 1 при успешной отправке '
+
+' Отправка с автоматическим текстом (текст = тема) '
+result = is_send_catastrophic_log("Сервер заданий недоступен")
+```
+
+---
+
+### is_version — объект связи с репозиторием версий
+
+возвращает объект связи с репозиторием версий. в языке EME-L используется для программного доступа к системе контроля версий и управления конфигурациями.
+
+**Параметры**: нет.
+
+**Возвращает**: `Reference` — ссылка на объект связи с репозиторием версий.
+
+```EME-L
+' Получить объект версий '
+verObj = is_version()
+' verObj — ссылка на объект репозитория версий '
+```
+
+---
+
+### is_send_email_report — отправка отчёта разработчику
+
+формирует и отправляет отчёт разработчику на основе данных объекта запроса. в системе EME.WMS используется для автоматической отправки диагностических отчётов и данных запросов команде разработки.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Название отчёта, отображаемое в теме письма |
+| args[1] | Reference | Да | Ссылка на объект запроса. Данные запроса сериализуются в текстовый формат с разделителями `";"` и включаются в тело письма |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Сформировать и отправить отчёт '
+q = Object("Query")
+' ... заполнение запроса ... '
+is_send_email_report("Отчёт по ошибкам", q)
+```
+
+---
+
+### is_web_request — проверка кэширования на HTTP-сервере
+
+проверяет, включено ли кэширование объектов на сервере HTTP. в языке EME-L используется для определения режима работы веб-сервера и принятия решений о стратегии кэширования.
+
+**Параметры**: нет.
+
+**Возвращает**: `Boolean` — `TRUE` — кэширование объектов на HTTP-сервере включено; `FALSE` — кэширование отключено.
+
+```EME-L
+' Проверить режим кэширования (TRUE — кэширование включено) '
+result = is_web_request()
+
+' Условная логика при отключённом кэшировании '
+If (Not is_web_request())
+    ' Выполнить принудительное обновление данных '
+    is_refresh_data()
+End If
+```
+
+---
+
+### is_sms_message — отправка SMS
+
+отправляет SMS-сообщение через сервер сообщений EME. в системе EME.WMS используется для экстренных уведомлений операторам и администраторам через SMS-канал.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Текст SMS-сообщения |
+| args[1] | Boolean | Нет | Флаг немедленной отправки: `FALSE` — сообщение помещается в очередь сервера сообщений (по умолчанию); `TRUE` — сообщение отправляется немедленно, минуя очередь |
+| args[2] | String | Нет | Адрес(а) получателя, разделённые запятой. Можно указать до 100 номеров за один запрос. По умолчанию пустая строка — выбор получателя осуществляется сервером сообщений |
+
+**Возвращает**: `Boolean` — `TRUE` — сообщение успешно добавлено в очередь сервера сообщений; `FALSE` — не удалось добавить сообщение в очередь.
+
+```EME-L
+' Отправить SMS в очередь '
+result = is_sms_message("Склад переполнен. Требуется вмешательство.")
+' result = TRUE при успешной постановке в очередь '
+
+' Немедленная отправка на конкретные номера '
+result = is_sms_message("Критическая ошибка сервера", TRUE, "+79001234567,+79007654321")
+```
+
+---
+
+### is_set_request_name — установка имени HTTP-запроса
+
+устанавливает произвольное имя для текущего HTTP-запроса на сервере. Используется для идентификации и трассировки запросов (аналогично имени транзакции). в системе EME.WMS применяется для мониторинга и логирования HTTP-запросов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Произвольное имя запроса, отображаемое в статистике и журналах сервера |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Установить имя текущего запроса '
+is_set_request_name("Загрузка остатков")
+
+' Имя для отчётного запроса '
+is_set_request_name("Формирование отчёта по инвентаризации")
+```
+
+---
+
+### is_server_job — проверка сервера заданий
+
+определяет, выполняется ли текущий код на сервере заданий. в языке EME-L используется для разделения логики выполнения между клиентским контекстом и сервером заданий.
+
+**Параметры**: нет.
+
+**Возвращает**: `Boolean` — `TRUE` — код выполняется на сервере заданий; `FALSE` — код выполняется в другом контексте.
+
+```EME-L
+' Проверить, выполняется ли код на сервере заданий (TRUE — сервер заданий) '
+result = is_server_job()
+
+' Разделение логики по контексту выполнения '
+If (is_server_job())
+    ' Логика сервера заданий '
+    is_process_background_task()
+Else
+    ' Логика клиента '
+    is_show_status("Ожидание обработки...")
+End If
+```
+
+---
+
+### is_syslog_msg — отправка диагностики в формате SYSLOG
+
+отправляет диагностическое сообщение в формате SYSLOG на сервер ArcSight (аналогично записи в историю операций). в системе EME.WMS используется для централизованного сбора диагностики и мониторинга безопасности.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Нет | Название продукта. Если пусто — `"EME.WMS"` |
+| args[1] | String | Нет | Версия продукта. Если пусто — `"5.0"` |
+| args[2] | Integer | Да | Номер тома истории операций |
+| args[3] | String | Да | Описание тома истории операций |
+| args[4] | Integer | Да | Уровень важности сообщения: `0` — Low (низкий), `1` — Medium (средний), `2` — High (высокий), `3` — VeryHigh (очень высокий) |
+| args[5] | String | Да | Текст диагностического сообщения |
+
+**Возвращает**: `Boolean` — `TRUE` — диагностическое сообщение успешно отправлено; `FALSE` — отправка не выполнена.
+
+```EME-L
+' Отправить диагностику среднего уровня '
+result = is_syslog_msg("EME.WMS", "5.0", 1, "История операций", 1, "Пользователь выполнил вход в систему")
+' result = TRUE при успешной отправке '
+
+' Отправка критического сообщения '
+result = is_syslog_msg("", "", 2, "Безопасность", 3, "Обнаружена попытка несанкционированного доступа")
 ```
 
 ---
