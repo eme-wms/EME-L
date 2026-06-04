@@ -1,6 +1,6 @@
 # Системные функции EME-L (is_System)
 
-> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD
+> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD
 
 в языке EME-L системные функции — это встроенные is-функции, реализованные на уровне ядра (C++) и доступные для вызова из EME-L кода. в системе EME.WMS системные функции обеспечивают доступ к свойствам окружения, управления интерфейсом, работе с цветами, транзакциям, филиалам и другим возможностям платформы.
 
@@ -176,6 +176,427 @@ is_show_popup_window("Новое задание", "DialogOrders", 1, 0)
 
 ```EME-L
 is_show_email_icon(TRUE)
+```
+
+---
+
+## Диалоги
+
+### is_enter_string — ввод строки через диалог
+
+GUI-функция. Выводит диалоговое окно для ввода строки текста и возвращает введённую строку. Если пользователь нажимает клавишу ESC, возвращается пустая строка.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Заголовок диалогового окна |
+| args[1] | String | Нет | Начальный текст в поле ввода. По умолчанию пустая строка |
+
+**Возвращает**: `String` — введённый пользователем текст. Пустая строка при нажатии ESC.
+
+```EME-L
+' Запросить имя пользователя через диалог '
+name = is_enter_string("Введите имя", "Иванов")
+' name = "Иванов" если пользователь подтвердил, или "" при отмене '
+```
+
+---
+
+### is_dlg_var — значение переменной диалога
+
+GUI-функция. Возвращает значение переменной диалога. В веб-контексте значение читается из прокси-объекта веб-диалога, в стандартном контексте — из текущего или указанного диалога в иерархии. При отсутствии переменной поведение определяется режимом контроля.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя переменной диалога |
+| args[1] | Integer | Нет | Уровень диалога в иерархии. По умолчанию 0 (текущий диалог) |
+| args[2] | Integer | Нет | Режим контроля при отсутствии переменной: 0 — генерировать ошибку (по умолчанию), 1 — вернуть пустое значение |
+
+**Возвращает**: тип зависит от типа переменной — `String`, `Integer`, `Date`, `Time`, `Float` или `Boolean`.
+
+```EME-L
+' Получить значение переменной MyVar из текущего диалога '
+val = is_dlg_var("MyVar")
+
+' Получить переменную из родительского диалога, без ошибки если не найдена '
+val = is_dlg_var("ParentVar", 1, 1)
+```
+
+---
+
+### is_dialog — запуск модального диалога
+
+GUI-функция. Запускает указанный диалог в модальном режиме и возвращает код завершения модального диалога.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Софтовое имя диалога |
+| args[1] | Integer | Нет | Базовая строка диалога. По умолчанию NEW_LINE_MARK |
+
+**Возвращает**: `Integer` — код возврата модального диалога.
+
+```EME-L
+' Открыть диалог настроек модально '
+result = is_dialog("Settings.Dialog")
+' result = код возврата, например 1 (OK) или 0 (Cancel) '
+
+' Открыть диалог на существующей записи '
+result = is_dialog("Orders.Edit", currentRec)
+```
+
+---
+
+### is_parent_dlg_rec — запись родительского диалога
+
+GUI-функция. Возвращает номер записи родительского диалога в базе данных.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — номер записи родительского диалога, или −1 если родительский диалог отсутствует или не привязан к базе данных.
+
+```EME-L
+' Получить запись родительского диалога '
+parentRec = is_parent_dlg_rec()
+' parentRec = номер записи родителя, или −1 если родителя нет '
+```
+
+---
+
+### is_dlg_rec — базовая запись диалога
+
+GUI-функция. Возвращает номер базовой записи текущего или указанного диалога в иерархии. В веб-контексте возвращает запись формы веб-диалога.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Положение диалога в иерархии. По умолчанию 0 (текущий диалог). В веб-контексте допустимы только значения −1, 0 или отсутствие аргумента |
+
+**Возвращает**: `Integer` — номер базовой записи диалога, или NULL_RECORD в веб-контексте при отсутствии формы.
+
+```EME-L
+' Получить запись текущего диалога '
+rec = is_dlg_rec()
+' rec = номер базовой записи '
+
+' Получить запись родительского диалога '
+parentRec = is_dlg_rec(1)
+```
+
+---
+
+### is_dlg_line — строка базовой записи диалога
+
+GUI-функция. Возвращает номер строки базовой записи текущего или указанного диалога в иерархии. В веб-контексте возвращает строку формы веб-диалога.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Положение диалога в иерархии. По умолчанию 0 (текущий диалог). В веб-контексте допустимы только значения −1, 0 или отсутствие аргумента |
+
+**Возвращает**: `Integer` — номер строки базовой записи диалога, или NULL_REF в веб-контексте при отсутствии формы.
+
+```EME-L
+' Получить строку текущего диалога '
+line = is_dlg_line()
+' line = номер строки в базе данных '
+
+' Получить строку родительского диалога '
+parentLine = is_dlg_line(1)
+```
+
+---
+
+### is_dlg_stencil — строка шаблона диалога
+
+GUI-функция. Возвращает номер строки шаблона текущего или указанного диалога в иерархии.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Положение диалога в иерархии. По умолчанию 0 (текущий диалог) |
+
+**Возвращает**: `Integer` — номер строки шаблона диалога.
+
+```EME-L
+' Получить строку шаблона текущего диалога '
+stencil = is_dlg_stencil()
+' stencil = номер строки шаблона из шаблонной таблицы '
+
+' Получить строку шаблона родительского диалога '
+parentStencil = is_dlg_stencil(1)
+```
+
+---
+
+### is_dlg_disabled — состояние дерева диалога
+
+GUI-функция. Возвращает свойство dialog_disabled дерева в диалоге, определяющее, отключено ли дерево для интерактивного взаимодействия.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Нет | Софтовое имя органа-дерева в диалоге. Если не задано, используется дерево текущего диалога |
+
+**Возвращает**: `Integer` — значение свойства dialog_disabled дерева.
+
+```EME-L
+' Проверить, отключено ли дерево текущего диалога '
+disabled = is_dlg_disabled()
+' disabled = 1 если дерево отключено, 0 если активно '
+
+' Проверить состояние конкретного дерева '
+disabled = is_dlg_disabled("TreeControl")
+```
+
+---
+
+### is_calendar — операции с массивом дат
+
+GUI-функция. Выполняет операции с массивом дат, хранящимся в переменной диалога: возвращает размер массива или проверяет наличие указанной даты.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя переменной диалога, содержащей указатель на массив дат |
+| args[1] | Integer | Нет | Уровень переменной диалога в иерархии. По умолчанию 0 |
+| args[2] | Integer | Да | Команда: 1 — вернуть размер массива дат, 2 — проверить наличие даты в массиве |
+| args[3] | Date | Нет | Проверяемая дата. Обязательна при args[2] = 2, недопустима при args[2] = 1 |
+
+**Возвращает**: при args[2] = 1 — `Integer` (количество элементов). При args[2] = 2 — `Boolean` (true — дата найдена, false — дата отсутствует).
+
+```EME-L
+' Получить размер массива дат из переменной CalendarVar '
+size = is_calendar("CalendarVar", 0, 1)
+' size = количество дат в массиве '
+
+' Проверить наличие конкретной даты в массиве '
+found = is_calendar("CalendarVar", 0, 2, #01.01.2024#)
+' found = TRUE если дата присутствует в массиве '
+```
+
+---
+
+### is_select_color — выбор цвета
+
+GUI-функция. Выводит стандартное диалоговое окно выбора цвета Windows и возвращает выбранный цвет в формате COLORREF.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Начальное значение цвета в формате COLORREF |
+
+**Возвращает**: `Integer` — выбранный пользователем цвет в формате COLORREF.
+
+```EME-L
+' Выбрать цвет, начиная с красного (0x0000FF) '
+color = is_select_color(0x0000FF)
+' color = COLORREF выбранного цвета '
+
+' Выбрать цвет с начальным значением по умолчанию '
+color = is_select_color(0)
+```
+
+---
+
+### is_dlg_caption — заголовок диалога
+
+GUI-функция. Возвращает заголовок текущего или указанного диалога в иерархии.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Положение диалога в иерархии. По умолчанию 0 (текущий диалог) |
+
+**Возвращает**: `String` — заголовок диалога.
+
+```EME-L
+' Получить заголовок текущего диалога '
+caption = is_dlg_caption()
+' caption = "Редактирование заказа" (пример) '
+
+' Получить заголовок родительского диалога '
+parentCaption = is_dlg_caption(1)
+```
+
+---
+
+### is_put_parameter — сохранить локальный параметр диалога
+
+GUI-функция. Сохраняет значение в локальных настройках (пользовательских параметрах) текущего диалога. Тип сохраняемого значения определяется автоматически по типу переданного варианта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Наименование параметра |
+| args[1] | Variant | Да | Значение для сохранения. Поддерживаются: дата, целое число, вещественное число, строка |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Сохранить строковый параметр '
+is_put_parameter("LastFilter", "Active")
+
+' Сохранить дату последнего обновления '
+is_put_parameter("LastUpdate", #15.03.2024#)
+
+' Сохранить числовой параметр '
+is_put_parameter("PageSize", 50)
+```
+
+---
+
+### is_get_parameter — прочитать локальный параметр диалога
+
+GUI-функция. Читает значение ранее сохранённого локального параметра текущего диалога. Если параметр не найден, возвращает значение по умолчанию. Тип читаемого значения определяется автоматически по типу значения по умолчанию.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Наименование параметра |
+| args[1] | Variant | Да | Значение по умолчанию, возвращаемое при отсутствии сохранённого параметра |
+
+**Возвращает**: значение параметра из локальных настроек диалога, или заданное значение по умолчанию. Тип соответствует типу args[1].
+
+```EME-L
+' Прочитать строковый параметр с значением по умолчанию '
+filter = is_get_parameter("LastFilter", "All")
+' filter = "Active" если параметр был сохранён, иначе "All" '
+
+' Прочитать числовой параметр '
+pageSize = is_get_parameter("PageSize", 25)
+' pageSize = 50 если параметр был сохранён, иначе 25 '
+
+' Прочитать дату с значением по умолчанию '
+lastUpdate = is_get_parameter("LastUpdate", #01.01.2024#)
+```
+
+---
+
+### is_dialog_access_permitted — проверка доступа к диалогу
+
+GUI-функция. Определяет, разрешён ли доступ текущего или указанного пользователя к указанному диалогу с учётом флагов доступа, установленных в меню пользователя.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Нет | Софтовое имя диалога. По умолчанию — текущий диалог |
+| args[1] | Integer | Нет | Ссылка на пользователя. По умолчанию — текущий оператор |
+| args[2] | Integer | Нет | Код запуска диалога. По умолчанию — текущий ovl-код |
+| args[3] | Integer | Нет | Код проверки флагов доступа: 0 — только наличие в меню (по умолчанию), 1 — разрешён запуск, 2 — разрешено создание, 3 — разрешено удаление, 4 — разрешено редактирование |
+
+**Возвращает**: `Integer` — 1 если доступ разрешён, 0 если доступ запрещён.
+
+```EME-L
+' Проверить доступ к диалогу Orders '
+permitted = is_dialog_access_permitted("Orders.Dialog")
+' permitted = 1 если доступ разрешён, 0 если запрещён '
+
+' Проверить разрешение создания записей '
+canCreate = is_dialog_access_permitted("Orders.Dialog", 0, 0, 2)
+' canCreate = 1 если создание разрешено '
+
+' Проверить доступ для конкретного пользователя '
+permitted = is_dialog_access_permitted("Admin.Dialog", userRef, 0, 1)
+```
+
+---
+
+### is_property_dialog — запуск диалога свойств
+
+GUI-функция. Запускает указанный диалог в режиме диалога свойств с учётом прав доступа текущего пользователя. В зависимости от параметров запускает диалог модально или немодально, с возможностью только чтения. Если диалог отсутствует в меню пользователя или запуск запрещён, выводится сообщение об ошибке и диалог не открывается.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Софтовое имя диалога |
+| args[1] | Integer | Да | Базовая строка диалога |
+| args[2] | Integer | Да | Код запуска диалога |
+| args[3] | Boolean | Нет | Признак немодального запуска. TRUE — немодально. По умолчанию FALSE |
+| args[4] | Boolean | Нет | Признак запуска только для чтения. TRUE — только чтение. По умолчанию FALSE |
+| args[5] | String | Нет | Дополнительные строковые параметры, передаваемые диалогу. По умолчанию пустая строка |
+
+**Возвращает**: `Integer` — при модальном запуске код возврата диалога; при немодальном или в случае ошибки доступа — 0.
+
+```EME-L
+' Открыть диалог свойств модально '
+result = is_property_dialog("Orders.Edit", currentLine, 0)
+
+' Открыть диалог свойств немодально '
+is_property_dialog("Orders.View", currentLine, 0, TRUE)
+
+' Открыть только для чтения '
+result = is_property_dialog("Orders.Edit", currentLine, 0, FALSE, TRUE)
+```
+
+---
+
+### is_peek_all_messages — обработка сообщений Windows
+
+GUI-функция. Обрабатывает все сообщения из очереди Windows: извлекает, транслирует и диспатчит их до полного опустошения очереди. Используется для синхронизации обработки сообщений, в том числе в консольном режиме и на сервере.
+
+**Параметры**: нет.
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Обработать все накопившиеся сообщения Windows '
+is_peek_all_messages()
+
+' Обработать сообщения перед длительной операцией '
+is_peek_all_messages()
+' Теперь можно выполнять длительные вычисления '
+```
+
+---
+
+### is_enter_date — ввод даты через календарь
+
+GUI-функция. Выводит диалоговое окно с календарём для выбора даты. Если пользователь подтверждает выбор, возвращает выбранную дату, иначе возвращает пустую дату (NULL_DATE).
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Date | Нет | Начальная дата, отображаемая в календаре при открытии. По умолчанию текущая системная дата |
+
+**Возвращает**: `Date` — выбранная дата, или NULL_DATE (01.01.0100) при отмене выбора.
+
+```EME-L
+' Выбрать дату, начиная с текущей '
+selectedDate = is_enter_date()
+' selectedDate = выбранная дата, или NULL_DATE при отмене '
+
+' Выбрать дату с заданным начальным значением '
+selectedDate = is_enter_date(#15.03.2024#)
+```
+
+---
+
+### is_dialog_close — закрытие диалога
+
+GUI-функция. Закрывает текущий диалог или диалог с указанным софтовым именем, отправляя ему сообщение о закрытии.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Нет | Софтовое имя диалога для закрытия. Если не задано, закрывается текущий диалог |
+
+**Возвращает**: `Boolean` — true если диалог найден и закрыт, false если диалог не найден.
+
+```EME-L
+' Закрыть текущий диалог '
+is_dialog_close()
+
+' Закрыть диалог по имени '
+closed = is_dialog_close("Orders.Edit")
+' closed = TRUE если диалог был найден и закрыт '
+```
+
+---
+
+### is_dialog_active — проверка активности диалога
+
+GUI-функция. Определяет, является ли текущий диалог активным в текущем MDI-окне.
+
+**Параметры**: нет.
+
+**Возвращает**: `Boolean` — true если текущий диалог активен, false если диалог неактивен.
+
+```EME-L
+' Проверить, активен ли текущий диалог '
+active = is_dialog_active()
+' active = TRUE если диалог имеет фокус в MDI-окне '
+
+' Выполнить действие только если диалог активен '
+If is_dialog_active()
+    ' Обновить данные активного диалога '
+    is_refresh_dialog()
+End If
 ```
 
 ---
