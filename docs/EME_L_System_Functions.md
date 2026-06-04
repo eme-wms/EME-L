@@ -1,6 +1,6 @@
 # Системные функции EME-L (is_System)
 
-> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD
+> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_path_to_dir, is_path_to_file_title, is_path_to_file_name, is_path_to_file_ext, is_get_temp_file_path, is_make_dir_tree, is_ini_query_setting, is_ini_store_setting, is_copy_file, is_move_file, is_rename_file, is_set_file_creation_date, is_set_file_modify_date, is_valid_filename, is_ensure_last_slash, is_file_exists, is_delete_file, is_directory, is_empty_directory, is_ensure_path_exists, is_path_exists, is_file_size, is_file_inuse, is_file_createdate, is_file_modifydate, is_delete_dir, is_copy_dir, is_create_shortcut, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD
 
 в языке EME-L системные функции — это встроенные is-функции, реализованные на уровне ядра (C++) и доступные для вызова из EME-L кода. в системе EME.WMS системные функции обеспечивают доступ к свойствам окружения, управления интерфейсом, работе с цветами, транзакциям, филиалам и другим возможностям платформы.
 
@@ -1345,6 +1345,564 @@ result = is_exec("is_arg(0) + is_arg(1)", 10, 20)
 
 ' Выполнить вызов метода через строку '
 result = is_exec("is_this().Calculate()")
+```
+
+---
+
+## Файловая система
+
+### is_path_to_dir — извлечь директорию из пути
+
+Извлекает директорию (путь к папке) из полного пути к файлу или директории.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу или директории |
+
+**Возвращает**: `String` — путь к директории без имени файла.
+
+```EME-L
+' Получить директорию из полного пути '
+dir = is_path_to_dir("C:\\Data\\report.txt")
+' dir = "C:\\Data\\" '
+```
+
+---
+
+### is_path_to_file_title — извлечь имя файла без расширения
+
+Извлекает имя файла без расширения из полного пути.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+
+**Возвращает**: `String` — имя файла без расширения.
+
+```EME-L
+' Получить имя файла без расширения '
+title = is_path_to_file_title("C:\\Data\\report.txt")
+' title = "report" '
+```
+
+---
+
+### is_path_to_file_name — извлечь имя файла с расширением
+
+Извлекает имя файла вместе с расширением из полного пути.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+
+**Возвращает**: `String` — имя файла с расширением.
+
+```EME-L
+' Получить имя файла с расширением '
+name = is_path_to_file_name("C:\\Data\\report.txt")
+' name = "report.txt" '
+```
+
+---
+
+### is_path_to_file_ext — извлечь расширение файла
+
+Извлекает расширение файла из полного пути.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+
+**Возвращает**: `String` — расширение файла без точки.
+
+```EME-L
+' Получить расширение файла '
+ext = is_path_to_file_ext("C:\\Data\\report.txt")
+' ext = "txt" '
+```
+
+---
+
+### is_get_temp_file_path — путь к временному файлу
+
+Генерирует уникальное имя для временного файла в системной или указанной директории.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Префикс имени временного файла, до трёх символов |
+| args[1] | String | Нет | Путь к директории для создания временного файла. По умолчанию системная временная директория текущего пользователя |
+
+**Возвращает**: `String` — полный путь к сгенерированному временному файлу.
+
+```EME-L
+' Создать временный файл с префиксом "tmp" '
+tempFile = is_get_temp_file_path("tmp")
+' tempFile = "C:\\Users\\...\\AppData\\Local\\Temp\\tmpA1B2.tmp" '
+
+' Создать временный файл в указанной директории '
+tempFile = is_get_temp_file_path("dat", "C:\\Temp")
+```
+
+---
+
+### is_make_dir_tree — создать цепочку директорий
+
+Создаёт полную цепочку директорий по указанному пути, включая все промежуточные папки.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Целевой путь, для которого необходимо создать все отсутствующие директории |
+
+**Возвращает**: `Boolean` — TRUE если все директории созданы или уже существуют, FALSE при ошибке.
+
+```EME-L
+' Создать полную цепочку директорий '
+result = is_make_dir_tree("C:\\Temp\\eme_db\\test\\123")
+' result = TRUE если все папки созданы '
+```
+
+---
+
+### is_ini_query_setting — чтение из kernel.ini
+
+Читает значение параметра из ядерного конфигурационного файла kernel.ini.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя секции в INI-файле |
+| args[1] | String | Да | Имя параметра (ключа) в указанной секции |
+| args[2] | String/Integer | Нет | Значение по умолчанию, возвращаемое при отсутствии параметра. Тип определяет тип возвращаемого значения |
+
+**Возвращает**: `String` или `Integer` — значение параметра из INI-файла, или значение по умолчанию.
+
+```EME-L
+' Прочитать строковый параметр '
+val = is_ini_query_setting("Database", "Server", "localhost")
+
+' Прочитать целочисленный параметр '
+port = is_ini_query_setting("Database", "Port", 1433)
+```
+
+---
+
+### is_ini_store_setting — запись в kernel.ini
+
+Записывает значение параметра в ядерный конфигурационный файл kernel.ini.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя секции в INI-файле |
+| args[1] | String | Да | Имя параметра (ключа) в указанной секции |
+| args[2] | String/Integer | Да | Записываемое значение |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Записать строковый параметр '
+is_ini_store_setting("Database", "Server", "192.168.1.1")
+
+' Записать целочисленный параметр '
+is_ini_store_setting("Database", "Port", 1433)
+```
+
+---
+
+### is_copy_file — копирование файла
+
+Копирует файл из одного расположения в другое с возможностью переименования и сохранения атрибутов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к исходному файлу |
+| args[1] | String | Да | Полный путь к целевой директории без имени файла |
+| args[2] | Boolean | Да | Режим при существовании целевого файла: FALSE — перезаписать, TRUE — вернуть ошибку |
+| args[3] | String | Нет | Новое имя файла в целевой директории. По умолчанию имя исходного файла |
+| args[4] | Boolean | Нет | Признак копирования временных штампов от исходного файла. По умолчанию FALSE |
+
+**Возвращает**: `Integer` — 0 при ошибке, 1 при успехе.
+
+```EME-L
+' Копировать файл в другую директорию '
+result = is_copy_file("C:\\Data\\report.txt", "D:\\Backup", FALSE)
+
+' Копировать с переименованием и сохранением дат '
+result = is_copy_file("C:\\Data\\report.txt", "D:\\Backup", FALSE, "report_old.txt", TRUE)
+```
+
+---
+
+### is_move_file — перемещение файла
+
+Перемещает файл из одного расположения в другое, включая перемещение между дисками.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к исходному файлу |
+| args[1] | String | Да | Полный путь к целевому файлу |
+| args[2] | Boolean | Нет | Признак перезаписи существующего файла. По умолчанию FALSE |
+
+**Возвращает**: `String` — "Ok" при успехе, или сообщение об ошибке.
+
+```EME-L
+' Переместить файл '
+result = is_move_file("C:\\Temp\\data.txt", "D:\\Archive\\data.txt")
+
+' Переместить с перезаписью '
+result = is_move_file("C:\\Temp\\data.txt", "D:\\Archive\\data.txt", TRUE)
+```
+
+---
+
+### is_rename_file — переименование файла
+
+Переименовывает файл в той же директории.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к существующему файлу |
+| args[1] | String | Да | Новое имя файла без пути |
+
+**Возвращает**: `String` — "Ok" при успехе, или сообщение об ошибке.
+
+```EME-L
+' Переименовать файл '
+result = is_rename_file("C:\\Data\\oldname.txt", "newname.txt")
+```
+
+---
+
+### is_set_file_creation_date — установка даты создания
+
+Устанавливает дату и время создания для существующего файла.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+| args[1] | Date | Да | Новая дата и время создания |
+
+**Возвращает**: `Boolean` — TRUE при успехе, FALSE при ошибке.
+
+```EME-L
+' Установить дату создания файла '
+result = is_set_file_creation_date("C:\\Data\\report.txt", #01.01.2024#)
+```
+
+---
+
+### is_set_file_modify_date — установка даты модификации
+
+Устанавливает дату и время последней модификации для существующего файла.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+| args[1] | Date | Да | Новая дата и время модификации |
+
+**Возвращает**: `Boolean` — TRUE при успехе, FALSE при ошибке.
+
+```EME-L
+' Установить дату модификации файла '
+result = is_set_file_modify_date("C:\\Data\\report.txt", #15.03.2024 10:30:00#)
+```
+
+---
+
+### is_valid_filename — проверка имени файла
+
+Проверяет, содержит ли имя файла символы, недопустимые в файловых системах FAT32 и NTFS.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Проверяемое имя файла или пути |
+
+**Возвращает**: `Boolean` — TRUE если имя валидно, FALSE если содержит недопустимые символы.
+
+```EME-L
+' Проверить имя файла '
+valid = is_valid_filename("report_2024.txt")
+' valid = TRUE '
+
+' Проверить недопустимое имя '
+valid = is_valid_filename("report<test>.txt")
+' valid = FALSE '
+```
+
+---
+
+### is_ensure_last_slash — управление завершающим слешем
+
+Гарантирует наличие или отсутствие завершающего разделителя пути в конце строки пути.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Исходный путь |
+| args[1] | Boolean | Нет | Признак добавления слеша: TRUE — добавить (по умолчанию), FALSE — удалить |
+
+**Возвращает**: `String` — скорректированный путь.
+
+```EME-L
+' Гарантировать наличие слеша в конце '
+path = is_ensure_last_slash("C:\\Data")
+' path = "C:\\Data\\" '
+
+' Удалить завершающий слеш '
+path = is_ensure_last_slash("C:\\Data\\", FALSE)
+' path = "C:\\Data" '
+```
+
+---
+
+### is_file_exists — проверка существования файла
+
+Проверяет существование файла или директории по указанному пути.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Путь к файлу или директории |
+
+**Возвращает**: `Boolean` — TRUE если файл или директория существует, FALSE если не найдены.
+
+```EME-L
+' Проверить существование файла '
+exists = is_file_exists("C:\\Data\\report.txt")
+' exists = TRUE если файл существует '
+```
+
+---
+
+### is_delete_file — удаление файла или директории
+
+Удаляет файл или пустую директорию по указанному пути.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к удаляемому файлу или директории |
+
+**Возвращает**: `String` — "Ok" при успехе, или сообщение об ошибке.
+
+```EME-L
+' Удалить файл '
+result = is_delete_file("C:\\Temp\\olddata.txt")
+
+' Удалить пустую директорию '
+result = is_delete_file("C:\\Temp\\EmptyFolder")
+```
+
+---
+
+### is_directory — проверка директории
+
+Проверяет, является ли указанный путь директорией.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Путь к файловому объекту |
+
+**Возвращает**: `Boolean` — TRUE если путь является директорией, FALSE если не существует или является файлом.
+
+```EME-L
+' Проверить, является ли путь директорией '
+isDir = is_directory("C:\\Data")
+' isDir = TRUE '
+```
+
+---
+
+### is_empty_directory — проверка пустой директории
+
+Проверяет, является ли указанный путь пустой директорией.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Путь к директории |
+
+**Возвращает**: `Boolean` — TRUE если директория существует и пуста, FALSE в остальных случаях.
+
+```EME-L
+' Проверить, пуста ли директория '
+empty = is_empty_directory("C:\\Temp\\Test")
+' empty = TRUE если директория не содержит файлов '
+```
+
+---
+
+### is_ensure_path_exists — создание пути
+
+Создаёт цепочку директорий по указанному пути, если она отсутствует.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Целевой путь к директории |
+
+**Возвращает**: `Boolean` — TRUE если директория существует или создана, FALSE если по пути существует файл.
+
+```EME-L
+' Создать путь, если он не существует '
+result = is_ensure_path_exists("C:\\Temp\\eme\\test")
+' result = TRUE '
+```
+
+---
+
+### is_path_exists — проверка существования директории
+
+Проверяет существование директории по указанному пути.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Путь к проверяемой директории |
+
+**Возвращает**: `Boolean` — TRUE если путь существует и является директорией, FALSE в остальных случаях.
+
+```EME-L
+' Проверить существование директории '
+exists = is_path_exists("C:\\Data")
+' exists = TRUE если директория существует '
+```
+
+---
+
+### is_file_size — размер файла
+
+Возвращает размер файла в байтах.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+
+**Возвращает**: `Integer` — размер файла в байтах, или −1 если файл не найден или является директорией.
+
+```EME-L
+' Получить размер файла '
+size = is_file_size("C:\\Data\\report.txt")
+' size = размер в байтах, например 1024 '
+```
+
+---
+
+### is_file_inuse — проверка занятости файла
+
+Проверяет, открыт ли файл другим процессом.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+
+**Возвращает**: `Boolean` — TRUE если файл занят другим процессом, FALSE если файл свободен или не найден.
+
+```EME-L
+' Проверить, занят ли файл '
+inuse = is_file_inuse("C:\\Data\\report.txt")
+' inuse = TRUE если файл открыт другим приложением '
+```
+
+---
+
+### is_file_createdate — дата создания файла
+
+Возвращает дату и время создания файла в локальном времени.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу |
+
+**Возвращает**: `Date` — дата и время создания файла, или нулевая дата при ошибке.
+
+```EME-L
+' Получить дату создания файла '
+created = is_file_createdate("C:\\Data\\report.txt")
+' created = дата создания файла '
+```
+
+---
+
+### is_file_modifydate — дата модификации файла
+
+Возвращает дату и время последнего изменения файла или директории в локальном времени.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к файлу или директории |
+
+**Возвращает**: `Date` — дата и время последней модификации, или нулевая дата при ошибке.
+
+```EME-L
+' Получить дату модификации файла '
+modified = is_file_modifydate("C:\\Data\\report.txt")
+' modified = дата последнего изменения '
+```
+
+---
+
+### is_delete_dir — удаление директории
+
+Удаляет директорию стандартным или рекурсивным способом.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к удаляемой директории |
+| args[1] | Boolean | Нет | Режим удаления: TRUE — стандартное (пустая директория, по умолчанию), FALSE — рекурсивное |
+| args[2] | Boolean | Нет | Удалить корневую директорию: TRUE (по умолчанию), FALSE — удалить только содержимое |
+| args[3] | Boolean | Нет | Подавление информационных сообщений. По умолчанию FALSE |
+
+**Возвращает**: `String` — "Ok" при успехе, или сообщение об ошибке.
+
+```EME-L
+' Удалить пустую директорию '
+result = is_delete_dir("C:\\Temp\\EmptyFolder")
+
+' Рекурсивно удалить директорию со всем содержимым '
+result = is_delete_dir("C:\\Temp\\OldData", FALSE, TRUE, TRUE)
+```
+
+---
+
+### is_copy_dir — копирование директории
+
+Рекурсивно копирует содержимое директории в другое расположение.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь к исходной директории |
+| args[1] | String | Да | Полный путь к целевой директории |
+| args[2] | String | Нет | Шаблон имени файла для фильтрации. По умолчанию "*" |
+| args[3] | Boolean | Нет | Подавление информационных сообщений. По умолчанию FALSE |
+
+**Возвращает**: `String` — "Ok" при успехе, или сообщение об ошибке.
+
+```EME-L
+' Копировать директорию '
+result = is_copy_dir("C:\\Data\\Reports", "D:\\Backup\\Reports")
+
+' Копировать только текстовые файлы '
+result = is_copy_dir("C:\\Data", "D:\\Backup", "*.txt")
+```
+
+---
+
+### is_create_shortcut — создание ярлыка
+
+Создаёт ярлык Windows (.lnk) для указанного объекта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Полный путь для сохранения ярлыка с расширением .lnk |
+| args[1] | String | Да | Полный путь к целевому объекту |
+| args[2] | String | Нет | Аргументы командной строки. По умолчанию пустая строка |
+| args[3] | String | Нет | Рабочая директория. По умолчанию пустая строка |
+| args[4] | String | Нет | Путь к файлу иконки. По умолчанию пустая строка |
+| args[5] | Integer | Нет | Индекс иконки. По умолчанию 0 |
+| args[6] | String | Нет | Описание ярлыка. По умолчанию пустая строка |
+| args[7] | Integer | Нет | Режим отображения окна. По умолчанию 0 |
+
+**Возвращает**: `String` — "Ok" при успехе, или сообщение об ошибке.
+
+```EME-L
+' Создать ярлык на рабочем столе '
+result = is_create_shortcut("C:\\Users\\User\\Desktop\\MyApp.lnk", "C:\\Program Files\\MyApp\\app.exe")
+
+' Создать ярлык с параметрами '
+result = is_create_shortcut("C:\\Desktop\\Report.lnk", "C:\\App\\viewer.exe", "report.txt", "C:\\Data", "", 0, "Открыть отчёт")
 ```
 
 ---
