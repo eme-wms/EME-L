@@ -1,6 +1,6 @@
 # Системные функции EME-L (is_System)
 
-> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_path_to_dir, is_path_to_file_title, is_path_to_file_name, is_path_to_file_ext, is_get_temp_file_path, is_make_dir_tree, is_ini_query_setting, is_ini_store_setting, is_copy_file, is_move_file, is_rename_file, is_set_file_creation_date, is_set_file_modify_date, is_valid_filename, is_ensure_last_slash, is_file_exists, is_delete_file, is_directory, is_empty_directory, is_ensure_path_exists, is_path_exists, is_file_size, is_file_inuse, is_file_createdate, is_file_modifydate, is_delete_dir, is_copy_dir, is_create_shortcut, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD
+> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_path_to_dir, is_path_to_file_title, is_path_to_file_name, is_path_to_file_ext, is_get_temp_file_path, is_make_dir_tree, is_ini_query_setting, is_ini_store_setting, is_copy_file, is_move_file, is_rename_file, is_set_file_creation_date, is_set_file_modify_date, is_valid_filename, is_ensure_last_slash, is_file_exists, is_delete_file, is_directory, is_empty_directory, is_ensure_path_exists, is_path_exists, is_file_size, is_file_inuse, is_file_createdate, is_file_modifydate, is_delete_dir, is_copy_dir, is_create_shortcut, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD, is_vendor, is_rounded_week, is_rounded_date, is_production_date, is_default_vendor, is_turn_EANCOM_messages, is_force_document_export, is_base_curr, is_column, is_enter_value_dialog, is_convert_string_to_date, is_save_ware_timer_param, is_transit_ware, is_inventarisation, is_inventarisation_by_vendor, is_vendor_inventarisation, is_user_vendor, is_inventarisation_off, is_run_free_browser, is_run_free_browser_by_str, is_prune_base, is_insert_delimeters_in_string, is_print_docs, is_print_report_indirect, is_EAN13_by_order, is_BARCODE_by_order, is_BARCODE_by_document, is_drag_drop_terminals_dispatcher, is_once_queue_orders_inventarisation, is_queue_orders_inventarisation, is_inventarisation_warehouse, is_get_first_queue_priority, is_set_valid_terminal_ref, is_get_valid_terminal_ref, is_set_first_queue_priority, is_set_orders_type, is_delete_queue_order, is_get_text_info_integrator, is_get_base_icon_color_integrator, is_get_parent_text_info_integrator, is_get_parent_base_icon_color_integrator, is_get_parent_record_for_integrator, is_get_parent_line_for_integrator, is_fill_refs_for_integrator, is_exist_queue_order_with_terminal_for_delete, is_check_both_double_stack_queue, is_undefine_array_to_queue_oders_array, is_add_del_terminals_dispatcher, is_ccd, is_document_line_pallet_ms_up, is_document_pallet_ms_up, is_document_change_mu, is_exists_ext_par, is_extract_picture_from_DB, is_dbref, is_dbref_record, is_dbref_field, is_dbref_line, is_open_sertificate_in_shell, is_print_word_file, is_export_pdf_docs, is_save_image_from_field_to_pdf, is_save_image_from_field_to_pdf2, is_price_in_full, is_bcp_solution_active, is_bcp_solution_sos_turn_on, is_codec, is_keyWGH, is_auto_change_statuses, is_auto_create_moving_in_pickbyline, is_planned_creations_orders, is_future, is_test_block_write, is_check_online_terminals, is_serial_generate_on, is_SHA256_as_base64_string, инвентаризация, склад, терминалы, штрих-код, WMS
 
 в языке EME-L системные функции — это встроенные is-функции, реализованные на уровне ядра (C++) и доступные для вызова из EME-L кода. в системе EME.WMS системные функции обеспечивают доступ к свойствам окружения, управления интерфейсом, работе с цветами, транзакциям, филиалам и другим возможностям платформы.
 
@@ -4358,6 +4358,1377 @@ err = is_restart_as_server_request()
 
 ```EME-L
 result = is_sys_import("C:\\import\\")
+```
+
+---
+
+## Инвентаризация и склады
+
+### is_inventarisation — проверка и управление режимом инвентаризации
+
+проверяет или изменяет состояние режима инвентаризации.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Код операции: `1` — включить; `2` — включить без проверки; `-1` — выключить, закрыв документы; `-2` — выключить без закрытия; `0` — проверить состояние |
+| args[1] | Boolean / Reference | Нет | Флаг подавления диалогов или массив `CArrayOfLong` для выходных данных |
+
+**Возвращает**: `Integer` — состояние после операции: `0` — выключен, `1` — включен.
+
+```EME-L
+' Проверить текущее состояние инвентаризации '
+state = is_inventarisation(0)
+' state = 0 — выключен, 1 — включен '
+```
+
+---
+
+### is_inventarisation_by_vendor — инвентаризация с привязкой к организации
+
+проверяет или изменяет состояние режима инвентаризации с привязкой к организации.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Код операции |
+| args[1] | Reference | Нет | Массив для выходных данных или флаг подавления диалогов |
+| args[2] | Integer | Нет | Ссылка на организацию |
+
+**Возвращает**: `Integer` — состояние после операции: `0` — выключен, `1` — включен.
+
+```EME-L
+' Включить инвентаризацию для организации '
+result = is_inventarisation_by_vendor(1, NULL, vendorRef)
+```
+
+---
+
+### is_inventarisation_off — выключение инвентаризации
+
+выключает режим инвентаризации и снимает флажок инвентаризации у ячеек склада.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Ссылка на организацию. `NULL_REF` — все ячейки |
+| args[1] | Integer | Да | Ссылка на склад |
+
+**Возвращает**: `Integer` — `0`.
+
+```EME-L
+' Выключить инвентаризацию для склада '
+is_inventarisation_off(NULL_REF, warehouseRef)
+```
+
+---
+
+### is_vendor_inventarisation — организация инвентаризации
+
+возвращает ссылку на организацию, по которой выполняется инвентаризация.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — ссылка на организацию, или `NULL_REF` если инвентаризация не включена.
+
+```EME-L
+' Получить организацию инвентаризации '
+vendorRef = is_vendor_inventarisation()
+```
+
+---
+
+### is_once_queue_orders_inventarisation — проверка единственности приказа инвентаризации
+
+проверяет, что в массиве не более одного приказа инвентаризации.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Массив объектов |
+| args[1] | Reference | Да | Интерфейс интегратора |
+
+**Возвращает**: `Integer` — `1` если условие выполнено, `0` — нарушено.
+
+```EME-L
+' Проверить массив приказов '
+result = is_once_queue_orders_inventarisation(ordersArray, integrator)
+```
+
+---
+
+### is_queue_orders_inventarisation — проверка приказа на инвентаризацию
+
+проверяет, является ли объект приказом инвентаризации.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Идентификатор объекта |
+| args[1] | Reference | Да | Интерфейс интегратора |
+
+**Возвращает**: `Integer` — ссылка на документ инвентаризации, или `NULL_REF`.
+
+```EME-L
+' Проверить объект на приказ инвентаризации '
+docRef = is_queue_orders_inventarisation(objId, integrator)
+```
+
+---
+
+### is_inventarisation_warehouse — склад инвентаризации
+
+возвращает ссылку на склад инвентаризации для объекта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Идентификатор объекта |
+| args[1] | Reference | Да | Интерфейс интегратора |
+
+**Возвращает**: `Integer` — ссылка на склад, или `NULL_REF`.
+
+```EME-L
+' Получить склад инвентаризации '
+whRef = is_inventarisation_warehouse(objId, integrator)
+```
+
+---
+
+### is_transit_ware — транзитный склад
+
+возвращает ссылку на транзитный склад.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — ссылка на транзитный склад.
+
+```EME-L
+' Получить транзитный склад '
+transitRef = is_transit_ware()
+```
+
+---
+
+### is_check_online_terminals — проверка онлайн-терминалов
+
+проверяет состояние онлайн-терминалов и переводит неактивные в оффлайн.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Ссылка на текущий терминал |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Проверить терминалы '
+is_check_online_terminals(currentTerminalRef)
+```
+
+---
+
+### is_test_block_write — тестирование блочной записи
+
+выполняет тестирование блочной записи в базу данных.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Номер теста |
+| args[1] | Integer | Да | Начальная строка |
+| args[2] | Integer | Да | Конечная строка |
+| args[3] | Integer | Да | Количество строк в блоке |
+| args[4] | Reference | Да | Массив ссылок на заголовки |
+| args[5] | Reference | Да | Объект `CalcOrdersResultsLines` |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Выполнить тест блочной записи '
+is_test_block_write(1, 1, 100, 10, headersArray, calcResults)
+```
+
+---
+
+## Диспетчер терминалов
+
+### is_drag_drop_terminals_dispatcher — перетаскивание объектов
+
+реализует перетаскивание объектов в диспетчере терминалов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект-источник |
+| args[1] | Reference | Нет | Объект-приёмник |
+| args[2] | Reference | Нет | Карта для ошибок |
+
+**Возвращает**: `String` — пустая строка при успехе, или описание ошибки.
+
+```EME-L
+' Перетащить приказ на терминал '
+result = is_drag_drop_terminals_dispatcher(orderRef, terminalRef)
+```
+
+---
+
+### is_add_del_terminals_dispatcher — привязка приказа к терминалу
+
+реализует привязку или отвязку приказа к терминалу.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Ссылка на приказ |
+| args[1] | Integer | Нет | Ссылка на терминал, `NULL_REF` для отвязки |
+| args[2] | Reference | Нет | Карта для ошибок |
+
+**Возвращает**: `String` — пустая строка при успехе, или описание ошибки.
+
+```EME-L
+' Привязать приказ к терминалу '
+result = is_add_del_terminals_dispatcher(queueOrderRef, terminalRef)
+```
+
+---
+
+### is_get_valid_terminal_ref — получить ссылку на терминал
+
+возвращает ссылку на терминал для объекта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `Integer` — ссылка на терминал, или `NULL_REF`.
+
+```EME-L
+' Получить терминал объекта '
+terminalRef = is_get_valid_terminal_ref(objRef)
+```
+
+---
+
+### is_set_valid_terminal_ref — установить ссылку на терминал
+
+устанавливает ссылку на терминал для объекта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+| args[1] | Integer | Да | Ссылка на терминал |
+
+**Возвращает**: `Integer` — предыдущая ссылка на терминал.
+
+```EME-L
+' Назначить терминал '
+prevTerminal = is_set_valid_terminal_ref(objRef, terminalRef)
+```
+
+---
+
+### is_delete_queue_order — удалить приказ
+
+удаляет приказ из диспетчера терминалов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект для удаления |
+| args[1] | Reference | Нет | Массив для сохранения ссылок удалённых строк |
+
+**Возвращает**: `String` — пустая строка при успехе, или описание ошибки.
+
+```EME-L
+' Удалить приказ '
+result = is_delete_queue_order(orderRef)
+```
+
+---
+
+### is_exist_queue_order_with_terminal_for_delete — проверка приказов для удаления
+
+проверяет наличие приказов, привязанных к терминалу, для удаления.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `Integer` — `1` если есть приказы, `0` — нет.
+
+```EME-L
+' Проверить наличие приказов для удаления '
+hasOrders = is_exist_queue_order_with_terminal_for_delete(objRef)
+```
+
+---
+
+### is_get_first_queue_priority — приоритет очереди
+
+возвращает приоритет очереди для объекта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `Float` — приоритет, или `0.0` если не инициализирован.
+
+```EME-L
+' Получить приоритет '
+priority = is_get_first_queue_priority(objRef)
+```
+
+---
+
+### is_set_first_queue_priority — установить приоритет
+
+устанавливает приоритет очереди для объекта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+| args[1] | Float | Да | Новый приоритет |
+
+**Возвращает**: `Float` — предыдущий приоритет.
+
+```EME-L
+' Установить приоритет '
+prevPriority = is_set_first_queue_priority(objRef, 100.0)
+```
+
+---
+
+### is_set_orders_type — тип приказов
+
+устанавливает тип отображаемых приказов для пачки заказов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект пачки |
+| args[1] | Integer | Да | Тип приказов |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Установить тип приказов '
+is_set_orders_type(batchRef, 2)
+```
+
+---
+
+### is_get_text_info_integrator — текстовая информация
+
+возвращает текстовую информацию об элементе для интегратора.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `String` — текстовая информация.
+
+```EME-L
+' Получить текст для интегратора '
+textInfo = is_get_text_info_integrator(objRef)
+```
+
+---
+
+### is_get_base_icon_color_integrator — цвет иконки
+
+возвращает цвет иконки элемента для интегратора.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `Integer` — цвет, или `0` если не задан.
+
+```EME-L
+' Получить цвет иконки '
+color = is_get_base_icon_color_integrator(objRef)
+```
+
+---
+
+### is_get_parent_text_info_integrator — текст родителя
+
+возвращает текстовую информацию о родительском элементе.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `String` — текст родителя.
+
+```EME-L
+' Получить текст родителя '
+parentText = is_get_parent_text_info_integrator(objRef)
+```
+
+---
+
+### is_get_parent_base_icon_color_integrator — цвет иконки родителя
+
+возвращает цвет иконки родительского элемента.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `Integer` — цвет родителя, или `0` если не задан.
+
+```EME-L
+' Получить цвет иконки родителя '
+parentColor = is_get_parent_base_icon_color_integrator(objRef)
+```
+
+---
+
+### is_get_parent_record_for_integrator — запись родителя
+
+возвращает номер записи родительского объекта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `Integer` — номер записи, или `NULL_RECORD`.
+
+```EME-L
+' Получить запись родителя '
+parentRec = is_get_parent_record_for_integrator(objRef)
+```
+
+---
+
+### is_get_parent_line_for_integrator — строка родителя
+
+возвращает номер строки родительского объекта.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект диспетчера |
+
+**Возвращает**: `Integer` — номер строки, или `NULL_REF`.
+
+```EME-L
+' Получить строку родителя '
+parentLine = is_get_parent_line_for_integrator(objRef)
+```
+
+---
+
+### is_fill_refs_for_integrator — заполнение карт ссылками
+
+заполняет карты ссылками на документы, пачки и заказы.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Карта документов |
+| args[1] | Reference | Да | Резервный параметр |
+| args[2] | Reference | Да | Карта пачек заказов |
+| args[3] | Reference | Да | Карта заказов на отгрузку |
+| args[4] | Reference | Да | Карта пачек типа 2 |
+| args[5] | Reference | Да | Карта пачек типа 3 |
+| args[6] | Reference | Да | Карта пачек типа 4 |
+| args[7] | Integer | Да | Опция фильтрации |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Заполнить карты ссылками '
+is_fill_refs_for_integrator(docRefs, reserved, batchRefs, shipRefs, batch2, batch3, batch4, 0)
+```
+
+---
+
+### is_check_both_double_stack_queue — проверка double-stack
+
+проверяет наличие обоих приказов double-stack в массиве.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Массив объектов |
+
+**Возвращает**: `Boolean` — `TRUE` если оба найдены.
+
+```EME-L
+' Проверить double-stack '
+bothPresent = is_check_both_double_stack_queue(ordersArray)
+```
+
+---
+
+### is_undefine_array_to_queue_oders_array — заполнение массива приказами
+
+заполняет массив строками приказов из массива объектов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Исходный массив |
+| args[1] | Reference | Да | Выходной массив |
+
+**Возвращает**: `Integer` — количество заполненных элементов.
+
+```EME-L
+' Заполнить массив строками приказов '
+count = is_undefine_array_to_queue_oders_array(sourceArray, queueStrings)
+```
+
+---
+
+## Товары, организации и документы
+
+### is_vendor — проверка организации-продавца
+
+проверяет, является ли клиент организацией-продавцом.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Ссылка на клиента |
+
+**Возвращает**: `Boolean` — `TRUE` если продавец, `FALSE` — нет. При невалидной строке — пустое значение.
+
+```EME-L
+' Проверить клиента '
+result = is_vendor(clientRef)
+```
+
+---
+
+### is_default_vendor — поставщик по умолчанию
+
+возвращает ссылку на организацию-поставщика по умолчанию.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — ссылка на организацию.
+
+```EME-L
+' Получить поставщика по умолчанию '
+vendorRef = is_default_vendor()
+```
+
+---
+
+### is_user_vendor — организация пользователя
+
+возвращает ссылку на организацию текущего пользователя.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — ссылка на организацию. Для администратора — `NULL_REF`.
+
+```EME-L
+' Получить организацию пользователя '
+userOrg = is_user_vendor()
+```
+
+---
+
+### is_base_curr — базовая валюта
+
+возвращает ссылку на базовую валюту системы.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — ссылка на базовую валюту.
+
+```EME-L
+' Получить базовую валюту '
+currRef = is_base_curr()
+```
+
+---
+
+### is_production_date — дата производства
+
+вычисляет дату производства по сроку годности и товарной единице.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Date | Да | Дата срока годности |
+| args[1] | Integer | Да | Ссылка на товарную единицу |
+
+**Возвращает**: `Date` — дата производства.
+
+```EME-L
+' Вычислить дату производства '
+prodDate = is_production_date(bestBeforeDate, wareUnitRef)
+```
+
+---
+
+### is_rounded_week — номер недели Rounded-календаря
+
+возвращает номер недели по Rounded-календарю.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Date | Да | Дата |
+
+**Возвращает**: `Integer` — номер недели.
+
+```EME-L
+' Получить номер недели '
+weekNum = is_rounded_week(Date(2024, 1, 15))
+```
+
+---
+
+### is_rounded_date — дата начала недели
+
+возвращает дату начала недели по Rounded-календарю.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Год |
+| args[1] | Integer | Да | Номер недели |
+
+**Возвращает**: `Date` — дата начала недели.
+
+```EME-L
+' Получить дату начала недели '
+weekStart = is_rounded_date(2024, 3)
+```
+
+---
+
+### is_EAN13_by_order — код EAN-13 по заказу
+
+возвращает код EAN-13 для заказа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Да | Номер заказа или ссылка |
+| args[1] | String | Нет | Территория |
+| args[2] | Integer | Нет | Количество строк |
+
+**Возвращает**: `String` — код EAN-13, или пустая строка.
+
+```EME-L
+' Получить EAN-13 '
+ean = is_EAN13_by_order("ORD-2024-001")
+```
+
+---
+
+### is_BARCODE_by_order — штрих-код по заказу
+
+возвращает штрих-код для заказа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Да | Номер заказа или ссылка |
+| args[1] | String | Нет | Территория |
+| args[2] | Integer | Нет | Количество строк |
+
+**Возвращает**: `String` — штрих-код, или пустая строка.
+
+```EME-L
+' Получить штрих-код '
+barcode = is_BARCODE_by_order("ORD-2024-001")
+```
+
+---
+
+### is_BARCODE_by_document — штрих-код по документу
+
+возвращает штрих-код для документа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Ссылка на документ |
+| args[1] | String | Нет | Территория |
+| args[2] | Integer | Нет | Количество строк |
+
+**Возвращает**: `String` — штрих-код, или пустая строка.
+
+```EME-L
+' Получить штрих-код документа '
+barcode = is_BARCODE_by_document(docRef)
+```
+
+---
+
+### is_ccd — формирование строки штрих-кода
+
+формирует строку для штрих-кода в формате `(AI)ЗНАЧЕНИЕ`.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Номер записи |
+| args[1] | Integer | Да | Номер строки |
+| args[2] | Integer | Да | Тип данных: `0` — SSCC, `2` — EAN, `3` — EAN-13, `10` — партия, `11` — дата производства, `15` — срок годности, `37` — количество, `89` — SCD, `90` — артикул, `92` — адрес ячейки, `93` — код склада, `94` — сектор, `95` — колонна, `96` — ряд, `97` — уровень, `21` — серийный номер |
+| args[3] | Boolean | Нет | Выводить скобки. По умолчанию `FALSE` |
+
+**Возвращает**: `String` — строка штрих-кода.
+
+```EME-L
+' Сформировать строку EAN-13 '
+eanStr = is_ccd(DOC_LINES_RECORD, lineNum, 3)
+```
+
+---
+
+### is_document_line_pallet_ms_up — проверка пополнения пикинга строки
+
+проверяет, является ли строка операцией пополнения пикинга.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Номер строки. По умолчанию `param->line` |
+
+**Возвращает**: `Boolean` — `TRUE` если пополнение пикинга.
+
+```EME-L
+' Проверить строку '
+result = is_document_line_pallet_ms_up()
+```
+
+---
+
+### is_document_pallet_ms_up — проверка пополнения пикинга документа
+
+проверяет, является ли документ операцией пополнения пикинга.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Номер строки. По умолчанию `param->line` |
+
+**Возвращает**: `Boolean` — `TRUE` если пополнение пикинга.
+
+```EME-L
+' Проверить документ '
+result = is_document_pallet_ms_up()
+```
+
+---
+
+### is_document_change_mu — проверка изменения единицы измерения
+
+проверяет, является ли документ операцией изменения единицы измерения.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Номер строки. По умолчанию `param->line` |
+
+**Возвращает**: `Boolean` — `TRUE` если изменение единицы измерения или пополнение пикинга.
+
+```EME-L
+' Проверить документ '
+result = is_document_change_mu()
+```
+
+---
+
+### is_exists_ext_par — проверка расширенного количества
+
+проверяет наличие расширенного количества в строке документа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Номер строки. По умолчанию `param->line` |
+
+**Возвращает**: `Boolean` — `TRUE` если расширенное количество присутствует.
+
+```EME-L
+' Проверить расширенное количество '
+result = is_exists_ext_par()
+```
+
+---
+
+### is_force_document_export — принудительный экспорт
+
+инициирует принудительный экспорт документов.
+
+**Параметры**: нет.
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Запустить экспорт '
+is_force_document_export()
+```
+
+---
+
+### is_turn_EANCOM_messages — обработка EANCOM
+
+выполняет импорт-экспорт сообщений EANCOM.
+
+**Параметры**: нет.
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Обработать EANCOM '
+is_turn_EANCOM_messages()
+```
+
+---
+
+## Печать, экспорт и GUI
+
+### is_enter_value_dialog — диалог ввода значения
+
+выводит модальный диалог для ввода значения.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Заголовок окна |
+| args[1] | Variant | Да | Стартовое значение (тип определяет тип ввода) |
+| args[2] | Integer | Нет | Минимальное значение |
+| args[3] | Integer | Нет | Максимальное значение |
+| args[4] | Variant | Нет | Значение при отмене |
+
+**Возвращает**: введённое значение. При отмене — `args[4]` или пустое значение.
+
+```EME-L
+' Запросить число '
+result = is_enter_value_dialog("Введите количество", 10)
+```
+
+---
+
+### is_run_free_browser — запуск браузера
+
+запускает непривязанный браузер для выбора строки.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Наименование браузера |
+| args[1] | Array | Да | Массив колонок |
+| args[2] | Array | Да | Массив значений |
+| args[3] | Array | Нет | Массив для выделенных строк |
+
+**Возвращает**: `Integer` — номер выбранной строки.
+
+```EME-L
+' Запустить браузер '
+selected = is_run_free_browser("Выбор", cols, rows)
+```
+
+---
+
+### is_run_free_browser_by_str — браузер из строк
+
+запускает браузер из строковых данных.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Наименование браузера |
+| args[1] | String | Да | Колонки через запятую |
+| args[2] | String | Да | Значения через запятую и точку с запятой |
+| args[3] | Array | Нет | Массив для выделенных строк |
+
+**Возвращает**: `Integer` — номер выбранной строки.
+
+```EME-L
+' Запустить браузер из строк '
+selected = is_run_free_browser_by_str("Выбор", "Код,Имя", "001,А;002,Б")
+```
+
+---
+
+### is_print_docs — печать документов
+
+печатает документы из базы по данным запроса.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект запроса |
+| args[1] | String / Integer | Да | Поле со ссылкой на документы |
+| args[2] | String / Integer | Нет | Поле с документом |
+| args[3] | Boolean / Integer | Нет | Двусторонняя печать |
+| args[4] | Integer | Нет | Количество копий |
+| args[5] | Array | Нет | Параметры `OnEditDocument` |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Напечатать документы '
+is_print_docs(q, "DocRef")
+```
+
+---
+
+### is_print_report_indirect — печать отчёта
+
+печатает отчёт напрямую.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя отчёта |
+| args[1] | Integer | Да | Номер строки |
+| args[2] | Integer | Да | Количество копий |
+| args[3] | Reference | Нет | Дополнительный параметр |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Напечатать отчёт '
+is_print_report_indirect("Invoice", lineRef, 1)
+```
+
+---
+
+### is_print_word_file — печать файла Word
+
+печатает файл Word.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Путь к файлу |
+| args[1] | Boolean / Integer | Нет | Двусторонняя печать |
+| args[2] | Integer | Нет | Количество копий |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Напечатать Word '
+is_print_word_file("C:\\Docs\\file.docx")
+```
+
+---
+
+### is_export_pdf_docs — экспорт в PDF
+
+экспортирует документы в PDF.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Путь к PDF |
+| args[1] | Reference | Да | Объект запроса |
+| args[2] | String / Integer | Да | Поле со ссылкой |
+| args[3] | String / Integer | Нет | Поле с документом |
+| args[4] | Array | Да | Массив ошибок |
+
+**Возвращает**: `Integer` — `1` при успехе, `0` — ошибка.
+
+```EME-L
+' Экспорт в PDF '
+result = is_export_pdf_docs("C:\\out.pdf", q, "DocRef", "", errors)
+```
+
+---
+
+### is_save_image_from_field_to_pdf — сохранение изображения в PDF
+
+сохраняет изображение из поля БД в PDF.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String / Integer | Да | Запись |
+| args[1] | String / Integer | Да | Поле |
+| args[2] | Integer | Да | Строка |
+| args[3] | String | Да | Путь к PDF |
+| args[4] | Array | Да | Массив ошибок |
+
+**Возвращает**: `Integer` — `1` при успехе, `0` — ошибка.
+
+```EME-L
+' Сохранить изображение в PDF '
+result = is_save_image_from_field_to_pdf(rec, field, 1, "C:\\img.pdf", errors)
+```
+
+---
+
+### is_save_image_from_field_to_pdf2 — сохранение массива изображений
+
+сохраняет массив изображений в PDF.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Array | Да | Записи |
+| args[1] | Array | Да | Поля |
+| args[2] | Array | Да | Строки |
+| args[3] | String | Да | Путь к PDF |
+| args[4] | Array | Да | Массив ошибок |
+
+**Возвращает**: `Integer` — `1` при успехе, `0` — ошибка.
+
+```EME-L
+' Сохранить массив изображений '
+result = is_save_image_from_field_to_pdf2(recs, fields, lines, "C:\\out.pdf", errors)
+```
+
+---
+
+### is_extract_picture_from_DB — извлечение изображения
+
+сохраняет изображение из поля БД в файл.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя файла |
+| args[1] | String / Integer | Да | Запись |
+| args[2] | String / Integer | Да | Поле |
+| args[3] | Integer | Да | Строка |
+
+**Возвращает**: `String` — имя сохранённого файла, или пустая строка.
+
+```EME-L
+' Извлечь изображение '
+fileName = is_extract_picture_from_DB("C:\\Temp\\img", rec, field, 1)
+```
+
+---
+
+## Утилиты и вспомогательные функции
+
+### is_column — значение column
+
+возвращает значение `column` из `TS_PARAM`.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — значение `column`.
+
+```EME-L
+' Получить column '
+col = is_column()
+```
+
+---
+
+### is_convert_string_to_date — конвертация в дату
+
+конвертирует строку `YYYYMMDD` в дату.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Строка даты |
+
+**Возвращает**: `Date` — дата.
+
+```EME-L
+' Конвертировать строку '
+d = is_convert_string_to_date("20250115")
+```
+
+---
+
+### is_insert_delimeters_in_string — вставка разделителей
+
+вставляет разделители в строку на указанных позициях.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Исходная строка |
+| args[1] | String | Да | Разделитель |
+| args[2] | Integer | Да | Первая позиция |
+| args[3+] | Integer | Нет | Последующие позиции |
+
+**Возвращает**: `String` — строка с разделителями.
+
+```EME-L
+' Форматировать дату '
+result = is_insert_delimeters_in_string("20250115", "-", 4, 6)
+```
+
+---
+
+### is_prune_base — очистка базы
+
+выполняет очистку базы данных.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Нет | Тип очистки. По умолчанию `"DISTRIBUTIVE"` |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Очистить базу '
+is_prune_base()
+```
+
+---
+
+### is_dbref — создание ссылки dbref
+
+создаёт или проверяет ссылку `dbref`.
+
+**При 3 аргументах** создаёт ссылку:
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer / String | Да | Запись |
+| args[1] | Integer / String | Да | Поле |
+| args[2] | Integer | Да | Строка |
+
+**При 1 аргументе** проверяет:
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Строка для проверки |
+
+**Возвращает**: `String` — ссылка, или `Boolean` — результат проверки.
+
+```EME-L
+' Создать dbref '
+ref = is_dbref("DOC", "Field", 1)
+
+' Проверить '
+isValid = is_dbref("dbref://DOC/Field/1")
+```
+
+---
+
+### is_dbref_record — запись из dbref
+
+извлекает номер записи из `dbref`.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Ссылка `dbref` |
+
+**Возвращает**: `Integer` — номер записи, или `0`.
+
+```EME-L
+' Извлечь запись '
+rec = is_dbref_record("dbref://DOC/Field/1")
+```
+
+---
+
+### is_dbref_field — поле из dbref
+
+извлекает номер поля из `dbref`.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Ссылка `dbref` |
+
+**Возвращает**: `Integer` — номер поля, или `0`.
+
+```EME-L
+' Извлечь поле '
+field = is_dbref_field("dbref://DOC/Field/1")
+```
+
+---
+
+### is_dbref_line — строка из dbref
+
+извлекает номер строки из `dbref`.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Ссылка `dbref` |
+
+**Возвращает**: `Integer` — номер строки, или `0`.
+
+```EME-L
+' Извлечь строку '
+line = is_dbref_line("dbref://DOC/Field/1")
+```
+
+---
+
+### is_save_ware_timer_param — параметры таймера
+
+сохраняет параметры таймера события.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Периодичность: `0` — ежедневно, `1` — еженедельно, `2` — ежемесячно, `3` — выключен |
+| args[1] | Time | Да | Время запуска |
+| args[2] | Integer | Да | День недели |
+| args[3] | Integer | Да | Число месяца |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Настроить таймер '
+is_save_ware_timer_param(0, Time(2, 0, 0), 1, 1)
+```
+
+---
+
+### is_open_sertificate_in_shell — открытие документа
+
+открывает документ из БД во внешней программе.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя записи |
+| args[1] | Integer | Да | Номер строки |
+| args[2] | String | Да | Поле с документом |
+| args[3] | Array | Нет | Параметры `OnEditDocument` |
+
+**Возвращает**: `Integer` — `0`.
+
+```EME-L
+' Открыть документ '
+is_open_sertificate_in_shell("DOC", 1, "File")
+```
+
+---
+
+### is_price_in_full — сумма прописью
+
+возвращает сумму прописью.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Float | Да | Сумма |
+| args[1] | Integer | Нет | Формат дробной части |
+
+**Возвращает**: `String` — сумма прописью.
+
+```EME-L
+' Сумма прописью '
+text = is_price_in_full(1234.56)
+```
+
+---
+
+### is_codec — XOR-кодирование
+
+выполняет XOR-кодирование строки.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Входная строка |
+
+**Возвращает**: `String` — последние 3 символа результата.
+
+```EME-L
+' Закодировать '
+encoded = is_codec("test")
+```
+
+---
+
+### is_keyWGH — ключ кодирования
+
+возвращает ключ для кодирования габаритов.
+
+**Параметры**: нет.
+
+**Возвращает**: `String` — ключ, или пустое значение.
+
+```EME-L
+' Получить ключ '
+key = is_keyWGH()
+```
+
+---
+
+### is_SHA256_as_base64_string — хеш SHA256
+
+вычисляет SHA256 и возвращает base64.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект `CDataStorage` |
+
+**Возвращает**: `String` — хеш в base64.
+
+```EME-L
+' Вычислить SHA256 '
+hash = is_SHA256_as_base64_string(storage)
+```
+
+---
+
+### is_bcp_solution_active — активность BCP
+
+проверяет активность подсистемы BCP Solution.
+
+**Параметры**: нет.
+
+**Возвращает**: `Boolean` — `TRUE` если активна.
+
+```EME-L
+' Проверить BCP '
+active = is_bcp_solution_active()
+```
+
+---
+
+### is_bcp_solution_sos_turn_on — режим BCP-SOS
+
+проверяет режим BCP-SOS.
+
+**Параметры**: нет.
+
+**Возвращает**: `Boolean` — `TRUE` если включён.
+
+```EME-L
+' Проверить BCP-SOS '
+mode = is_bcp_solution_sos_turn_on()
+```
+
+---
+
+### is_auto_change_statuses — автосмена статусов
+
+выполняет автоматическое изменение стоковых статусов.
+
+**Параметры**: нет.
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Автосмена статусов '
+is_auto_change_statuses()
+```
+
+---
+
+### is_auto_create_moving_in_pickbyline — автоперемещение
+
+создаёт автоматическое перемещение для пикинга.
+
+**Параметры**: нет.
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Автоперемещение '
+is_auto_create_moving_in_pickbyline()
+```
+
+---
+
+### is_planned_creations_orders — плановое формирование
+
+выполняет плановое формирование волн и заказов.
+
+**Параметры**: нет.
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Плановое формирование '
+is_planned_creations_orders()
+```
+
+---
+
+### is_future — управление временем
+
+управляет внутренним временем системы при тестировании.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Команда: `0` — установить дату, `1` — сдвинуть |
+| args[1] | Date / Integer | Нет | Параметр команды |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Установить дату тестирования '
+is_future(0, Date(2025, 1, 1))
+```
+
+---
+
+### is_serial_generate_on — генератор серийных номеров
+
+проверяет, используется ли генератор серийных номеров.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — `1` если включён, `0` — нет.
+
+```EME-L
+' Проверить генератор '
+genOn = is_serial_generate_on()
 ```
 
 ---
