@@ -1,6 +1,6 @@
 # Системные функции EME-L (is_System)
 
-> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD
+> Synonyms for search: системные функции, is functions, system functions, is_qhash, is_msg, is_message, is_message_beep, is_timer_message, is_input, is_multiinput, is_get_password, is_computer_name, is_domain_name, is_domain_dc, is_domain_username, is_server, is_http_server, is_brain_computer, is_beep, is_sleep, is_system, is_set_system, is_administrator, is_access, is_sys_param, is_add_sys_param, is_force_standard_export, is_do_wait_cursor, is_RGB, is_RGBA, is_blendRGB, is_sys_color, is_legend_color, is_center, is_root_center, is_node_center, is_filial, is_parent_filial_ref, is_parent_filial_code, is_system_filial, is_send_message, is_add_history_line, is_get_tick_count, is_shell_execute, is_shell_execute_link, is_check_version, is_key_press, is_set_translate_regim, is_get_translate_regim, is_set_language, is_get_language, ML, tr, is_transliterate, is_set_method_find_mode, is_show_email_icon, is_enter_string, is_dlg_var, is_dialog, is_parent_dlg_rec, is_dlg_rec, is_dlg_line, is_dlg_stencil, is_dlg_disabled, is_calendar, is_select_color, is_dlg_caption, is_put_parameter, is_get_parameter, is_dialog_access_permitted, is_property_dialog, is_peek_all_messages, is_enter_date, is_dialog_close, is_dialog_active, is_if, is_exec_if, is_type, is_int64, is_array, is_ole_array, is_arg, is_argn, is_empty, is_loop, is_context, is_this, is_NULL, is_null, is_valid, is_double_type, is_type_equ, is_type_equ_db_type, is_call_method_for_this_class, is_class_name, is_get_NULL, is_equ_objects, is_content, is_sort_content, is_byte, is_calc_formula, is_format_EMEL, is_external, is_class_methods, is_get_functions, is_get_dlg_controls, is_classes_help, is_exec, is_workstation_mode, is_workstation_type, is_check_text_key, is_prf, is_DelayedRefNuller, is_mem_dump, is_SYS_mem_dump, is_exit, is_generate_NSI_script, is_db_driver_name, is_reg_query_value, is_OLE_serverbusydelay, is_process_rpc_over_file_system, is_last_rpc_date, is_last_rpc_time, is_last_rpc_number, is_reset_last_rpc_info, is_type_version, is_eventer_tick, is_main_thread, is_managed_thread, is_get_data_path, is_keycode, robot, is_decimal_separator, is_locale_info, is_show_popup_window, is_message_to_workstations, is_server_transaction_dump, is_server_transaction_data, is_server_emel, is_server_first_transaction, is_impersonate_user, is_get_clipboard_data_type, is_get_clipboard_as_bitmap, is_put_clipboard_data_as_text, is_put_clipboard_data_as_filelist, is_ui_test_mode, is_disconnect_user, is_filial_no, is_filial_ref, is_division_no, is_division_ref, is_change_division_no, is_license_param, is_transaction_no, is_export_db_structure, is_import_db_structure, is_password, is_change_password, is_set_user_read_only, is_clr_user_read_only, is_security_event, is_system_family, is_enable_dataslice, is_sys_import, is_restart_as_server_request, is_archive_DB, is_eme_is_arc, is_eme_arc, is_eme_unarc, is_eme_arc_deleted, is_eme_arc_all, is_eme_unarc_all_records, is_delete_documents, is_import_EANCOM_messages, is_EANCOM_name, is_EANCOM_segment, is_goods_item_code_to_EME, is_goods_item_code_to_SAP, is_read_only, is_selected, is_edit_data, is_sum, is_focus, is_modified, is_tree_line, is_tree_rec, is_recursion_ref, is_get_key_full_text, is_show_ctrl, is_find_printer, is_join_pdf, is_create_blank_pdf, is_getnoofpages_pdf, is_get_pdfimages, is_order_monitor, is_all_orders_monitor, is_calc_speed, is_switch_to_high_performance_power_scheme, хеш, MessageBox, звук, сон, цвета, реестр, буфер обмена, транзакции, филиал, пароль, лицензия, язык, локаль, профилирование, RPC, робот, clipboard, архивация, BBD
 
 в языке EME-L системные функции — это встроенные is-функции, реализованные на уровне ядра (C++) и доступные для вызова из EME-L кода. в системе EME.WMS системные функции обеспечивают доступ к свойствам окружения, управления интерфейсом, работе с цветами, транзакциям, филиалам и другим возможностям платформы.
 
@@ -597,6 +597,754 @@ If is_dialog_active()
     ' Обновить данные активного диалога '
     is_refresh_dialog()
 End If
+```
+
+---
+
+## Ядро языка
+
+### is_if — условное выражение
+
+Возвращает значение arg1, если условие arg0 истинно, иначе возвращает значение arg2. Аналог тернарного оператора в других языках программирования.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Boolean | Да | Логическое условие для проверки |
+| args[1] | Variant | Да | Значение, возвращаемое при истинном условии |
+| args[2] | Variant | Да | Значение, возвращаемое при ложном условии |
+
+**Возвращает**: `Variant` — значение arg1 или arg2 в зависимости от условия.
+
+```EME-L
+' Выбрать максимальное из двух чисел '
+maxVal = is_if(a > b, a, b)
+' maxVal = a если a > b, иначе b '
+
+' Условное присваивание строки '
+status = is_if(quantity > 0, "В наличии", "Нет в наличии")
+```
+
+---
+
+### is_exec_if — выполнение условного выражения
+
+Выполняет и возвращает результат емельного выражения arg1, если условие arg0 истинно, иначе выполняет и возвращает результат выражения arg2. Выражения передаются в виде текстовых строк и компилируются при выполнении.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Boolean | Да | Логическое условие для проверки |
+| args[1] | String | Да | Емельное выражение для выполнения при истинном условии |
+| args[2] | String | Да | Емельное выражение для выполнения при ложном условии |
+
+**Возвращает**: `Variant` — результат выполнения выбранного емельного выражения.
+
+```EME-L
+' Выполнить разные вычисления в зависимости от условия '
+result = is_exec_if(x > 0, "x * 2", "x + 10")
+' result = x * 2 если x > 0, иначе x + 10 '
+
+' Условный вызов функции через строку '
+val = is_exec_if(mode == 1, "is_calc_total()", "is_calc_average()")
+```
+
+---
+
+### is_type — приведение типов / имя типа
+
+С одним аргументом возвращает название типа значения в виде строки текста. С двумя аргументами приводит значение arg0 к VARIANT-типу, соответствующему аргументу arg1.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Variant | Да | Исходное значение для определения типа или преобразования |
+| args[1] | Variant | Нет | Значение, VARIANT-тип которого используется как целевой тип для приведения |
+
+**Возвращает**: `String` — название типа при одном аргументе, или преобразованное значение при двух аргументах.
+
+```EME-L
+' Получить имя типа переменной '
+typeName = is_type(42)
+' typeName = "VT_I4" '
+
+' Привести строку к целому числу '
+num = is_type("123", 0)
+' num = 123 как целое число '
+
+' Привести значение к дате '
+d = is_type(rawValue, #01.01.2024#)
+```
+
+---
+
+### is_int64 — 64-битное целое число
+
+Возвращает целое число 0 типа 64-битного целого (VT_I8). Используется для создания значений типа int64, которые затем могут быть изменены.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — 64-битное целое число 0.
+
+```EME-L
+' Создать 64-битное целое '
+val64 = is_int64()
+' val64 = 0 как int64 '
+
+' Использовать как начальное значение для больших чисел '
+bigNum = is_int64()
+bigNum = 9223372036854775807
+```
+
+---
+
+### is_array — массив байт
+
+Создаёт массив байт из переданных аргументов, преобразуя каждый аргумент в целое число.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Нет | Значение первого байта массива |
+| args[1] | Integer | Нет | Значение второго байта массива |
+| ... | Integer | Нет | Последующие значения байт |
+
+**Возвращает**: массив байт, содержащий переданные значения.
+
+```EME-L
+' Создать массив из трёх байт '
+arr = is_array(65, 66, 67)
+' arr = массив байт [65, 66, 67] '
+
+' Создать пустой массив байт '
+emptyArr = is_array()
+```
+
+---
+
+### is_ole_array — OLE-массив
+
+Создаёт одномерный OLE-массив (SAFEARRAY) из переданных элементов произвольного типа.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Variant | Нет | Первый элемент массива |
+| args[1] | Variant | Нет | Второй элемент массива |
+| ... | Variant | Нет | Последующие элементы массива |
+
+**Возвращает**: `Array` — одномерный OLE SafeArray с переданными элементами.
+
+```EME-L
+' Создать массив строк '
+strArr = is_ole_array("Alice", "Bob", "Charlie")
+
+' Создать массив разнотипных значений '
+mixedArr = is_ole_array(42, "text", TRUE, #01.01.2024#)
+```
+
+---
+
+### is_arg — значение внешнего аргумента
+
+Возвращает значение внешнего аргумента по указанному индексу. Используется для доступа к параметрам, переданным через is_exec или is_exec_if.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Индекс внешнего аргумента, начиная с 0 |
+
+**Возвращает**: `Variant` — значение внешнего аргумента с указанным индексом.
+
+```EME-L
+' Внутри выражения, выполняемого через is_exec '
+' arg0 содержит первый переданный параметр '
+val = is_arg(0)
+
+' Получить второй аргумент '
+second = is_arg(1)
+```
+
+---
+
+### is_argn — количество внешних аргументов
+
+Возвращает количество внешних аргументов, переданных в текущий контекст выполнения.
+
+**Параметры**: нет.
+
+**Возвращает**: `Integer` — количество внешних аргументов.
+
+```EME-L
+' Проверить количество переданных аргументов '
+count = is_argn()
+' count = 3 если передано 3 аргумента '
+
+' Использовать в цикле по аргументам '
+For i = 0 To is_argn() - 1
+    ' Обработать is_arg(i) '
+End For
+```
+
+---
+
+### is_empty — проверка на пустое значение
+
+Проверяет, является ли переданный аргумент пустым (Empty, VT_EMPTY).
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Variant | Да | Проверяемое значение |
+
+**Возвращает**: `Boolean` — TRUE если аргумент Empty, иначе FALSE.
+
+```EME-L
+' Проверить, передан ли параметр '
+If is_empty(param)
+    ' Параметр не задан, использовать значение по умолчанию '
+    param = "default"
+End If
+
+' Проверить результат функции '
+result = someFunction()
+If is_empty(result)
+    ' Функция ничего не вернула '
+End If
+```
+
+---
+
+### is_loop — функциональный цикл с аккумулятором
+
+Реализует функциональный цикл с аккумулятором. На каждой итерации проверяется условие, вычисляется новое значение аккумулятора и обновляется счётчик. Внутри выражений доступны is_arg(0) — текущий счётчик, is_arg(1) — текущий аккумулятор.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Variant | Да | Начальное значение счётчика цикла |
+| args[1] | String | Да | Условие продолжения цикла, выражение в виде текстовой строки |
+| args[2] | String | Да | Выражение для вычисления следующего значения счётчика |
+| args[3] | Variant | Да | Начальное значение аккумулятора |
+| args[4] | String | Да | Выражение для вычисления следующего значения аккумулятора |
+
+**Возвращает**: `Variant` — конечное значение аккумулятора после завершения цикла.
+
+```EME-L
+' Вычислить сумму чисел от 1 до 10 '
+sum = is_loop(1, "is_arg(0) <= 10", "is_arg(0) + 1", 0, "is_arg(1) + is_arg(0)")
+' sum = 55 '
+
+' Вычислить факториал 5 '
+fact = is_loop(1, "is_arg(0) <= 5", "is_arg(0) + 1", 1, "is_arg(1) * is_arg(0)")
+' fact = 120 '
+```
+
+---
+
+### is_context — контекст выполнения
+
+Без аргументов возвращает адрес указателя контекста выполнения TS_PARAM в виде целого числа. С аргументом возвращает объект указанного контекста.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Нет | Имя контекста для получения объекта: "QUERY", "DIALOG", "BROWSER", "CONTAINER" |
+
+**Возвращает**: `Integer` — адрес указателя TS_PARAM без аргументов, или объект указанного контекста.
+
+```EME-L
+' Получить адрес контекста выполнения '
+ctx = is_context()
+
+' Получить объект текущего диалога '
+dlg = is_context("DIALOG")
+
+' Получить объект браузера '
+brw = is_context("BROWSER")
+```
+
+---
+
+### is_this — текущий объект
+
+Возвращает текущий объект-контейнер (IClass), в контексте которого выполняется функция.
+
+**Параметры**: нет.
+
+**Возвращает**: `Reference` — текущий объект-контейнер или NULL.
+
+```EME-L
+' Получить ссылку на текущий объект '
+obj = is_this()
+
+' Проверить, что объект существует '
+If Not is_NULL(is_this())
+    ' Работаем в контексте объекта '
+End If
+```
+
+---
+
+### is_NULL — проверка на NULL
+
+Проверяет, содержит ли переданный объект значение NULL (VT_NULL с нулевым указателем).
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Проверяемый объект |
+
+**Возвращает**: `Boolean` — TRUE если объект является NULL, иначе FALSE.
+
+```EME-L
+' Проверить объект на NULL '
+If is_NULL(obj)
+    ' Объект не инициализирован '
+    obj = Object("MyClass")
+End If
+
+' Проверить результат поиска '
+found = find_object("Name")
+If is_NULL(found)
+    ' Объект не найден '
+End If
+```
+
+---
+
+### is_null — проверка на NULL (нижний регистр)
+
+Аналог is_NULL — проверяет, содержит ли переданный объект значение NULL (VT_NULL с нулевым указателем). Предоставляет альтернативное имя в нижнем регистре.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Проверяемый объект |
+
+**Возвращает**: `Boolean` — TRUE если объект является NULL, иначе FALSE.
+
+```EME-L
+' Использовать is_null вместо is_NULL '
+If is_null(obj)
+    ' Объект не инициализирован '
+End If
+```
+
+---
+
+### is_valid — проверка валидности объекта
+
+Проверяет валидность переданного объекта. По умолчанию использует иерархию CEME для проверки. С флагом arg1 = TRUE использует ядерную иерархию CHTEML.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Проверяемый объект |
+| args[1] | Boolean | Нет | Флаг использования ядерной иерархии CHTEML. По умолчанию FALSE |
+
+**Возвращает**: `Boolean` — TRUE если объект валиден, иначе FALSE.
+
+```EME-L
+' Проверить валидность объекта перед использованием '
+If is_valid(obj)
+    ' Объект валиден, можно вызывать методы '
+    obj.Process()
+End If
+
+' Проверить с использованием ядерной иерархии '
+If is_valid(obj, TRUE)
+    ' Объект валиден в CHTEML '
+End If
+```
+
+---
+
+### is_double_type — строка в вещественное число
+
+Преобразует текстовую строку в вещественное число. Использует стандартную функцию strtod.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Текстовая строка для преобразования в число |
+
+**Возвращает**: `Float` — вещественное число, полученное из строки.
+
+```EME-L
+' Преобразовать строку в double '
+val = is_double_type("3.14159")
+' val = 3.14159 '
+
+' Преобразовать строку с экспонентой '
+val = is_double_type("1.5e-10")
+' val = 1.5e-10 '
+```
+
+---
+
+### is_type_equ — равенство типов
+
+Проверяет, совпадают ли VARIANT-типы двух значений. Сравнивает поле vt у обоих аргументов.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Variant | Да | Первое значение для сравнения типов |
+| args[1] | Variant | Да | Второе значение для сравнения типов |
+
+**Возвращает**: `Boolean` — TRUE если типы значений совпадают, иначе FALSE.
+
+```EME-L
+' Проверить, что оба значения одного типа '
+If is_type_equ(val1, val2)
+    ' Типы совпадают '
+End If
+
+' Проверить тип перед операцией '
+If is_type_equ(x, 0)
+    ' x — целое число '
+End If
+```
+
+---
+
+### is_type_equ_db_type — соответствие типа полю БД
+
+Проверяет соответствие типа VARIANT-значения атрибуту поля базы данных.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Variant | Да | Проверяемое значение |
+| args[1] | Integer | Да | Код атрибута поля базы данных |
+
+**Возвращает**: `Boolean` — TRUE если тип значения соответствует атрибуту поля БД, иначе FALSE.
+
+```EME-L
+' Проверить соответствие строкового значения '
+match = is_type_equ_db_type("text", TEXT_STRING_ATTRIBUTE)
+' match = TRUE '
+
+' Проверить перед записью в БД '
+If Not is_type_equ_db_type(value, fieldAttribute)
+    ' Тип не соответствует, вывести ошибку '
+End If
+```
+
+---
+
+### is_call_method_for_this_class — вызов метода текущего класса
+
+Вызывает метод текущего класса по имени с переданными параметрами.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя вызываемого метода |
+| args[1] | Variant | Нет | Первый параметр метода |
+| ... | Variant | Нет | Последующие параметры метода |
+
+**Возвращает**: `Variant` — результат выполнения метода.
+
+```EME-L
+' Вызвать метод по имени '
+result = is_call_method_for_this_class("CalculateTotal", 100, 200)
+
+' Динамический вызов метода '
+methodName = "ProcessData"
+result = is_call_method_for_this_class(methodName, param1, param2)
+```
+
+---
+
+### is_class_name — имя класса объекта
+
+Возвращает имя класса переданного объекта. При передаче не-объекта или невалидной ссылки возвращает пустую строку.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Объект, имя класса которого требуется получить |
+
+**Возвращает**: `String` — имя класса объекта или пустая строка.
+
+```EME-L
+' Получить имя класса объекта '
+name = is_class_name(obj)
+' name = "MyClass" если obj создан как Object("MyClass") '
+
+' Проверить тип объекта '
+If is_class_name(obj) == "CEMERec"
+    ' Объект — запись базы данных '
+End If
+```
+
+---
+
+### is_get_NULL — ссылка на NULL
+
+Возвращает ссылку на NULL-объект. Используется для инициализации переменных-ссылок.
+
+**Параметры**: нет.
+
+**Возвращает**: `Reference` — ссылка на NULL.
+
+```EME-L
+' Инициализировать переменную-ссылку '
+obj = is_get_NULL()
+' obj = NULL-ссылка '
+
+' Очистить ссылку '
+obj = is_get_NULL()
+```
+
+---
+
+### is_equ_objects — равенство объектов
+
+Проверяет идентичность двух объектов по ссылке. Объекты считаются равными, если оба являются VT_NULL и имеют одинаковый указатель byref.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Первый объект для сравнения |
+| args[1] | Reference | Да | Второй объект для сравнения |
+
+**Возвращает**: `Boolean` — TRUE если объекты идентичны по ссылке, иначе FALSE.
+
+```EME-L
+' Проверить, что два указателя ссылаются на один объект '
+If is_equ_objects(obj1, obj2)
+    ' obj1 и obj2 — один и тот же объект '
+End If
+
+' Сравнить с текущим объектом '
+If is_equ_objects(is_this(), targetObj)
+    ' targetObj — это текущий объект '
+End If
+```
+
+---
+
+### is_content — строковое содержимое
+
+Возвращает строковое представление содержимого переданного аргумента. Поддерживает все VARIANT-типы.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Variant | Да | Значение для получения строкового содержимого |
+
+**Возвращает**: `String` — содержимое аргумента в виде строки текста.
+
+```EME-L
+' Получить строковое представление числа '
+text = is_content(42)
+' text = "42" '
+
+' Получить строковое представление даты '
+text = is_content(#01.01.2024#)
+' text = "01.01.2024" '
+```
+
+---
+
+### is_sort_content — содержимое поля сортировки
+
+Возвращает строковое представление содержимого поля сортировки из массива байт. Формат вывода: "NEXT=%d PREV=%d".
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | ByteArray | Да | Массив байт, содержащий структуру сортировки |
+
+**Возвращает**: `String` — строка с полями NEXT и PREV структуры сортировки.
+
+```EME-L
+' Получить содержимое поля сортировки '
+sortInfo = is_sort_content(sortArray)
+' sortInfo = "NEXT=5 PREV=3" (пример) '
+```
+
+---
+
+### is_byte — байт из массива
+
+Возвращает байт по указанному индексу из массива байт.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | ByteArray | Да | Массив байт для извлечения значения |
+| args[1] | Integer | Да | Номер байта (индекс) в массиве, начиная с 0 |
+
+**Возвращает**: `Integer` — значение байта по указанному индексу.
+
+```EME-L
+' Получить первый байт массива '
+first = is_byte(arr, 0)
+
+' Получить байт по индексу 5 '
+b = is_byte(arr, 5)
+' b = значение байта с индексом 5 '
+```
+
+---
+
+### is_calc_formula — вычисление формулы рабочей книги
+
+Вычисляет формулу в контексте рабочей книги ЕМЕ (аналог рабочих книг Excel). Использует CWorkbookCalc для вычисления.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Текст формулы для вычисления |
+| args[1] | Variant | Да | Произвольный параметр, передаваемый в контекст рабочей книги |
+
+**Возвращает**: `Variant` — результат вычисления формулы.
+
+```EME-L
+' Вычислить формулу в контексте рабочей книги '
+result = is_calc_formula("A1 + B1 * 2", param)
+
+' Вычислить сложную формулу '
+result = is_calc_formula("SUM(A1:A10)", workbookParam)
+```
+
+---
+
+### is_format_EMEL — форматирование кода EME-L
+
+Выполняет жёсткое форматирование емельного кода указанного класса с заданным размером отступа и режимом форматирования.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Integer | Да | Ссылка на класс для форматирования кода |
+| args[1] | Integer | Нет | Размер отступа в пробелах. По умолчанию 4 |
+| args[2] | Integer | Нет | Режим форматирования: 0 — конструктор, 1 — методы, 2 — процедуры. По умолчанию 1 |
+
+**Возвращает**: `String` — отформатированный код в виде строки текста.
+
+```EME-L
+' Отформатировать методы класса с отступом 4 '
+formatted = is_format_EMEL(classRef)
+
+' Отформатировать конструктор '
+formatted = is_format_EMEL(classRef, 4, 0)
+
+' Отформатировать процедуры '
+formatted = is_format_EMEL(classRef, 4, 2)
+```
+
+---
+
+### is_external — внешняя переменная
+
+Возвращает значение внешней переменной по имени. Если переменная не найдена, возвращает значение по умолчанию или Empty. Предназначена для использования в запросах.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя внешней переменной |
+| args[1] | Variant | Нет | Значение по умолчанию, возвращаемое при отсутствии переменной |
+
+**Возвращает**: `Variant` — значение внешней переменной или значение по умолчанию/Empty.
+
+```EME-L
+' Получить внешнюю переменную '
+val = is_external("MyVar")
+
+' Получить с значением по умолчанию '
+val = is_external("Counter", 0)
+' val = значение Counter или 0 если переменная не определена '
+```
+
+---
+
+### is_class_methods — методы класса
+
+Заполняет массив описаниями методов указанного класса. Поддерживаются массивы типа CIArray и CIMultiArray(4).
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Имя класса для получения методов |
+| args[1] | Reference | Да | Массив для записи описаний методов (CIArray или CIMultiArray(4)) |
+| args[2] | String | Нет | Имя конкретного метода для получения информации |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Получить список методов класса '
+arr = Object("Array")
+is_class_methods("CEMERec", arr)
+' arr содержит описания методов CEMERec '
+
+' Получить информацию о конкретном методе '
+mularr = Object("MultiArray", 4)
+is_class_methods("CEMERec", mularr, "Find")
+```
+
+---
+
+### is_get_functions — список is-функций
+
+Заполняет массив списком is-функций с их описаниями. Используется для интроспекции доступных функций.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Массив CIMultiArray размером 2 для записи названий функций и справки |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Получить список всех is-функций '
+mularr = Object("MultiArray", 2)
+is_get_functions(mularr)
+' mularr содержит названия и описания всех is-функций '
+```
+
+---
+
+### is_get_dlg_controls — контролы диалога
+
+Заполняет массив списком контролов диалога по софтовому имени диалога или имени класса EME-L.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Софтовое имя диалога или имя класса EME-L |
+| args[1] | Reference | Да | Массив CIMultiArray размером 2 для записи названий контролов и их типов |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Получить список контролов диалога '
+mularr = Object("MultiArray", 2)
+is_get_dlg_controls("Orders.Dialog", mularr)
+' mularr содержит имена и типы контролов диалога '
+```
+
+---
+
+### is_classes_help — хелп классов
+
+Заполняет массив именами классов, их группами и строками хелпа. Массив должен иметь размер 4 по второй размерности.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | Reference | Да | Массив CIMultiArray размером 4: колонка 2 — имя класса, 3 — группа, 4 — хелп |
+
+**Возвращает**: пустое значение.
+
+```EME-L
+' Получить информацию о всех классах '
+mularr = Object("MultiArray", 4)
+is_classes_help(mularr)
+' mularr содержит имена, группы и хелп всех классов '
+```
+
+---
+
+### is_exec — выполнение емельного выражения
+
+Выполняет емельное выражение с возможностью передачи параметров, доступных через is_arg(). При ошибке компиляции или выполнения выражения генерирует исключение.
+
+| Параметр | Тип | Обязательный | Описание |
+|----------|-----|-------------|----------|
+| args[0] | String | Да | Емельное выражение для выполнения |
+| args[1] | Variant | Нет | Первый параметр выражения, доступный как is_arg(0) |
+| ... | Variant | Нет | Последующие параметры выражения |
+
+**Возвращает**: `Variant` — результат выполнения емельного выражения.
+
+```EME-L
+' Выполнить простое выражение '
+result = is_exec("2 + 3")
+' result = 5 '
+
+' Выполнить выражение с параметрами '
+result = is_exec("is_arg(0) + is_arg(1)", 10, 20)
+' result = 30 '
+
+' Выполнить вызов метода через строку '
+result = is_exec("is_this().Calculate()")
 ```
 
 ---
