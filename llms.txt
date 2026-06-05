@@ -26,7 +26,8 @@
 - [EME_L_Classes.md](docs/EME_L_Classes.md): Объектная модель — Object(), IClass, песочница, apartment threading, интерфейсы CEME (FindMethod, CallMethod, EnumProperties)
 - [EME_L_Events.md](docs/EME_L_Events.md): Все обработчики событий — 24 диалоговых, 16 органов, 7 таблиц, 11 браузеров, 20 интегратора, 3 отчёта, 5 элементов отчёта, 2 бэнда
 - [EME_L_Constants.md](docs/EME_L_Constants.md): 13 групп констант — типы документов (DOCUMENT_TYPE_*), статусы заказов (os*), типы приказов (MO_TYPE_*), зоны склада (ZONE_*), типы ячеек (CELL_TYPE_*), типы доставки, JSON-узлы
-- [EME_L_IS_Functions.md](docs/EME_L_IS_Functions.md): is-функции групп Bit, Browser, Context — битовые операции, работа с браузером, контекст диалогов
+- [EME_L_IS_Functions.md](docs/EME_L_IS_Functions.md): is-функции групп Bit, Browser, Context, DateTime, DB — битовые операции, работа с браузером, контекст диалогов, дата/время, база данных
+- [system-functions/index.md](docs/system-functions/index.md): Системные is-функции — MessageBox, диалоги, ядро языка, битовые операции, браузеры, контекст, дата/время, файловая система, безопасность, филиалы, цвета, локализация, криптография, RPC, HTTP, математика, БД (ядро, ссылки, транзакции, структура), WMS, EANCOM, печать, GUI
 
 ### Язык EME-L — Данные и память
 
