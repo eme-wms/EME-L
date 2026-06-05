@@ -23,12 +23,12 @@
 ```EME-L
 ' Проверка формата email '
 Result = is_regexp("user@example.com", "^[\w.-]+@[\w.-]+\.\w+$")
-' Result = TRUE
+' Result = TRUE '
 
 ' Извлечение групп совпадений '
 Dim arr(10)
 Found = is_regexp("Order #12345", "#(\d+)", arr)
-' Found = TRUE, arr[0] = "12345"
+' Found = TRUE, arr[0] = "12345" '
 ```
 
 ---
@@ -49,12 +49,12 @@ Found = is_regexp("Order #12345", "#(\d+)", arr)
 ' Поиск всех чисел в строке '
 Dim Numbers()
 Numbers = is_regexparr("Order 100, Item 200, Total 300", "\d+")
-' Numbers = ["100", "200", "300"]
+' Numbers = ["100", "200", "300"] '
 
 ' Ленивый поиск '
 Dim Tags()
 Tags = is_regexparr("<b>bold</b><i>italic</i>", "<.*>", TRUE)
-' Tags = ["<b>", "</b>", "<i>", "</i>"] — при ленивом режиме
+' Tags = ["<b>", "</b>", "<i>", "</i>"] — при ленивом режиме '
 ```
 
 ---
@@ -79,7 +79,7 @@ Tags = is_regexparr("<b>bold</b><i>italic</i>", "<.*>", TRUE)
 Dim Results()
 Dim Positions()
 Results = is_regexparrpos("ABC def GHI", "[A-Z]{3}", Positions)
-' Results = ["ABC", "GHI"], Positions = [0, 8]
+' Results = ["ABC", "GHI"], Positions = [0, 8] '
 ```
 
 ---
@@ -100,11 +100,11 @@ Results = is_regexparrpos("ABC def GHI", "[A-Z]{3}", Positions)
 ```EME-L
 ' Замена части строки '
 Result = is_replacepos("Hello World", 6, 5, "EME-L")
-' Result = "Hello EME-L"
+' Result = "Hello EME-L" '
 
 ' Вставка без удаления '
 Result = is_replacepos("ABC", 1, 0, "123")
-' Result = "A123BC"
+' Result = "A123BC" '
 ```
 
 ---
@@ -125,11 +125,11 @@ Result = is_replacepos("ABC", 1, 0, "123")
 ```EME-L
 ' Проверка формата даты '
 Result = is_formatted("2024-03-15", "%d-%d-%d")
-' Result = TRUE
+' Result = TRUE '
 
 ' Проверка числа '
 Result = is_formatted("123.45", "%f")
-' Result = TRUE
+' Result = TRUE '
 ```
 
 ---
@@ -150,11 +150,11 @@ Result = is_formatted("123.45", "%f")
 ```EME-L
 ' Проверка, что строка содержит только цифры '
 Result = is_masked("12345", "{ '0'-'9' }(*)")
-' Result = TRUE
+' Result = TRUE '
 
 ' Проверка на буквы и цифры '
 Result = is_masked("A1B2", "{ 'A'-'Z', '0'-'9' }(*)")
-' Result = TRUE
+' Result = TRUE '
 ```
 
 ---
@@ -172,11 +172,11 @@ Result = is_masked("A1B2", "{ 'A'-'Z', '0'-'9' }(*)")
 ```EME-L
 ' Длина строки '
 Len = is_length("Hello")
-' Len = 5
+' Len = 5 '
 
 ' Длина пустой строки '
 Len = is_length("")
-' Len = 0
+' Len = 0 '
 ```
 
 ---
@@ -197,19 +197,19 @@ Len = is_length("")
 ```EME-L
 ' Код символа '
 Code = is_char("A")
-' Code = 65
+' Code = 65 '
 
 ' Символ по коду '
 Symbol = is_char(65)
-' Symbol = "A"
+' Symbol = "A" '
 
 ' Несколько символов по коду '
 Symbols = is_char(65, 3)
-' Symbols = "AAA"
+' Symbols = "AAA" '
 
 ' Проверка обратимости '
 Result = is_char(is_char("X"))
-' Result = "X"
+' Result = "X" '
 ```
 
 ---
@@ -227,11 +227,11 @@ Result = is_char(is_char("X"))
 ```EME-L
 ' Символ сердца '
 Heart = is_charw(9829)
-' Heart = "♥"
+' Heart = "♥" '
 
 ' Знак евро '
 Euro = is_charw(8364)
-' Euro = "€"
+' Euro = "€" '
 ```
 
 ---
@@ -249,11 +249,11 @@ Euro = is_charw(8364)
 ```EME-L
 ' Преобразование строки '
 Value = is_atof("3.14159")
-' Value = 3.14159
+' Value = 3.14159 '
 
 ' Число остаётся числом '
 Value = is_atof(42)
-' Value = 42.0
+' Value = 42.0 '
 ```
 
 ---
@@ -271,11 +271,11 @@ Value = is_atof(42)
 ```EME-L
 ' Преобразование строки '
 Value = is_atol("12345")
-' Value = 12345
+' Value = 12345 '
 
 ' Отрицательное число '
 Value = is_atol("-100")
-' Value = -100
+' Value = -100 '
 ```
 
 ---
@@ -293,7 +293,7 @@ Value = is_atol("-100")
 ```EME-L
 ' Большое число '
 Value = is_atoi64("9223372036854775807")
-' Value = 9223372036854775807
+' Value = 9223372036854775807 '
 ```
 
 ---
@@ -311,7 +311,7 @@ Value = is_atoi64("9223372036854775807")
 ```EME-L
 ' Число прописью '
 Text = is_in_full(1234.56)
-' Text = "одна тысяча двести тридцать четыре"
+' Text = "одна тысяча двести тридцать четыре" '
 ```
 
 ---
@@ -331,11 +331,11 @@ Text = is_in_full(1234.56)
 ```EME-L
 ' Удаление первых двух токенов '
 Result = is_trim_token("a;b;c;d", ";", 2)
-' Result = "c;d"
+' Result = "c;d" '
 
 ' Удаление последнего токена '
 Result = is_trim_token("a;b;c;d", ";", -1)
-' Result = "a;b;c"
+' Result = "a;b;c" '
 ```
 
 ---
@@ -353,11 +353,11 @@ Result = is_trim_token("a;b;c;d", ";", -1)
 ```EME-L
 ' Преобразование в верхний регистр '
 Result = is_upper("Hello World")
-' Result = "HELLO WORLD"
+' Result = "HELLO WORLD" '
 
 ' Русские буквы '
 Result = is_upper("Привет")
-' Result = "ПРИВЕТ"
+' Result = "ПРИВЕТ" '
 ```
 
 ---
@@ -375,11 +375,11 @@ Result = is_upper("Привет")
 ```EME-L
 ' Преобразование в нижний регистр '
 Result = is_lower("Hello World")
-' Result = "hello world"
+' Result = "hello world" '
 
 ' Русские буквы '
 Result = is_lower("ПРИВЕТ")
-' Result = "привет"
+' Result = "привет" '
 ```
 
 ---
@@ -397,11 +397,11 @@ Result = is_lower("ПРИВЕТ")
 ```EME-L
 ' Преобразование '
 Result = is_PascalCase2snake_case("HelloWorld")
-' Result = "hello_world"
+' Result = "hello_world" '
 
 ' С аббревиатурой '
 Result = is_PascalCase2snake_case("XMLParser")
-' Result = "x_m_l_parser"
+' Result = "x_m_l_parser" '
 ```
 
 ---
@@ -422,15 +422,15 @@ Result = is_PascalCase2snake_case("XMLParser")
 ```EME-L
 ' Форматирование числа '
 Result = is_format("Value: %d", 42)
-' Result = "Value: 42"
+' Result = "Value: 42" '
 
 ' Несколько аргументов '
 Result = is_format("Name: %s, Age: %d", "Ivan", 30)
-' Result = "Name: Ivan, Age: 30"
+' Result = "Name: Ivan, Age: 30" '
 
 ' Вещественное число с точностью '
 Result = is_format("Pi = %.2f", 3.14159)
-' Result = "Pi = 3.14"
+' Result = "Pi = 3.14" '
 ```
 
 ---
@@ -451,11 +451,11 @@ Result = is_format("Pi = %.2f", 3.14159)
 ```EME-L
 ' Первые 5 символов '
 Result = is_piece("Hello World", 5)
-' Result = "Hello"
+' Result = "Hello" '
 
 ' Последние 5 символов '
 Result = is_piece("Hello World", -5)
-' Result = "World"
+' Result = "World" '
 ```
 
 ---
@@ -474,11 +474,11 @@ Result = is_piece("Hello World", -5)
 ```EME-L
 ' Денежный формат '
 Result = is_fmoney(1234567.89)
-' Result = "1`234`567.89"
+' Result = "1`234`567.89" '
 
 ' Без копеек '
 Result = is_fmoney(1234567, 0)
-' Result = "1`234`567"
+' Result = "1`234`567" '
 ```
 
 ---
@@ -496,7 +496,7 @@ Result = is_fmoney(1234567, 0)
 ```EME-L
 ' Удаление пробелов '
 Result = is_trim_spaces("  Hello   World  ")
-' Result = "HelloWorld"
+' Result = "HelloWorld" '
 ```
 
 ---
@@ -515,11 +515,11 @@ Result = is_trim_spaces("  Hello   World  ")
 ```EME-L
 ' Удаление whitespace '
 Result = is_trim_left("   Hello")
-' Result = "Hello"
+' Result = "Hello" '
 
 ' Удаление указанных символов '
 Result = is_trim_left("xxxHello", "x")
-' Result = "Hello"
+' Result = "Hello" '
 ```
 
 ---
@@ -538,11 +538,11 @@ Result = is_trim_left("xxxHello", "x")
 ```EME-L
 ' Удаление whitespace '
 Result = is_trim_right("Hello   ")
-' Result = "Hello"
+' Result = "Hello" '
 
 ' Удаление указанных символов '
 Result = is_trim_right("Helloxxx", "x")
-' Result = "Hello"
+' Result = "Hello" '
 ```
 
 ---
@@ -561,11 +561,11 @@ Result = is_trim_right("Helloxxx", "x")
 ```EME-L
 ' Удаление whitespace '
 Result = is_trim_all("   Hello   ")
-' Result = "Hello"
+' Result = "Hello" '
 
 ' Удаление указанных символов '
 Result = is_trim_all("xxHelloxx", "x")
-' Result = "Hello"
+' Result = "Hello" '
 ```
 
 ---
@@ -584,7 +584,7 @@ Result = is_trim_all("xxHelloxx", "x")
 ```EME-L
 ' Первые 3 символа '
 Result = is_left("Hello", 3)
-' Result = "Hel"
+' Result = "Hel" '
 ```
 
 ---
@@ -603,7 +603,7 @@ Result = is_left("Hello", 3)
 ```EME-L
 ' Последние 3 символа '
 Result = is_right("Hello", 3)
-' Result = "llo"
+' Result = "llo" '
 ```
 
 ---
@@ -623,11 +623,11 @@ Result = is_right("Hello", 3)
 ```EME-L
 ' Подстрока с позиции 2 '
 Result = is_mid("Hello", 2)
-' Result = "llo"
+' Result = "llo" '
 
 ' Подстрока 3 символа с позиции 1 '
 Result = is_mid("Hello", 1, 3)
-' Result = "ell"
+' Result = "ell" '
 ```
 
 ---
@@ -648,7 +648,7 @@ Result = is_mid("Hello", 1, 3)
 ```EME-L
 ' Удаление кавычек и юридических форм '
 Result = is_clear_shortname('"ООО Ромашка"', "ООО", "ОАО", "ЗАО")
-' Result = "Ромашка"
+' Result = "Ромашка" '
 ```
 
 ---
@@ -669,15 +669,15 @@ Result = is_clear_shortname('"ООО Ромашка"', "ООО", "ОАО", "ЗА
 ```EME-L
 ' Проверка расширения файла '
 Result = is_wildcmp("*.txt", "document.txt")
-' Result = 1
+' Result = 1 '
 
 ' Один символ '
 Result = is_wildcmp("file?.log", "file1.log")
-' Result = 1
+' Result = 1 '
 
 ' Не соответствует '
 Result = is_wildcmp("*.pdf", "document.txt")
-' Result = 0
+' Result = 0 '
 ```
 
 ---
@@ -698,19 +698,19 @@ Result = is_wildcmp("*.pdf", "document.txt")
 ```EME-L
 ' Простой поиск '
 Pos = is_find("Hello World", "World")
-' Pos = 6
+' Pos = 6 '
 
 ' Поиск с позиции '
 Pos = is_find("ababab", "ab", 2)
-' Pos = 2
+' Pos = 2 '
 
 ' Поиск без учёта регистра '
 Pos = is_find("Hello World", "world", 0, FALSE)
-' Pos = 6
+' Pos = 6 '
 
 ' Не найдено '
 Pos = is_find("Hello", "xyz")
-' Pos = -1
+' Pos = -1 '
 ```
 
 ---
@@ -731,11 +731,11 @@ Pos = is_find("Hello", "xyz")
 ```EME-L
 ' Обратный поиск '
 Pos = is_rfind("ababab", "ab")
-' Pos = 4
+' Pos = 4 '
 
 ' С позиции '
 Pos = is_rfind("ababab", "ab", 3)
-' Pos = 2
+' Pos = 2 '
 ```
 
 ---
@@ -753,7 +753,7 @@ Pos = is_rfind("ababab", "ab", 3)
 ```EME-L
 ' Контрольная сумма '
 Crc = is_count_CRC("Hello World")
-' Crc = целочисленное значение CRC32
+' Crc = целочисленное значение CRC32 '
 ```
 
 ---
@@ -776,11 +776,11 @@ Crc = is_count_CRC("Hello World")
 ```EME-L
 ' Простая замена '
 Result = is_replace("Hello World", "World", "EME-L")
-' Result = "Hello EME-L"
+' Result = "Hello EME-L" '
 
 ' Несколько замен '
 Result = is_replace("a-b-c", "-", "_", "a", "x")
-' Result = "x_b_c"
+' Result = "x_b_c" '
 ```
 
 ---
@@ -800,11 +800,11 @@ Result = is_replace("a-b-c", "-", "_", "a", "x")
 ```EME-L
 ' Корректировка имени файла '
 Result = is_replace_ex("file:name?.txt")
-' Result = "file_name_.txt"
+' Result = "file_name_.txt" '
 
 ' Замена других символов '
 Result = is_replace_ex("a,b,c", ",", ";")
-' Result = "a;b;c"
+' Result = "a;b;c" '
 ```
 
 ---
@@ -822,7 +822,7 @@ Result = is_replace_ex("a,b,c", ",", ";")
 ```EME-L
 ' Корректировка имени '
 Result = is_correct_filename("report:2024/03.txt")
-' Result = "report202403.txt"
+' Result = "report202403.txt" '
 ```
 
 ---
@@ -844,8 +844,8 @@ Result = is_correct_filename("report:2024/03.txt")
 ' Замена с сохранением позиций '
 Dim Positions()
 Result = is_replace_and_save_position("a:b/c", "", "", Positions)
-' Result = "a_b_c"
-' Positions = [":", 1, "/", 3]
+' Result = "a_b_c" '
+' Positions = [":", 1, "/", 3] '
 ```
 
 ---
@@ -869,7 +869,7 @@ Arr[1] = 2
 Arr[2] = "-"
 Arr[3] = 5
 Result = is_insert_simbols_from_array("123456", Arr)
-' Result = "12-34-56"
+' Result = "12-34-56" '
 ```
 
 ---
@@ -929,7 +929,7 @@ is_WIN2UTF(StringBuilder)
 ' Генерация случайных имён '
 Dim Names()
 is_load_random_names(10, "ФИО", Names)
-' Names содержит 10 случайных ФИО
+' Names содержит 10 случайных ФИО '
 ```
 
 ---
@@ -949,7 +949,7 @@ is_load_random_names(10, "ФИО", Names)
 ```EME-L
 ' Выделение отличий '
 Result = is_show_text_diff_by_html_color("Hello World", "Hello EME-L")
-' Result содержит HTML с выделенным "EME-L"
+' Result содержит HTML с выделенным "EME-L" '
 ```
 
 ---
@@ -968,11 +968,11 @@ Result = is_show_text_diff_by_html_color("Hello World", "Hello EME-L")
 ```EME-L
 ' Преобразование денежного формата '
 Value = is_atofmoney("1`234`567.89")
-' Value = 1234567.89
+' Value = 1234567.89 '
 
 ' С запятой '
 Value = is_atofmoney("1 234,56")
-' Value = 1234.56
+' Value = 1234.56 '
 ```
 
 ---
@@ -994,12 +994,12 @@ Value = is_atofmoney("1 234,56")
 ' Разбиение по точке с запятой '
 Dim Parts()
 Count = is_split("a;b;c;d", ";", Parts)
-' Parts = ["a", "b", "c", "d"], Count = 4
+' Parts = ["a", "b", "c", "d"], Count = 4 '
 
 ' Разбиение с полным совпадением '
 Dim Items()
 Count = is_split("a::b::c", "::", Items, TRUE)
-' Items = ["a", "b", "c"], Count = 3
+' Items = ["a", "b", "c"], Count = 3 '
 ```
 
 ---
@@ -1023,11 +1023,11 @@ Dim Arr()
 Arr[0] = "Hello"
 Arr[1] = "World"
 Result = is_join(Arr, " ")
-' Result = "Hello World"
+' Result = "Hello World" '
 
 ' С разделителем '
 Result = is_join(Arr, "-")
-' Result = "Hello-World"
+' Result = "Hello-World" '
 ```
 
 ---
@@ -1050,11 +1050,11 @@ Result = is_join(Arr, "-")
 ```EME-L
 ' Сравнение '
 Result = is_strncmp("Hello", "Helium", 3)
-' Result = 0 — первые 3 символа равны
+' Result = 0 — первые 3 символа равны '
 
 ' Различие '
 Result = is_strncmp("ABC", "XYZ", 2)
-' Result < 0
+' Result < 0 '
 ```
 
 ---
@@ -1077,7 +1077,7 @@ Result = is_strncmp("ABC", "XYZ", 2)
 ```EME-L
 ' Сравнение без регистра '
 Result = is_strnicmp("Hello", "HELLO", 5)
-' Result = 0
+' Result = 0 '
 ```
 
 ---
@@ -1099,11 +1099,11 @@ Result = is_strnicmp("Hello", "HELLO", 5)
 ```EME-L
 ' Полное сравнение '
 Result = is_strcmp("Hello", "Hello")
-' Result = 0
+' Result = 0 '
 
 ' Различие '
 Result = is_strcmp("ABC", "XYZ")
-' Result < 0
+' Result < 0 '
 ```
 
 ---
@@ -1125,11 +1125,11 @@ Result = is_strcmp("ABC", "XYZ")
 ```EME-L
 ' Простая шаблонизация '
 Result = is_stemplate("Hello, {name}!", TRUE, "name", "World")
-' Result = "Hello, World!"
+' Result = "Hello, World!" '
 
 ' С несколькими параметрами '
 Result = is_stemplate("{greeting}, {name}!", TRUE, "greeting", "Hi", "name", "EME-L")
-' Result = "Hi, EME-L!"
+' Result = "Hi, EME-L!" '
 ```
 
 ---
@@ -1147,11 +1147,11 @@ Result = is_stemplate("{greeting}, {name}!", TRUE, "greeting", "Hi", "name", "EM
 ```EME-L
 ' Кодирование строки '
 Encoded = is_urlencode("Hello World!")
-' Encoded = "Hello%20World%21"
+' Encoded = "Hello%20World%21" '
 
 ' Русские символы '
 Encoded = is_urlencode("Привет")
-' Encoded = URL-encoded UTF-8
+' Encoded = URL-encoded UTF-8 '
 ```
 
 ---
@@ -1169,7 +1169,7 @@ Encoded = is_urlencode("Привет")
 ```EME-L
 ' Декодирование '
 Decoded = is_urldecode("Hello%20World%21")
-' Decoded = "Hello World!"
+' Decoded = "Hello World!" '
 ```
 
 ---
@@ -1188,11 +1188,11 @@ Decoded = is_urldecode("Hello%20World%21")
 ```EME-L
 ' HEX-представление '
 Result = is_hex("ABC")
-' Result = "414243"
+' Result = "414243" '
 
 ' С нижним регистром '
 Result = is_hex("ABC", "%02x")
-' Result = "414243"
+' Result = "414243" '
 ```
 
 ---
@@ -1211,7 +1211,7 @@ Result = is_hex("ABC", "%02x")
 ```EME-L
 ' Декодирование HEX '
 Result = is_fromhex("414243")
-' Result = "ABC"
+' Result = "ABC" '
 ```
 
 ---
@@ -1229,11 +1229,11 @@ Result = is_fromhex("414243")
 ```EME-L
 ' Упрощение '
 Result = is_simplified("  Hello    World  ")
-' Result = "Hello World"
+' Result = "Hello World" '
 
 ' С табуляцией и переносами '
 Result = is_simplified("  Line1\t\t\n\n  Line2  ")
-' Result = "Line1 Line2"
+' Result = "Line1 Line2" '
 ```
 
 ---
@@ -1251,7 +1251,7 @@ Result = is_simplified("  Line1\t\t\n\n  Line2  ")
 ```EME-L
 ' Кодирование '
 Encoded = is_base64("Hello World")
-' Encoded = "SGVsbG8gV29ybGQ="
+' Encoded = "SGVsbG8gV29ybGQ=" '
 ```
 
 ---
@@ -1272,7 +1272,7 @@ Encoded = is_base64("Hello World")
 ```EME-L
 ' Декодирование '
 Decoded = is_frombase64("SGVsbG8gV29ybGQ=")
-' Decoded = "Hello World"
+' Decoded = "Hello World" '
 ```
 
 ---
@@ -1293,7 +1293,7 @@ Decoded = is_frombase64("SGVsbG8gV29ybGQ=")
 ```EME-L
 ' Декодирование Base64URL '
 Decoded = is_frombase64URL("SGVsbG8gV29ybGQ")
-' Decoded = "Hello World"
+' Decoded = "Hello World" '
 ```
 
 ---
@@ -1313,15 +1313,15 @@ Decoded = is_frombase64URL("SGVsbG8gV29ybGQ")
 ```EME-L
 ' Проверка символа '
 Result = is_letter("A")
-' Result = TRUE
+' Result = TRUE '
 
 ' Проверка кода '
 Result = is_letter(65)
-' Result = TRUE
+' Result = TRUE '
 
 ' Проверка цифры '
 Result = is_letter("1")
-' Result = FALSE
+' Result = FALSE '
 ```
 
 ---
@@ -1342,19 +1342,19 @@ Result = is_letter("1")
 ```EME-L
 ' Все символы — буквы '
 Result = is_all_letters("Hello")
-' Result = TRUE
+' Result = TRUE '
 
 ' Не все буквы '
 Result = is_all_letters("Hello123")
-' Result = FALSE
+' Result = FALSE '
 
 ' Хотя бы одна буква '
 Result = is_all_letters("123A456", FALSE)
-' Result = TRUE
+' Result = TRUE '
 
 ' Пустая строка '
 Result = is_all_letters("")
-' Result = FALSE
+' Result = FALSE '
 ```
 
 ---
@@ -1374,11 +1374,11 @@ Result = is_all_letters("")
 ```EME-L
 ' Проверка цифры '
 Result = is_digit("5")
-' Result = TRUE
+' Result = TRUE '
 
 ' Проверка буквы '
 Result = is_digit("A")
-' Result = FALSE
+' Result = FALSE '
 ```
 
 ---
@@ -1413,7 +1413,7 @@ FixedCode = is_check_ccd_code(ScannedCode)
 ```EME-L
 ' Хеширование пароля '
 Hash = is_SHA1Sum("my_password")
-' Hash = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8"
+' Hash = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" '
 ```
 
 ---
@@ -1431,11 +1431,11 @@ Hash = is_SHA1Sum("my_password")
 ```EME-L
 ' Малое HEX-число '
 Value = is_hexstring2integer("FF")
-' Value = 255
+' Value = 255 '
 
 ' Большое HEX-число '
 Value = is_hexstring2integer("FFFFFFFFFF")
-' Value = 1099511627775 (int64)
+' Value = 1099511627775 (int64) '
 ```
 
 ---
@@ -1453,11 +1453,11 @@ Value = is_hexstring2integer("FFFFFFFFFF")
 ```EME-L
 ' Вычисление контрольного символа '
 Ean14 = is_calc_crc_ean13("4601234567890")
-' Ean14 = "4601234567890X" (где X — контрольный символ)
+' Ean14 = "4601234567890X" (где X — контрольный символ) '
 
 ' Неверная длина '
 Result = is_calc_crc_ean13("123")
-' Result = "ERROR"
+' Result = "ERROR" '
 ```
 
 ---
@@ -1478,7 +1478,7 @@ Result = is_calc_crc_ean13("123")
 ' Разбиение кода '
 Dim Tokens()
 InComment = is_split_EMEL("Var = 10 + 20", Tokens, FALSE)
-' Tokens содержит лексемы: ["Var", "=", "10", "+", "20"]
+' Tokens содержит лексемы: ["Var", "=", "10", "+", "20"] '
 ```
 
 ---
@@ -1500,11 +1500,11 @@ InComment = is_split_EMEL("Var = 10 + 20", Tokens, FALSE)
 ```EME-L
 ' Получение BOM '
 Bom = is_utf8_bom()
-' Bom = "\xEF\xBB\xBF"
+' Bom = "\xEF\xBB\xBF" '
 
 ' Проверка строки '
 HasBom = is_utf8_bom(Utf8String)
-' HasBom = TRUE или FALSE
+' HasBom = TRUE или FALSE '
 ```
 
 ---
@@ -1526,7 +1526,7 @@ HasBom = is_utf8_bom(Utf8String)
 ' Разбор CSV-строки '
 Dim Fields()
 LinePos = is_split_csv(CsvString, 0, ";", Fields)
-' Fields содержит разобранные поля
+' Fields содержит разобранные поля '
 ```
 
 ---
@@ -1546,7 +1546,7 @@ LinePos = is_split_csv(CsvString, 0, ";", Fields)
 ```EME-L
 ' Поиск в UTF-16 '
 Pos = is_find_w(Utf16String, Substring)
-' Pos = позиция найденной подстроки
+' Pos = позиция найденной подстроки '
 ```
 
 ---
