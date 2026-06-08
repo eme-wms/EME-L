@@ -655,7 +655,7 @@ MyClassName
 ```EME-L
     /* $$#DEV_INITIALS$$ 30.11.2023 Консолидация приказов на подборку
     Принимает - объект записи "Пачка заказов"
-    Возвращает - пустую строку */
+    Возвращает - тип метода Void */
     CreateConsolidateMO(r_OrderBatch as "OrdersBatch")
     {
         ...
