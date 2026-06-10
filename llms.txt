@@ -18,7 +18,7 @@
 
 ---
 
-## Обзор файловой структуры (44 файла)
+## Обзор файловой структуры (45 файлов)
 
 ### Язык EME-L — Основы
 
@@ -44,6 +44,7 @@
 - [EME_L_HTTP_Integration.md](docs/EME_L_HTTP_Integration.md): HTTP-архитектура, ТСД-коммуникация, пакетная обработка (Batch), CEMEHttp, CHttpData, SendWebRequest
 - [EME_L_Query_Reports.md](docs/EME_L_Query_Reports.md): Отчёты и печатные формы — визуальный редактор, бэнды (горизонтальный, вертикальный, скрытый, динамический), BindBand/BindCell, редактируемые отчёты на диалоге
 - [EME_L_Misc_and_Localization.md](docs/EME_L_Misc_and_Localization.md): UI-тестирование (is_ui_test_mode), робот-тестеры, локализация, ENG.txt, LocalizationUtilities
+- [EME_L_Testing.md](docs/EME_L_Testing.md): Система тестов — юнит-тесты (Json, 45 методов), ERP-тесты (интеграция с внешней БД, ERPEngine, XML/JSON), самодиагностика RobotHealer (healClasses), шаблоны тестов, контрольный список
 
 ### Бизнес и архитектура
 
