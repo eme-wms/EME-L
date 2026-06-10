@@ -247,6 +247,122 @@ RunTest()
 1. Создаётся объект `Json` со строковым литералом
 2. Вызывается тестируемый метод (`GetType()`)
 3. Результат сравнивается с ожидаемой константой через `CHECK_EQ`
+
+### Дополнительные примеры из `Tests.Test`
+
+#### CubiScan — измерение ВГХ
+
+```eme-l
+Cubi()
+{
+    CubiScan = Object("CubiScan", "10.24.2.251", 443);
+    CubiScan.SetDebug(True);
+    Result = CubiScan.Ping();
+    Result = CubiScan.Measure();
+    If (Result == 200)
+        Length = CubiScan.GetLength();
+        Width = CubiScan.GetWidth();
+        Height = CubiScan.GetHeight();
+        Weight = CubiScan.GetWeight();
+    End If
+}
+```
+
+#### Фильтр `MustBeInMap`
+
+```eme-l
+TestMustBeInMap()
+{
+    StockStatusMap = Object("Map", 17, 0);
+    StockStatusMap.SetAt(is_char("M"), 0);
+    StockStatusMap.SetAt(is_char("K"), 0);
+
+    r_Registers = Object("dsDB", "Registers");
+    r_Registers.SetSkipMode();
+    r_Registers.GetStockStatusFld().MustBeInMap(StockStatusMap);
+    Loop (r_Registers)
+        ' Обработка '
+    End Loop
+}
+```
+
+#### Присоединённое поле времени
+
+```eme-l
+TestAttachTimeFld()
+{
+    r_Document = Object("dsDB", "Document");
+    r_Document.SetSkipMode();
+    r_Document.GetCreateDateFld().AttachTimeFld();
+    r_Document.GetCreateDateFld().MustBeGT(is_date(19, 11, 2018, 11, 0));
+    r_Document.GetCreateDateFld().MustBeLT(is_date(19, 11, 2018, 12, 0));
+    Loop (r_Document)
+        ' Фильтрация по дате+времени '
+    End Loop
+}
+```
+
+#### Копирование записей
+
+```eme-l
+CopyOrder()
+{
+    nLineFrom = 291415;
+    is_transaction(1, tr("Копирование заказа"));
+    dbOrder = Object("dsDB", "Orders");
+    dbOrder.AppendAndSetLine();
+    dbOrder.CopyLineFrom(nLineFrom);
+    dbOrder.PutOrdersBatchRef(NULL_REF);
+    dbOrder.ClrIntroduced();
+    dbOrder.PutOrderNo(dbOrder.GetOrderNo() + "_" + is_time());
+
+    dbLines = Object("dsDB", "OrdersLines");
+    dbLines.SetChain("@Заказ", nLineFrom);
+    arr = Object("Array");
+    For (dbLines.SetFirstLine(); dbLines.IsValidLine(); dbLines.SetNextLine())
+        arr.Add(dbLines.GetLine());
+    End For
+
+    dbLines.SetChain("@Заказ", dbOrder.GetLine());
+    For (i = 0; i < arr.GetSize(); i = i + 1)
+        dbLines.AppendAndSetLine();
+        dbLines.CopyLineFrom(arr.GetAt(i));
+        dbLines.PutOrderRef(dbOrder.GetLine());
+    End For
+
+    dbOrder.Introduce();
+    is_transaction(-1);
+}
+```
+
+#### Семафор
+
+```eme-l
+Semaphore = Object("Semaphore", "my_semaphore", False);
+If (~Semaphore.Check())
+    Semaphore.Set();
+End If
+If (Semaphore.Check())
+    ' Семафор установлен '
+End If
+```
+
+#### Итерация по Map и BitBuffer
+
+```eme-l
+Map = Object("Map");
+Map.SetAt("a", 1);
+Loop(Map)
+    Key = Map.GetKey();
+    Value = Map.GetValue();
+End Loop
+
+BitBuffer = Object("BitBuffer");
+BitBuffer.HewItemGrow(2);
+Loop(BitBuffer)
+    Line = BitBuffer.GetLine();
+End Loop
+```
 4. Раннер собирает статистику по всем `CHECK_EQ`
 
 ### Константы типов JSON
@@ -413,6 +529,128 @@ heal()
 
 ---
 
+## Дозор базы данных (DBWatch)
+
+`DBWatch` — механизм отслеживания изменений в БД между подготовкой данных и записью в транзакции.
+
+```eme-l
+Tests.TestDBWatch
+************************          Конструктор          ************************
+m_DBWatch = Object("DBWatch");
+m_TrueSign;
+m_Line;
+
+************************             Методы            ************************
+OnPrepare()
+{
+    r_GoodsItem = Object("dsDB", "GoodsItem");
+    r_GoodsItem.SetFirstLine();
+    m_TrueSign = FALSE;
+    If (r_GoodsItem.IsValidLine() & ~r_GoodsItem.IsTrueSign())
+        m_TrueSign = TRUE;
+        m_Line = r_GoodsItem.GetLine();
+    End If
+    m_DBWatch.WatchFieldLine(r_GoodsItem.GetGlobalFlagsThreeFld());
+}
+
+OnChange()
+{
+    If (m_TrueSign)
+        r_GoodsItem = Object("dsDB", "GoodsItem");
+        r_GoodsItem.SetLine(m_Line);
+        r_GoodsItem.SetTrueSign();
+    End If
+}
+
+Do()
+{
+    is_db_watch(1);
+    If (is_workstation_mode() != "MONO")
+        OnPrepare();
+    End If
+    is_transaction(1, "Устанавливаем ЧЗ");
+    is_db_watch(-1);
+    If (is_workstation_mode() == "MONO" | m_DBWatch.Check() != "")
+        OnPrepare();
+    End If
+    OnChange();
+    is_transaction(-1);
+}
+```
+
+**Паттерн DBWatch:**
+1. `is_db_watch(1)` — начать наблюдение
+2. `OnPrepare()` — читаем данные
+3. `m_DBWatch.WatchFieldLine(...)` — добавляем поля в наблюдение
+4. `is_transaction(1)` — открываем транзакцию
+5. `is_db_watch(-1)` — завершаем наблюдение
+6. `m_DBWatch.Check()` — проверяем изменения
+7. Если изменились — повторяем `OnPrepare()`
+8. `OnChange()` — записываем
+9. `is_transaction(-1)` — закрываем транзакцию
+
+---
+
+## ERP-стресс-тесты и симулятор
+
+Класс `ERPSolution.ERPStressTest` — массовая выгрузка и симуляция.
+
+### Пачковый экспорт с BitBuffer
+
+```eme-l
+ExportAll(Source, Target, Name, RecordObject As "CEMERec", BitBufferFilter As "BitBuffer")
+{
+    m_ERPEngine.Launch(m_ERPEngine.GetConnStr());
+    m_ERPEngine.StartPercentage("Читаем из записи", RecordObject.GetNoOfLines());
+    RecordObject.SetFirstLine();
+    Refs = Object("Array");
+    While (GetNextExportBatch(RecordObject, BitBufferFilter, Refs))
+        Error = m_ERPEngine.BeginExport(Source, Target, Name);
+        If (Error == "")
+            Loop (Refs)
+                RecordObject.SetLine(Refs.Get());
+                m_ERPEngine.NextPercentage(RecordObject.GetLine());
+                Error = m_ERPEngine.DoExport(RecordObject);
+                is_peek_all_messages();
+                If (Error != "")
+                    Break
+                End If
+            End Loop
+        End If
+        If (Error == "")
+            Error = m_ERPEngine.EndExport();
+        End If
+    End While
+}
+```
+
+### Верификаторы сообщений
+
+| Верификатор | Тип |
+|-------------|-----|
+| `ERPAsnVerifier` | ASN |
+| `ERPChangeVerifier` | CHANGE |
+| `ERPGoodsVerifier` | GOODS |
+| `ERPOrdersVerifier` | ORDERS |
+| `ERPShipmentsVerifier` | SHIPMENTS |
+| `ERPStaffVerifier` | STAFF |
+
+### Симулятор EME.WMS
+
+```eme-l
+SimulateEmeWms()
+{
+    Menu = Object("IClass", "ActiveMenuObject_" + Object().GetObjectName(), "ActiveMenu");
+    Menu.AddMenuItem("Тестовый склад", "CreateTestWarehouse");
+    Menu.AddMenuItem("Приход#Случайный приход", "CreateReceipt", "");
+    Menu.AddMenuItem("Отгрузка#Подобрать заказ", "CreateDespatch", "Assembly");
+    Menu.AddMenuItem("Перемещение#Приход под заказ", "CreateReceiptPerPO", "Transfer");
+    Menu.Run();
+}
+```
+
+---
+
 ## Шаблоны для создания новых тестов
 
 ### Шаблон юнит-теста
@@ -505,6 +743,69 @@ heal()
     strResult = strResult + tr("Исправление выполнено");
     is_transaction(-1);
     Return strResult;
+}
+```
+
+### Шаблон теста с Browser
+
+```eme-l
+TestWithBrowser()
+{
+    Select (Query)
+        SELECT [@], [Рег.No] FROM [Заказы]
+        WHERE { r_Orders = Const(Object("dsDB", "Orders"));
+                r_Orders.SetLine(is_query(, "@"));
+                Return r_Orders.GetStatusAsNumber() >= osIntroduced; }
+    End Select
+
+    Browser = Object("FreeBrowser", Query, "Заказы");
+    Browser.Run(TRUE);
+
+    OrdersRefs = Object("Array");
+    For (QueryLine = Browser.GetSelected(0);
+         QueryLine != NULL_REF;
+         QueryLine = Browser.GetSelected(QueryLine + 1))
+        OrdersRefs.Add(Query.GetData("@", QueryLine));
+    End For
+
+    If (OrdersRefs.GetSize() > 0)
+        is_transaction(1, "Обработка заказов");
+        Loop (OrdersRefs)
+            r_Orders = Object("dsDB", "Orders");
+            r_Orders.SetLine(OrdersRefs.Get());
+        End Loop
+        is_transaction(-1);
+    End If
+}
+```
+
+### Шаблон серверного теста
+
+```eme-l
+Tests.TestUnit
+************************             Флаги             ************************
+ДЛ: Нет
+НК: Да
+ВЗ: Нет
+************************          Конструктор          ************************
+AAA = 0;
+
+************************             Методы            ************************
+Run()
+{
+    Params = Object("Parameters");
+    Params.PutParam("Action", "Run");
+    Params.PutParam("Class", "TestUnit");
+    Params.PutParam("Method", "TestRun");
+    Result = is_server_emel(1009, Params);
+    Params.SetString(Result);
+    ssSA = is_frombase64(Params.GetParam("Result", ""));
+}
+
+TestRun()
+{
+    is_catastrophic_log("Server test started");
+    Return is_server();
 }
 ```
 
