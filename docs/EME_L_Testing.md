@@ -999,3 +999,19 @@ result = is_test_email_message(
 | `File` | `Object("File", путь)` | Работа с файлами |
 | `Automation` | `Object("Automation", ProgID)` | COM-автоматизация |
 | `IClass` | `Object("IClass", имя, имя)` | Динамический вызов класса |
+
+---
+
+## Навигация по документации тестирования
+
+- [Обзор тестирования](testing/EME_L_Testing_Index.md) — сводная таблица всех тестов
+- [Юнит-тесты](testing/EME_L_Testing_Unit.md) — изолированные тесты объектов Json
+- [ERP-тесты](testing/EME_L_Testing_ERP.md) — интеграционные тесты обмена с ERP
+- [Самодиагностика](testing/EME_L_Testing_SelfDiagnostics.md) — система KPI, роботы, UI-тесты
+- [Шаблоны тестов](testing/EME_L_Testing_Templates.md) — готовые заготовки
+- [SQL-тесты](testing/sql-tests.md) — проверка целостности данных через SQL
+- [Тесты записей и БД](testing/record-tests.md) — CEMERec, CEMESkip, DBWatch, транзакции
+- [Интеграционные тесты](testing/integration-tests.md) — HTTP, RPC, XML, внешние БД
+- [Роботы-тестировщики](testing/robot-tests.md) — автоматические тесты классификаторов и операций
+- [Тесты браузеров](testing/browser-tests.md) — браузеры терминалов TSD
+- [Прочие тесты](testing/misc-tests.md) — изображения, ошибки, ВЕТИС, EANCOM, Диадок

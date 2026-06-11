@@ -1,6 +1,6 @@
 # Тестирование в EME-L
 
-Синонимы: тесты, тестирование, юнит-тесты, ERP-тесты, самодиагностика, RobotHealer, healClasses, CIRobot, TestJson, DBWatch, шаблоны тестов
+Синонимы: тесты, тестирование, юнит-тесты, ERP-тесты, самодиагностика, RobotHealer, healClasses, CIRobot, TestJson, DBWatch, шаблоны тестов, роботы-тестировщики, UI-тест, тест интерфейса, тест целостности БД, is_run_dbtest, is_ui_test_mode
 
 ## Обзор системы тестов
 
@@ -8,11 +8,16 @@
 
 ### Семейства тестов
 
-| Семейство | Пространство имён | Назначение |
-|-----------|-------------------|------------|
+| Семейство | Пространство имён / Запуск | Назначение |
+|-----------|---------------------------|------------|
 | **Юнит-тесты** | `Tests.TestJson.*` | Изолированная проверка методов объекта `Json` / `PropertyTree` |
 | **ERP-тесты** | `ERPSolution.ERPTests` | Интеграционные тесты обмена данными между WMS и ERP-системой |
 | **Самодиагностика** | `RobotHealer.healClasses.*` | Проверка здоровья БД, скорости операций, исправление проблем |
+| **Роботы-тестировщики** | `Система → Ресурсы → Тестирование → Робот` | Автоматические тесты классификаторов и операций (CIRobot) |
+| **UI-тест диалогов** | `Система → Ресурсы → Тестирование → Тест интерфейса` | Последовательное открытие всех диалогов (~3 мин) |
+| **Тест целостности БД** | `is_run_dbtest()` | Физический и логический тест структуры базы данных |
+| **SQL-тесты** | `Запросы/Tests.*` | Проверка целостности данных через SQL-запросы |
+| **Тесты браузеров** | `Браузеры/TerminalTester.*` | Табличные представления данных для терминалов |
 | **Общие / ad-hoc** | `Tests.Test`, `Tests.TestUnit` | Разработческие «песочницы», эксперименты, ручные проверки |
 
 ### Сравнение типов тестов
@@ -125,11 +130,72 @@
 | `testRegisters.txt` | `testRegisters` | Фрагментация записи регистров |
 | `testKernelSettings.txt` | `testKernelSettings` | Параметры ядра: архивы, HTTP, DLL, кэш |
 
+### D. SQL-тесты (`Запросы/Tests.*`)
+
+| Файл | Класс | Что проверяет | Тип |
+|------|-------|--------------|-----|
+| `Tests.DupKeys.txt` | `Tests.DupKeys` | Дубли ключевых значений | Целостность |
+| `Tests.DupLotID.txt` | `Tests.DupLotID` | Дубли идентификаторов партий | Целостность |
+| `Tests.DupLotNo.txt` | `Tests.DupLotNo` | Дубли номеров партий | Целостность |
+| `Tests.TestDocLinesDups.txt` | `Tests.TestDocLinesDups` | Дубли строк документов | Целостность |
+| `Tests.TestRegistersDups.txt` | `Tests.TestRegistersDups` | Дубли в регистрах | Целостность |
+| `Tests.TestSpLock.txt` | `Tests.TestSpLock` | Блокировки хранимых процедур | Параллельный доступ |
+| `Tests.TestStoredProcedure.txt` | `Tests.TestStoredProcedure` | Корректность хранимых процедур | Функциональность |
+| `Tests.TestWITH.txt` | `Tests.TestWITH` | CTE-запросы | SQL-функциональность |
+| `Tests.TestGUID.txt` | `Tests.TestGUID` | Уникальность GUID | Целостность |
+| `Tests.ExternalDB.txt` | `Tests.ExternalDB` | Подключение к внешним БД (ODBC) | Интеграция |
+| `Tests.SqlServer.txt` | `Tests.SqlServer` | Специфика SQL Server | Совместимость |
+
+### E. Тесты записей и БД
+
+| Файл | Класс | Что проверяет | Объекты |
+|------|-------|--------------|---------|
+| `TestCEMERec.txt` | `Tests.TestCEMERec` | Базовый класс `CEMERec` | `dsDB` |
+| `TestCEMESkip.txt` | `Tests.TestCEMESkip` | Фильтрация `MustBeEQAbt` | `dsDB` |
+| `TestFindLine.txt` | `Tests.TestFindLine` | Хэшированный поиск | `dsDB` |
+| `TestPickByLine.txt` | `Tests.TestPickByLine` | `GetParamsByTransitOrPBL` | `dsDB` |
+| `TestGoodsItem.txt` | `Tests.TestGoodsItem` | Точность `GoodsItem` | `dsDB` |
+| `TestCommit.txt` | `Tests.TestCommit` | Транзакции (фиксация) | `dsDB` |
+| `TestDBWatch.txt` | `Tests.TestDBWatch` | `DBWatch` (дозор БД) | `DBWatch`, `dsDB` |
+
+### F. Интеграционные тесты
+
+| Файл | Класс | Что проверяет | Внешняя система |
+|------|-------|--------------|-----------------|
+| `TestExternalDB.txt` | `Tests.TestExternalDB` | ODBC-подключение | PostgreSQL, SQL Server, Oracle |
+| `TestHttpsReq.txt` | `Tests.TestHttpsReq` | HTTP(S)-запросы, пагинация | Веб-сервисы, REST API |
+| `TestRPC.txt` | `Tests.TestRPC` | Удалённые вызовы через ФС | Внутренние компоненты |
+| `TestXml.txt` | `Tests.TestXml` | Парсинг XML | ЦБ РФ, XML-сервисы |
+| `TestTranslate.txt` | `Tests.TestTranslate` | Локализация (`tr()`) | Файлы переводов |
+| `TestOrderFrom1C.txt` | `Tests.TestOrderFrom1C` | Импорт заказов | 1С |
+| `TestExportToTHQ.txt` | `Tests.TestExportToTHQ` | Выгрузка в ЦУП | ЦУП |
+
+### G. Роботы-тестировщики
+
+| Файл | Класс | Что проверяет | Тип |
+|------|-------|--------------|-----|
+| `GuideRobots.txt` | `GuideRobots` | Базовая логика классификаторов | Классификаторы |
+| `GoodsItemRobot.txt` | `GoodsItemRobot` | Справочник товаров | Классификаторы |
+| `ClientRobot.txt` | `ClientRobot` | Справочник клиентов | Классификаторы |
+| `WarehouseRobot.txt` | `WarehouseRobot` | Справочник складов | Классификаторы |
+| `INCOMERobot.txt` | `INCOMERobot` | Операция прихода | Операции |
+| `IncomingASNRobot.txt` | `IncomingASNRobot` | Приход по ASN | Операции |
+| `OrdersBatchRobot.txt` | `OrdersBatchRobot` | Отгрузка по заказам | Операции |
+| `ReportsRobots.txt` | `ReportsRobots` | Печатные формы | Отчёты |
+| `RobotOpenDialogs.txt` | `RobotOpenDialogs` | Открытие всех диалогов | UI-тест |
+| `CheckSpeedRobot.txt` | `CheckSpeedRobot` | Скорость операций | Производительность |
+
 ---
 
 ## Навигация по документации тестирования
 
 - [Юнит-тесты](EME_L_Testing_Unit.md) — как писать и запускать изолированные тесты объектов
 - [ERP-тесты](EME_L_Testing_ERP.md) — интеграционные тесты обмена с ERP
-- [Самодиагностика](EME_L_Testing_SelfDiagnostics.md) — система KPI, роботы-тестировщики, UI-тесты, тесты БД
+- [Самодиагностика](EME_L_Testing_SelfDiagnostics.md) — система KPI, роботы-тестировщики, UI-тесты, тесты целостности БД, DBWatch
 - [Шаблоны тестов](EME_L_Testing_Templates.md) — готовые заготовки для новых тестов
+- [SQL-тесты](sql-tests.md) — проверка целостности данных через SQL-запросы
+- [Тесты записей и БД](record-tests.md) — тестирование CEMERec, CEMESkip, DBWatch, транзакций
+- [Интеграционные тесты](integration-tests.md) — HTTP, RPC, XML, внешние БД, 1С
+- [Роботы-тестировщики](robot-tests.md) — автоматические тесты классификаторов и операций
+- [Тесты браузеров](browser-tests.md) — браузеры терминалов и интерфейсные тесты
+- [Прочие тесты](misc-tests.md) — изображения, ошибки, стресс-тесты, ВЕТИС, EANCOM, Диадок
