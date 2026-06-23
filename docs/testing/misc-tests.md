@@ -23,17 +23,17 @@ Tests.TestImage
 ************************             Методы            ************************
 RunTest()
 {
-    ' Загружаем тестовое изображение
+    'Загружаем тестовое изображение'
     Image = Object("Image", "D:\\Temp\\TestPhoto.jpg")
 
     If (Image.IsValid())
         is_message("TestImage", "Изображение загружено. Размер: " + Image.GetWidth() + "x" + Image.GetHeight(), "OK", "INFORMATION")
 
-        ' Масштабируем
+        'Масштабируем'
         Image.Resize(200, 200)
         is_message("TestImage", "Масштабировано: " + Image.GetWidth() + "x" + Image.GetHeight(), "OK", "INFORMATION")
 
-        ' Сохраняем
+        'Сохраняем'
         Image.Save("D:\\Temp\\TestPhoto_Resized.jpg")
         is_message("TestImage", "Сохранено", "OK", "INFORMATION")
     Else
@@ -59,12 +59,12 @@ Tests.TestPatch
 ************************             Методы            ************************
 RunTest()
 {
-    ' Применяем патч к диалогу
+    'Применяем патч к диалогу'
     Patch = Object("Patch", "GoodsItem")
     Patch.AddButton("btnTest", "Тестовая кнопка", 100, 100, 80, 25)
     Patch.AddLabel("lblTest", "Тестовая метка", 10, 10, 200, 20)
 
-    ' Открываем диалог с патчем
+    'Открываем диалог с патчем'
     Dialog = Object("Dialog", "GoodsItem")
     Dialog.ApplyPatch(Patch)
     Dialog.Show()
@@ -90,13 +90,13 @@ Tests.TestPrintDocFiles
 ************************             Методы            ************************
 RunTest()
 {
-    ' Формируем печатную форму накладной
+    'Формируем печатную форму накладной'
     r_Doc = Object("dsDB", "Document")
     r_Doc.SetSkipMode()
     r_Doc.SetFirstLine()
 
     If (r_Doc.IsValidLine())
-        ' Формируем файл печати
+        'Формируем файл печати'
         File = Object("File", "D:\\Temp\\Invoice.txt")
         File.CreateFile()
         File.PutFileData("НАКЛАДНАЯ № " + r_Doc.GetDocNo() + "\n")
@@ -128,7 +128,7 @@ Tests.TestAbsent
 ************************             Методы            ************************
 RunTest()
 {
-    ' Пытаемся получить доступ к несуществующей записи
+    'Пытаемся получить доступ к несуществующей записи'
     r_Record = Object("dsDB", "GoodsItem")
     r_Record.SetLineByCode("NONEXISTENT_CODE_99999")
 
@@ -138,7 +138,7 @@ RunTest()
         is_message("TestAbsent", "ОШИБКА: Найдена несуществующая запись", "OK", "STOP")
     End If
 
-    ' Проверяем безопасное чтение поля
+    'Проверяем безопасное чтение поля'
     EmptyValue = r_Record.GetName()
     If (is_empty(EmptyValue))
         is_message("TestAbsent", "Корректно: пустое значение при отсутствии данных", "OK", "INFORMATION")
@@ -166,25 +166,25 @@ RunTest()
     r_Record = Object("dsDB", "TestRecord")
     CountBefore = r_Record.GetNoOfLines()
 
-    ' Открываем транзакцию
+    'Открываем транзакцию'
     is_transaction(1, "Тест пользовательской ошибки")
 
-    ' Добавляем строку
+    'Добавляем строку'
     r_Record.AppendAndSetLine()
     r_Record.PutCode("ERROR_TEST")
 
-    ' Генерируем пользовательскую ошибку
+    'Генерируем пользовательскую ошибку'
     Try (Error)
         is_error(1, "Тестовая пользовательская ошибка")
     Catch
         If (~is_empty(Error))
-            ' Откатываем транзакцию
+            'Откатываем транзакцию'
             is_transaction(0)
             is_message("TestUserError", "Транзакция откатена: " + Error, "OK", "INFORMATION")
         End If
     End Try
 
-    ' Проверяем, что строка НЕ добавлена
+    'Проверяем, что строка НЕ добавлена'
     CountAfter = r_Record.GetNoOfLines()
     If (CountAfter == CountBefore)
         is_message("TestUserError", "Корректно: данные не изменены после отката", "OK", "INFORMATION")
@@ -217,29 +217,29 @@ RunTest()
     Console.Show(1)
     Console.PutText("=== НАЧАЛО ПОЛНОГО ТЕСТА ===")
 
-    ' 1. Тест структуры БД
+    '1. Тест структуры БД'
     Console.PutText("1. Тест структуры БД...")
     Result = is_run_dbtest()
     Console.PutText("   Результат: " + Result)
 
-    ' 2. Тест счётчиков ссылок
+    '2. Тест счётчиков ссылок'
     Console.PutText("2. Тест счётчиков ссылок...")
     is_test_references_counter()
     Console.PutText("   OK")
 
-    ' 3. Тест VFS
+    '3. Тест VFS'
     Console.PutText("3. Тест виртуальной файловой системы...")
     is_vfs_test()
     Console.PutText("   OK")
 
-    ' 4. Тест JSON
+    '4. Тест JSON'
     Console.PutText("4. Тест JSON...")
     Object("IClass", "Tests.TestJson", "TestJson").RunTests()
     Console.PutText("   OK")
 
-    ' 5. Тест UI
+    '5. Тест UI'
     Console.PutText("5. Тест интерфейса...")
-    ' is_ui_test_mode() используется для пропуска MessageBox
+    'is_ui_test_mode() используется для пропуска MessageBox'
     Console.PutText("   OK")
 
     Console.PutText("=== КОНЕЦ ПОЛНОГО ТЕСТА ===")
@@ -264,7 +264,7 @@ Tests.SQL_Test
 ************************             Методы            ************************
 RunTest()
 {
-    ' Сложный SQL-запрос с JOIN и агрегацией
+    'Сложный SQL-запрос с JOIN и агрегацией'
     Select (Query)
         SELECT
             G.[Code] AS [КодТовара],
@@ -308,17 +308,17 @@ Tests.Wms3DTest
 ************************             Методы            ************************
 RunTest()
 {
-    ' Открываем 3D-визуализацию склада
+    'Открываем 3D-визуализацию склада'
     View3D = Object("View3D", "Warehouse")
     View3D.SetWarehouseRef(WarehouseRef)
     View3D.SetZoneRef(ZoneRef)
 
-    ' Настраиваем отображение
+    'Настраиваем отображение'
     View3D.ShowCells(TRUE)
     View3D.ShowGoods(TRUE)
     View3D.SetZoom(1.5)
 
-    ' Открываем окно
+    'Открываем окно'
     View3D.Show()
 
     is_message("Wms3DTest", "3D-визуализация открыта", "OK", "INFORMATION")
@@ -344,7 +344,7 @@ Tests.VETTest
 ************************             Методы            ************************
 RunTest()
 {
-    ' Формируем запрос к ВЕТИС
+    'Формируем запрос к ВЕТИС'
     Vetis = Object("Automation", "Vetis.Client")
     Error = Vetis.Connect()
 
@@ -353,7 +353,7 @@ RunTest()
         Return
     End If
 
-    ' Получаем список ветеринарных сертификатов
+    'Получаем список ветеринарных сертификатов'
     Certificates = Vetis.GetCertificates()
     is_message("VETTest", "Получено сертификатов: " + Certificates.GetSize(), "OK", "INFORMATION")
 
@@ -378,23 +378,23 @@ Tests.EANCOMTest
 ************************             Методы            ************************
 RunTest()
 {
-    ' Формируем тестовое EANCOM-сообщение
+    'Формируем тестовое EANCOM-сообщение'
     EANCOM = Object("EANCOM")
     EANCOM.SetMessageType("DESADV")
     EANCOM.SetSender("1234567890123")
     EANCOM.SetReceiver("9876543210987")
 
-    ' Добавляем строку
+    'Добавляем строку'
     EANCOM.AddLine()
     EANCOM.SetLineField("GTIN", "4601234567890")
     EANCOM.SetLineField("Quantity", "100")
     EANCOM.SetLineField("SSCC", "146000000001234567")
 
-    ' Формируем сообщение
+    'Формируем сообщение'
     MessageText = EANCOM.Generate()
     is_message("EANCOMTest", "EANCOM-сообщение сформировано. Размер: " + is_length(MessageText), "OK", "INFORMATION")
 
-    ' Сохраняем в файл
+    'Сохраняем в файл'
     File = Object("File", "D:\\Temp\\TestEANCOM.edi")
     File.CreateFile()
     File.PutFileData(MessageText)
@@ -419,7 +419,7 @@ Tests.DIADOCTestRequests
 ************************             Методы            ************************
 RunTest()
 {
-    ' Подключаемся к API Диадок
+    'Подключаемся к API Диадок'
     Diadoc = Object("Automation", "Diadoc.Api")
     Error = Diadoc.Authenticate("login", "password")
 
@@ -428,7 +428,7 @@ RunTest()
         Return
     End If
 
-    ' Получаем список документов
+    'Получаем список документов'
     Documents = Diadoc.GetDocuments()
     is_message("DIADOCTest", "Документов в Диадок: " + Documents.GetSize(), "OK", "INFORMATION")
 
@@ -455,7 +455,7 @@ Tests.XsdTestCDATA
 ************************             Методы            ************************
 RunTest()
 {
-    ' XML с CDATA
+    'XML с CDATA'
     XmlText = "<?xml version=\"1.0\"?>"
     XmlText = XmlText + "<Document>"
     XmlText = XmlText + "<Description><![CDATA[<Специальные > символы & сущности]]></Description>"
@@ -486,7 +486,7 @@ Tests.XsdTestDateTime
 ************************             Методы            ************************
 RunTest()
 {
-    ' Формируем XML с датой-временем
+    'Формируем XML с датой-временем'
     XmlText = "<?xml version=\"1.0\"?>"
     XmlText = XmlText + "<Event>"
     XmlText = XmlText + "<DateTime>2024-06-10T14:30:00+03:00</DateTime>"
@@ -517,20 +517,20 @@ RunTest()
 | `Tests.xml` | Общая тестовая схема |
 
 ```EME-L
-' Использование тестовой схемы IDoc
+'Использование тестовой схемы IDoc'
 IDoc = Object("IDoc", "TestJSON")
 
-' Создаём сообщение
+'Создаём сообщение'
 Message = IDoc.AddMessage()
 Message.PutField("DocNo", "TEST-001")
 Message.PutField("DocDate", is_dos_date())
 
-' Добавляем строку
+'Добавляем строку'
 Line = Message.AddLine()
 Line.PutField("GoodsCode", "12345")
 Line.PutField("Quantity", "100")
 
-' Получаем JSON-представление
+'Получаем JSON-представление'
 JsonText = IDoc.ToJSON()
 is_message("IDocTest", "JSON: " + JsonText, "OK", "INFORMATION")
 ```
@@ -554,16 +554,16 @@ RobotInter.repAnalysis
 ************************             Методы            ************************
 RunReport()
 {
-    ' Формируем отчёт по роботам
+    'Формируем отчёт по роботам'
     Report = Object("Report")
     Report.Create()
 
-    ' Шапка
+    'Шапка'
     Report.AddBand("Header")
     Report.PutField("Title", "Анализ работы роботов")
     Report.PutField("Date", is_dos_date())
 
-    ' Данные по роботам
+    'Данные по роботам'
     Robots = Object("Array")
     Robots.Add("GoodsItemRobot")
     Robots.Add("ClientRobot")
@@ -576,7 +576,7 @@ RunReport()
         Report.PutField("Duration", "500 мс")
     End Loop
 
-    ' Выводим отчёт
+    'Выводим отчёт'
     Report.Show()
 }
 ```
@@ -600,12 +600,12 @@ Tests.PromiseTests
 ************************             Методы            ************************
 RunTest()
 {
-    ' Создаём обещание
+    'Создаём обещание'
     Promise = Object("Promise")
     Promise.Then("OnSuccess")
     Promise.Catch("OnError")
 
-    ' Запускаем асинхронную операцию
+    'Запускаем асинхронную операцию'
     Promise.Resolve("Результат операции")
 }
 
@@ -637,21 +637,21 @@ Tests.CompleteStockmanOperations
 ************************             Методы            ************************
 RunTest()
 {
-    ' Шаг 1: Приёмка
+    'Шаг 1: Приёмка'
     is_message("StockmanOps", "Шаг 1: Приёмка", "OK", "INFORMATION")
-    ' ... логика приёмки ...
+    '... логика приёмки ...'
 
-    ' Шаг 2: Размещение
+    'Шаг 2: Размещение'
     is_message("StockmanOps", "Шаг 2: Размещение", "OK", "INFORMATION")
-    ' ... логика размещения ...
+    '... логика размещения ...'
 
-    ' Шаг 3: Подбор
+    'Шаг 3: Подбор'
     is_message("StockmanOps", "Шаг 3: Подбор", "OK", "INFORMATION")
-    ' ... логика подбора ...
+    '... логика подбора ...'
 
-    ' Шаг 4: Отгрузка
+    'Шаг 4: Отгрузка'
     is_message("StockmanOps", "Шаг 4: Отгрузка", "OK", "INFORMATION")
-    ' ... логика отгрузки ...
+    '... логика отгрузки ...'
 
     is_message("StockmanOps", "Все операции кладовщика выполнены", "OK", "INFORMATION")
 }

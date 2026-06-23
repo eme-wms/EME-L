@@ -17,14 +17,14 @@ Tests.TestJson.TestJson_XXX__MethodName
 ************************             Методы            ************************
 RunTest()
 {
-    ' Создаём тестовый объект '
+    'Создаём тестовый объект'
     json = Object("Json", "{ \"key\": \"value\", \"num\": 42 }");
 
-    ' Проверяем метод '
+    'Проверяем метод'
     CHECK_EQ( json.MethodName()        , expectedValue1 );
     CHECK_EQ( json.MethodName("arg")   , expectedValue2 );
 
-    ' Проверяем крайние случаи '
+    'Проверяем крайние случаи'
     emptyJson = Object("Json", "{}");
     CHECK_EQ( emptyJson.MethodName()   , defaultValue );
 }
@@ -51,31 +51,31 @@ ERPSolution.ERPTests
 ************************             Методы            ************************
 TestMyIntegration()
 {
-    ' 1. Подключаемся к внешней БД '
+    '1. Подключаемся к внешней БД'
     ExternalDB = Object("ExternalDB");
     If (~Connect(ExternalDB))
         Return;
     End If
 
-    ' 2. Подготавливаем данные '
+    '2. Подготавливаем данные'
     Query = Object("Query");
     Query.Create();
 
-    ' 3. Выполняем тестируемую операцию '
+    '3. Выполняем тестируемую операцию'
     Error = ExternalDB.Execute("SELECT * FROM my_table", Query);
     If (Error != "")
         is_message("TestMyIntegration", "Error: " + Error, "OK", "STOP");
         Return;
     End If
 
-    ' 4. Проверяем результаты '
+    '4. Проверяем результаты'
     If (Query.GetNoOfLines() > 0)
         is_message("TestMyIntegration", "OK: " + Query.GetNoOfLines() + " rows", "OK", "INFORMATION");
     Else
         is_message("TestMyIntegration", "No data found", "OK", "EXCLAMATION");
     End If
 
-    ' 5. Отключаемся '
+    '5. Отключаемся'
     ExternalDB.Disconnect();
 }
 ```
@@ -105,11 +105,12 @@ test()
 {
     rating = 10;
 
-    ' Проверяем условие '
+    'Проверяем условие'
     r_Record = Object("dsDB", "MyRecord");
     r_Record.SetSkipMode();
     If (r_Record.GetNoOfLines() == 0)
-        rating = 1;  ' Проблема: нет данных '
+        'Проблема: нет данных'
+        rating = 1;
     End If
 
     Return rating;
@@ -122,7 +123,7 @@ heal()
 
     is_transaction(1, tr("Исправление моей фичи"));
 
-    ' Выполняем исправляющий код '
+    'Выполняем исправляющий код'
     strResult = strResult + tr("Исправление выполнено");
 
     is_transaction(-1);
@@ -180,12 +181,12 @@ r_Record = Object("dsDB", "MyRecord");
 ************************             Методы            ************************
 TestFindLine()
 {
-    ' Настраиваем фильтр '
+    'Настраиваем фильтр'
     r_Record.SetSkipMode();
     r_Record.GetCodeFld().MustBeEQ("TEST001");
     r_Record.SetFirstLine();
 
-    ' Проверяем результат '
+    'Проверяем результат'
     If (r_Record.IsValidLine())
         is_message("TestFindLine", "Найдена строка: " + r_Record.GetCode(), "OK", "INFORMATION");
     Else
@@ -218,17 +219,17 @@ AutoCreateTasksBot
 ************************             Методы            ************************
 Test()
 {
-    ' Тест инициализации стартовых заданий
-    ' Запускается вручную (F5) при работе в моно-режиме
+    'Тест инициализации стартовых заданий'
+    'Запускается вручную (F5) при работе в моно-режиме'
     CreateStartingTasks();
     is_message("AutoCreateTasksBot", "Стартовые задания созданы", "OK", "INFORMATION");
 }
 
 CreateStartingTasks()
 {
-    ' Создание начальных заданий для планировщика
+    'Создание начальных заданий для планировщика'
     r_Schedule = Object("dsDB", "Schedule");
-    ' ... логика создания заданий ...
+    '... логика создания заданий ...'
 }
 ```
 
@@ -236,6 +237,8 @@ CreateStartingTasks()
 - В моно-режиме бот не запускается автоматически — `Test()` вызывается вручную (F5)
 - Используется для первоначальной настройки системы
 - Результат проверяется визуально или через `is_message`
+
+---
 
 ## Шаблон теста с выбором через Browser
 
@@ -258,11 +261,11 @@ TestWithBrowser()
             }
     End Select
 
-    ' FreeBrowser — выбор нескольких строк '
+    'FreeBrowser — выбор нескольких строк'
     Browser = Object("FreeBrowser", Query, "Заказы");
     Browser.Run(TRUE);
 
-    ' Собираем выбранные строки '
+    'Собираем выбранные строки'
     OrdersRefs = Object("Array");
     For (QueryLine = Browser.GetSelected(0);
          QueryLine != NULL_REF;
@@ -276,7 +279,7 @@ TestWithBrowser()
         Loop (OrdersRefs)
             r_Orders = Object("dsDB", "Orders");
             r_Orders.SetLine(OrdersRefs.Get());
-            ' ... обработка ... '
+            '... обработка ...'
         End Loop
         is_transaction(-1);
     End If
@@ -288,6 +291,8 @@ TestWithBrowser()
 - `Browser.Run(TRUE)` — модальный вызов
 - `Browser.GetSelected(0)` — первая выбранная строка
 - `Browser.GetSelected(prev + 1)` — следующая выбранная строка
+
+---
 
 ## Шаблон серверного теста
 
@@ -308,11 +313,11 @@ Run()
     Params.PutParam("Class", "TestUnit");
     Params.PutParam("Method", "TestRun");
 
-    ' Отправляем задание на сервер '
+    'Отправляем задание на сервер'
     Result = is_server_emel(1009, Params);
     Params.SetString(Result);
 
-    ' Декодируем результат из base64 '
+    'Декодируем результат из base64'
     ssSA = is_frombase64(Params.GetParam("Result", ""));
 }
 
@@ -329,6 +334,8 @@ TestRun()
 3. Сервер выполняет метод `TestRun()`
 4. Результат возвращается в `Params`
 5. `is_frombase64()` — декодирует ответ
+
+---
 
 ## Контрольный список при создании теста
 

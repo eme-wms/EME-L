@@ -95,7 +95,7 @@ Test()
     CreateTable(ExternalDB, "erp_goods_mu_lines", MuLinesQuery, LinesPrimaryKeys);
     CreateTable(ExternalDB, "erp_goods_bar_codes", BarCodesQuery, LinesPrimaryKeys);
 
-    ' ... экспорт данных ... '
+    '... экспорт данных ...'
 
     UpdateTable(ExternalDB, "erp_goods_header", HeaderQuery);
     UpdateTable(ExternalDB, "erp_goods_mu_lines", MuLinesQuery);
@@ -128,7 +128,7 @@ TestERPEngineSharp()
     erp.PutHeaderData("id", "12222258");
     erp.PutHeaderData("article", "12222258");
     erp.PutHeaderData("name", "РОССИЙСКИЙ Шоколад Горький70% 27(5х90г)");
-    ' ... ещё поля ... '
+    '... ещё поля ...'
 
     erp.SelectChild("packs");
 
@@ -136,7 +136,7 @@ TestERPEngineSharp()
     erp.PutChildData("id", "Штука");
     erp.PutChildData("mu_code", "EA");
     erp.PutChildData("factor", 1);
-    ' ... ещё строки ... '
+    '... ещё строки ...'
 
     Error = erp.CommitExport();
     If (Error != "")
@@ -225,7 +225,7 @@ TestImportReceipts()
 ### Работа с JSON и XML
 
 ```eme-l
-' Выгрузка в JSON через PropertyTree + IDoc
+'Выгрузка в JSON через PropertyTree + IDoc'
 TestJsonUpload()
 {
     Json = Object("PropertyTree");
@@ -249,7 +249,7 @@ TestJsonUpload()
     File.PutEndFileData(Json.GetJSON());
 }
 
-' Загрузка из JSON
+'Загрузка из JSON'
 TestJsonLoad()
 {
     File = Object("File", "E:\\Json\\Test.json");
@@ -288,7 +288,7 @@ UploadErpWmsMessages()
     Menu.AddMenuItem("Выгрузка всех ASN", "UploadASNs");
     Menu.AddMenuItem("Выгрузка всех заказов", "UploadOrders");
     Menu.AddMenuItem("Выгрузка всех перевозок", "UploadShipments");
-    ' ... ещё 11 пунктов ... '
+    '... ещё 11 пунктов ...'
     Menu.Run();
 }
 ```

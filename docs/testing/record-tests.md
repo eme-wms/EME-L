@@ -25,21 +25,21 @@ RunTest()
 {
     r_Record = Object("dsDB", "GoodsItem")
 
-    ' Проверяем установку режима пропуска '
+    'Проверяем установку режима пропуска'
     r_Record.SetSkipMode()
     is_message("TestCEMERec", "SetSkipMode: " + r_Record.GetNoOfLines() + " строк", "OK", "INFORMATION")
 
-    ' Проверяем навигацию по записям '
+    'Проверяем навигацию по записям'
     r_Record.SetFirstLine()
     If (r_Record.IsValidLine())
         is_message("TestCEMERec", "Первая строка: " + r_Record.GetCode(), "OK", "INFORMATION")
     End If
 
-    ' Проверяем получение ссылки '
+    'Проверяем получение ссылки'
     Line = r_Record.GetLine()
     is_message("TestCEMERec", "Ссылка первой строки: " + Line, "OK", "INFORMATION")
 
-    ' Проверяем установку строки по ссылке '
+    'Проверяем установку строки по ссылке'
     r_Record.SetLine(Line)
     If (r_Record.IsValidLine())
         is_message("TestCEMERec", "Установка по ссылке работает", "OK", "INFORMATION")
@@ -73,22 +73,22 @@ RunTest()
     r_Record = Object("dsDB", "GoodsItem")
     r_Record.SetSkipMode()
 
-    ' Применяем нечёткий фильтр '
+    'Применяем нечёткий фильтр'
     r_Record.GetCodeFld().MustBeEQAbt("TEST")
     r_Record.SetFirstLine()
 
     Count = 0
     Loop (r_Record)
-        Count = Count + 1
+        Count = Count + 1;
     End Loop
 
     is_message("TestCEMESkip", "Найдено по MustBeEQAbt: " + Count, "OK", "INFORMATION")
 
-    ' Сбрасываем фильтр и проверяем полный список '
+    'Сбрасываем фильтр и проверяем полный список'
     r_Record.SetSkipMode()
     FullCount = 0
     Loop (r_Record)
-        FullCount = FullCount + 1
+        FullCount = FullCount + 1;
     End Loop
 
     is_message("TestCEMESkip", "Всего записей: " + FullCount, "OK", "INFORMATION")
@@ -122,11 +122,11 @@ RunTest()
     r_Record = Object("dsDB", "GoodsItem")
     r_Record.SetSkipMode()
 
-    ' Получаем код первой строки '
+    'Получаем код первой строки'
     r_Record.SetFirstLine()
     TestCode = r_Record.GetCode()
 
-    ' Проверяем хэшированный поиск по коду '
+    'Проверяем хэшированный поиск по коду'
     r_Record.SetLineByCode(TestCode)
     If (r_Record.IsValidLine() & r_Record.GetCode() == TestCode)
         is_message("TestFindLine", "Хэш-поиск по коду работает: " + TestCode, "OK", "INFORMATION")
@@ -134,7 +134,7 @@ RunTest()
         is_message("TestFindLine", "ОШИБКА: Хэш-поиск не нашёл: " + TestCode, "OK", "STOP")
     End If
 
-    ' Проверяем поиск по ссылке '
+    'Проверяем поиск по ссылке'
     Ref = r_Record.GetLine()
     r_Record.SetLine(Ref)
     If (r_Record.IsValidLine() & r_Record.GetLine() == Ref)
@@ -170,7 +170,7 @@ RunTest()
     r_Record.SetFirstLine()
 
     If (r_Record.IsValidLine())
-        ' Получаем параметры по транзиту '
+        'Получаем параметры по транзиту'
         Params = r_Record.GetParamsByTransitOrPBL()
         is_message("TestPickByLine", "Параметры получены: " + Params, "OK", "INFORMATION")
     End If
@@ -199,26 +199,26 @@ RunTest()
     r_GoodsItem = Object("dsDB", "GoodsItem")
     r_GoodsItem.SetSkipMode()
 
-    ' Проверяем точность веса '
+    'Проверяем точность веса'
     r_GoodsItem.SetFirstLine()
     If (r_GoodsItem.IsValidLine())
         Weight = r_GoodsItem.GetWeight()
         is_message("TestGoodsItem", "Вес товара: " + Weight, "OK", "INFORMATION")
 
-        ' Проверяем точность длины '
+        'Проверяем точность длины'
         Length = r_GoodsItem.GetLength()
         is_message("TestGoodsItem", "Длина: " + Length, "OK", "INFORMATION")
 
-        ' Проверяем точность ширины '
+        'Проверяем точность ширины'
         Width = r_GoodsItem.GetWidth()
         is_message("TestGoodsItem", "Ширина: " + Width, "OK", "INFORMATION")
 
-        ' Проверяем точность высоты '
+        'Проверяем точность высоты'
         Height = r_GoodsItem.GetHeight()
         is_message("TestGoodsItem", "Высота: " + Height, "OK", "INFORMATION")
     End If
 
-    ' Проверяем связь с единицами измерения '
+    'Проверяем связь с единицами измерения'
     MURef = r_GoodsItem.GetDefaultMURef()
     is_message("TestGoodsItem", "Единица измерения по умолчанию: " + MURef, "OK", "INFORMATION")
 }
@@ -250,22 +250,22 @@ RunTest()
 {
     r_Record = Object("dsDB", "TestRecord")
 
-    ' Запоминаем текущее состояние '
+    'Запоминаем текущее состояние'
     r_Record.SetSkipMode()
     CountBefore = r_Record.GetNoOfLines()
 
-    ' Открываем транзакцию '
+    'Открываем транзакцию'
     is_transaction(1, "Тестовая транзакция")
 
-    ' Добавляем тестовую строку '
+    'Добавляем тестовую строку'
     r_Record.AppendAndSetLine()
     r_Record.PutCode("TEST" + is_time())
     r_Record.PutName("Тестовая запись")
 
-    ' Фиксируем транзакцию '
+    'Фиксируем транзакцию'
     is_transaction(-1)
 
-    ' Проверяем, что строка добавлена '
+    'Проверяем, что строка добавлена'
     CountAfter = r_Record.GetNoOfLines()
     If (CountAfter > CountBefore)
         is_message("TestCommit", "Транзакция зафиксирована. Было: " + CountBefore + ", стало: " + CountAfter, "OK", "INFORMATION")
@@ -301,7 +301,7 @@ m_TrueSign
 m_Line
 
 ************************             Методы            ************************
-' Подготовка данных вне транзакции '
+'Подготовка данных вне транзакции'
 OnPrepare()
 {
     r_GoodsItem = Object("dsDB", "GoodsItem")
@@ -311,11 +311,11 @@ OnPrepare()
         m_TrueSign = TRUE
         m_Line = r_GoodsItem.GetLine()
     End If
-    ' Добавляем поле GlobalFlagsThreeFld на текущей строке в наблюдение '
+    'Добавляем поле GlobalFlagsThreeFld на текущей строке в наблюдение'
     m_DBWatch.WatchFieldLine(r_GoodsItem.GetGlobalFlagsThreeFld())
 }
 
-' Запись внутри транзакции '
+'Запись внутри транзакции'
 OnChange()
 {
     If (m_TrueSign)
@@ -325,37 +325,37 @@ OnChange()
     End If
 }
 
-' Полный цикл с блокировкой '
+'Полный цикл с блокировкой'
 Do()
 {
-    ' Начинаем дозор (до чтения данных БД) '
-    ' is_db_watch поднимает данные на верхний уровень '
+    'Начинаем дозор (до чтения данных БД)'
+    'is_db_watch поднимает данные на верхний уровень'
     is_db_watch(1)
 
-    ' Проводим подготовку данных вне транзакции '
+    'Проводим подготовку данных вне транзакции'
     If (is_workstation_mode() != "MONO")
         OnPrepare()
     End If
 
-    ' Открываем транзакцию '
+    'Открываем транзакцию'
     is_transaction(1, "Устанавливаем ЧЗ")
 
-    ' Завершаем дозор — больше информация не собирается '
+    'Завершаем дозор — больше информация не собирается'
     is_db_watch(-1)
 
-    ' Проверяем изменения: если есть — делаем подготовку заново '
+    'Проверяем изменения: если есть — делаем подготовку заново'
     If (is_workstation_mode() == "MONO" | m_DBWatch.Check() != "")
         OnPrepare()
     End If
 
-    ' Производим изменения в БД на основе ранее подготовленных данных '
+    'Производим изменения в БД на основе ранее подготовленных данных'
     OnChange()
 
-    ' Закрываем транзакцию '
+    'Закрываем транзакцию'
     is_transaction(-1)
 }
 
-' Простой вариант без блокировки '
+'Простой вариант без блокировки'
 Do2()
 {
     is_transaction(1, "Устанавливаем ЧЗ")

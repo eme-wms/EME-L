@@ -158,13 +158,20 @@ RunTest()
 ## Константы типов JSON
 
 ```eme-l
-JSON_NODE_TYPE_NULL    = 0   ' null
-JSON_NODE_TYPE_INTEGER = 1   ' целое число
-JSON_NODE_TYPE_DOUBLE  = 2   ' число с плавающей точкой
-JSON_NODE_TYPE_BOOLEAN = 3   ' true/false
-JSON_NODE_TYPE_STRING  = 4   ' строка
-JSON_NODE_TYPE_OBJECT  = 5   ' объект { }
-JSON_NODE_TYPE_ARRAY   = 6   ' массив [ ]
+/* null */
+JSON_NODE_TYPE_NULL    = 0
+/* целое число */
+JSON_NODE_TYPE_INTEGER = 1
+/* число с плавающей точкой */
+JSON_NODE_TYPE_DOUBLE  = 2
+/* true/false */
+JSON_NODE_TYPE_BOOLEAN = 3
+/* строка */
+JSON_NODE_TYPE_STRING  = 4
+/* объект { } */
+JSON_NODE_TYPE_OBJECT  = 5
+/* массив [ ] */
+JSON_NODE_TYPE_ARRAY   = 6
 ```
 
 ## Другие юнит-тестовые классы
@@ -244,7 +251,7 @@ TestAttachTimeFld()
 {
     r_Document = Object("dsDB", "Document");
     r_Document.SetSkipMode();
-    ' Присоединяем время к дате для фильтрации по datetime '
+    'Присоединяем время к дате для фильтрации по datetime'
     r_Document.GetCreateDateFld().AttachTimeFld();
     r_Document.GetCreateDateFld().MustBeGT(is_date(19, 11, 2018, 11, 0));
     r_Document.GetCreateDateFld().MustBeLT(is_date(19, 11, 2018, 12, 0));
@@ -274,7 +281,7 @@ CopyOrder()
     dbOrder.ClrFinished();
     dbOrder.PutOrderNo(dbOrder.GetOrderNo() + "_" + is_time());
 
-    ' Копируем строки '
+    'Копируем строки'
     dbLines = Object("dsDB", "OrdersLines");
     dbLines.SetChain("@Заказ", nLineFrom);
     arr = Object("Array");
@@ -304,9 +311,8 @@ rwer()
         Semaphore.Set();
     End If
 
-    If (Semaphore.Check())
-        ' Семафор установлен '
-    End If
+    'Проверить состояние семафора: TRUE — установлен'
+    SemSet = Semaphore.Check()
 }
 ```
 
