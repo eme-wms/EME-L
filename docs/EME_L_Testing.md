@@ -31,54 +31,54 @@
 
 Основной раннер: `Tests.TestJson` (`TestJson.txt`). Каждый подтест — отдельный класс, проверяющий один метод `Json`.
 
-| Файл | Класс | Что проверяет | Объект |
-|------|-------|---------------|--------|
-| `TestJson.txt` | `Tests.TestJson` | Раннер: `RunTests()`, `CHECK_EQ()`, счётчики | `Json` |
-| `TestJson_001__GetType.txt` | `TestJson_001__GetType` | `GetType()` — распознавание типов узлов | `Json` |
-| `TestJson_002__GetTypeAt.txt` | `TestJson_002__GetTypeAt` | `GetTypeAt()` — тип узла по пути | `Json` |
-| `TestJson_003__GetCurrentType.txt` | `TestJson_003__GetCurrentType` | `GetCurrentType()` — тип текущего узла при итерации | `Json` |
-| `TestJson_004__IsType_typed.txt` | `TestJson_004__IsType_typed` | `IsType()` — проверка типа с константами | `Json` |
-| `TestJson_005__IsTypeAt_typed.txt` | `TestJson_005__IsTypeAt_typed` | `IsTypeAt()` — проверка типа по пути | `Json` |
-| `TestJson_006__IsCurrentType_typed.txt` | `TestJson_006__IsCurrentType_typed` | `IsCurrentType()` — проверка типа текущего узла | `Json` |
-| `TestJson_007__IsKeyExists.txt` | `TestJson_007__IsKeyExists` | `IsKeyExists()` — наличие ключа в объекте | `Json` |
-| `TestJson_008__GetValue.txt` | `TestJson_008__GetValue` | `GetValue()` — чтение значения по ключу | `Json` |
-| `TestJson_009__GetValueAt.txt` | `TestJson_009__GetValueAt` | `GetValueAt()` — чтение по пути | `Json` |
-| `TestJson_010__GetValueAtOrDefault.txt` | `TestJson_010__GetValueAtOrDefault` | `GetValueAtOrDefault()` — значение или дефолт | `Json` |
-| `TestJson_011__GetCurrentValue.txt` | `TestJson_011__GetCurrentValue` | `GetCurrentValue()` — значение при итерации | `Json` |
-| `TestJson_012__GetNodeAt.txt` | `TestJson_012__GetNodeAt` | `GetNodeAt()` — получение под-узла по пути | `Json` |
-| `TestJson_013__GetCurrentNode.txt` | `TestJson_013__GetCurrentNode` | `GetCurrentNode()` — текущий узел итерации | `Json` |
-| `TestJson_014__PutValue.txt` | `TestJson_014__PutValue` | `PutValue()` — запись значения по ключу | `Json` |
-| `TestJson_015__PutValueAt.txt` | `TestJson_015__PutValueAt` | `PutValueAt()` — запись по пути | `Json` |
-| `TestJson_016__IsEmpty.txt` | `TestJson_016__IsEmpty` | `IsEmpty()` — пустой ли узел | `Json` |
-| `TestJson_017__GetSize.txt` | `TestJson_017__GetSize` | `GetSize()` — размер массива/объекта | `Json` |
-| `TestJson_018__AddNodeAt.txt` | `TestJson_018__AddNodeAt` | `AddNodeAt()` — добавление узла по пути | `Json` |
-| `TestJson_019__ResizeArray.txt` | `TestJson_019__ResizeArray` | `ResizeArray()` — изменение размера массива | `Json` |
-| `TestJson_020__PushBackValue.txt` | `TestJson_020__PushBackValue` | `PushBackValue()` — добавление значения в массив | `Json` |
-| `TestJson_021__PushBackNode.txt` | `TestJson_021__PushBackNode` | `PushBackNode()` — добавление узла в массив | `Json` |
-| `TestJson_022__PutArray.txt` | `TestJson_022__PutArray` | `PutArray()` — запись массива | `Json` |
-| `TestJson_023__PutArrayAt.txt` | `TestJson_023__PutArrayAt` | `PutArrayAt()` — запись массива по пути | `Json` |
-| `TestJson_024__GetArray.txt` | `TestJson_024__GetArray` | `GetArray()` — чтение массива | `Json` |
-| `TestJson_025__GetArrayAt.txt` | `TestJson_025__GetArrayAt` | `GetArrayAt()` — чтение массива по пути | `Json` |
-| `TestJson_026__PutQuery.txt` | `TestJson_026__PutQuery` | `PutQuery()` — загрузка `Query` в JSON | `Json` |
-| `TestJson_027__PutQueryAt.txt` | `TestJson_027__PutQueryAt` | `PutQueryAt()` — загрузка `Query` по пути | `Json` |
-| `TestJson_028__GetQuery.txt` | `TestJson_028__GetQuery` | `GetQuery()` — выгрузка JSON в `Query` | `Json` |
-| `TestJson_029__GetQueryAt.txt` | `TestJson_029__GetQueryAt` | `GetQueryAt()` — выгрузка по пути | `Json` |
-| `TestJson_030__EraseAt.txt` | `TestJson_030__EraseAt` | `EraseAt()` — удаление по пути | `Json` |
-| `TestJson_031__EraseCurrent.txt` | `TestJson_031__EraseCurrent` | `EraseCurrent()` — удаление текущего узла | `Json` |
-| `TestJson_032__EraseAll.txt` | `TestJson_032__EraseAll` | `EraseAll()` — очистка узла | `Json` |
-| `TestJson_033__SetFirstLine.txt` | `TestJson_033__SetFirstLine` | `SetFirstLine()` — итерация по узлам | `Json` |
-| `TestJson_034__IsValidLine.txt` | `TestJson_034__IsValidLine` | `IsValidLine()` — валидность текущей строки | `Json` |
-| `TestJson_035__SetNextLine.txt` | `TestJson_035__SetNextLine` | `SetNextLine()` — переход к следующему узлу | `Json` |
-| `TestJson_036__ResetIteration.txt` | `TestJson_036__ResetIteration` | `ResetIteration()` — сброс итератора | `Json` |
-| `TestJson_037__GetCurrentKey.txt` | `TestJson_037__GetCurrentKey` | `GetCurrentKey()` — ключ текущего узла | `Json` |
-| `TestJson_038__GetCurrentIndex.txt` | `TestJson_038__GetCurrentIndex` | `GetCurrentIndex()` — индекс текущего узла | `Json` |
-| `TestJson_039__iteration.txt` | `TestJson_039__iteration` | Комплексная проверка итерации | `Json` |
-| `TestJson_040__ParseNoExcept.txt` | `TestJson_040__ParseNoExcept` | `ParseNoExcept()` — парсинг без исключений | `Json` |
-| `TestJson_041__Parse.txt` | `TestJson_041__Parse` | `Parse()` — парсинг строки | `Json` |
-| `TestJson_042__DumpToStr.txt` | `TestJson_042__DumpToStr` | `DumpToStr()` — сериализация в строку | `Json` |
-| `TestJson_043__DumpToStrFormatted.txt` | `TestJson_043__DumpToStrFormatted` | `DumpToStrFormatted()` — форматированная сериализация | `Json` |
-| `TestJson_044__GetContent.txt` | `TestJson_044__GetContent` | `GetContent()` — получение «сырого» содержимого | `Json` |
-| `TestJson_045__codepage.txt` | `TestJson_045__codepage` | Работа с кодировками (`ANSI`/`UTF-8`) | `Json` |
+| Файл | Класс | Что проверяет |
+|------|-------|---------------|
+| `TestJson.txt` | `Tests.TestJson` | Раннер: `RunTests()`, `CHECK_EQ()`, счётчики |
+| `TestJson_001__GetType.txt` | `TestJson_001__GetType` | `GetType()` — распознавание типов узлов |
+| `TestJson_002__GetTypeAt.txt` | `TestJson_002__GetTypeAt` | `GetTypeAt()` — тип узла по пути |
+| `TestJson_003__GetCurrentType.txt` | `TestJson_003__GetCurrentType` | `GetCurrentType()` — тип текущего узла при итерации |
+| `TestJson_004__IsType_typed.txt` | `TestJson_004__IsType_typed` | `IsType()` — проверка типа с константами |
+| `TestJson_005__IsTypeAt_typed.txt` | `TestJson_005__IsTypeAt_typed` | `IsTypeAt()` — проверка типа по пути |
+| `TestJson_006__IsCurrentType_typed.txt` | `TestJson_006__IsCurrentType_typed` | `IsCurrentType()` — проверка типа текущего узла |
+| `TestJson_007__IsKeyExists.txt` | `TestJson_007__IsKeyExists` | `IsKeyExists()` — наличие ключа в объекте |
+| `TestJson_008__GetValue.txt` | `TestJson_008__GetValue` | `GetValue()` — чтение значения по ключу |
+| `TestJson_009__GetValueAt.txt` | `TestJson_009__GetValueAt` | `GetValueAt()` — чтение по пути |
+| `TestJson_010__GetValueAtOrDefault.txt` | `TestJson_010__GetValueAtOrDefault` | `GetValueAtOrDefault()` — значение или дефолт |
+| `TestJson_011__GetCurrentValue.txt` | `TestJson_011__GetCurrentValue` | `GetCurrentValue()` — значение при итерации |
+| `TestJson_012__GetNodeAt.txt` | `TestJson_012__GetNodeAt` | `GetNodeAt()` — получение под-узла по пути |
+| `TestJson_013__GetCurrentNode.txt` | `TestJson_013__GetCurrentNode` | `GetCurrentNode()` — текущий узел итерации |
+| `TestJson_014__PutValue.txt` | `TestJson_014__PutValue` | `PutValue()` — запись значения по ключу |
+| `TestJson_015__PutValueAt.txt` | `TestJson_015__PutValueAt` | `PutValueAt()` — запись по пути |
+| `TestJson_016__IsEmpty.txt` | `TestJson_016__IsEmpty` | `IsEmpty()` — пустой ли узел |
+| `TestJson_017__GetSize.txt` | `TestJson_017__GetSize` | `GetSize()` — размер массива/объекта |
+| `TestJson_018__AddNodeAt.txt` | `TestJson_018__AddNodeAt` | `AddNodeAt()` — добавление узла по пути |
+| `TestJson_019__ResizeArray.txt` | `TestJson_019__ResizeArray` | `ResizeArray()` — изменение размера массива |
+| `TestJson_020__PushBackValue.txt` | `TestJson_020__PushBackValue` | `PushBackValue()` — добавление значения в массив |
+| `TestJson_021__PushBackNode.txt` | `TestJson_021__PushBackNode` | `PushBackNode()` — добавление узла в массив |
+| `TestJson_022__PutArray.txt` | `TestJson_022__PutArray` | `PutArray()` — запись массива |
+| `TestJson_023__PutArrayAt.txt` | `TestJson_023__PutArrayAt` | `PutArrayAt()` — запись массива по пути |
+| `TestJson_024__GetArray.txt` | `TestJson_024__GetArray` | `GetArray()` — чтение массива |
+| `TestJson_025__GetArrayAt.txt` | `TestJson_025__GetArrayAt` | `GetArrayAt()` — чтение массива по пути |
+| `TestJson_026__PutQuery.txt` | `TestJson_026__PutQuery` | `PutQuery()` — загрузка `Query` в JSON |
+| `TestJson_027__PutQueryAt.txt` | `TestJson_027__PutQueryAt` | `PutQueryAt()` — загрузка `Query` по пути |
+| `TestJson_028__GetQuery.txt` | `TestJson_028__GetQuery` | `GetQuery()` — выгрузка JSON в `Query` |
+| `TestJson_029__GetQueryAt.txt` | `TestJson_029__GetQueryAt` | `GetQueryAt()` — выгрузка по пути |
+| `TestJson_030__EraseAt.txt` | `TestJson_030__EraseAt` | `EraseAt()` — удаление по пути |
+| `TestJson_031__EraseCurrent.txt` | `TestJson_031__EraseCurrent` | `EraseCurrent()` — удаление текущего узла |
+| `TestJson_032__EraseAll.txt` | `TestJson_032__EraseAll` | `EraseAll()` — очистка узла |
+| `TestJson_033__SetFirstLine.txt` | `TestJson_033__SetFirstLine` | `SetFirstLine()` — итерация по узлам |
+| `TestJson_034__IsValidLine.txt` | `TestJson_034__IsValidLine` | `IsValidLine()` — валидность текущей строки |
+| `TestJson_035__SetNextLine.txt` | `TestJson_035__SetNextLine` | `SetNextLine()` — переход к следующему узлу |
+| `TestJson_036__ResetIteration.txt` | `TestJson_036__ResetIteration` | `ResetIteration()` — сброс итератора |
+| `TestJson_037__GetCurrentKey.txt` | `TestJson_037__GetCurrentKey` | `GetCurrentKey()` — ключ текущего узла |
+| `TestJson_038__GetCurrentIndex.txt` | `TestJson_038__GetCurrentIndex` | `GetCurrentIndex()` — индекс текущего узла |
+| `TestJson_039__iteration.txt` | `TestJson_039__iteration` | Комплексная проверка итерации |
+| `TestJson_040__ParseNoExcept.txt` | `TestJson_040__ParseNoExcept` | `ParseNoExcept()` — парсинг без исключений |
+| `TestJson_041__Parse.txt` | `TestJson_041__Parse` | `Parse()` — парсинг строки |
+| `TestJson_042__DumpToStr.txt` | `TestJson_042__DumpToStr` | `DumpToStr()` — сериализация в строку |
+| `TestJson_043__DumpToStrFormatted.txt` | `TestJson_043__DumpToStrFormatted` | `DumpToStrFormatted()` — форматированная сериализация |
+| `TestJson_044__GetContent.txt` | `TestJson_044__GetContent` | `GetContent()` — получение «сырого» содержимого |
+| `TestJson_045__codepage.txt` | `TestJson_045__codepage` | Работа с кодировками (`ANSI`/`UTF-8`) |
 
 ### B. ERP-тесты (`ERPSolution.ERPTests`)
 
