@@ -30,21 +30,21 @@ Tests.TestHttpsReq
 RunTest()
 {
     'Выполняем GET-запрос'
-    Result = is_http_get("https://api.example.com/data")
-    is_message("TestHttpsReq", "GET-ответ: " + is_left(Result, 100), "OK", "INFORMATION")
+    Result = is_http_get("https://api.example.com/data");
+    is_message("TestHttpsReq", "GET-ответ: " + is_left(Result, 100), "OK", "INFORMATION");
 
     'Выполняем POST-запрос с JSON'
-    JsonBody = "{\"key\":\"value\",\"count\":42}"
-    Result = is_http_post("https://api.example.com/submit", JsonBody, "application/json")
-    is_message("TestHttpsReq", "POST-ответ: " + is_left(Result, 100), "OK", "INFORMATION")
+    JsonBody = "{\"key\":\"value\",\"count\":42}";
+    Result = is_http_post("https://api.example.com/submit", JsonBody, "application/json");
+    is_message("TestHttpsReq", "POST-ответ: " + is_left(Result, 100), "OK", "INFORMATION");
 
     'Проверяем пагинацию'
-    Page = 1
+    Page = 1;
     While (Page <= 3)
-        Url = "https://api.example.com/data?page=" + Page
-        Result = is_http_get(Url)
-        is_message("TestHttpsReq", "Страница " + Page + ": " + is_length(Result) + " байт", "OK", "INFORMATION")
-        Page = Page + 1
+        Url = "https://api.example.com/data?page=" + Page;
+        Result = is_http_get(Url);
+        is_message("TestHttpsReq", "Страница " + Page + ": " + is_length(Result) + " байт", "OK", "INFORMATION");
+        Page = Page + 1;
     End While
 }
 ```
@@ -75,17 +75,17 @@ Tests.TestRPC
 RunTest()
 {
     'Формируем параметры для RPC-вызова'
-    Params = Object("Parameters")
-    Params.PutParam("Action", "Test")
-    Params.PutParam("Data", "Hello from RPC test")
+    Params = Object("Parameters");
+    Params.PutParam("Action", "Test");
+    Params.PutParam("Data", "Hello from RPC test");
 
     'Выполняем RPC-вызов через файловую систему'
-    Result = is_rpc_call("TestRPC", Params)
+    Result = is_rpc_call("TestRPC", Params);
 
     If (Result == "OK")
-        is_message("TestRPC", "RPC-вызов выполнен успешно", "OK", "INFORMATION")
+        is_message("TestRPC", "RPC-вызов выполнен успешно", "OK", "INFORMATION");
     Else
-        is_message("TestRPC", "Ошибка RPC: " + Result, "OK", "STOP")
+        is_message("TestRPC", "Ошибка RPC: " + Result, "OK", "STOP");
     End If
 }
 ```
@@ -116,22 +116,22 @@ Tests.TestXml
 RunTest()
 {
     'Загружаем XML с курсами ЦБ'
-    XmlData = is_http_get("https://www.cbr.ru/scripts/XML_daily.asp")
+    XmlData = is_http_get("https://www.cbr.ru/scripts/XML_daily.asp");
 
     'Парсим XML'
-    Xml = Object("Xml")
-    Xml.LoadFromString(XmlData)
+    Xml = Object("Xml");
+    Xml.LoadFromString(XmlData);
 
     'Получаем список валют'
-    Currencies = Xml.GetNodes("Valute")
-    is_message("TestXml", "Найдено валют: " + Currencies.GetSize(), "OK", "INFORMATION")
+    Currencies = Xml.GetNodes("Valute");
+    is_message("TestXml", "Найдено валют: " + Currencies.GetSize(), "OK", "INFORMATION");
 
     'Читаем данные первой валюты'
     If (Currencies.GetSize() > 0)
-        FirstCurrency = Currencies.GetAt(0)
-        Code = FirstCurrency.GetValue("CharCode")
-        Rate = FirstCurrency.GetValue("Value")
-        is_message("TestXml", "Валюта: " + Code + " = " + Rate, "OK", "INFORMATION")
+        FirstCurrency = Currencies.GetAt(0);
+        Code = FirstCurrency.GetValue("CharCode");
+        Rate = FirstCurrency.GetValue("Value");
+        is_message("TestXml", "Валюта: " + Code + " = " + Rate, "OK", "INFORMATION");
     End If
 }
 ```
@@ -161,42 +161,42 @@ Tests.TestExternalDB
 ************************             Методы            ************************
 RunTest()
 {
-    ExternalDB = Object("ExternalDB")
+    ExternalDB = Object("ExternalDB");
 
     'Тест подключения к PostgreSQL'
     Error = ExternalDB.Connect(
-        "ODBC:Driver={PostgreSQL ODBC Driver(ANSI)};Server=localhost;Port=5432;Database=Test;Uid=postgres;Pwd=123;")
+        "ODBC:Driver={PostgreSQL ODBC Driver(ANSI)};Server=localhost;Port=5432;Database=Test;Uid=postgres;Pwd=123;");
     If (Error == "")
-        is_message("TestExternalDB", "PostgreSQL: Подключение успешно", "OK", "INFORMATION")
-        TestExternalDB(ExternalDB)
-        ExternalDB.Disconnect()
+        is_message("TestExternalDB", "PostgreSQL: Подключение успешно", "OK", "INFORMATION");
+        TestExternalDB(ExternalDB);
+        ExternalDB.Disconnect();
     Else
-        is_message("TestExternalDB", "PostgreSQL: " + Error, "OK", "EXCLAMATION")
+        is_message("TestExternalDB", "PostgreSQL: " + Error, "OK", "EXCLAMATION");
     End If
 
     'Тест подключения к SQL Server'
     Error = ExternalDB.Connect(
-        "ODBC:Driver={SQL Server};Server=localhost;Database=Test;Uid=sa;Pwd=123;")
+        "ODBC:Driver={SQL Server};Server=localhost;Database=Test;Uid=sa;Pwd=123;");
     If (Error == "")
-        is_message("TestExternalDB", "SQL Server: Подключение успешно", "OK", "INFORMATION")
-        TestExternalDB(ExternalDB)
-        ExternalDB.Disconnect()
+        is_message("TestExternalDB", "SQL Server: Подключение успешно", "OK", "INFORMATION");
+        TestExternalDB(ExternalDB);
+        ExternalDB.Disconnect();
     Else
-        is_message("TestExternalDB", "SQL Server: " + Error, "OK", "EXCLAMATION")
+        is_message("TestExternalDB", "SQL Server: " + Error, "OK", "EXCLAMATION");
     End If
 }
 
 TestExternalDB(ExternalDB)
 {
     'Выполняем тестовый запрос'
-    Query = Object("Query")
-    Query.Create()
-    Error = ExternalDB.Execute("SELECT 1 AS Test", Query)
+    Query = Object("Query");
+    Query.Create();
+    Error = ExternalDB.Execute("SELECT 1 AS Test", Query);
 
     If (Error == "")
-        is_message("TestExternalDB", "Запрос выполнен. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION")
+        is_message("TestExternalDB", "Запрос выполнен. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION");
     Else
-        is_message("TestExternalDB", "Ошибка запроса: " + Error, "OK", "STOP")
+        is_message("TestExternalDB", "Ошибка запроса: " + Error, "OK", "STOP");
     End If
 }
 ```
@@ -227,17 +227,17 @@ Tests.TestTranslate
 RunTest()
 {
     'Проверяем перевод строки'
-    Original = "Hello World"
-    Translated = tr(Original)
-    is_message("TestTranslate", "Оригинал: " + Original + "\nПеревод: " + Translated, "OK", "INFORMATION")
+    Original = "Hello World";
+    Translated = tr(Original);
+    is_message("TestTranslate", "Оригинал: " + Original + "\nПеревод: " + Translated, "OK", "INFORMATION");
 
     'Проверяем перевод системной строки'
-    SysTranslated = tr("Сохранить изменения?")
-    is_message("TestTranslate", "Системная строка: " + SysTranslated, "OK", "INFORMATION")
+    SysTranslated = tr("Сохранить изменения?");
+    is_message("TestTranslate", "Системная строка: " + SysTranslated, "OK", "INFORMATION");
 
     'Проверяем текущий язык'
-    CurrentLang = is_get_lang()
-    is_message("TestTranslate", "Текущий язык: " + CurrentLang, "OK", "INFORMATION")
+    CurrentLang = is_get_lang();
+    is_message("TestTranslate", "Текущий язык: " + CurrentLang, "OK", "INFORMATION");
 }
 ```
 
@@ -264,12 +264,12 @@ Tests.TestTranslatePura
 RunTest()
 {
     'Загружаем переводы из файла'
-    File = Object("File", "D:\\EME\\Lang\\Custom.lang")
+    File = Object("File", "D:\\EME\\Lang\\Custom.lang");
     If (File.Exists())
-        LangData = File.GetData().AsString()
-        is_message("TestTranslatePura", "Загружено переводов: " + is_length(LangData), "OK", "INFORMATION")
+        LangData = File.GetData().AsString();
+        is_message("TestTranslatePura", "Загружено переводов: " + is_length(LangData), "OK", "INFORMATION");
     Else
-        is_message("TestTranslatePura", "Файл переводов не найден", "OK", "EXCLAMATION")
+        is_message("TestTranslatePura", "Файл переводов не найден", "OK", "EXCLAMATION");
     End If
 }
 ```
@@ -294,25 +294,25 @@ Tests.TestOrderFrom1C
 RunTest()
 {
     'Подключаемся к 1С через COM'
-    OneC = Object("Automation", "V83.COMConnector")
-    Connection = OneC.Connect("Srvr='localhost';Ref='MyBase';Usr='Admin';Pwd='';")
+    OneC = Object("Automation", "V83.COMConnector");
+    Connection = OneC.Connect("Srvr='localhost';Ref='MyBase';Usr='Admin';Pwd='';");
 
     If (Connection == "")
-        is_message("TestOrderFrom1C", "Не удалось подключиться к 1С", "OK", "STOP")
-        Return
+        is_message("TestOrderFrom1C", "Не удалось подключиться к 1С", "OK", "STOP");
+        Return;
     End If
 
     'Получаем список заказов'
-    Query = Connection.NewObject("Query")
-    Query.Text = "ВЫБРАТЬ ПЕРВЫЕ 10 Номер, Дата, Контрагент ИЗ Документ.ЗаказКлиента"
-    Result = Query.Execute().Выбрать()
+    Query = Connection.NewObject("Query");
+    Query.Text = "ВЫБРАТЬ ПЕРВЫЕ 10 Номер, Дата, Контрагент ИЗ Документ.ЗаказКлиента";
+    Result = Query.Execute().Выбрать();
 
-    Count = 0
+    Count = 0;
     While (Result.Следующий())
-        Count = Count + 1
+        Count = Count + 1;
     End While
 
-    is_message("TestOrderFrom1C", "Заказов из 1С: " + Count, "OK", "INFORMATION")
+    is_message("TestOrderFrom1C", "Заказов из 1С: " + Count, "OK", "INFORMATION");
 }
 ```
 
@@ -342,24 +342,24 @@ Tests.TestExportToTHQ
 RunTest()
 {
     'Формируем данные для выгрузки'
-    r_Orders = Object("dsDB", "Orders")
-    r_Orders.SetSkipMode()
+    r_Orders = Object("dsDB", "Orders");
+    r_Orders.SetSkipMode();
 
     'Экспортируем заказы в формат ЦУП'
-    File = Object("File", "D:\\Temp\\THQ_Export.xml")
-    File.CreateFile()
-    File.PutFileData("<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
-    File.PutFileData("<Orders>")
+    File = Object("File", "D:\\Temp\\THQ_Export.xml");
+    File.CreateFile();
+    File.PutFileData("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+    File.PutFileData("<Orders>");
 
     Loop (r_Orders)
-        Line = "<Order Number=\"" + r_Orders.GetOrderNo() + "\" Date=\"" + r_Orders.GetDocDate() + "\"/>"
-        File.PutFileData(Line)
+        Line = "<Order Number=\"" + r_Orders.GetOrderNo() + "\" Date=\"" + r_Orders.GetDocDate() + "\"/>";
+        File.PutFileData(Line);
     End Loop
 
-    File.PutFileData("</Orders>")
-    File.CloseFile()
+    File.PutFileData("</Orders>");
+    File.CloseFile();
 
-    is_message("TestExportToTHQ", "Выгружено заказов: " + r_Orders.GetNoOfLines(), "OK", "INFORMATION")
+    is_message("TestExportToTHQ", "Выгружено заказов: " + r_Orders.GetNoOfLines(), "OK", "INFORMATION");
 }
 ```
 
