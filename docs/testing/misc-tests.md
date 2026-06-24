@@ -24,20 +24,20 @@ Tests.TestImage
 RunTest()
 {
     'Загружаем тестовое изображение'
-    Image = Object("Image", "D:\\Temp\\TestPhoto.jpg")
+    Image = Object("Image", "D:\\Temp\\TestPhoto.jpg");
 
     If (Image.IsValid())
-        is_message("TestImage", "Изображение загружено. Размер: " + Image.GetWidth() + "x" + Image.GetHeight(), "OK", "INFORMATION")
+        is_message("TestImage", "Изображение загружено. Размер: " + Image.GetWidth() + "x" + Image.GetHeight(), "OK", "INFORMATION");
 
         'Масштабируем'
-        Image.Resize(200, 200)
-        is_message("TestImage", "Масштабировано: " + Image.GetWidth() + "x" + Image.GetHeight(), "OK", "INFORMATION")
+        Image.Resize(200, 200);
+        is_message("TestImage", "Масштабировано: " + Image.GetWidth() + "x" + Image.GetHeight(), "OK", "INFORMATION");
 
         'Сохраняем'
-        Image.Save("D:\\Temp\\TestPhoto_Resized.jpg")
-        is_message("TestImage", "Сохранено", "OK", "INFORMATION")
+        Image.Save("D:\\Temp\\TestPhoto_Resized.jpg");
+        is_message("TestImage", "Сохранено", "OK", "INFORMATION");
     Else
-        is_message("TestImage", "Не удалось загрузить изображение", "OK", "STOP")
+        is_message("TestImage", "Не удалось загрузить изображение", "OK", "STOP");
     End If
 }
 ```
@@ -60,16 +60,16 @@ Tests.TestPatch
 RunTest()
 {
     'Применяем патч к диалогу'
-    Patch = Object("Patch", "GoodsItem")
-    Patch.AddButton("btnTest", "Тестовая кнопка", 100, 100, 80, 25)
-    Patch.AddLabel("lblTest", "Тестовая метка", 10, 10, 200, 20)
+    Patch = Object("Patch", "GoodsItem");
+    Patch.AddButton("btnTest", "Тестовая кнопка", 100, 100, 80, 25);
+    Patch.AddLabel("lblTest", "Тестовая метка", 10, 10, 200, 20);
 
     'Открываем диалог с патчем'
-    Dialog = Object("Dialog", "GoodsItem")
-    Dialog.ApplyPatch(Patch)
-    Dialog.Show()
+    Dialog = Object("Dialog", "GoodsItem");
+    Dialog.ApplyPatch(Patch);
+    Dialog.Show();
 
-    is_message("TestPatch", "Патч применён", "OK", "INFORMATION")
+    is_message("TestPatch", "Патч применён", "OK", "INFORMATION");
 }
 ```
 
@@ -91,20 +91,20 @@ Tests.TestPrintDocFiles
 RunTest()
 {
     'Формируем печатную форму накладной'
-    r_Doc = Object("dsDB", "Document")
-    r_Doc.SetSkipMode()
-    r_Doc.SetFirstLine()
+    r_Doc = Object("dsDB", "Document");
+    r_Doc.SetSkipMode();
+    r_Doc.SetFirstLine();
 
     If (r_Doc.IsValidLine())
         'Формируем файл печати'
-        File = Object("File", "D:\\Temp\\Invoice.txt")
-        File.CreateFile()
-        File.PutFileData("НАКЛАДНАЯ № " + r_Doc.GetDocNo() + "\n")
-        File.PutFileData("Дата: " + r_Doc.GetDocDate() + "\n")
-        File.PutFileData("Контрагент: " + r_Doc.GetClientName() + "\n")
-        File.CloseFile()
+        File = Object("File", "D:\\Temp\\Invoice.txt");
+        File.CreateFile();
+        File.PutFileData("НАКЛАДНАЯ № " + r_Doc.GetDocNo() + "\n");
+        File.PutFileData("Дата: " + r_Doc.GetDocDate() + "\n");
+        File.PutFileData("Контрагент: " + r_Doc.GetClientName() + "\n");
+        File.CloseFile();
 
-        is_message("TestPrintDocFiles", "Документ сформирован", "OK", "INFORMATION")
+        is_message("TestPrintDocFiles", "Документ сформирован", "OK", "INFORMATION");
     End If
 }
 ```
@@ -129,19 +129,19 @@ Tests.TestAbsent
 RunTest()
 {
     'Пытаемся получить доступ к несуществующей записи'
-    r_Record = Object("dsDB", "GoodsItem")
-    r_Record.SetLineByCode("NONEXISTENT_CODE_99999")
+    r_Record = Object("dsDB", "GoodsItem");
+    r_Record.SetLineByCode("NONEXISTENT_CODE_99999");
 
     If (~r_Record.IsValidLine())
-        is_message("TestAbsent", "Корректно: запись не найдена, ошибки нет", "OK", "INFORMATION")
+        is_message("TestAbsent", "Корректно: запись не найдена, ошибки нет", "OK", "INFORMATION");
     Else
-        is_message("TestAbsent", "ОШИБКА: Найдена несуществующая запись", "OK", "STOP")
+        is_message("TestAbsent", "ОШИБКА: Найдена несуществующая запись", "OK", "STOP");
     End If
 
     'Проверяем безопасное чтение поля'
-    EmptyValue = r_Record.GetName()
+    EmptyValue = r_Record.GetName();
     If (is_empty(EmptyValue))
-        is_message("TestAbsent", "Корректно: пустое значение при отсутствии данных", "OK", "INFORMATION")
+        is_message("TestAbsent", "Корректно: пустое значение при отсутствии данных", "OK", "INFORMATION");
     End If
 }
 ```
@@ -163,33 +163,33 @@ Tests.TestUserError
 ************************             Методы            ************************
 RunTest()
 {
-    r_Record = Object("dsDB", "TestRecord")
-    CountBefore = r_Record.GetNoOfLines()
+    r_Record = Object("dsDB", "TestRecord");
+    CountBefore = r_Record.GetNoOfLines();
 
     'Открываем транзакцию'
-    is_transaction(1, "Тест пользовательской ошибки")
+    is_transaction(1, "Тест пользовательской ошибки");
 
     'Добавляем строку'
-    r_Record.AppendAndSetLine()
-    r_Record.PutCode("ERROR_TEST")
+    r_Record.AppendAndSetLine();
+    r_Record.PutCode("ERROR_TEST");
 
     'Генерируем пользовательскую ошибку'
     Try (Error)
-        is_error(1, "Тестовая пользовательская ошибка")
+        is_error(1, "Тестовая пользовательская ошибка");
     Catch
         If (~is_empty(Error))
             'Откатываем транзакцию'
-            is_transaction(0)
-            is_message("TestUserError", "Транзакция откатена: " + Error, "OK", "INFORMATION")
+            is_transaction(0);
+            is_message("TestUserError", "Транзакция откатена: " + Error, "OK", "INFORMATION");
         End If
     End Try
 
     'Проверяем, что строка НЕ добавлена'
-    CountAfter = r_Record.GetNoOfLines()
+    CountAfter = r_Record.GetNoOfLines();
     If (CountAfter == CountBefore)
-        is_message("TestUserError", "Корректно: данные не изменены после отката", "OK", "INFORMATION")
+        is_message("TestUserError", "Корректно: данные не изменены после отката", "OK", "INFORMATION");
     Else
-        is_message("TestUserError", "ОШИБКА: Данные изменены несмотря на откат", "OK", "STOP")
+        is_message("TestUserError", "ОШИБКА: Данные изменены несмотря на откат", "OK", "STOP");
     End If
 }
 ```
@@ -213,37 +213,37 @@ Tests.FULL_TEST
 ************************             Методы            ************************
 RunTest()
 {
-    Console = Object("Console")
-    Console.Show(1)
-    Console.PutText("=== НАЧАЛО ПОЛНОГО ТЕСТА ===")
+    Console = Object("Console");
+    Console.Show(1);
+    Console.PutText("=== НАЧАЛО ПОЛНОГО ТЕСТА ===");
 
     '1. Тест структуры БД'
-    Console.PutText("1. Тест структуры БД...")
-    Result = is_run_dbtest()
-    Console.PutText("   Результат: " + Result)
+    Console.PutText("1. Тест структуры БД...");
+    Result = is_run_dbtest();
+    Console.PutText("   Результат: " + Result);
 
     '2. Тест счётчиков ссылок'
-    Console.PutText("2. Тест счётчиков ссылок...")
-    is_test_references_counter()
-    Console.PutText("   OK")
+    Console.PutText("2. Тест счётчиков ссылок...");
+    is_test_references_counter();
+    Console.PutText("   OK");
 
     '3. Тест VFS'
-    Console.PutText("3. Тест виртуальной файловой системы...")
-    is_vfs_test()
-    Console.PutText("   OK")
+    Console.PutText("3. Тест виртуальной файловой системы...");
+    is_vfs_test();
+    Console.PutText("   OK");
 
     '4. Тест JSON'
-    Console.PutText("4. Тест JSON...")
-    Object("IClass", "Tests.TestJson", "TestJson").RunTests()
-    Console.PutText("   OK")
+    Console.PutText("4. Тест JSON...");
+    Object("IClass", "Tests.TestJson", "TestJson").RunTests();
+    Console.PutText("   OK");
 
     '5. Тест UI'
-    Console.PutText("5. Тест интерфейса...")
+    Console.PutText("5. Тест интерфейса...");
     'is_ui_test_mode() используется для пропуска MessageBox'
-    Console.PutText("   OK")
+    Console.PutText("   OK");
 
-    Console.PutText("=== КОНЕЦ ПОЛНОГО ТЕСТА ===")
-    is_message("FULL_TEST", "Полный тест завершён", "OK", "INFORMATION")
+    Console.PutText("=== КОНЕЦ ПОЛНОГО ТЕСТА ===");
+    is_message("FULL_TEST", "Полный тест завершён", "OK", "INFORMATION");
 }
 ```
 
@@ -285,7 +285,7 @@ RunTest()
             SUM(R.[Quantity]) > 0
     End Select
 
-    is_message("SQL_Test", "SQL-запрос выполнен. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION")
+    is_message("SQL_Test", "SQL-запрос выполнен. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION");
 }
 ```
 
@@ -309,19 +309,19 @@ Tests.Wms3DTest
 RunTest()
 {
     'Открываем 3D-визуализацию склада'
-    View3D = Object("View3D", "Warehouse")
-    View3D.SetWarehouseRef(WarehouseRef)
-    View3D.SetZoneRef(ZoneRef)
+    View3D = Object("View3D", "Warehouse");
+    View3D.SetWarehouseRef(WarehouseRef);
+    View3D.SetZoneRef(ZoneRef);
 
     'Настраиваем отображение'
-    View3D.ShowCells(TRUE)
-    View3D.ShowGoods(TRUE)
-    View3D.SetZoom(1.5)
+    View3D.ShowCells(TRUE);
+    View3D.ShowGoods(TRUE);
+    View3D.SetZoom(1.5);
 
     'Открываем окно'
-    View3D.Show()
+    View3D.Show();
 
-    is_message("Wms3DTest", "3D-визуализация открыта", "OK", "INFORMATION")
+    is_message("Wms3DTest", "3D-визуализация открыта", "OK", "INFORMATION");
 }
 ```
 
@@ -345,19 +345,19 @@ Tests.VETTest
 RunTest()
 {
     'Формируем запрос к ВЕТИС'
-    Vetis = Object("Automation", "Vetis.Client")
-    Error = Vetis.Connect()
+    Vetis = Object("Automation", "Vetis.Client");
+    Error = Vetis.Connect();
 
     If (Error != "")
-        is_message("VETTest", "Ошибка подключения к ВЕТИС: " + Error, "OK", "STOP")
-        Return
+        is_message("VETTest", "Ошибка подключения к ВЕТИС: " + Error, "OK", "STOP");
+        Return;
     End If
 
     'Получаем список ветеринарных сертификатов'
-    Certificates = Vetis.GetCertificates()
-    is_message("VETTest", "Получено сертификатов: " + Certificates.GetSize(), "OK", "INFORMATION")
+    Certificates = Vetis.GetCertificates();
+    is_message("VETTest", "Получено сертификатов: " + Certificates.GetSize(), "OK", "INFORMATION");
 
-    Vetis.Disconnect()
+    Vetis.Disconnect();
 }
 ```
 
@@ -379,26 +379,26 @@ Tests.EANCOMTest
 RunTest()
 {
     'Формируем тестовое EANCOM-сообщение'
-    EANCOM = Object("EANCOM")
-    EANCOM.SetMessageType("DESADV")
-    EANCOM.SetSender("1234567890123")
-    EANCOM.SetReceiver("9876543210987")
+    EANCOM = Object("EANCOM");
+    EANCOM.SetMessageType("DESADV");
+    EANCOM.SetSender("1234567890123");
+    EANCOM.SetReceiver("9876543210987");
 
     'Добавляем строку'
-    EANCOM.AddLine()
-    EANCOM.SetLineField("GTIN", "4601234567890")
-    EANCOM.SetLineField("Quantity", "100")
-    EANCOM.SetLineField("SSCC", "146000000001234567")
+    EANCOM.AddLine();
+    EANCOM.SetLineField("GTIN", "4601234567890");
+    EANCOM.SetLineField("Quantity", "100");
+    EANCOM.SetLineField("SSCC", "146000000001234567");
 
     'Формируем сообщение'
-    MessageText = EANCOM.Generate()
-    is_message("EANCOMTest", "EANCOM-сообщение сформировано. Размер: " + is_length(MessageText), "OK", "INFORMATION")
+    MessageText = EANCOM.Generate();
+    is_message("EANCOMTest", "EANCOM-сообщение сформировано. Размер: " + is_length(MessageText), "OK", "INFORMATION");
 
     'Сохраняем в файл'
-    File = Object("File", "D:\\Temp\\TestEANCOM.edi")
-    File.CreateFile()
-    File.PutFileData(MessageText)
-    File.CloseFile()
+    File = Object("File", "D:\\Temp\\TestEANCOM.edi");
+    File.CreateFile();
+    File.PutFileData(MessageText);
+    File.CloseFile();
 }
 ```
 
@@ -420,19 +420,19 @@ Tests.DIADOCTestRequests
 RunTest()
 {
     'Подключаемся к API Диадок'
-    Diadoc = Object("Automation", "Diadoc.Api")
-    Error = Diadoc.Authenticate("login", "password")
+    Diadoc = Object("Automation", "Diadoc.Api");
+    Error = Diadoc.Authenticate("login", "password");
 
     If (Error != "")
-        is_message("DIADOCTest", "Ошибка авторизации: " + Error, "OK", "STOP")
-        Return
+        is_message("DIADOCTest", "Ошибка авторизации: " + Error, "OK", "STOP");
+        Return;
     End If
 
     'Получаем список документов'
-    Documents = Diadoc.GetDocuments()
-    is_message("DIADOCTest", "Документов в Диадок: " + Documents.GetSize(), "OK", "INFORMATION")
+    Documents = Diadoc.GetDocuments();
+    is_message("DIADOCTest", "Документов в Диадок: " + Documents.GetSize(), "OK", "INFORMATION");
 
-    Diadoc.Logout()
+    Diadoc.Logout();
 }
 ```
 
@@ -456,16 +456,16 @@ Tests.XsdTestCDATA
 RunTest()
 {
     'XML с CDATA'
-    XmlText = "<?xml version=\"1.0\"?>"
-    XmlText = XmlText + "<Document>"
-    XmlText = XmlText + "<Description><![CDATA[<Специальные > символы & сущности]]></Description>"
-    XmlText = XmlText + "</Document>"
+    XmlText = "<?xml version=\"1.0\"?>";
+    XmlText = XmlText + "<Document>";
+    XmlText = XmlText + "<Description><![CDATA[<Специальные > символы & сущности]]></Description>";
+    XmlText = XmlText + "</Document>";
 
-    Xml = Object("Xml")
-    Xml.LoadFromString(XmlText)
+    Xml = Object("Xml");
+    Xml.LoadFromString(XmlText);
 
-    Description = Xml.GetValue("Description")
-    is_message("XsdTestCDATA", "CDATA содержимое: " + Description, "OK", "INFORMATION")
+    Description = Xml.GetValue("Description");
+    is_message("XsdTestCDATA", "CDATA содержимое: " + Description, "OK", "INFORMATION");
 }
 ```
 
@@ -487,17 +487,17 @@ Tests.XsdTestDateTime
 RunTest()
 {
     'Формируем XML с датой-временем'
-    XmlText = "<?xml version=\"1.0\"?>"
-    XmlText = XmlText + "<Event>"
-    XmlText = XmlText + "<DateTime>2024-06-10T14:30:00+03:00</DateTime>"
-    XmlText = XmlText + "</Event>"
+    XmlText = "<?xml version=\"1.0\"?>";
+    XmlText = XmlText + "<Event>";
+    XmlText = XmlText + "<DateTime>2024-06-10T14:30:00+03:00</DateTime>";
+    XmlText = XmlText + "</Event>";
 
-    Xml = Object("Xml")
-    Xml.LoadFromString(XmlText)
+    Xml = Object("Xml");
+    Xml.LoadFromString(XmlText);
 
-    DateTimeStr = Xml.GetValue("DateTime")
-    ParsedDate = is_parse_iso_datetime(DateTimeStr)
-    is_message("XsdTestDateTime", "Распарсенная дата: " + ParsedDate, "OK", "INFORMATION")
+    DateTimeStr = Xml.GetValue("DateTime");
+    ParsedDate = is_parse_iso_datetime(DateTimeStr);
+    is_message("XsdTestDateTime", "Распарсенная дата: " + ParsedDate, "OK", "INFORMATION");
 }
 ```
 
@@ -518,21 +518,21 @@ RunTest()
 
 ```EME-L
 'Использование тестовой схемы IDoc'
-IDoc = Object("IDoc", "TestJSON")
+IDoc = Object("IDoc", "TestJSON");
 
 'Создаём сообщение'
-Message = IDoc.AddMessage()
-Message.PutField("DocNo", "TEST-001")
-Message.PutField("DocDate", is_dos_date())
+Message = IDoc.AddMessage();
+Message.PutField("DocNo", "TEST-001");
+Message.PutField("DocDate", is_dos_date());
 
 'Добавляем строку'
-Line = Message.AddLine()
-Line.PutField("GoodsCode", "12345")
-Line.PutField("Quantity", "100")
+Line = Message.AddLine();
+Line.PutField("GoodsCode", "12345");
+Line.PutField("Quantity", "100");
 
 'Получаем JSON-представление'
-JsonText = IDoc.ToJSON()
-is_message("IDocTest", "JSON: " + JsonText, "OK", "INFORMATION")
+JsonText = IDoc.ToJSON();
+is_message("IDocTest", "JSON: " + JsonText, "OK", "INFORMATION");
 ```
 
 ---
@@ -555,29 +555,29 @@ RobotInter.repAnalysis
 RunReport()
 {
     'Формируем отчёт по роботам'
-    Report = Object("Report")
-    Report.Create()
+    Report = Object("Report");
+    Report.Create();
 
     'Шапка'
-    Report.AddBand("Header")
-    Report.PutField("Title", "Анализ работы роботов")
-    Report.PutField("Date", is_dos_date())
+    Report.AddBand("Header");
+    Report.PutField("Title", "Анализ работы роботов");
+    Report.PutField("Date", is_dos_date());
 
     'Данные по роботам'
-    Robots = Object("Array")
-    Robots.Add("GoodsItemRobot")
-    Robots.Add("ClientRobot")
-    Robots.Add("INCOMERobot")
+    Robots = Object("Array");
+    Robots.Add("GoodsItemRobot");
+    Robots.Add("ClientRobot");
+    Robots.Add("INCOMERobot");
 
     Loop (Robots)
-        Report.AddBand("Detail")
-        Report.PutField("RobotName", Robots.Get())
-        Report.PutField("Status", "OK")
-        Report.PutField("Duration", "500 мс")
+        Report.AddBand("Detail");
+        Report.PutField("RobotName", Robots.Get());
+        Report.PutField("Status", "OK");
+        Report.PutField("Duration", "500 мс");
     End Loop
 
     'Выводим отчёт'
-    Report.Show()
+    Report.Show();
 }
 ```
 
@@ -601,22 +601,22 @@ Tests.PromiseTests
 RunTest()
 {
     'Создаём обещание'
-    Promise = Object("Promise")
-    Promise.Then("OnSuccess")
-    Promise.Catch("OnError")
+    Promise = Object("Promise");
+    Promise.Then("OnSuccess");
+    Promise.Catch("OnError");
 
     'Запускаем асинхронную операцию'
-    Promise.Resolve("Результат операции")
+    Promise.Resolve("Результат операции");
 }
 
 OnSuccess(Result)
 {
-    is_message("PromiseTests", "Успешно: " + Result, "OK", "INFORMATION")
+    is_message("PromiseTests", "Успешно: " + Result, "OK", "INFORMATION");
 }
 
 OnError(Error)
 {
-    is_message("PromiseTests", "Ошибка: " + Error, "OK", "STOP")
+    is_message("PromiseTests", "Ошибка: " + Error, "OK", "STOP");
 }
 ```
 
@@ -638,22 +638,22 @@ Tests.CompleteStockmanOperations
 RunTest()
 {
     'Шаг 1: Приёмка'
-    is_message("StockmanOps", "Шаг 1: Приёмка", "OK", "INFORMATION")
+    is_message("StockmanOps", "Шаг 1: Приёмка", "OK", "INFORMATION");
     '... логика приёмки ...'
 
     'Шаг 2: Размещение'
-    is_message("StockmanOps", "Шаг 2: Размещение", "OK", "INFORMATION")
+    is_message("StockmanOps", "Шаг 2: Размещение", "OK", "INFORMATION");
     '... логика размещения ...'
 
     'Шаг 3: Подбор'
-    is_message("StockmanOps", "Шаг 3: Подбор", "OK", "INFORMATION")
+    is_message("StockmanOps", "Шаг 3: Подбор", "OK", "INFORMATION");
     '... логика подбора ...'
 
     'Шаг 4: Отгрузка'
-    is_message("StockmanOps", "Шаг 4: Отгрузка", "OK", "INFORMATION")
+    is_message("StockmanOps", "Шаг 4: Отгрузка", "OK", "INFORMATION");
     '... логика отгрузки ...'
 
-    is_message("StockmanOps", "Все операции кладовщика выполнены", "OK", "INFORMATION")
+    is_message("StockmanOps", "Все операции кладовщика выполнены", "OK", "INFORMATION");
 }
 ```
 
