@@ -23,26 +23,26 @@ Tests.TestCEMERec
 ************************             Методы            ************************
 RunTest()
 {
-    r_Record = Object("dsDB", "GoodsItem")
+    r_Record = Object("dsDB", "GoodsItem");
 
     'Проверяем установку режима пропуска'
-    r_Record.SetSkipMode()
-    is_message("TestCEMERec", "SetSkipMode: " + r_Record.GetNoOfLines() + " строк", "OK", "INFORMATION")
+    r_Record.SetSkipMode();
+    is_message("TestCEMERec", "SetSkipMode: " + r_Record.GetNoOfLines() + " строк", "OK", "INFORMATION");
 
     'Проверяем навигацию по записям'
-    r_Record.SetFirstLine()
+    r_Record.SetFirstLine();
     If (r_Record.IsValidLine())
-        is_message("TestCEMERec", "Первая строка: " + r_Record.GetCode(), "OK", "INFORMATION")
+        is_message("TestCEMERec", "Первая строка: " + r_Record.GetCode(), "OK", "INFORMATION");
     End If
 
     'Проверяем получение ссылки'
-    Line = r_Record.GetLine()
-    is_message("TestCEMERec", "Ссылка первой строки: " + Line, "OK", "INFORMATION")
+    Line = r_Record.GetLine();
+    is_message("TestCEMERec", "Ссылка первой строки: " + Line, "OK", "INFORMATION");
 
     'Проверяем установку строки по ссылке'
-    r_Record.SetLine(Line)
+    r_Record.SetLine(Line);
     If (r_Record.IsValidLine())
-        is_message("TestCEMERec", "Установка по ссылке работает", "OK", "INFORMATION")
+        is_message("TestCEMERec", "Установка по ссылке работает", "OK", "INFORMATION");
     End If
 }
 ```
@@ -70,28 +70,28 @@ Tests.TestCEMESkip
 ************************             Методы            ************************
 RunTest()
 {
-    r_Record = Object("dsDB", "GoodsItem")
-    r_Record.SetSkipMode()
+    r_Record = Object("dsDB", "GoodsItem");
+    r_Record.SetSkipMode();
 
     'Применяем нечёткий фильтр'
-    r_Record.GetCodeFld().MustBeEQAbt("TEST")
-    r_Record.SetFirstLine()
+    r_Record.GetCodeFld().MustBeEQAbt("TEST");
+    r_Record.SetFirstLine();
 
-    Count = 0
+    Count = 0;
     Loop (r_Record)
         Count = Count + 1;
     End Loop
 
-    is_message("TestCEMESkip", "Найдено по MustBeEQAbt: " + Count, "OK", "INFORMATION")
+    is_message("TestCEMESkip", "Найдено по MustBeEQAbt: " + Count, "OK", "INFORMATION");
 
     'Сбрасываем фильтр и проверяем полный список'
-    r_Record.SetSkipMode()
-    FullCount = 0
+    r_Record.SetSkipMode();
+    FullCount = 0;
     Loop (r_Record)
         FullCount = FullCount + 1;
     End Loop
 
-    is_message("TestCEMESkip", "Всего записей: " + FullCount, "OK", "INFORMATION")
+    is_message("TestCEMESkip", "Всего записей: " + FullCount, "OK", "INFORMATION");
 }
 ```
 
@@ -119,26 +119,26 @@ Tests.TestFindLine
 ************************             Методы            ************************
 RunTest()
 {
-    r_Record = Object("dsDB", "GoodsItem")
-    r_Record.SetSkipMode()
+    r_Record = Object("dsDB", "GoodsItem");
+    r_Record.SetSkipMode();
 
     'Получаем код первой строки'
-    r_Record.SetFirstLine()
-    TestCode = r_Record.GetCode()
+    r_Record.SetFirstLine();
+    TestCode = r_Record.GetCode();
 
     'Проверяем хэшированный поиск по коду'
-    r_Record.SetLineByCode(TestCode)
+    r_Record.SetLineByCode(TestCode);
     If (r_Record.IsValidLine() & r_Record.GetCode() == TestCode)
-        is_message("TestFindLine", "Хэш-поиск по коду работает: " + TestCode, "OK", "INFORMATION")
+        is_message("TestFindLine", "Хэш-поиск по коду работает: " + TestCode, "OK", "INFORMATION");
     Else
-        is_message("TestFindLine", "ОШИБКА: Хэш-поиск не нашёл: " + TestCode, "OK", "STOP")
+        is_message("TestFindLine", "ОШИБКА: Хэш-поиск не нашёл: " + TestCode, "OK", "STOP");
     End If
 
     'Проверяем поиск по ссылке'
-    Ref = r_Record.GetLine()
-    r_Record.SetLine(Ref)
+    Ref = r_Record.GetLine();
+    r_Record.SetLine(Ref);
     If (r_Record.IsValidLine() & r_Record.GetLine() == Ref)
-        is_message("TestFindLine", "Поиск по ссылке работает: " + Ref, "OK", "INFORMATION")
+        is_message("TestFindLine", "Поиск по ссылке работает: " + Ref, "OK", "INFORMATION");
     End If
 }
 ```
@@ -165,14 +165,14 @@ Tests.TestPickByLine
 ************************             Методы            ************************
 RunTest()
 {
-    r_Record = Object("dsDB", "GoodsItem")
-    r_Record.SetSkipMode()
-    r_Record.SetFirstLine()
+    r_Record = Object("dsDB", "GoodsItem");
+    r_Record.SetSkipMode();
+    r_Record.SetFirstLine();
 
     If (r_Record.IsValidLine())
         'Получаем параметры по транзиту'
-        Params = r_Record.GetParamsByTransitOrPBL()
-        is_message("TestPickByLine", "Параметры получены: " + Params, "OK", "INFORMATION")
+        Params = r_Record.GetParamsByTransitOrPBL();
+        is_message("TestPickByLine", "Параметры получены: " + Params, "OK", "INFORMATION");
     End If
 }
 ```
@@ -196,31 +196,31 @@ Tests.TestGoodsItem
 ************************             Методы            ************************
 RunTest()
 {
-    r_GoodsItem = Object("dsDB", "GoodsItem")
-    r_GoodsItem.SetSkipMode()
+    r_GoodsItem = Object("dsDB", "GoodsItem");
+    r_GoodsItem.SetSkipMode();
 
     'Проверяем точность веса'
-    r_GoodsItem.SetFirstLine()
+    r_GoodsItem.SetFirstLine();
     If (r_GoodsItem.IsValidLine())
-        Weight = r_GoodsItem.GetWeight()
-        is_message("TestGoodsItem", "Вес товара: " + Weight, "OK", "INFORMATION")
+        Weight = r_GoodsItem.GetWeight();
+        is_message("TestGoodsItem", "Вес товара: " + Weight, "OK", "INFORMATION");
 
         'Проверяем точность длины'
-        Length = r_GoodsItem.GetLength()
-        is_message("TestGoodsItem", "Длина: " + Length, "OK", "INFORMATION")
+        Length = r_GoodsItem.GetLength();
+        is_message("TestGoodsItem", "Длина: " + Length, "OK", "INFORMATION");
 
         'Проверяем точность ширины'
-        Width = r_GoodsItem.GetWidth()
-        is_message("TestGoodsItem", "Ширина: " + Width, "OK", "INFORMATION")
+        Width = r_GoodsItem.GetWidth();
+        is_message("TestGoodsItem", "Ширина: " + Width, "OK", "INFORMATION");
 
         'Проверяем точность высоты'
-        Height = r_GoodsItem.GetHeight()
-        is_message("TestGoodsItem", "Высота: " + Height, "OK", "INFORMATION")
+        Height = r_GoodsItem.GetHeight();
+        is_message("TestGoodsItem", "Высота: " + Height, "OK", "INFORMATION");
     End If
 
     'Проверяем связь с единицами измерения'
-    MURef = r_GoodsItem.GetDefaultMURef()
-    is_message("TestGoodsItem", "Единица измерения по умолчанию: " + MURef, "OK", "INFORMATION")
+    MURef = r_GoodsItem.GetDefaultMURef();
+    is_message("TestGoodsItem", "Единица измерения по умолчанию: " + MURef, "OK", "INFORMATION");
 }
 ```
 
@@ -248,29 +248,29 @@ Tests.TestCommit
 ************************             Методы            ************************
 RunTest()
 {
-    r_Record = Object("dsDB", "TestRecord")
+    r_Record = Object("dsDB", "TestRecord");
 
     'Запоминаем текущее состояние'
-    r_Record.SetSkipMode()
-    CountBefore = r_Record.GetNoOfLines()
+    r_Record.SetSkipMode();
+    CountBefore = r_Record.GetNoOfLines();
 
     'Открываем транзакцию'
-    is_transaction(1, "Тестовая транзакция")
+    is_transaction(1, "Тестовая транзакция");
 
     'Добавляем тестовую строку'
-    r_Record.AppendAndSetLine()
-    r_Record.PutCode("TEST" + is_time())
-    r_Record.PutName("Тестовая запись")
+    r_Record.AppendAndSetLine();
+    r_Record.PutCode("TEST" + is_time());
+    r_Record.PutName("Тестовая запись");
 
     'Фиксируем транзакцию'
-    is_transaction(-1)
+    is_transaction(-1);
 
     'Проверяем, что строка добавлена'
-    CountAfter = r_Record.GetNoOfLines()
+    CountAfter = r_Record.GetNoOfLines();
     If (CountAfter > CountBefore)
-        is_message("TestCommit", "Транзакция зафиксирована. Было: " + CountBefore + ", стало: " + CountAfter, "OK", "INFORMATION")
+        is_message("TestCommit", "Транзакция зафиксирована. Было: " + CountBefore + ", стало: " + CountAfter, "OK", "INFORMATION");
     Else
-        is_message("TestCommit", "ОШИБКА: Транзакция не зафиксирована", "OK", "STOP")
+        is_message("TestCommit", "ОШИБКА: Транзакция не зафиксирована", "OK", "STOP");
     End If
 }
 ```
@@ -296,32 +296,32 @@ Tests.TestDBWatch
 НК: Да
 ВЗ: Нет
 ************************          Конструктор          ************************
-m_DBWatch = Object("DBWatch")
-m_TrueSign
-m_Line
+m_DBWatch = Object("DBWatch");
+m_TrueSign;
+m_Line;
 
 ************************             Методы            ************************
 'Подготовка данных вне транзакции'
 OnPrepare()
 {
-    r_GoodsItem = Object("dsDB", "GoodsItem")
-    r_GoodsItem.SetFirstLine()
-    m_TrueSign = FALSE
+    r_GoodsItem = Object("dsDB", "GoodsItem");
+    r_GoodsItem.SetFirstLine();
+    m_TrueSign = FALSE;
     If (r_GoodsItem.IsValidLine() & ~r_GoodsItem.IsTrueSign())
-        m_TrueSign = TRUE
-        m_Line = r_GoodsItem.GetLine()
+        m_TrueSign = TRUE;
+        m_Line = r_GoodsItem.GetLine();
     End If
     'Добавляем поле GlobalFlagsThreeFld на текущей строке в наблюдение'
-    m_DBWatch.WatchFieldLine(r_GoodsItem.GetGlobalFlagsThreeFld())
+    m_DBWatch.WatchFieldLine(r_GoodsItem.GetGlobalFlagsThreeFld());
 }
 
 'Запись внутри транзакции'
 OnChange()
 {
     If (m_TrueSign)
-        r_GoodsItem = Object("dsDB", "GoodsItem")
-        r_GoodsItem.SetLine(m_Line)
-        r_GoodsItem.SetTrueSign()
+        r_GoodsItem = Object("dsDB", "GoodsItem");
+        r_GoodsItem.SetLine(m_Line);
+        r_GoodsItem.SetTrueSign();
     End If
 }
 
@@ -330,41 +330,41 @@ Do()
 {
     'Начинаем дозор (до чтения данных БД)'
     'is_db_watch поднимает данные на верхний уровень'
-    is_db_watch(1)
+    is_db_watch(1);
 
     'Проводим подготовку данных вне транзакции'
     If (is_workstation_mode() != "MONO")
-        OnPrepare()
+        OnPrepare();
     End If
 
     'Открываем транзакцию'
-    is_transaction(1, "Устанавливаем ЧЗ")
+    is_transaction(1, "Устанавливаем ЧЗ");
 
     'Завершаем дозор — больше информация не собирается'
-    is_db_watch(-1)
+    is_db_watch(-1);
 
     'Проверяем изменения: если есть — делаем подготовку заново'
     If (is_workstation_mode() == "MONO" | m_DBWatch.Check() != "")
-        OnPrepare()
+        OnPrepare();
     End If
 
     'Производим изменения в БД на основе ранее подготовленных данных'
-    OnChange()
+    OnChange();
 
     'Закрываем транзакцию'
-    is_transaction(-1)
+    is_transaction(-1);
 }
 
 'Простой вариант без блокировки'
 Do2()
 {
-    is_transaction(1, "Устанавливаем ЧЗ")
-    r_GoodsItem = Object("dsDB", "GoodsItem")
-    r_GoodsItem.SetFirstLine()
+    is_transaction(1, "Устанавливаем ЧЗ");
+    r_GoodsItem = Object("dsDB", "GoodsItem");
+    r_GoodsItem.SetFirstLine();
     If (~r_GoodsItem.IsTrueSign())
-        r_GoodsItem.SetTrueSign()
+        r_GoodsItem.SetTrueSign();
     End If
-    is_transaction(-1)
+    is_transaction(-1);
 }
 ```
 
