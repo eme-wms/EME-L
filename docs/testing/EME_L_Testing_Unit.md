@@ -159,19 +159,19 @@ RunTest()
 
 ```eme-l
 /* null */
-JSON_NODE_TYPE_NULL    = 0
+JSON_NODE_TYPE_NULL    = 0;
 /* целое число */
-JSON_NODE_TYPE_INTEGER = 1
+JSON_NODE_TYPE_INTEGER = 1;
 /* число с плавающей точкой */
-JSON_NODE_TYPE_DOUBLE  = 2
+JSON_NODE_TYPE_DOUBLE  = 2;
 /* true/false */
-JSON_NODE_TYPE_BOOLEAN = 3
+JSON_NODE_TYPE_BOOLEAN = 3;
 /* строка */
-JSON_NODE_TYPE_STRING  = 4
+JSON_NODE_TYPE_STRING  = 4;
 /* объект { } */
-JSON_NODE_TYPE_OBJECT  = 5
+JSON_NODE_TYPE_OBJECT  = 5;
 /* массив [ ] */
-JSON_NODE_TYPE_ARRAY   = 6
+JSON_NODE_TYPE_ARRAY   = 6;
 ```
 
 ## Другие юнит-тестовые классы
@@ -312,7 +312,7 @@ rwer()
     End If
 
     'Проверить состояние семафора: TRUE — установлен'
-    SemSet = Semaphore.Check()
+    SemSet = Semaphore.Check();
 }
 ```
 
