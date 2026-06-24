@@ -29,16 +29,16 @@ Tests.TestHttpsReq
 ************************             Методы            ************************
 RunTest()
 {
-    ' Выполняем GET-запрос '
+    'Выполняем GET-запрос'
     Result = is_http_get("https://api.example.com/data")
     is_message("TestHttpsReq", "GET-ответ: " + is_left(Result, 100), "OK", "INFORMATION")
 
-    ' Выполняем POST-запрос с JSON '
+    'Выполняем POST-запрос с JSON'
     JsonBody = "{\"key\":\"value\",\"count\":42}"
     Result = is_http_post("https://api.example.com/submit", JsonBody, "application/json")
     is_message("TestHttpsReq", "POST-ответ: " + is_left(Result, 100), "OK", "INFORMATION")
 
-    ' Проверяем пагинацию '
+    'Проверяем пагинацию'
     Page = 1
     While (Page <= 3)
         Url = "https://api.example.com/data?page=" + Page
@@ -74,12 +74,12 @@ Tests.TestRPC
 ************************             Методы            ************************
 RunTest()
 {
-    ' Формируем параметры для RPC-вызова '
+    'Формируем параметры для RPC-вызова'
     Params = Object("Parameters")
     Params.PutParam("Action", "Test")
     Params.PutParam("Data", "Hello from RPC test")
 
-    ' Выполняем RPC-вызов через файловую систему '
+    'Выполняем RPC-вызов через файловую систему'
     Result = is_rpc_call("TestRPC", Params)
 
     If (Result == "OK")
@@ -115,18 +115,18 @@ Tests.TestXml
 ************************             Методы            ************************
 RunTest()
 {
-    ' Загружаем XML с курсами ЦБ '
+    'Загружаем XML с курсами ЦБ'
     XmlData = is_http_get("https://www.cbr.ru/scripts/XML_daily.asp")
 
-    ' Парсим XML '
+    'Парсим XML'
     Xml = Object("Xml")
     Xml.LoadFromString(XmlData)
 
-    ' Получаем список валют '
+    'Получаем список валют'
     Currencies = Xml.GetNodes("Valute")
     is_message("TestXml", "Найдено валют: " + Currencies.GetSize(), "OK", "INFORMATION")
 
-    ' Читаем данные первой валюты '
+    'Читаем данные первой валюты'
     If (Currencies.GetSize() > 0)
         FirstCurrency = Currencies.GetAt(0)
         Code = FirstCurrency.GetValue("CharCode")
@@ -163,7 +163,7 @@ RunTest()
 {
     ExternalDB = Object("ExternalDB")
 
-    ' Тест подключения к PostgreSQL '
+    'Тест подключения к PostgreSQL'
     Error = ExternalDB.Connect(
         "ODBC:Driver={PostgreSQL ODBC Driver(ANSI)};Server=localhost;Port=5432;Database=Test;Uid=postgres;Pwd=123;")
     If (Error == "")
@@ -174,7 +174,7 @@ RunTest()
         is_message("TestExternalDB", "PostgreSQL: " + Error, "OK", "EXCLAMATION")
     End If
 
-    ' Тест подключения к SQL Server '
+    'Тест подключения к SQL Server'
     Error = ExternalDB.Connect(
         "ODBC:Driver={SQL Server};Server=localhost;Database=Test;Uid=sa;Pwd=123;")
     If (Error == "")
@@ -188,7 +188,7 @@ RunTest()
 
 TestExternalDB(ExternalDB)
 {
-    ' Выполняем тестовый запрос '
+    'Выполняем тестовый запрос'
     Query = Object("Query")
     Query.Create()
     Error = ExternalDB.Execute("SELECT 1 AS Test", Query)
@@ -226,16 +226,16 @@ Tests.TestTranslate
 ************************             Методы            ************************
 RunTest()
 {
-    ' Проверяем перевод строки '
+    'Проверяем перевод строки'
     Original = "Hello World"
     Translated = tr(Original)
     is_message("TestTranslate", "Оригинал: " + Original + "\nПеревод: " + Translated, "OK", "INFORMATION")
 
-    ' Проверяем перевод системной строки '
+    'Проверяем перевод системной строки'
     SysTranslated = tr("Сохранить изменения?")
     is_message("TestTranslate", "Системная строка: " + SysTranslated, "OK", "INFORMATION")
 
-    ' Проверяем текущий язык '
+    'Проверяем текущий язык'
     CurrentLang = is_get_lang()
     is_message("TestTranslate", "Текущий язык: " + CurrentLang, "OK", "INFORMATION")
 }
@@ -263,7 +263,7 @@ Tests.TestTranslatePura
 ************************             Методы            ************************
 RunTest()
 {
-    ' Загружаем переводы из файла '
+    'Загружаем переводы из файла'
     File = Object("File", "D:\\EME\\Lang\\Custom.lang")
     If (File.Exists())
         LangData = File.GetData().AsString()
@@ -293,7 +293,7 @@ Tests.TestOrderFrom1C
 ************************             Методы            ************************
 RunTest()
 {
-    ' Подключаемся к 1С через COM '
+    'Подключаемся к 1С через COM'
     OneC = Object("Automation", "V83.COMConnector")
     Connection = OneC.Connect("Srvr='localhost';Ref='MyBase';Usr='Admin';Pwd='';")
 
@@ -302,7 +302,7 @@ RunTest()
         Return
     End If
 
-    ' Получаем список заказов '
+    'Получаем список заказов'
     Query = Connection.NewObject("Query")
     Query.Text = "ВЫБРАТЬ ПЕРВЫЕ 10 Номер, Дата, Контрагент ИЗ Документ.ЗаказКлиента"
     Result = Query.Execute().Выбрать()
@@ -341,11 +341,11 @@ Tests.TestExportToTHQ
 ************************             Методы            ************************
 RunTest()
 {
-    ' Формируем данные для выгрузки '
+    'Формируем данные для выгрузки'
     r_Orders = Object("dsDB", "Orders")
     r_Orders.SetSkipMode()
 
-    ' Экспортируем заказы в формат ЦУП '
+    'Экспортируем заказы в формат ЦУП'
     File = Object("File", "D:\\Temp\\THQ_Export.xml")
     File.CreateFile()
     File.PutFileData("<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
