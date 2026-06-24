@@ -49,13 +49,13 @@ AllRobots
 Constructor()
 {
     'Регистрируем всех роботов'
-    Robots = Object("Array")
-    Robots.Add("GuideRobots")
-    Robots.Add("GoodsItemRobot")
-    Robots.Add("ClientRobot")
-    Robots.Add("WarehouseRobot")
-    Robots.Add("INCOMERobot")
-    Robots.Add("OrdersBatchRobot")
+    Robots = Object("Array");
+    Robots.Add("GuideRobots");
+    Robots.Add("GoodsItemRobot");
+    Robots.Add("ClientRobot");
+    Robots.Add("WarehouseRobot");
+    Robots.Add("INCOMERobot");
+    Robots.Add("OrdersBatchRobot");
     '... и т.д. ...'
 }
 ```
@@ -80,24 +80,24 @@ GuideRobots
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем справочник'
-    Robot.OpenDialog("GoodsItem")
-    Robot.Wait(500)
+    Robot.OpenDialog("GoodsItem");
+    Robot.Wait(500);
 
     'Создаём новый элемент'
-    Robot.ClickButton("New")
-    Robot.Wait(300)
+    Robot.ClickButton("New");
+    Robot.Wait(300);
 
     'Заполняем поля'
-    Robot.SetText("Code", "TEST_" + is_time())
-    Robot.SetText("Name", "Тестовый товар")
-    Robot.SelectItem("MU", "Штука")
+    Robot.SetText("Code", "TEST_" + is_time());
+    Robot.SetText("Name", "Тестовый товар");
+    Robot.SelectItem("MU", "Штука");
 
     'Сохраняем'
-    Robot.ClickButton("Save")
-    Robot.Wait(300)
+    Robot.ClickButton("Save");
+    Robot.Wait(300);
 
     'Закрываем диалог'
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -126,35 +126,35 @@ GoodsItemRobot
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем справочник товаров'
-    Robot.OpenDialog("GoodsItem")
-    Robot.Wait(500)
+    Robot.OpenDialog("GoodsItem");
+    Robot.Wait(500);
 
     'Создаём тестовый товар'
-    Robot.ClickButton("New")
-    Robot.Wait(300)
+    Robot.ClickButton("New");
+    Robot.Wait(300);
 
-    Code = "ROBOT_" + is_time()
-    Robot.SetText("Code", Code)
-    Robot.SetText("Name", "Товар создан роботом")
-    Robot.SetText("Weight", "1.5")
-    Robot.SetText("Length", "20")
-    Robot.SetText("Width", "15")
-    Robot.SetText("Height", "10")
+    Code = "ROBOT_" + is_time();
+    Robot.SetText("Code", Code);
+    Robot.SetText("Name", "Товар создан роботом");
+    Robot.SetText("Weight", "1.5");
+    Robot.SetText("Length", "20");
+    Robot.SetText("Width", "15");
+    Robot.SetText("Height", "10");
 
     'Выбираем единицу измерения'
-    Robot.SelectItem("DefaultMU", "Штука")
+    Robot.SelectItem("DefaultMU", "Штука");
 
     'Сохраняем товар'
-    Robot.ClickButton("Save")
-    Robot.Wait(300)
+    Robot.ClickButton("Save");
+    Robot.Wait(300);
 
     'Проверяем, что товар создан'
-    Robot.SetText("SearchCode", Code)
-    Robot.ClickButton("Find")
-    Robot.Wait(200)
+    Robot.SetText("SearchCode", Code);
+    Robot.ClickButton("Find");
+    Robot.Wait(200);
 
     'Закрываем диалог'
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -176,23 +176,23 @@ ClientRobot
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем справочник клиентов'
-    Robot.OpenDialog("Clients")
-    Robot.Wait(500)
+    Robot.OpenDialog("Clients");
+    Robot.Wait(500);
 
     'Создаём тестового клиента'
-    Robot.ClickButton("New")
-    Robot.Wait(300)
+    Robot.ClickButton("New");
+    Robot.Wait(300);
 
-    Robot.SetText("Code", "CLT_" + is_time())
-    Robot.SetText("Name", "Тестовый клиент")
-    Robot.SetText("INN", "1234567890")
-    Robot.SetText("KPP", "123456789")
+    Robot.SetText("Code", "CLT_" + is_time());
+    Robot.SetText("Name", "Тестовый клиент");
+    Robot.SetText("INN", "1234567890");
+    Robot.SetText("KPP", "123456789");
 
     'Сохраняем'
-    Robot.ClickButton("Save")
-    Robot.Wait(300)
+    Robot.ClickButton("Save");
+    Robot.Wait(300);
 
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -214,22 +214,22 @@ WarehouseRobot
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем справочник складов'
-    Robot.OpenDialog("Warehouse")
-    Robot.Wait(500)
+    Robot.OpenDialog("Warehouse");
+    Robot.Wait(500);
 
     'Создаём тестовый склад'
-    Robot.ClickButton("New")
-    Robot.Wait(300)
+    Robot.ClickButton("New");
+    Robot.Wait(300);
 
-    Robot.SetText("Code", "WH_" + is_time())
-    Robot.SetText("Name", "Тестовый склад")
-    Robot.SelectItem("WarehouseType", "Обычный")
+    Robot.SetText("Code", "WH_" + is_time());
+    Robot.SetText("Name", "Тестовый склад");
+    Robot.SelectItem("WarehouseType", "Обычный");
 
     'Сохраняем'
-    Robot.ClickButton("Save")
-    Robot.Wait(300)
+    Robot.ClickButton("Save");
+    Robot.Wait(300);
 
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -296,34 +296,34 @@ INCOMERobot
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем документ прихода'
-    Robot.OpenDialog("Receipt")
-    Robot.Wait(500)
+    Robot.OpenDialog("Receipt");
+    Robot.Wait(500);
 
     'Создаём новый приход'
-    Robot.ClickButton("New")
-    Robot.Wait(300)
+    Robot.ClickButton("New");
+    Robot.Wait(300);
 
     'Заполняем шапку'
-    Robot.SelectItem("Warehouse", "Тестовый склад")
-    Robot.SelectItem("Vendor", "Тестовый поставщик")
-    Robot.SetText("DocDate", is_dos_date())
+    Robot.SelectItem("Warehouse", "Тестовый склад");
+    Robot.SelectItem("Vendor", "Тестовый поставщик");
+    Robot.SetText("DocDate", is_dos_date());
 
     'Добавляем строку'
-    Robot.ClickButton("AddLine")
-    Robot.Wait(200)
-    Robot.SelectItem("GoodsItem", "Тестовый товар")
-    Robot.SetText("Quantity", "100")
-    Robot.SetText("LotNo", "LOT_" + is_time())
+    Robot.ClickButton("AddLine");
+    Robot.Wait(200);
+    Robot.SelectItem("GoodsItem", "Тестовый товар");
+    Robot.SetText("Quantity", "100");
+    Robot.SetText("LotNo", "LOT_" + is_time());
 
     'Сохраняем документ'
-    Robot.ClickButton("Save")
-    Robot.Wait(300)
+    Robot.ClickButton("Save");
+    Robot.Wait(300);
 
     'Проводим документ'
-    Robot.ClickButton("Introduce")
-    Robot.Wait(500)
+    Robot.ClickButton("Introduce");
+    Robot.Wait(500);
 
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -345,22 +345,22 @@ IncomingASNRobot
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем приёмку по ASN'
-    Robot.OpenDialog("ReceiptPerASN")
-    Robot.Wait(500)
+    Robot.OpenDialog("ReceiptPerASN");
+    Robot.Wait(500);
 
     'Выбираем ASN'
-    Robot.SelectItem("ASN", "ASN_TEST_001")
-    Robot.Wait(300)
+    Robot.SelectItem("ASN", "ASN_TEST_001");
+    Robot.Wait(300);
 
     'Подтверждаем приёмку'
-    Robot.ClickButton("Confirm")
-    Robot.Wait(500)
+    Robot.ClickButton("Confirm");
+    Robot.Wait(500);
 
     'Проверяем соответствие количеств'
-    Robot.ClickButton("CheckQuantities")
-    Robot.Wait(300)
+    Robot.ClickButton("CheckQuantities");
+    Robot.Wait(300);
 
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -384,37 +384,37 @@ OrdersBatchRobot
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем заказ'
-    Robot.OpenDialog("Orders")
-    Robot.Wait(500)
+    Robot.OpenDialog("Orders");
+    Robot.Wait(500);
 
     'Создаём новый заказ'
-    Robot.ClickButton("New")
-    Robot.Wait(300)
+    Robot.ClickButton("New");
+    Robot.Wait(300);
 
     'Заполняем шапку'
-    Robot.SelectItem("Client", "Тестовый клиент")
-    Robot.SelectItem("Warehouse", "Тестовый склад")
-    Robot.SetText("OrderNo", "ORD_" + is_time())
+    Robot.SelectItem("Client", "Тестовый клиент");
+    Robot.SelectItem("Warehouse", "Тестовый склад");
+    Robot.SetText("OrderNo", "ORD_" + is_time());
 
     'Добавляем строки заказа'
-    Robot.ClickButton("AddLine")
-    Robot.Wait(200)
-    Robot.SelectItem("GoodsItem", "Тестовый товар")
-    Robot.SetText("Quantity", "50")
+    Robot.ClickButton("AddLine");
+    Robot.Wait(200);
+    Robot.SelectItem("GoodsItem", "Тестовый товар");
+    Robot.SetText("Quantity", "50");
 
     'Сохраняем'
-    Robot.ClickButton("Save")
-    Robot.Wait(300)
+    Robot.ClickButton("Save");
+    Robot.Wait(300);
 
     'Переводим в статус "Собирается"'
-    Robot.ClickButton("StartAssembly")
-    Robot.Wait(500)
+    Robot.ClickButton("StartAssembly");
+    Robot.Wait(500);
 
     'Завершаем отгрузку'
-    Robot.ClickButton("Finish")
-    Robot.Wait(500)
+    Robot.ClickButton("Finish");
+    Robot.Wait(500);
 
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -438,22 +438,22 @@ ReportsRobots
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем отчёт по остаткам'
-    Robot.OpenDialog("StockReport")
-    Robot.Wait(500)
+    Robot.OpenDialog("StockReport");
+    Robot.Wait(500);
 
     'Устанавливаем параметры'
-    Robot.SelectItem("Warehouse", "Тестовый склад")
-    Robot.SetText("Date", is_dos_date())
+    Robot.SelectItem("Warehouse", "Тестовый склад");
+    Robot.SetText("Date", is_dos_date());
 
     'Формируем отчёт'
-    Robot.ClickButton("Generate")
-    Robot.Wait(1000)
+    Robot.ClickButton("Generate");
+    Robot.Wait(1000);
 
     'Экспортируем в PDF'
-    Robot.ClickButton("ExportPDF")
-    Robot.Wait(500)
+    Robot.ClickButton("ExportPDF");
+    Robot.Wait(500);
 
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -477,20 +477,20 @@ RobotOpenDialogs
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Список всех диалогов для тестирования'
-    Dialogs = Object("Array")
-    Dialogs.Add("GoodsItem")
-    Dialogs.Add("Clients")
-    Dialogs.Add("Orders")
-    Dialogs.Add("Receipt")
-    Dialogs.Add("Despatch")
+    Dialogs = Object("Array");
+    Dialogs.Add("GoodsItem");
+    Dialogs.Add("Clients");
+    Dialogs.Add("Orders");
+    Dialogs.Add("Receipt");
+    Dialogs.Add("Despatch");
     '... все остальные диалоги ...'
 
     Loop (Dialogs)
-        DialogName = Dialogs.Get()
-        Robot.OpenDialog(DialogName)
-        Robot.Wait(300)
-        Robot.CloseDialog()
-        Robot.Wait(200)
+        DialogName = Dialogs.Get();
+        Robot.OpenDialog(DialogName);
+        Robot.Wait(300);
+        Robot.CloseDialog();
+        Robot.Wait(200);
     End Loop
 }
 ```
@@ -513,32 +513,32 @@ RobotInter
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Открываем браузер товаров'
-    Robot.OpenDialog("GoodsItemBrowser")
-    Robot.Wait(500)
+    Robot.OpenDialog("GoodsItemBrowser");
+    Robot.Wait(500);
 
     'Устанавливаем фильтр'
-    Robot.SetText("FilterCode", "TEST")
-    Robot.ClickButton("ApplyFilter")
-    Robot.Wait(300)
+    Robot.SetText("FilterCode", "TEST");
+    Robot.ClickButton("ApplyFilter");
+    Robot.Wait(300);
 
     'Сортируем по наименованию'
-    Robot.ClickButton("SortName")
-    Robot.Wait(200)
+    Robot.ClickButton("SortName");
+    Robot.Wait(200);
 
     'Выбираем первую строку'
-    Robot.ClickRow(0)
-    Robot.Wait(200)
+    Robot.ClickRow(0);
+    Robot.Wait(200);
 
     'Открываем выбранный товар'
-    Robot.ClickButton("Open")
-    Robot.Wait(300)
+    Robot.ClickButton("Open");
+    Robot.Wait(300);
 
     'Закрываем диалог товара'
-    Robot.CloseDialog()
-    Robot.Wait(200)
+    Robot.CloseDialog();
+    Robot.Wait(200);
 
     'Закрываем браузер'
-    Robot.CloseDialog()
+    Robot.CloseDialog();
 }
 ```
 
@@ -560,24 +560,24 @@ CheckSpeedRobot
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Измеряем время открытия диалога товаров'
-    StartTime = is_tick_count()
-    Robot.OpenDialog("GoodsItem")
-    EndTime = is_tick_count()
-    OpenTime = EndTime - StartTime
-    Robot.CloseDialog()
+    StartTime = is_tick_count();
+    Robot.OpenDialog("GoodsItem");
+    EndTime = is_tick_count();
+    OpenTime = EndTime - StartTime;
+    Robot.CloseDialog();
 
-    is_message("CheckSpeed", "Открытие GoodsItem: " + OpenTime + " мс", "OK", "INFORMATION")
+    is_message("CheckSpeed", "Открытие GoodsItem: " + OpenTime + " мс", "OK", "INFORMATION");
 
     'Измеряем время поиска'
-    Robot.OpenDialog("GoodsItem")
-    StartTime = is_tick_count()
-    Robot.SetText("Search", "TEST")
-    Robot.ClickButton("Find")
-    EndTime = is_tick_count()
-    SearchTime = EndTime - StartTime
-    Robot.CloseDialog()
+    Robot.OpenDialog("GoodsItem");
+    StartTime = is_tick_count();
+    Robot.SetText("Search", "TEST");
+    Robot.ClickButton("Find");
+    EndTime = is_tick_count();
+    SearchTime = EndTime - StartTime;
+    Robot.CloseDialog();
 
-    is_message("CheckSpeed", "Поиск: " + SearchTime + " мс", "OK", "INFORMATION")
+    is_message("CheckSpeed", "Поиск: " + SearchTime + " мс", "OK", "INFORMATION");
 }
 ```
 
@@ -629,7 +629,7 @@ RobotBatchGo_RST(Robot AS "CIRobot")
 
 ```EME-L
 'Запустить робота для тестирования диалогов'
-is_run_robot("RobotOpenDialogs", 1000, 600, 0)
+is_run_robot("RobotOpenDialogs", 1000, 600, 0);
 ```
 
 | Параметр | Описание |
