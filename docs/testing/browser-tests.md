@@ -23,17 +23,17 @@
 
 ```EME-L
 'Открываем браузер ASN на терминале'
-Browser = Object("Browser", "TerminalTester.BrowserASN")
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserASN");
+Browser.Run();
 
 'Применяем фильтр по дате'
-Browser.SetFilter("DocDate", is_dos_date())
+Browser.SetFilter("DocDate", is_dos_date());
 
 'Выбираем первую строку'
 If (Browser.GetNoOfLines() > 0)
-    Browser.SetLine(0)
-    ASNRef = Browser.GetSelectedLine()
-    is_message("BrowserASN", "Выбран ASN: " + ASNRef, "OK", "INFORMATION")
+    Browser.SetLine(0);
+    ASNRef = Browser.GetSelectedLine();
+    is_message("BrowserASN", "Выбран ASN: " + ASNRef, "OK", "INFORMATION");
 End If
 ```
 
@@ -45,15 +45,15 @@ End If
 
 ```EME-L
 'Браузер партий для терминала'
-Browser = Object("Browser", "TerminalTester.BrowserBatch")
-Browser.SetFilter("GoodsItemRef", GoodsItemRef)
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserBatch");
+Browser.SetFilter("GoodsItemRef", GoodsItemRef);
+Browser.Run();
 
 If (Browser.GetNoOfLines() > 0)
     'Выбираем партию с наибольшим остатком'
-    Browser.SetLine(0)
-    BatchRef = Browser.GetSelectedLine()
-    is_message("BrowserBatch", "Выбрана партия: " + BatchRef, "OK", "INFORMATION")
+    Browser.SetLine(0);
+    BatchRef = Browser.GetSelectedLine();
+    is_message("BrowserBatch", "Выбрана партия: " + BatchRef, "OK", "INFORMATION");
 End If
 ```
 
@@ -65,12 +65,12 @@ End If
 
 ```EME-L
 'Браузер коробов'
-Browser = Object("Browser", "TerminalTester.BrowserBox")
-Browser.SetFilter("Status", "Available")
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserBox");
+Browser.SetFilter("Status", "Available");
+Browser.Run();
 
-BoxCount = Browser.GetNoOfLines()
-is_message("BrowserBox", "Доступно коробов: " + BoxCount, "OK", "INFORMATION")
+BoxCount = Browser.GetNoOfLines();
+is_message("BrowserBox", "Доступно коробов: " + BoxCount, "OK", "INFORMATION");
 ```
 
 ---
@@ -81,16 +81,16 @@ is_message("BrowserBox", "Доступно коробов: " + BoxCount, "OK", "
 
 ```EME-L
 'Браузер ячеек для размещения'
-Browser = Object("Browser", "TerminalTester.BrowserCell")
-Browser.SetFilter("WarehouseRef", WarehouseRef)
-Browser.SetFilter("ZoneRef", ZoneRef)
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserCell");
+Browser.SetFilter("WarehouseRef", WarehouseRef);
+Browser.SetFilter("ZoneRef", ZoneRef);
+Browser.Run();
 
 If (Browser.GetNoOfLines() > 0)
     'Выбираем ячейку для размещения'
-    Browser.SetLine(0)
-    CellRef = Browser.GetSelectedLine()
-    is_message("BrowserCell", "Выбрана ячейка: " + CellRef, "OK", "INFORMATION")
+    Browser.SetLine(0);
+    CellRef = Browser.GetSelectedLine();
+    is_message("BrowserCell", "Выбрана ячейка: " + CellRef, "OK", "INFORMATION");
 End If
 ```
 
@@ -102,20 +102,20 @@ End If
 
 ```EME-L
 'Браузер товаров для терминала'
-Browser = Object("Browser", "TerminalTester.BrowserGood")
-Browser.SetFilter("WarehouseRef", WarehouseRef)
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserGood");
+Browser.SetFilter("WarehouseRef", WarehouseRef);
+Browser.Run();
 
 'Выбираем товар по штрих-коду'
-Barcode = is_input("Отсканируйте штрих-код:", "", "Товар")
-Browser.SetFilter("BarCode", Barcode)
+Barcode = is_input("Отсканируйте штрих-код:", "", "Товар");
+Browser.SetFilter("BarCode", Barcode);
 
 If (Browser.GetNoOfLines() > 0)
-    Browser.SetLine(0)
-    GoodsRef = Browser.GetSelectedLine()
-    is_message("BrowserGood", "Товар: " + GoodsRef, "OK", "INFORMATION")
+    Browser.SetLine(0);
+    GoodsRef = Browser.GetSelectedLine();
+    is_message("BrowserGood", "Товар: " + GoodsRef, "OK", "INFORMATION");
 Else
-    is_message("BrowserGood", "Товар не найден", "OK", "EXCLAMATION")
+    is_message("BrowserGood", "Товар не найден", "OK", "EXCLAMATION");
 End If
 ```
 
@@ -127,12 +127,12 @@ End If
 
 ```EME-L
 'Браузер заданий инвентаризации'
-Browser = Object("Browser", "TerminalTester.BrowserInventory")
-Browser.SetFilter("Status", "Open")
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserInventory");
+Browser.SetFilter("Status", "Open");
+Browser.Run();
 
-InvCount = Browser.GetNoOfLines()
-is_message("BrowserInventory", "Открытых заданий: " + InvCount, "OK", "INFORMATION")
+InvCount = Browser.GetNoOfLines();
+is_message("BrowserInventory", "Открытых заданий: " + InvCount, "OK", "INFORMATION");
 ```
 
 ---
@@ -143,14 +143,14 @@ is_message("BrowserInventory", "Открытых заданий: " + InvCount, "
 
 ```EME-L
 'Браузер SSCC'
-Browser = Object("Browser", "TerminalTester.BrowserSSCC")
-Browser.SetFilter("WarehouseRef", WarehouseRef)
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserSSCC");
+Browser.SetFilter("WarehouseRef", WarehouseRef);
+Browser.Run();
 
 If (Browser.GetNoOfLines() > 0)
-    Browser.SetLine(0)
-    SSCC = Browser.GetValue("SSCCCode")
-    is_message("BrowserSSCC", "SSCC: " + SSCC, "OK", "INFORMATION")
+    Browser.SetLine(0);
+    SSCC = Browser.GetValue("SSCCCode");
+    is_message("BrowserSSCC", "SSCC: " + SSCC, "OK", "INFORMATION");
 End If
 ```
 
@@ -162,13 +162,13 @@ End If
 
 ```EME-L
 'Браузер отгрузок'
-Browser = Object("Browser", "TerminalTester.BrowserShipments")
-Browser.SetFilter("DocDate", is_dos_date())
-Browser.SetFilter("Status", "Ready")
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserShipments");
+Browser.SetFilter("DocDate", is_dos_date());
+Browser.SetFilter("Status", "Ready");
+Browser.Run();
 
-ShipCount = Browser.GetNoOfLines()
-is_message("BrowserShipments", "Готовых к отгрузке: " + ShipCount, "OK", "INFORMATION")
+ShipCount = Browser.GetNoOfLines();
+is_message("BrowserShipments", "Готовых к отгрузке: " + ShipCount, "OK", "INFORMATION");
 ```
 
 ---
@@ -179,12 +179,12 @@ is_message("BrowserShipments", "Готовых к отгрузке: " + ShipCoun
 
 ```EME-L
 'Браузер сотрудников'
-Browser = Object("Browser", "TerminalTester.BrowserStaff")
-Browser.SetFilter("IsActive", TRUE)
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserStaff");
+Browser.SetFilter("IsActive", TRUE);
+Browser.Run();
 
-StaffCount = Browser.GetNoOfLines()
-is_message("BrowserStaff", "Активных сотрудников: " + StaffCount, "OK", "INFORMATION")
+StaffCount = Browser.GetNoOfLines();
+is_message("BrowserStaff", "Активных сотрудников: " + StaffCount, "OK", "INFORMATION");
 ```
 
 ---
@@ -195,12 +195,12 @@ is_message("BrowserStaff", "Активных сотрудников: " + StaffCo
 
 ```EME-L
 'Браузер перемещений'
-Browser = Object("Browser", "TerminalTester.BrowserMove")
-Browser.SetFilter("Status", "Open")
-Browser.Run()
+Browser = Object("Browser", "TerminalTester.BrowserMove");
+Browser.SetFilter("Status", "Open");
+Browser.Run();
 
-MoveCount = Browser.GetNoOfLines()
-is_message("BrowserMove", "Открытых перемещений: " + MoveCount, "OK", "INFORMATION")
+MoveCount = Browser.GetNoOfLines();
+is_message("BrowserMove", "Открытых перемещений: " + MoveCount, "OK", "INFORMATION");
 ```
 
 ---
@@ -252,35 +252,35 @@ RobotInter.brwFullTest
 RunTest()
 {
     'Открываем браузер'
-    Browser = Object("Browser", "GoodsItemBrowser")
-    Browser.Run()
+    Browser = Object("Browser", "GoodsItemBrowser");
+    Browser.Run();
 
     'Проверяем количество строк'
-    TotalLines = Browser.GetNoOfLines()
-    is_message("brwFullTest", "Всего строк: " + TotalLines, "OK", "INFORMATION")
+    TotalLines = Browser.GetNoOfLines();
+    is_message("brwFullTest", "Всего строк: " + TotalLines, "OK", "INFORMATION");
 
     'Применяем фильтр'
-    Browser.SetFilter("Code", "TEST")
-    FilteredLines = Browser.GetNoOfLines()
-    is_message("brwFullTest", "После фильтра: " + FilteredLines, "OK", "INFORMATION")
+    Browser.SetFilter("Code", "TEST");
+    FilteredLines = Browser.GetNoOfLines();
+    is_message("brwFullTest", "После фильтра: " + FilteredLines, "OK", "INFORMATION");
 
     'Сбрасываем фильтр'
-    Browser.ResetFilter()
-    ResetLines = Browser.GetNoOfLines()
-    is_message("brwFullTest", "После сброса: " + ResetLines, "OK", "INFORMATION")
+    Browser.ResetFilter();
+    ResetLines = Browser.GetNoOfLines();
+    is_message("brwFullTest", "После сброса: " + ResetLines, "OK", "INFORMATION");
 
     'Проверяем сортировку'
-    Browser.Sort("Name", TRUE)
-    is_message("brwFullTest", "Сортировка по имени (ASC)", "OK", "INFORMATION")
+    Browser.Sort("Name", TRUE);
+    is_message("brwFullTest", "Сортировка по имени (ASC)", "OK", "INFORMATION");
 
-    Browser.Sort("Name", FALSE)
-    is_message("brwFullTest", "Сортировка по имени (DESC)", "OK", "INFORMATION")
+    Browser.Sort("Name", FALSE);
+    is_message("brwFullTest", "Сортировка по имени (DESC)", "OK", "INFORMATION");
 
     'Выбираем строку'
     If (Browser.GetNoOfLines() > 0)
-        Browser.SetLine(0)
-        SelectedRef = Browser.GetSelectedLine()
-        is_message("brwFullTest", "Выбрана строка: " + SelectedRef, "OK", "INFORMATION")
+        Browser.SetLine(0);
+        SelectedRef = Browser.GetSelectedLine();
+        is_message("brwFullTest", "Выбрана строка: " + SelectedRef, "OK", "INFORMATION");
     End If
 }
 ```
@@ -304,14 +304,14 @@ TestAbsent.Browser
 RunTest()
 {
     'Устанавливаем фильтр, который точно ничего не найдёт'
-    Browser = Object("Browser", "GoodsItemBrowser")
-    Browser.SetFilter("Code", "NONEXISTENT_CODE_99999")
-    Browser.Run()
+    Browser = Object("Browser", "GoodsItemBrowser");
+    Browser.SetFilter("Code", "NONEXISTENT_CODE_99999");
+    Browser.Run();
 
     If (Browser.GetNoOfLines() == 0)
-        is_message("TestAbsent", "Корректно: пустой результат при отсутствии данных", "OK", "INFORMATION")
+        is_message("TestAbsent", "Корректно: пустой результат при отсутствии данных", "OK", "INFORMATION");
     Else
-        is_message("TestAbsent", "ОШИБКА: Браузер вернул данные при невозможном фильтре", "OK", "STOP")
+        is_message("TestAbsent", "ОШИБКА: Браузер вернул данные при невозможном фильтре", "OK", "STOP");
     End If
 }
 ```
@@ -324,12 +324,12 @@ RunTest()
 
 ```EME-L
 'Браузер шаблонов заданий'
-Browser = Object("Browser", "ProcessTaskTemplates.BrowserRobot")
-Browser.SetFilter("IsActive", TRUE)
-Browser.Run()
+Browser = Object("Browser", "ProcessTaskTemplates.BrowserRobot");
+Browser.SetFilter("IsActive", TRUE);
+Browser.Run();
 
-TemplateCount = Browser.GetNoOfLines()
-is_message("BrowserRobot", "Доступно шаблонов: " + TemplateCount, "OK", "INFORMATION")
+TemplateCount = Browser.GetNoOfLines();
+is_message("BrowserRobot", "Доступно шаблонов: " + TemplateCount, "OK", "INFORMATION");
 ```
 
 ---
@@ -340,12 +340,12 @@ is_message("BrowserRobot", "Доступно шаблонов: " + TemplateCount
 
 ```EME-L
 'Браузер ячеек зоны'
-Browser = Object("Browser", "Zone.RobotCells")
-Browser.SetFilter("ZoneRef", ZoneRef)
-Browser.Run()
+Browser = Object("Browser", "Zone.RobotCells");
+Browser.SetFilter("ZoneRef", ZoneRef);
+Browser.Run();
 
-CellCount = Browser.GetNoOfLines()
-is_message("RobotCells", "Ячеек в зоне: " + CellCount, "OK", "INFORMATION")
+CellCount = Browser.GetNoOfLines();
+is_message("RobotCells", "Ячеек в зоне: " + CellCount, "OK", "INFORMATION");
 ```
 
 ---
@@ -366,24 +366,24 @@ Tests.TestMyBrowser
 RunTest()
 {
     'Создаём браузер'
-    Browser = Object("Browser", "MyBrowser")
+    Browser = Object("Browser", "MyBrowser");
 
     'Устанавливаем фильтры'
-    Browser.SetFilter("Field1", Value1)
-    Browser.SetFilter("Field2", Value2)
+    Browser.SetFilter("Field1", Value1);
+    Browser.SetFilter("Field2", Value2);
 
     'Запускаем браузер'
-    Browser.Run()
+    Browser.Run();
 
     'Проверяем результаты'
-    LineCount = Browser.GetNoOfLines()
-    is_message("TestMyBrowser", "Найдено строк: " + LineCount, "OK", "INFORMATION")
+    LineCount = Browser.GetNoOfLines();
+    is_message("TestMyBrowser", "Найдено строк: " + LineCount, "OK", "INFORMATION");
 
     'Выбираем строку'
     If (LineCount > 0)
-        Browser.SetLine(0)
-        SelectedRef = Browser.GetSelectedLine()
-        is_message("TestMyBrowser", "Выбрана строка: " + SelectedRef, "OK", "INFORMATION")
+        Browser.SetLine(0);
+        SelectedRef = Browser.GetSelectedLine();
+        is_message("TestMyBrowser", "Выбрана строка: " + SelectedRef, "OK", "INFORMATION");
     End If
 }
 ```
