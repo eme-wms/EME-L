@@ -44,9 +44,9 @@ RunTest()
     End Select
 
     If (Query.GetNoOfLines() > 0)
-        is_message("DupKeys", "Найдено дубликатов ключей: " + Query.GetNoOfLines(), "OK", "EXCLAMATION")
+        is_message("DupKeys", "Найдено дубликатов ключей: " + Query.GetNoOfLines(), "OK", "EXCLAMATION");
     Else
-        is_message("DupKeys", "Дубликатов ключей не найдено", "OK", "INFORMATION")
+        is_message("DupKeys", "Дубликатов ключей не найдено", "OK", "INFORMATION");
     End If
 }
 ```
@@ -122,7 +122,7 @@ Select (Query)
 End Select
 
 If (Query.GetNoOfLines() > 0)
-    is_message("TestDocLinesDups", "Дубли строк в документах: " + Query.GetNoOfLines(), "OK", "EXCLAMATION")
+    is_message("TestDocLinesDups", "Дубли строк в документах: " + Query.GetNoOfLines(), "OK", "EXCLAMATION");
 End If
 ```
 
@@ -172,10 +172,10 @@ Tests.TestSpLock
 RunTest()
 {
     'Запускаем несколько параллельных сессий с блокировками'
-    Result = is_message("TestSpLock", "Запустить тест блокировок?", "YESNO", "QUESTION")
+    Result = is_message("TestSpLock", "Запустить тест блокировок?", "YESNO", "QUESTION");
     If (Result == "YES")
         'Выполняем тестовую хранимую процедуру с блокировкой'
-        is_message("TestSpLock", "Тест блокировок запущен. Проверьте логи.", "OK", "INFORMATION")
+        is_message("TestSpLock", "Тест блокировок запущен. Проверьте логи.", "OK", "INFORMATION");
     End If
 }
 ```
@@ -212,7 +212,7 @@ RunTest()
     End Select
 
     If (Query.GetNoOfLines() > 0)
-        is_message("TestStoredProcedure", "Хранимая процедура выполнена. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION")
+        is_message("TestStoredProcedure", "Хранимая процедура выполнена. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION");
     End If
 }
 ```
@@ -265,7 +265,7 @@ RunTest()
         SELECT * FROM [Hierarchy]
     End Select
 
-    is_message("TestWITH", "CTE-запрос выполнен. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION")
+    is_message("TestWITH", "CTE-запрос выполнен. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION");
 }
 ```
 
@@ -290,8 +290,8 @@ Tests.TestGUID
 RunTest()
 {
     'Генерируем GUID и проверяем его формат'
-    Guid = is_new_guid()
-    is_message("TestGUID", "Сгенерирован GUID: " + Guid, "OK", "INFORMATION")
+    Guid = is_new_guid();
+    is_message("TestGUID", "Сгенерирован GUID: " + Guid, "OK", "INFORMATION");
 
     'Проверяем уникальность GUID в таблице'
     Select (Query)
@@ -303,9 +303,9 @@ RunTest()
     End Select
 
     If (Query.GetNoOfLines() > 0)
-        is_message("TestGUID", "Найдены дубли GUID: " + Query.GetNoOfLines(), "OK", "EXCLAMATION")
+        is_message("TestGUID", "Найдены дубли GUID: " + Query.GetNoOfLines(), "OK", "EXCLAMATION");
     Else
-        is_message("TestGUID", "Дублей GUID не найдено", "OK", "INFORMATION")
+        is_message("TestGUID", "Дублей GUID не найдено", "OK", "INFORMATION");
     End If
 }
 ```
@@ -330,25 +330,25 @@ Tests.ExternalDB
 ************************             Методы            ************************
 RunTest()
 {
-    ExternalDB = Object("ExternalDB")
+    ExternalDB = Object("ExternalDB");
 
     'Подключаемся к внешней БД'
-    Error = ExternalDB.Connect("ODBC:Driver={SQL Server};Server=localhost;Database=Test;Uid=sa;Pwd=;")
+    Error = ExternalDB.Connect("ODBC:Driver={SQL Server};Server=localhost;Database=Test;Uid=sa;Pwd=;");
 
     If (Error != "")
-        is_message("ExternalDB", "Ошибка подключения: " + Error, "OK", "STOP")
-        Return
+        is_message("ExternalDB", "Ошибка подключения: " + Error, "OK", "STOP");
+        Return;
     End If
 
     'Выполняем тестовый запрос'
-    Error = ExternalDB.Execute("SELECT 1 AS Test", Query)
+    Error = ExternalDB.Execute("SELECT 1 AS Test", Query);
     If (Error != "")
-        is_message("ExternalDB", "Ошибка запроса: " + Error, "OK", "STOP")
+        is_message("ExternalDB", "Ошибка запроса: " + Error, "OK", "STOP");
     Else
-        is_message("ExternalDB", "Подключение успешно. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION")
+        is_message("ExternalDB", "Подключение успешно. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION");
     End If
 
-    ExternalDB.Disconnect()
+    ExternalDB.Disconnect();
 }
 ```
 
@@ -370,20 +370,20 @@ Tests.ExternalDBOnFly
 ************************             Методы            ************************
 RunTest()
 {
-    ExternalDB = Object("ExternalDB")
+    ExternalDB = Object("ExternalDB");
 
     'Формируем строку подключения динамически'
-    ConnStr = "ODBC:Driver={PostgreSQL ODBC Driver(ANSI)};Server=" + ServerIP
-    ConnStr = ConnStr + ";Port=" + Port + ";Database=" + DBName
-    ConnStr = ConnStr + ";Uid=" + User + ";Pwd=" + Password + ";"
+    ConnStr = "ODBC:Driver={PostgreSQL ODBC Driver(ANSI)};Server=" + ServerIP;
+    ConnStr = ConnStr + ";Port=" + Port + ";Database=" + DBName;
+    ConnStr = ConnStr + ";Uid=" + User + ";Pwd=" + Password + ";";
 
-    Error = ExternalDB.Connect(ConnStr)
+    Error = ExternalDB.Connect(ConnStr);
 
     If (Error == "")
-        is_message("ExternalDBOnFly", "Динамическое подключение успешно", "OK", "INFORMATION")
-        ExternalDB.Disconnect()
+        is_message("ExternalDBOnFly", "Динамическое подключение успешно", "OK", "INFORMATION");
+        ExternalDB.Disconnect();
     Else
-        is_message("ExternalDBOnFly", "Ошибка: " + Error, "OK", "STOP")
+        is_message("ExternalDBOnFly", "Ошибка: " + Error, "OK", "STOP");
     End If
 }
 ```
@@ -406,14 +406,14 @@ Tests.ExternalDBOracle
 ************************             Методы            ************************
 RunTest()
 {
-    ExternalDB = Object("ExternalDB")
-    Error = ExternalDB.Connect("ODBC:Driver={Oracle in OraClient11g_home1};Dbq=ORCL;Uid=system;Pwd=;")
+    ExternalDB = Object("ExternalDB");
+    Error = ExternalDB.Connect("ODBC:Driver={Oracle in OraClient11g_home1};Dbq=ORCL;Uid=system;Pwd=;");
 
     If (Error == "")
-        is_message("ExternalDBOracle", "Подключение к Oracle успешно", "OK", "INFORMATION")
-        ExternalDB.Disconnect()
+        is_message("ExternalDBOracle", "Подключение к Oracle успешно", "OK", "INFORMATION");
+        ExternalDB.Disconnect();
     Else
-        is_message("ExternalDBOracle", "Ошибка Oracle: " + Error, "OK", "STOP")
+        is_message("ExternalDBOracle", "Ошибка Oracle: " + Error, "OK", "STOP");
     End If
 }
 ```
@@ -446,7 +446,7 @@ RunTest()
             [СистемнаяЗапись]
     End Select
 
-    is_message("SqlServer", "SQL Server-запрос выполнен. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION")
+    is_message("SqlServer", "SQL Server-запрос выполнен. Строк: " + Query.GetNoOfLines(), "OK", "INFORMATION");
 }
 ```
 
@@ -471,24 +471,24 @@ Tests.TestExpImp
 RunTest()
 {
     'Экспортируем данные в файл'
-    File = Object("File", "D:\\Temp\\TestExport.txt")
-    File.CreateFile()
+    File = Object("File", "D:\\Temp\\TestExport.txt");
+    File.CreateFile();
 
-    r_Record = Object("dsDB", "GoodsItem")
-    r_Record.SetSkipMode()
+    r_Record = Object("dsDB", "GoodsItem");
+    r_Record.SetSkipMode();
 
     Loop (r_Record)
-        Line = r_Record.GetCode() + ";" + r_Record.GetName() + "\n"
-        File.PutFileData(Line)
+        Line = r_Record.GetCode() + ";" + r_Record.GetName() + "\n";
+        File.PutFileData(Line);
     End Loop
 
-    File.CloseFile()
+    File.CloseFile();
 
     'Импортируем данные обратно'
-    File2 = Object("File", "D:\\Temp\\TestExport.txt")
-    Data = File2.GetData().AsString()
+    File2 = Object("File", "D:\\Temp\\TestExport.txt");
+    Data = File2.GetData().AsString();
 
-    is_message("TestExpImp", "Экспортировано и импортировано. Размер: " + is_length(Data), "OK", "INFORMATION")
+    is_message("TestExpImp", "Экспортировано и импортировано. Размер: " + is_length(Data), "OK", "INFORMATION");
 }
 ```
 
@@ -551,9 +551,9 @@ RunTest()
     End Select
 
     If (Query.GetNoOfLines() > 0)
-        is_message("MySqlTest", "Найдено проблем: " + Query.GetNoOfLines(), "OK", "EXCLAMATION")
+        is_message("MySqlTest", "Найдено проблем: " + Query.GetNoOfLines(), "OK", "EXCLAMATION");
     Else
-        is_message("MySqlTest", "Проблем не найдено", "OK", "INFORMATION")
+        is_message("MySqlTest", "Проблем не найдено", "OK", "INFORMATION");
     End If
 }
 ```
