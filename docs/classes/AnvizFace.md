@@ -49,7 +49,7 @@ objAnviz = Object("AnvizFace", "192.168.1.100", 5010, 1, 10, 1);
 | `DeleteEmployee(userId)` | arg0: Integer | Integer | Удаляет запись пользователя с устройства. >=0 — успех, <0 — ошибка. |
 | `DeleteUser(userId)` | arg0: Integer | Integer | Псевдоним `DeleteEmployee`. |
 | `InitUserDataArea()` | — | Boolean | Полностью удаляет всех пользователей и их данные с устройства. |
-| `GetUsersCapacity()` | — | Integer | Максимальное количество пользователей устройства. -1 для неподдерживаемой модели. |
+| `GetUsersCapacity()` | — | Integer | Максимальное количество пользователей устройства: 3000 для модели Face7, -1 для неподдерживаемой модели. |
 
 ## Биометрические шаблоны
 
@@ -64,7 +64,7 @@ objAnviz = Object("AnvizFace", "192.168.1.100", 5010, 1, 10, 1);
 | `SetFingerprintTemplate(userId, fingerNumber, templateData)` | arg0: Integer, arg1: Integer, arg2: DataStorage | Boolean | Псевдоним `UploadFingerPrint` с булевым результатом. TRUE — шаблон загружен. |
 | `DownloadFingerPrint(userId, fingerNumber)` | arg0: Integer, arg1: Integer | DataStorage или FALSE | Скачивает шаблон пользователя через внутреннее хранилище. FALSE — ошибка. |
 | `GetFingerprintTemplate(userId, fingerNumber)` | arg0: Integer, arg1: Integer | DataStorage или FALSE | Псевдоним `DownloadFingerPrint`. |
-| `GetFingerprintsCapacity()` | — | Integer | Максимальное количество биометрических шаблонов. -1 для неподдерживаемой модели. |
+| `GetFingerprintsCapacity()` | — | Integer | Максимальное количество биометрических шаблонов: 3000 для модели Face7, -1 для неподдерживаемой модели. |
 
 ## Журналы регистрации (записи)
 
@@ -80,7 +80,7 @@ objAnviz = Object("AnvizFace", "192.168.1.100", 5010, 1, 10, 1);
 | `ClearNewRecords(count)` | arg0: Integer | Boolean | Очищает метку новой записи с указанного количества записей. |
 | `DeleteAllRecords()` | — | Integer | Удаляет все записи. Возвращает количество удалённых или -1 при ошибке. |
 | `DeleteAllNewRecords()` | — | Integer | Очищает метку новой записи со всех записей. Возвращает количество обработанных или -1 при ошибке. |
-| `GetRecordsCapacity()` | — | Integer | Максимальное количество записей устройства. -1 для неподдерживаемой модели. |
+| `GetRecordsCapacity()` | — | Integer | Максимальное количество записей устройства: 100000 для модели Face7, -1 для неподдерживаемой модели. |
 
 ## Информация об устройстве
 
