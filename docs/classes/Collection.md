@@ -6,7 +6,7 @@
 
 Объект класса `Collection` в языке EME-L создаётся через `Object()`. Коллекция класса Collection в системе EME.WMS может передавать свой контекст выполнения в конструкторы объектов, создаваемых методом `Put`, — это полезно, когда вложенные объекты должны разделять с вызывающим скриптом состояние транзакций, соединений с БД и т. п.
 
-> **Примечание:** класс `Collection` в языке EME-L не имеет записи `REGISTRY_EMEL_CLASS` в `CEMEPrj.cpp` — описание черпается из блока `BEGIN_IMPLEMENT` файла `i_Collection.cpp`. Класс зарегистрирован как встроенный, имя скрипта `Collection` подтверждается реальными вызовами `Object("Collection")` в кодовой базе EME.WMS.
+> **Примечание:** регистрация `REGISTRY_EMEL_CLASS(Collection, …)` находится в `p_System.cpp` (а не в `CEMEPrj.cpp`, где держится основная масса классов); описание черпается из неё и из блока `BEGIN_IMPLEMENT` файла `i_Collection.cpp`. Имя скрипта `Collection` подтверждается реальными вызовами `Object("Collection")` в кодовой базе EME.WMS.
 
 ## Создание объекта класса Collection
 
@@ -85,8 +85,8 @@ objCol = Object("Collection", Context);
 'Создать коллекцию для хранения пунктов меню'
 m_MenuCollection = Object("Collection");
 
-'Добавить объект Menu под именем "root#" — коллекция владеет объектом'
-SubMenu = m_MenuCollection.Put("root#", "Menu", TRUE);
+'Добавить объект Menu под именем "root#" — коллекция автоматически владеет созданным объектом'
+SubMenu = m_MenuCollection.Put("root#", "Menu");
 
 'Получить объект обратно по имени'
 RootMenu As "Menu" = m_MenuCollection.Get("root#");
@@ -121,5 +121,6 @@ End If
 
 ## См. также
 
-- [Класс Array](./ArrayOfObjects.md) — массив объектов и данных произвольного типа в языке EME-L.
-- [Класс DataStorage](./DataStorage.md) — бинарное хранилище данных класса DataStorage в системе EME.WMS.
+- [Класс Array](./Array.md) — динамический массив произвольных типов в языке EME-L.
+- [Класс ArrayOfObjects](./ArrayOfObjects.md) — массив объектов с управлением временем жизни.
+- [Класс DataStorage](./DataStorage.md) — бинарное хранилище данных в системе EME.WMS.
