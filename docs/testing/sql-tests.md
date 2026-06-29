@@ -290,7 +290,7 @@ Tests.TestGUID
 RunTest()
 {
     'Генерируем GUID и проверяем его формат'
-    Guid = is_new_guid();
+    Guid = GetNewGUID();
     is_message("TestGUID", "Сгенерирован GUID: " + Guid, "OK", "INFORMATION");
 
     'Проверяем уникальность GUID в таблице'

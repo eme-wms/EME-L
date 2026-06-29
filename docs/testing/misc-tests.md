@@ -496,7 +496,7 @@ RunTest()
     Xml.LoadFromString(XmlText);
 
     DateTimeStr = Xml.GetValue("DateTime");
-    ParsedDate = is_parse_iso_datetime(DateTimeStr);
+    ParsedDate = is_ISO8601_to_datetime(DateTimeStr);
     is_message("XsdTestDateTime", "Распарсенная дата: " + ParsedDate, "OK", "INFORMATION");
 }
 ```

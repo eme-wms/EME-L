@@ -29,20 +29,26 @@ Tests.TestHttpsReq
 ************************             Методы            ************************
 RunTest()
 {
-    'Выполняем GET-запрос'
-    Result = is_http_get("https://api.example.com/data");
+    'Создаём объект HTTPS-запроса один раз — Object() нельзя вызывать в цикле'
+    csHttp = Object("System");
+
+    'Выполняем GET-запрос, ответ возвращается в Result'
+    Result = "";
+    csHttp.HttpsRequest("api.example.com", 443, "/data", 0, Result);
     is_message("TestHttpsReq", "GET-ответ: " + is_left(Result, 100), "OK", "INFORMATION");
 
-    'Выполняем POST-запрос с JSON'
+    'Выполняем POST-запрос с JSON, тело передаётся последним аргументом'
     JsonBody = "{\"key\":\"value\",\"count\":42}";
-    Result = is_http_post("https://api.example.com/submit", JsonBody, "application/json");
+    Result = "";
+    csHttp.HttpsRequest("api.example.com", 443, "/submit", 0, Result, "",,,"=" + JsonBody);
     is_message("TestHttpsReq", "POST-ответ: " + is_left(Result, 100), "OK", "INFORMATION");
 
-    'Проверяем пагинацию'
+    'Проверяем пагинацию — переиспользуем csHttp внутри цикла'
     Page = 1;
     While (Page <= 3)
-        Url = "https://api.example.com/data?page=" + Page;
-        Result = is_http_get(Url);
+        Path = "/data?page=" + Page;
+        Result = "";
+        csHttp.HttpsRequest("api.example.com", 443, Path, 0, Result);
         is_message("TestHttpsReq", "Страница " + Page + ": " + is_length(Result) + " байт", "OK", "INFORMATION");
         Page = Page + 1;
     End While
@@ -79,14 +85,15 @@ RunTest()
     Params.PutParam("Action", "Test");
     Params.PutParam("Data", "Hello from RPC test");
 
-    'Выполняем RPC-вызов через файловую систему'
-    Result = is_rpc_call("TestRPC", Params);
+    'Выполняем RPC-вызов через файловую систему — Object("RPC", ...) возвращает интерфейс удалённой процедуры'
+    rpc = Object("RPC", Params.AsString(), "TestRPC");
 
-    If (Result == "OK")
-        is_message("TestRPC", "RPC-вызов выполнен успешно", "OK", "INFORMATION");
-    Else
-        is_message("TestRPC", "Ошибка RPC: " + Result, "OK", "STOP");
-    End If
+    'Вызываем метод RPC — передаём массив данных'
+    Array = Object("Array");
+    Array.Add("test");
+    rpc.ViewArray(Array);
+
+    is_message("TestRPC", "RPC-вызов выполнен", "OK", "INFORMATION");
 }
 ```
 
@@ -115,8 +122,10 @@ Tests.TestXml
 ************************             Методы            ************************
 RunTest()
 {
-    'Загружаем XML с курсами ЦБ'
-    XmlData = is_http_get("https://www.cbr.ru/scripts/XML_daily.asp");
+    'Загружаем XML с курсами ЦБ через HTTPS-запрос'
+    csHttp = Object("System");
+    XmlData = "";
+    csHttp.HttpsRequest("www.cbr.ru", 443, "/scripts/XML_daily.asp", 0, XmlData);
 
     'Парсим XML'
     Xml = Object("Xml");
@@ -236,7 +245,7 @@ RunTest()
     is_message("TestTranslate", "Системная строка: " + SysTranslated, "OK", "INFORMATION");
 
     'Проверяем текущий язык'
-    CurrentLang = is_get_lang();
+    CurrentLang = is_get_language();
     is_message("TestTranslate", "Текущий язык: " + CurrentLang, "OK", "INFORMATION");
 }
 ```

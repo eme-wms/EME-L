@@ -560,9 +560,9 @@ CheckSpeedRobot
 RobotBatchGo_RST(Robot AS "CIRobot")
 {
     'Измеряем время открытия диалога товаров'
-    StartTime = is_tick_count();
+    StartTime = is_get_tick_count();
     Robot.OpenDialog("GoodsItem");
-    EndTime = is_tick_count();
+    EndTime = is_get_tick_count();
     OpenTime = EndTime - StartTime;
     Robot.CloseDialog();
 
@@ -570,10 +570,10 @@ RobotBatchGo_RST(Robot AS "CIRobot")
 
     'Измеряем время поиска'
     Robot.OpenDialog("GoodsItem");
-    StartTime = is_tick_count();
+    StartTime = is_get_tick_count();
     Robot.SetText("Search", "TEST");
     Robot.ClickButton("Find");
-    EndTime = is_tick_count();
+    EndTime = is_get_tick_count();
     SearchTime = EndTime - StartTime;
     Robot.CloseDialog();
 
