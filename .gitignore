@@ -20,6 +20,9 @@ Thumbs.db
 .opencode/
 opencode.json
 
+# Claude Code (agent memory and local working artifacts)
+.claude/
+
 # Source files - not for Context7
 EMEL_Programming_Language/
 
