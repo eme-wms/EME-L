@@ -57,7 +57,7 @@ objJob = Object("ServerJob", "192.168.1.100", 8080, 8081);
 | methodName | String | Да | Имя метода для выполнения. |
 | argN | произвольный | Нет | Аргументы вызова метода. Должны быть сериализуемы. |
 
-**Возвращает**: `Integer` — идентификатор задания. Чётный для REPORT, нечётный для TRANSACTION. -1 при ошибке отправки.
+**Возвращает**: `Integer` — идентификатор задания. Чётный для REPORT, нечётный для TRANSACTION. -1 при ошибке отправки. Минимальное число аргументов вызова — 5 (тип, имя, класс, метод и хотя бы ноль аргументов); при `argn < 4` ядро генерирует «слишком мало аргументов» (проверка `too_rare()` в теле `CIServerJob::SendJob`).
 
 В языке EME-L при использовании `"TRANSACTION:SHARE"` само задание не должно открывать и закрывать транзакцию. При использовании `"TRANSACTION:BATCH"` задание может иметь только один параметр.
 
@@ -87,7 +87,7 @@ objJob = Object("ServerJob", "192.168.1.100", 8080, 8081);
 | `GetJobQueue(jobId)` | jobId: Integer/String | Integer/Empty | Позиция в очереди (с 0). Отрицательное — выполнено. Empty — не найдено. |
 | `GetJobLength(jobId)` | jobId: Integer/String | Integer/Empty | Чистая продолжительность в мс. 0 — не выполнено. Empty — не найдено. |
 | `IsJobsComplete(jobId)` | jobId: Integer/String/Array | Boolean | TRUE — задание или все задания массива выполнены. При неверном номере — исключение. |
-| `CancelJob(jobId)` | jobId: Integer/String | Boolean/Empty | TRUE — отменено. Empty — не найдено или уже выполнено. |
+| `CancelJob(jobId)` | jobId: Integer/String | Boolean/Empty | TRUE — отменено. Empty — не найдено или уже выполнено. Поведение зависит от состояния: при статусе моложе «Выполняется» задание переводится в «Ошибка» с результатом «Выполнение задания отменено»; если поток уже начал выполнение, ядро пытается остановить его через `SetStopExecution(TRUE)` (версия ядра ≥ 46.0) и возвращает TRUE, если поток найден. |
 
 ### Идентификация и поиск задания
 
@@ -108,7 +108,7 @@ objJob = Object("ServerJob", "192.168.1.100", 8080, 8081);
 
 | Метод | Аргументы | Возвращает | Описание |
 |-------|-----------|------------|----------|
-| `GetJobReturnValue(jobId, variableName)` | jobId: Integer/String, variableName: String | Number/String/Empty | Значение переменной по имени. Только простые типы. |
+| `GetJobReturnValue(jobId, variableName)` | jobId: Integer/String, variableName: String | Number/String/Empty | Значение переменной по имени. Только простые типы. Если объект задания временно недоступен (другой поток читает результат), сервер вместо возврата данных записывает в `m_csResult` строку «Задание временно недоступно. Попробуйте позже» — её возвращает `GetLastError`, а `GetJobReturnValue` вернёт Empty. |
 | `GetJobReturnValue(jobId, variableName, returnObjects)` | + returnObjects: Boolean (по умолч. FALSE) | произвольный/Empty | То же с возвратом объектов (Array, Map, Query, сериализуемый класс). Вызывать до `Close`. |
 | `GetJobReturnType(jobId, variableName)` | jobId: Integer/String, variableName: String | String/Empty | Тип значения переменной. |
 | `EnumJobReturnValues(jobId)` | jobId: Integer/String | Array/Empty | Массив имён переменных-результатов. Вызывать до `Close`. |
@@ -123,11 +123,11 @@ objJob = Object("ServerJob", "192.168.1.100", 8080, 8081);
 |-------|-----------|------------|----------|
 | `GetJobArgValue(jobId, argNo)` | jobId: Integer/String, argNo: Integer | Number/String/Empty | Значение аргумента вызова по индексу (с 0). Простые типы. |
 | `GetJobArgValue(jobId, argNo, returnObjects)` | + returnObjects: Boolean | произвольный/Empty | То же с возвратом объектов. |
-| `GetJobArgType(jobId, argNo)` | jobId: Integer/String, argNo: Integer | String/Empty | Тип аргумента. |
+| `GetJobArgType(jobId, argNo)` | jobId: Integer/String, argNo: Integer | String/Empty | Тип аргумента. Реестр объявляет 2 параметра, но реализация клиента и сервера читают третий аргумент `returnObjects` (Boolean, по умолчанию FALSE) — фактически метод поддерживает необязательный третий параметр, влияющий только на формат ответа сервера. |
 | `GetJobPropertyValue(jobId, propertyName)` | jobId: Integer/String, propertyName: String | произвольный/Empty | Значение свойства задания. |
 | `GetJobParameters(jobId)` | jobId: Integer/String | String/Empty | Параметры задания строкой. |
 
-Свойства `GetJobPropertyValue`: `ARGN` (Integer, число аргументов), `CLASS_NAME` (String), `METHOD_NAME` (String), `TYPE` (String, тип задания), `COMPUTER` (String), `USER` (String), `EXE_DATE_TIME` (DateTime), `LIFE_LENGTH` (Integer, минуты).
+Свойства `GetJobPropertyValue`: `ARGN` (Integer, число аргументов), `CLASS_NAME` (String), `METHOD_NAME` (String), `TYPE` (String, тип задания), `COMPUTER` (String), `USER` (String), `EXE_DATE_TIME` (DateTime, вычисляется приблизительно по `GetTickCount()` на сервере — не хранится как абсолютное время; может расходиться с реальным временем старта на время работы сервера после перезагрузки системы; если задание не выполнено, возвращает пустую дату), `LIFE_LENGTH` (Integer, минуты).
 
 ### Журнал сервера заданий
 

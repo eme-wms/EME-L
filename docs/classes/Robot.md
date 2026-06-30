@@ -29,7 +29,7 @@ Robot.Log("Начало теста");
 | `StartPopup(style, text)` | style: String, text: String | Reference | Начинает отображение, возвращает указатель на объект окна для `EndPopup`. |
 | `EndPopup(window_ptr)` | window_ptr: Reference | Empty | Закрывает окно по указателю от `StartPopup`. Выполняет `Wait` перед закрытием. |
 | `SetFocusPopupStyle(style)` | style: String | CRobotPopupStyle | Устанавливает имя стиля для подсказок `FocusPopup`. |
-| `FocusPopup(place, text)` | place: String, text: String | Empty | Выводит подсказку рядом с элементом интерфейса. Продолжительность: 1 сек × количество слов / 2. |
+| `FocusPopup(place, text)` | place: String, text: String | Empty | Выводит подсказку рядом с элементом интерфейса. Продолжительность рассчитывается так же, как у `Popup(style, text)` — `задержка + количество слов × задержка / 3`. |
 | `FocusPopup(place, text, row)` | place: String, text: String, row: Integer | Empty | То же для элемента в указанной строке таблицы. |
 
 В языке EME-L параметр `place` в `FocusPopup` задаёт место вывода: имя органа управления (например, `GoodsItem.Name`) или имя колонки таблицы с номером бита через `#` (например, `Признаки#3`).
