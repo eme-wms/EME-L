@@ -6,7 +6,7 @@
 
 Основной сценарий использования в языке EME-L: создание объекта Menu, формирование структуры меню через AppendMenu, установка пункта по умолчанию при необходимости через SetDefaultItem, вызов TrackPopupMenu или TrackPopupMenuWithMousePos для отображения меню пользователю и обработка возвращенного идентификатора выбранного пункта.
 
-Идентификаторы пунктов, задаваемые пользователем, должны находиться в диапазоне 0..100 — внутренне к идентификатору прибавляется системное смещение команд меню (START_MENU_COMMAND), поэтому возвращаемые TrackPopupMenu значения соответствуют исходным идентификаторам, заданным в AppendMenu.
+Идентификаторы пунктов, передаваемые в AppendMenu, должны быть неотрицательными целыми значениями. Внутренне к идентификатору прибавляется системное смещение команд меню (START_MENU_COMMAND), поэтому возвращаемые TrackPopupMenu значения соответствуют исходным идентификаторам, заданным в AppendMenu. Рекомендуемый диапазон — 0..100, но в реальных скриптах EME-L используются значения вплоть до 999998; значение -1 трактуется как «пункт без команды» (используется для декоративных элементов календарей и плейсхолдеров).
 
 Используется в прикладных скриптах EME-L для организации контекстного взаимодействия с пользователем через всплывающие меню.
 
@@ -43,7 +43,7 @@ objMenu = Object("Menu", TRUE);
 | Метод | Аргументы | Возвращает | Описание |
 |-------|-----------|------------|----------|
 | `AppendMenu(arg0)` | arg0: String (тип) | Empty | Добавляет разделительный элемент или маркер разрыва колонки. Допустимые значения arg0: `"SEPARATOR"` — горизонтальная разделительная линия; `"MENUBREAK"` — новая колонка без разделительной линии; `"MENUBARBREAK"` — новая колонка, отделенная вертикальной линией. |
-| `AppendMenu(arg0, arg1, arg2)` | arg0: String (тип), arg1: Integer или Menu (идентификатор/подменю), arg2: String (текст) | Empty | Добавляет текстовый пункт или вложенное подменю. Для arg0 = `"STRING"`: arg1 — числовой идентификатор пункта 0..100 (целое число), arg2 — отображаемый текст. Для arg0 = `"POPUP"`: arg1 — объект Menu (вложенное подменю), arg2 — заголовок подменю. |
+| `AppendMenu(arg0, arg1, arg2)` | arg0: String (тип), arg1: Integer или Menu (идентификатор/подменю), arg2: String (текст) | Empty | Добавляет текстовый пункт или вложенное подменю. Для arg0 = `"STRING"`: arg1 — числовой идентификатор пункта (целое число); рекомендуемый диапазон 0..100, но в реальных скриптах EME-L используются значения вплоть до 999998 (значение -1 — декоративный элемент без команды). arg2 — отображаемый текст. Для arg0 = `"POPUP"`: arg1 — объект Menu (вложенное подменю), arg2 — заголовок подменю. |
 | `AppendMenu(arg0, arg1, arg2, arg3)` | + arg3: String (состояние) | Empty | То же с указанием состояния доступности. arg3: `"ENABLED"` — пункт доступен (по умолчанию); `"DISABLED"` — недоступен; `"GRAYED"` — недоступен и отображается серым; `"CHECKED"` — доступен и отмечен галочкой. |
 
 ## Управление состоянием пунктов
@@ -134,6 +134,52 @@ Submenu.AppendMenu("STRING", 2, tr("Печать А5"));
 Menu.AppendMenu("POPUP", Submenu, tr("Печать"));
 Menu.AppendMenu("STRING", 0, tr("Закрыть"));
 Action = Menu.TrackPopupMenuWithMousePos();
+```
+
+Меню с пунктом по умолчанию и условной доступностью в языке EME-L (по образцу ARXIncoming):
+
+```EME-L
+'Пункт 3 по умолчанию (полужирный); Enter в открытом меню вернёт его идентификатор'
+menu = Object("Menu", TRUE);
+menu.AppendMenu("STRING", 3, tr("Отгрузить"), "ENABLED");
+menu.AppendMenu("STRING", 4, tr("Переместить"), "ENABLED");
+menu.SetDefaultItem(3,, TRUE);
+action = menu.TrackPopupMenu(rect.GetLeft(), rect.GetTop());
+If (action < 0)
+    'Ничего не выбрано в языке EME-L'
+    Return;
+End If
+'CheckMenuItem возвращает предыдущее состояние: MF_CHECKED (8), MF_UNCHECKED (0), -1'
+If (menu.CheckMenuItem(action, 0) == -1)
+    'Пункт не существует или недоступен — подобрать замену'
+    If (menu.CheckMenuItem(4, 0) != -1)
+        action = 4;
+    End If
+End If
+```
+
+Календарь в виде меню с разбиением на колонки через MENUBREAK в языке EME-L (по образцу BBDControl):
+
+```EME-L
+'Календарь на месяц: семь колонок (дни недели), MENUBREAK начинает новую колонку'
+smenu = Object("Menu", TRUE);
+smenu.AppendMenu("STRING", -1, tr("ПН"), "DISABLED");
+smenu.AppendMenu("STRING", -1, tr("ВТ"), "DISABLED");
+smenu.AppendMenu("STRING", -1, tr("СР"), "DISABLED");
+smenu.AppendMenu("STRING", -1, tr("ЧТ"), "DISABLED");
+smenu.AppendMenu("STRING", -1, tr("ПТ"), "DISABLED");
+smenu.AppendMenu("STRING", -1, tr("СБ"), "DISABLED");
+smenu.AppendMenu("STRING", -1, tr("ВС"), "DISABLED");
+smenu.AppendMenu("MENUBREAK");
+For (j = 1; j <= is_days_in_month(month, year); j = j + 1)
+    smenu.AppendMenu("STRING", month * 100 + j, j);
+    If (is_fdatetime(is_date(j, month, year), "%w") == "0")
+        'Воскресенье — начать новую колонку в языке EME-L'
+        smenu.AppendMenu("MENUBREAK");
+    End If
+End For
+Day = smenu.TrackPopupMenuWithMousePos();
+'Day содержит month*100+day или -1'
 ```
 
 ## См. также

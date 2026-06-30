@@ -38,8 +38,8 @@ q = Object("Query", "MyProjectQuery", container, context);
 
 | Метод | Аргументы | Возвращает | Описание |
 |-------|-----------|------------|----------|
-| `Execute()` | — | Empty | Выполняет именованный запрос проекта с параметрами по умолчанию. |
-| `Execute(singleThread)` | arg0: Boolean | Empty | Запрос выполняется в одном потоке. |
+| `Execute()` | — | Empty | Выполняет именованный запрос проекта с параметрами по умолчанию. Если в системе EME.WMS предварительно вызван `SetWithoutIndicator()`, выполнение идёт без индикатора прогресса. |
+| `Execute(singleThread)` | arg0: Boolean | Empty | Запрос выполняется в одном потоке. В текущей реализации ядра выполнение всегда однопоточное, поэтому параметр фактически не меняет поведения — перегрузка оставлена для совместимости. |
 | `Execute(params, className)` | arg0: String (параметры), arg1: String (класс) | Empty | Явные параметры и класс, например `"Входной фильтр"`. |
 | `Execute(params, className, withoutIndicator)` | + arg2: Boolean | Empty | Отключает индикатор прогресса. |
 | `Execute(params, className, withoutIndicator, cache)` | + arg3: Boolean | Empty | Управляет кэшированием (FALSE отключает). |
@@ -166,9 +166,9 @@ q = Object("Query", "MyProjectQuery", container, context);
 | `GetDBObject(field)` | arg0: String/Integer | CEMERec | Объект записи БД для ссылочного поля текущей строки. |
 | `GetDBObject(field, line)` | arg0: String/Integer, arg1: Integer | CEMERec | То же для указанной строки. |
 
-`Get` и `Put` в языке EME-L работают с текущей строкой. До первого вызова `SetLine`/`SetFirstLine`/`AddLine` номер строки равен -1 — вызов `Get`/`Put` в этом состоянии вызывает ошибку.
+`Get` и `Put` в языке EME-L работают с текущей строкой. До первого вызова `SetLine`/`SetFirstLine`/`AddLine` номер строки равен -1 — вызов `Get`/`Put` в этом состоянии вызывает `crushOnEmpty` (исключение).
 
-`NextBand` в языке EME-L требует, чтобы переданные поля были полями группировки, причём в правильном порядке. Первый вызов для поля возвращает первую строку группы, последующие переходят к следующей. Возврат FALSE означает конец группы.
+`NextBand` в языке EME-L требует, чтобы переданные поля были полями группировки, причём в правильном порядке. Первый вызов для поля возвращает первую строку группы, последующие переходят к следующей. Возврат FALSE означает конец группы. Передача поля, не входящего в группировку, или поля группировки не на своём месте вызывает `smart_error` с диагностическим сообщением.
 
 ## Сортировка и группировка
 
@@ -190,10 +190,10 @@ q = Object("Query", "MyProjectQuery", container, context);
 | `GetNoOfOrderFields()` | — | Integer | Количество полей в текущей сортировке. -1, если не создан. |
 | `FastFind(orderIndex, values)` | arg0: Integer (-1/Empty = текущая), arg1+ значения | Integer | Номер найденной строки. -1, если не найдена. |
 | `FastFind2(result, orderIndex, values)` | arg0: ByRef Integer, arg1: Integer, arg2+ значения | Integer | То же; `result`: 0 — совпадение, 1 — строка меньше или равна, -1 — больше или равна. |
-| `MarkUp(mode)` | arg0: Integer | Empty | Разметка запроса в заданном режиме. |
+| `MarkUp(mode)` | arg0: Integer | Empty | Разметка запроса в заданном режиме. В языке EME-L применима только к запросам EME-L (`Object("Query")`); для именованных запросов проекта метод игнорируется. |
 | `SetTransformQuery(crossQuery)` | arg0: Query (по ссылке) | Empty | Устанавливает перекрёстный запрос. |
 
-`Sort` и `Group` в языке EME-L принимают либо список аргументов-строк, либо один аргумент типа `Array`. В обоих случаях `DESC:` (с двоеточием, без пробела) перед именем поля инвертирует порядок. `Sort` сбрасывает временную сортировку до и после выполнения.
+`Sort` и `Group` в языке EME-L принимают либо список аргументов-строк, либо один аргумент типа `Array`. В обоих случаях `DESC:` (с двоеточием, без пробела) перед именем поля инвертирует порядок. `Sort` сбрасывает временную сортировку (`ClearOrder`) до и после выполнения — после `Sort` текущий порядок не сохраняется. `Group` не сбрасывает сортировку и не возвращает индекс; для фиксации порядка в языке EME-L используйте `FixOrder` отдельно.
 
 ## Подключение к БД и экспорт
 
@@ -215,45 +215,57 @@ q = Object("Query", "MyProjectQuery", container, context);
 
 ## Примеры
 
-Программное создание запроса и заполнение строк в языке EME-L:
+Программное создание запроса EME-L, заполнение строк и сортировка в языке EME-L (паттерн по мотивам `ActivistIncomingGoodsForgotten.Activity_GetDetails` и `ActivistOpenDialogTask`):
 
 ```EME-L
-'Построение временного запроса в памяти'
+'Построение запроса для списка зависших размещений в памяти'
 q = Object("Query");
 q.Create();
-q.AddTEXT("Code", 32);
-q.AddINT("Quantity");
-q.AddMONEY("Amount");
+q.AddTEXT(tr("Документ Приход"), 64);
+q.AddTEXT(tr("Поставщик"), 64);
+q.AddTEXT(tr("SSCC"), 64);
+q.AddDATETIME(tr("Дата создания"));
 
 line = q.AddLine();
-q.Put("Code", "A-001");
-q.Put("Quantity", 5);
-q.Put("Amount", 1250.50);
+q.Put(tr("Документ Приход"), "ПК-00123");
+q.Put(tr("Поставщик"), "ООО Ромашка");
+q.Put(tr("SSCC"), "460456789012345611");
+q.Put(tr("Дата создания"), is_now());
 
-Loop (q)
-    Code = q.Get("Code");
-    Qty = q.Get("Quantity");
-End Loop
+'Сортировка по наименованию документа'
+q.Sort(tr("Документ Приход"));
 ```
 
-Выполнение именованного запроса проекта и чтение результатов в языке EME-L:
+Выполнение именованного запроса проекта и передача результата в отчёт в системе EME.WMS (паттерн по мотивам `ActIncomingProduction.RunReport`):
 
 ```EME-L
-'Запрос проекта ABCAnalysis.Result'
-q = Object("Query", "ABCAnalysis.Result");
-Object("System").InitQueryCache();
+'Передача результата запроса в отчёт через переменную диалога'
+Object("System").InitQueryCache(TRUE);
+q = Object("Query", "Приход.Формы.Акт.Результат");
 q.Execute();
-Object("System").ClearQueryCache();
-
 If (q.GetNoOfLines() == 0)
-    Return;
+    is_message(tr("Операция отменена!"),
+        tr("На закладке \"Размещение\" нет строк."), 1, 3);
+    Return 1;
 End If
 
-q.SetFirstLine();
-While (q.IsValidLine())
-    Code = q.GetData("Code", q.GetLine());
-    q.SetNextLine();
-End While
+'Привязка запроса к переменной диалога отчёта'
+q.PutDialogVariable("Результат");
+Object("Dialog").RunReport("Акт приёмки продукции");
+Object("System").ClearQueryCache();
+```
+
+Сравнение двух запросов и формирование результата в языке EME-L (паттерн по мотивам `DataStore.CompareQueries`):
+
+```EME-L
+'Сравнение новой и старой версии данных'
+ResultQuery = Object("Query");
+ResultQuery.Create();
+
+If (OldQuery.GetNoOfLines() > 0 & NewQuery.GetNoOfLines() > 0)
+    'Результат — матрица различий по каждому полю'
+    NewQuery.CompareQueries(OldQuery, "ID", ResultQuery);
+End If
 ```
 
 ## См. также
@@ -262,3 +274,4 @@ End While
 - [Класс BitBuffer](./BitBuffer.md) — использование `Load` для загрузки отмеченных строк в языке EME-L.
 - [Класс File](./File.md) — файловый ввод-вывод в языке EME-L.
 - [Класс Array](./Array.md) — передача массива имён полей в `Sort`/`Group` в языке EME-L.
+- [Класс DataStore](./DataStore.md) — `GetQuery` выгружает сохранённые запросы в объекты `Query` в языке EME-L.

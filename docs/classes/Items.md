@@ -1,10 +1,20 @@
 # Класс Items
 
-> Синонимы для поиска: CIItems Items класс EME-L, набор элементов интегратора EME-L, DBIntegrator элементы EME-L, дерево интегратора EME-L, AttachToIntegrator AttachToIntegratorEx AddItem SetCurrentIcon SetCurrentCategory SetCategoryProperties SetCategoryRef SetCategorySkip FindCategoryProperties FindCategoryRef FindCategorySkip GetCategory GetCategoryRef GetText GetCategoryProperties SetTextColor SetBkColor, фильтрация элементов интегратора EME-L, категория элемента EME-L, ссылка REF категории EME-L, CSkip Skip метод EME-L, NULL_REF MAXDWORD __REF__ __CLASS__ __SKIP__, иерархия элементов DBIntegrator EME.WMS, навигационная панель EME-L, древовидный справочник EME-L
+> Синонимы для поиска: CIItems Items класс EME-L, набор элементов интегратора EME-L, DBIntegrator элементы EME-L, дерево интегратора EME-L, AttachToIntegrator AttachToIntegratorEx AddItem SetCurrentIcon SetCurrentCategory SetCategoryProperties SetCategoryRef SetCategorySkip FindCategoryProperties FindCategoryRef FindCategorySkip GetCategory GetCategoryRef GetText GetCategoryProperties SetTextColor SetBkColor, фильтрация элементов интегратора EME-L, категория элемента EME-L, ссылка REF категории EME-L, CSkip Skip метод EME-L, NULL_REF MAXDWORD __REF__ __CLASS__ __SKIP__, иерархия элементов DBIntegrator EME.WMS, навигационная панель EME-L, древовидный справочник EME-L, класс ERPMessageItems DBIProductExt, построение дерева сообщений ERP-WMS EME-L
 
-Класс `Items` в языке EME-L — класс-оболочка для формирования и управления набором абстрактных элементов в DBIntegrator. Предназначен для программного создания дерева элементов интегратора, привязки к ним EME-L класса-обработчика, настройки категорий, иконок, цветов и фильтрующих методов, а также для последующей вставки элементов в DBIntegrator в виде корневых узлов или иерархического дерева.
+Класс `Items` в языке EME-L — класс-оболочка для формирования и управления набором абстрактных элементов (Items) в DBIntegrator. Предназначен для программного создания дерева элементов интегратора, привязки к ним EME-L класса-обработчика, настройки категорий, иконок, цветов и фильтрующих методов, а также для последующей вставки элементов в DBIntegrator в виде корневых узлов или иерархического дерева.
 
 Класс Items в системе EME.WMS обеспечивает динамическое построение содержимого интегратора: навигационных панелей, древовидных справочников и иерархических структур данных. Элементы набора связываются с EME-L классом-обработчиком, методы которого вызываются для инициализации (`OnInit`) и фильтрации элементов.
+
+Основные возможности класса Items в языке EME-L:
+
+- Создание набора элементов с указанием EME-L класса-обработчика и необязательного родительского набора.
+- Добавление элементов с заданным текстом и именем класса.
+- Установка текущей иконки, категории, свойств категории, ссылки REF и фильтрующего метода для элементов.
+- Поиск свойств категории по цепочке родительских наборов.
+- Получение текста, категории, свойств и REF текущего элемента.
+- Установка цвета текста и фона последнего добавленного элемента.
+- Вставка всех элементов в DBIntegrator как корневые узлы или с учётом категорий в виде иерархического дерева.
 
 ## Создание объекта класса Items
 
@@ -18,7 +28,7 @@ objItems = Object("Items", "MyHandlerClass");
 objItems = Object("Items", "MyHandlerClass", objParentItems);
 ```
 
-Конструктор класса Items в языке EME-L создаёт пустой набор элементов, привязывает его к указанному EME-L классу-обработчику и немедленно вызывает метод `OnInit` этого класса. Если метод `OnInit` не найден — генерируется ошибка. Если имя класса — пустая строка, набор создаётся без обработчика (метод `OnInit` не вызывается), и элементы можно добавлять в интегратор напрямую. Внутренний индекс текущего элемента инициализируется значением -1.
+Конструктор класса Items в языке EME-L создаёт пустой набор элементов, привязывает его к указанному EME-L классу-обработчику и немедленно вызывает метод `OnInit` этого класса. Если метод `OnInit` не найден — генерируется ошибка. Если имя класса — пустая строка, набор создаётся без обработчика (метод `OnInit` не вызывается), и элементы можно добавлять в интегратор напрямую. Внутренний индекс текущего элемента инициализируется значением `-1`.
 
 ## Управление элементами класса Items
 
@@ -36,7 +46,7 @@ objItems = Object("Items", "MyHandlerClass", objParentItems);
 
 ## Свойства категории класса Items
 
-Методы работы со свойствами категории последнего добавленного элемента набора Items. Свойства хранятся в виде строки параметров (формат `CParameters`) и используются при фильтрации и навигации в DBIntegrator.
+Методы работы со свойствами категории последнего добавленного элемента набора Items. Свойства хранятся в виде строки параметров (формат `CParameters`) и используются при фильтрации и навигации в DBIntegrator в системе EME.WMS.
 
 | Метод | Аргументы | Возвращает | Описание |
 |-------|-----------|------------|----------|
@@ -96,31 +106,55 @@ objItems = Object("Items", "MyHandlerClass", objParentItems);
 
 ## Примеры работы с классом Items
 
-Создание набора элементов с категориями и иерархическая вставка в DBIntegrator в языке EME-L:
+Построение дерева сообщений ERP-WMS в языке EME-L (реальный пример из `ERPInterface.txt`):
 
 ```EME-L
-'Создать корневой набор с обработчиком'
-objItems = Object("Items", "TreeHandler");
-objItems.SetCurrentIcon("folder");
-objItems.SetCurrentCategory("");
-objItems.AddItem("Склад 1", "WarehouseItem");
-objItems.SetCurrentCategory("Склад 1");
-objItems.AddItem("Зона A", "ZoneItem");
-objItems.AddItem("Зона B", "ZoneItem");
-'Вставить как иерархическое дерево в DBIntegrator'
-objItems.AttachToIntegratorEx(integrator);
+'Создать корневой набор элементов дерева сообщений'
+Items = Object("Items", "ERPMessageItems");
+Items.SetCurrentCategory("MESSAGE_SOURCE");
+
+Items.SetCurrentIcon("MetC_WMS.dll#265");
+Items.AddItem("Сообщения ERP->WMS", "ERPMessageItems");
+Items.SetCategoryProperties("SOURCE=erp\r\nTARGET=wms");
+
+Items.SetCurrentIcon("MetC_Sys.dll#200");
+Items.AddItem("Сообщения WMS->ERP", "ERPMessageItems");
+Items.SetCategoryProperties("SOURCE=wms\r\nTARGET=erp");
+'Вставить элементы как корневые узлы в интегратор'
+Items.AttachToIntegrator(m_MessageTree);
 ```
 
-Поиск REF родительской категории по цепочке наборов класса Items в системе EME.WMS:
+Создание набора элементов справочника с категориями и вставка в виде дерева в системе EME.WMS (реальный пример из `ProductExtTree.txt`):
 
 ```EME-L
-objItems = Object("Items", "ChildHandler", objParentItems);
-'Найти REF категории «Склад» в родительских наборах'
-nRef = objItems.FindCategoryRef("Склад");
-'Если nRef не NULL_REF — категория найдена'
-If (nRef != NULL_REF)
-    RefValue = nRef;
-End If
+objRootItems = Object("Items", "DBIProductExt");
+level = 0;
+head = NULL_REF;
+While (true)
+    'Найти REF категории по уровню в цепочке родительских наборов'
+    ref = objRootItems.FindCategoryRef("" + level);
+    If (ref == NULL_REF)
+        Break;
+    End If
+    level = level + 1;
+    head = ref;
+End While
+objRootItems.SetCurrentCategory("" + level);
+objRootItems.SetCurrentIcon("MetC_Sys.dll#200");
+'Добавить элементы справочника в набор'
+r_ProdExt.SetChain("@Рекурсия", head);
+For (r_ProdExt.SetFirstLine(); r_ProdExt.IsValidLine(); r_ProdExt.SetNextLine())
+    If (r_ProdExt.Get("@Дочерние элементы") == NULL_REF)
+        objRootItems.AddItem(r_ProdExt.Get("Код группы") + " " +
+            r_ProdExt.Get("Наименование группы"), "");
+    Else
+        objRootItems.AddItem(r_ProdExt.Get("Код группы") + " " +
+            r_ProdExt.Get("Наименование группы"), "DBIProductExt");
+    End If
+    objRootItems.SetCategoryRef(r_ProdExt.GetLine());
+End For
+'Вставить набор в интегратор'
+objRootItems.AttachToIntegrator(Integrator);
 ```
 
 ## См. также

@@ -149,6 +149,19 @@ objItems.AddAndFillItem(r_QueueOrders.GetItemText(), "", r_QueueOrders, r_QueueO
 objItems.SetFirstQueuePriority(dPriority);
 ```
 
+Переопределение режима фильтрации для всех элементов уровня дерева — типовой паттерн внутри `OnInit` EME-L-класса-обработчика, где `objItems` передаётся ядром как аргумент. Так как `ReWriteFilterMode` меняет `__MOD__` у всех элементов текущего уровня дерева DBIntegrator, а не только последнего добавленного, вызов внутри `OnInit` обработчика применяет режим ко всем элементам, заполняемым этим обработчиком:
+
+```EME-L
+'OnInit обработчика вызывается ядром после конструктора ItemsOfDispatcher'
+OnInit(objItems As "ItemsOfDispatcher", FilterOption)
+    'FilterOption — второй аргумент конструктора ItemsOfDispatcher'
+    objItems.ReWriteFilterMode(FilterOption);
+    m_FilterOption = FilterOption;
+End OnInit
+```
+
+В EME-L-обработчиках `ItemsOfDispatcher` также активно используются унаследованные от базового класса `Items` методы: `FindCategoryProperties` (поиск свойства категории по цепочке родительских наборов), `GetCategory`/`GetCategoryRef` (чтение категории и ссылки текущего элемента), `SetCurrentCategory`/`SetCurrentIcon` (установка категории и иконки для следующего `AddAndFillItem`), `GetItemText` (текст текущего элемента). Эти методы описаны в [классе Items](./Items.md).
+
 ### См. также
 
 - [Класс Items](./Items.md) — базовый класс для наборов элементов DBIntegrator в языке EME-L.

@@ -130,4 +130,4 @@ End If
 ## См. также
 
 - [Класс OperationContext](./OperationContext.md) — контекст складских операций в языке EME-L.
-- [Класс File](./File.md) — класс для работы с файлами в языке EME-L.
+- [Бесклассовые is_-функции WMS](../EME_L_IS_Functions.md) — бесклассовые складские функции `is_*` в языке EME-L.
