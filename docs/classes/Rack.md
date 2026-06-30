@@ -1,4 +1,4 @@
-Rack CIRack Attach GetNoOfColumns GetNoOfRows GetNoOfLevels GetBayIndexOfColumn GetNoOfLevelsInBay GetLevelHeightInBay GetCellRef GetNoOfBays GetBayWidth GetUprightWidth GetBeamHeight GetUprightMinY GetUprightMaxY GetColumnY GetColumnIndex GetLevelIndex AddRack SaveRack стеллаж топология стеллажа пролёт колонна ячейка уровень балка стойка сектор Irrlicht IrrNode IrrMesh PropertyTree NULL_REF
+Rack CIRack Attach GetNoOfColumns GetNoOfRows GetNoOfLevels GetBayIndexOfColumn GetNoOfLevelsInBay GetLevelHeightInBay GetCellRef GetNoOfBays GetBayWidth GetUprightWidth GetBeamHeight GetUprightMinY GetUprightMaxY GetColumnY GetColumnIndex GetLevelIndex AddRack SaveRack стеллаж топология стеллажа пролёт колонна ячейка уровень балка стойка сектор Irrlicht IrrNode IrrMesh PropertyTree NULL_REF EME.WMS
 
 ### Rack — класс для работы с топологией складского стеллажа
 
@@ -50,7 +50,9 @@ objRack = Object("Rack");
 
 | Метод | Аргументы | Возвращает | Описание |
 |-------|-----------|------------|----------|
-| `GetCellRef(arg0, arg1, arg2)` | arg0: Integer (индекс колонны, с 0), arg1: Integer (индекс ряда, с 0), arg2: Integer (индекс уровня, с 0) | Integer | Ссылка на ячейку склада в указанной позиции стеллажа. Возвращает `NULL_REF` (0), если комбинация индексов выходит за пределы загруженной топологии. |
+| `GetCellRef(arg0, arg1, arg2)` | arg0: Integer (индекс колонны, с 0), arg1: Integer (индекс ряда, с 0), arg2: Integer (индекс уровня, с 0) | Integer | Ссылка на ячейку склада в указанной позиции стеллажа. Возвращает `NULL_REF` (`-1`), если комбинация индексов выходит за пределы загруженной топологии. |
+
+> **Важно:** `NULL_REF` в языке EME-L равно `-1`, а не `0`. Нулевая ссылка является валидной строкой классификатора. Проверяйте результат через `If (cellRef != NULL_REF)`, а не `If (cellRef != 0)`.
 
 #### Физические размеры и координаты элементов стеллажа
 
@@ -59,15 +61,15 @@ objRack = Object("Rack");
 | Метод | Аргументы | Возвращает | Описание |
 |-------|-----------|------------|----------|
 | `GetBayWidth(arg0)` | arg0: Integer (индекс пролёта, с 0) | Real | Ширина пролёта стеллажа в метрах. Рассчитывается из суммарной ширины входящих в него ячеек с учётом типовых размеров. |
-| `GetUprightWidth()` | — | Real | Ширина стойки стеллажа в метрах. Совпадает с высотой балки (`GetBeamHeight`). |
+| `GetUprightWidth()` | — | Real | Ширина стойки стеллажа в метрах. Совпадает с высотой балки (`GetBeamHeight`) — внутренняя реализация делегирует вызов `GetBeamHeight()`. |
 | `GetBeamHeight()` | — | Real | Высота балки стеллажа в метрах. Если высота не задана в секторе, по умолчанию `0.1` (10 см). |
-| `GetUprightMinY(arg0)` | arg0: Integer (индекс пролёта, с 0) | Real | Y-координата левой (минимальной) границы указанного пролёта в метрах. **Внимание:** см. расхождение ниже — в текущей реализации C++ диспетчер этого метода переопределён ошибочным дубликатом `GetUprightWidth(int argn, COleVariant args[])`. |
+| `GetUprightMinY(arg0)` | arg0: Integer (индекс пролёта, с 0) | Real | Y-координата левой (минимальной) границы указанного пролёта в метрах. См. примечание о расхождении ниже — метод работает в продакшен-скриптах, несмотря на отсутствие явно написанного диспетчера C++. |
 | `GetUprightMaxY(arg0)` | arg0: Integer (индекс пролёта, с 0) | Real | Y-координата правой (максимальной) границы указанного пролёта в метрах. |
 | `GetColumnY(arg0)` | arg0: Integer (индекс колонны, с 0) | Real | Y-координата центра указанной колонны в метрах. Рассчитывается как сумма минимальной Y-координаты пролёта и центрального смещения колонны внутри пролёта. |
 
 #### Поиск индексов колонн и уровней по шифрам
 
-В языке EME-L шифр — это номер элемента (колонны или уровня), как он задан в классификаторе базы данных. Поиск возвращает индекс этого элемента во внутренней топологии стеллажа.
+В языке EME-L шифр — это номер элемента (колонны или уровня), как он задан в классификаторе базы данных EME.WMS. Поиск возвращает индекс этого элемента во внутренней топологии стеллажа.
 
 | Метод | Аргументы | Возвращает | Описание |
 |-------|-----------|------------|----------|
@@ -75,6 +77,8 @@ objRack = Object("Rack");
 | `GetLevelIndex(arg0)` | arg0: Integer (номер/шифр уровня) | Integer | Индекс уровня в топологии стеллажа. Возвращает `-1`, если уровень с указанным шифром отсутствует. |
 
 #### Трёхмерная визуализация и сериализация стеллажа
+
+Метод `AddRack` создаёт полигональную сетку стеллажа для движка Irrlicht (доступна только при сборке с `IRRLICHT_IS_AVAILABLE`). Метод `SaveRack` сериализует топологию в дерево свойств для передачи на клиент или сохранения.
 
 | Метод | Аргументы | Возвращает | Описание |
 |-------|-----------|------------|----------|
@@ -92,7 +96,7 @@ objRack = Object("Rack");
 | Ширина ячейки по умолчанию | `1.0` м | Применяется в `Attach`, если ширина ячейки равна нулю или отсутствует. |
 | Высота ячейки по умолчанию | `2.0` м | Применяется в `Attach`, если высота ячейки равна нулю или отсутствует. |
 | Максимальная высота ячейки | `4.0` м | Ограничение сверху: ячейки выше этого значения обрезаются, чтобы не «упирались в небо» при 3D-визуализации. |
-| `NULL_REF` | `0` (ссылка) | Возвращается методом `GetCellRef`, если комбинация индексов выходит за пределы загруженной топологии стеллажа. |
+| `NULL_REF` | `-1` | Возвращается методом `GetCellRef`, если комбинация индексов выходит за пределы загруженной топологии стеллажа. В языке EME-L `NULL_REF` равно `-1`, а не `0` — нулевая ссылка валидна. |
 | Индекс не найден | `-1` | Возвращается методами `GetColumnIndex` и `GetLevelIndex`, если элемент с указанным шифром отсутствует. |
 | Версия формата `SaveRack` | `"1.0"` | Записывается в атрибут `version` корневого узла дерева свойств при сериализации топологии стеллажа. |
 
@@ -113,34 +117,56 @@ For (c = 0; c < nColumns; c = c + 1)
         nLevels = objRack.GetNoOfLevels(c, r);
         For (l = 0; l < nLevels; l = l + 1)
             cellRef = objRack.GetCellRef(c, r, l);
-            If (cellRef != 0)
-                'cellRef — ссылка на ячейку в БД EME.WMS'
+            If (cellRef != NULL_REF)
+                'cellRef — действительная ссылка на ячейку в БД EME.WMS'
             End If
         End For
     End For
 End For
 ```
 
-Поиск колонны по шифру и получение её физических координат:
+Поиск колонны по шифру и получение её физических координат (паттерн из `Wms3DRackComponent.txt`):
 
 ```EME-L
 'Найти индекс колонны по номеру из классификатора'
-colIdx = objRack.GetColumnIndex(105);
+colIdx = objRack.GetColumnIndex(r_Column.GetNumber());
 If (colIdx != -1)
     yPos = objRack.GetColumnY(colIdx);
     'yPos — координата центра колонны в метрах'
 End If
 ```
 
+Расчёт габаритов и высоты стеллажа по всем пролётам (паттерн из `Wms3DRackComponent.txt`):
+
+```EME-L
+'Обойти все пролёты, просуммировать длину и найти максимальную высоту'
+dRackLength = 0.0;
+MaxHeight = 0;
+iNoOfBays = objRack.GetNoOfBays();
+For (BayIndex = 0; BayIndex < iNoOfBays; BayIndex = BayIndex + 1)
+    NoOfLevels = objRack.GetNoOfLevelsInBay(BayIndex, 0);
+    If (NoOfLevels == 1)
+        LevelHeight = 0;
+    Else
+        LevelHeight = objRack.GetLevelHeightInBay(BayIndex, NoOfLevels - 1);
+    End If
+    If (LevelHeight > MaxHeight)
+        MaxHeight = LevelHeight;
+    End If
+    dRackLength = dRackLength + objRack.GetBayWidth(BayIndex);
+End For
+```
+
 #### Расхождения с реализацией C++ (i_Rack.cpp)
 
-В файле `i_Rack.cpp` обнаружено расхождение между регистрацией методов и их диспетчерами времени выполнения:
+В файле `i_Rack.cpp` обнаружены следующие расхождения между регистрацией методов в `BEGIN_IMPLEMENT(CIRack)` и их телами в C++:
 
-- **`GetUprightMinY` — сломанный диспетчер.** В блоке `BEGIN_IMPLEMENT(CIRack)` зарегистрирован метод `GetUprightMinY(arg0)` (один аргумент — индекс пролёта). Однако в разделе тел функций на C++ диспетчер `COleVariant CIRack::GetUprightMinY(int argn, COleVariant args[])` **отсутствует**. Вместо него в строке 699 определён второй экземпляр `COleVariant CIRack::GetUprightWidth(int argn, COleVariant args[])` (дублирующее определение, затеняющее предыдущее), тело которого вызывает `GetUprightWidth(variant2integer(args[0]))` — но `long CIRack::GetUprightWidth()` не принимает аргументов. В результате вызов `GetUprightMinY(idx)` из EME-L либо не компилируется, либо направляется в неверную функцию и не возвращает ожидаемую Y-координату левой границы пролёта. Документация следует контракту REGISTRY; при использовании метода следует проверить фактическое поведение времени выполнения.
+- **Дубликат диспетчера `GetUprightWidth`.** В строках 683–686 определён корректный диспетчер `COleVariant CIRack::GetUprightWidth(int argn, COleVariant args[])`, возвращающий `m_dBeamHeight`. В строках 699–702 определён **второй** диспетчер с тем же именем и сигнатурой, тело которого вызывает `GetUprightWidth(variant2integer(args[0]))` — но внутренний `double CIRack::GetUprightWidth()` не принимает аргументов. Второе определение либо отбрасывается линкером, либо является мёртвым кодом.
+- **Отсутствует явно написанный диспетчер `GetUprightMinY(int, COleVariant[])`.** Внутренний помощник `double CIRack::GetUprightMinY(long lBayIndex)` существует (строки 695–698) и возвращает `m_Bays[lBayIndex].m_dMinY`, но соответствующая функция-диспетчер для EME-L не определена. Тем не менее вызов `Rack.GetUprightMinY(bay)` из EME-L **реально работает** в продакшен-скрипте `Wms3DRackComponent.txt` (функция `GetRackAsJSON`), возвращая корректные Y-координаты. По-видимому, инфраструктура `BEGIN_IMPLEMENT/END_IMPLEMENT` генерирует диспетчер на основе таблицы регистрации `IMPLEMENT_METHOD`, а не требует явно написанной функции-диспетчера с совпадающим именем C++.
+- **`GetUprightWidth` — синоним `GetBeamHeight`.** Внутренняя реализация `double CIRack::GetUprightWidth()` просто вызывает `GetBeamHeight()`. Концептуально ширина стойки и высота балки — разные физические величины, но в данной реализации они всегда равны. Это видно и из EME-L-примеров в системе EME.WMS, где `Rack.GetUprightWidth()` используется как толщина стойки, а `Rack.GetBeamHeight()` — как высота балки.
 
 #### Связанные классы и ресурсы
 
-- [File](./File.md) — класс для работы с файловой системой в языке EME-L.
 - [IrrNode](./IrrNode.md) — родительский узел сцены Irrlicht, передаётся в метод `AddRack`.
 - [IrrMesh](./IrrMesh.md) — результат метода `AddRack`, полигональная сетка стеллажа.
-- [PropertyTree](./PropertyTree.md) — дерево свойств, передаётся в метод `SaveRack` для сериализации топологии.
+- [PropertyTree](./PropertyTree.md) — дерево свойств, передаётся в метод `SaveRack` для сериализации топологии стеллажа в системе EME.WMS.

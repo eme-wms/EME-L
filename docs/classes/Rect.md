@@ -78,7 +78,15 @@ If (rect.IsInside(50, 50))
 End If
 ```
 
+Передача прямоугольника в метод `AddSprite` класса `Irrlicht` в системе EME.WMS (реальный пример из компонента 3D-курсора):
+
+```EME-L
+'Спрайт-прицел создаётся с прямоугольником 16×16'
+CursorSpritePoint = m_Irrlicht.AddSprite("Cursor#point", Object("Rect", 0, 0, 16, 16));
+```
+
 ## См. также
 
-- [Класс Console](./Console.md) — использует Rect для задания области окна
-- [Класс IrrImage](./IrrImage.md) — использует Rect для вырезки и позиционирования изображений
+- [Класс Console](./Console.md) — метод `SetRect` принимает объект `Rect` для задания области окна консоли в системе EME.WMS.
+- [Класс IrrDevice](./IrrDevice.md) — метод `AddSprite` и другие принимают `Rect` для позиционирования спрайтов в языке EME-L.
+- [Класс IrrImage](./IrrImage.md) — использует Rect для вырезки и позиционирования изображений.

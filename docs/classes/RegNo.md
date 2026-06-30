@@ -29,7 +29,7 @@ objRegNo = Object("RegNo", r_Record, r_Dialog, TRUE);
 | `RegNo(record)` | record: Record (ссылка) | Создаёт генератор на основе объекта записи. |
 | `RegNo(record, dialog)` | record: Record (ссылка), dialog: Record (ссылка) | Дополнительно задаёт объект диалога для определения текущей группы номеров. |
 | `RegNo(record, dialog, throw_exceptions)` | + throw_exceptions: Boolean | TRUE — генерировать исключение «Превышена разрядность» при переполнении. FALSE — циклический переход в начало диапазона. |
-| `RegNo(record, dialog, throw_exceptions, search_full_record)` | + search_full_record: Boolean | TRUE — просматривать все строки записи для определения максимального индекса. FALSE — ограниченное число последних строк (по умолчанию). |
+| `RegNo(record, dialog, throw_exceptions, search_full_record)` | + search_full_record: Boolean | TRUE — просматривать все строки записи для определения максимального индекса (включается при реанимации строк в записи, когда просмотра нескольких строк с конца недостаточно; использует блочное чтение `regno_GetLastIndex` класса RegNo в языке EME-L). FALSE — ограниченное число последних строк (по умолчанию). |
 
 ## Инициализация параметров поиска
 
@@ -84,13 +84,15 @@ objRegNo = Object("RegNo", r_Record, r_Dialog, TRUE);
 
 ## Примеры
 
-Генерация следующего номера для записи в языке EME-L:
+Генерация номера для нового документа с инкрементом от последней строки в языке EME-L (реальный паттерн из прикладных скриптов EME.WMS):
 
 ```EME-L
-'Создать генератор и получить следующий регистрационный номер'
-objRegNo = Object("RegNo", r_Record);
-objRegNo.Init(TRUE);
-sNextNo = objRegNo.Get();
+'Создать генератор, привязанный к записи документа'
+objRegNo = Object("RegNo", r_Document);
+'Режим поиска последнего номера; глубина просмотра — все строки документа'
+objRegNo.Init(TRUE, r_Document.GetNoOfLines(TRUE));
+'Получить следующий регистрационный номер и записать его в строку'
+r_Document.PutRegNo(objRegNo.Get());
 ```
 
 Проверка вручную введенного номера в системе EME.WMS:
@@ -104,7 +106,17 @@ Else
 End If
 ```
 
+Получение номера от отдельной записи-перечисления без диалога в языке EME-L:
+
+```EME-L
+'Запись rDocEnum используется только для вычисления номера'
+enum = Object("RegNo", rDocEnum);
+csReg = enum.Get();
+r_Document.PutRegNo(csReg);
+```
+
 ## См. также
 
-- [Database](../database.md) — объекты записей, для строк которых генерируются номера.
+- [Database](../database.md) — объекты записей, для строк которых генерируются номера класса RegNo в языке EME-L.
+- [BitBuffer](./BitBuffer.md) — битовый буфер, используемый внутренне для режима поиска свободного номера класса RegNo в языке EME-L.
 - [BitBuffer](./BitBuffer.md) — битовый буфер, используемый внутренне для режима поиска свободного номера.

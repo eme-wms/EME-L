@@ -117,21 +117,40 @@ random = Object("Random");
 
 ### Примеры использования класса Random в языке EME-L
 
-Генерация тестовых данных для создания клиента в системе EME.WMS:
+Генерация штрих-кода PDF417 для алкогольной марки в системе EME.WMS (из `TerminalTester.txt`):
 
 ```EME-L
-'Создаём генератор случайных значений'
-random = Object("Random");
+'Создаём генератор один раз в конструкторе класса'
+Random = Object("Random");
 
-'Генерируем имя склада и транслитерируем первые 3 буквы в код'
-wrhName = random.GetNameString();
-wrhCode = is_transliterate(is_upper(is_left(wrhName, 3)));
+'Цифровая часть кода фиксированной длины 20 символов'
+numericPart = Random.GetNumericString(20);
 
-'Генерируем 8-значный числовой код (EAN-номер)'
-eanCode = random.GetNumericString(8);
+'Буквенно-цифровая часть фиксированной длины 129 на английском языке'
+alphaPart = is_upper(Random.GetString(129, 129, "Буквы+Цифры", "eng"));
 
-'Генерируем случайный целочисленный идентификатор в диапазоне 1–1000'
-itemId = random.GetInt(1, 1000);
+'Сборка кода марки и запись в PDF417'
+StampsCode = "1" + numericPart + alphaPart;
+r_Stamps.PutPDF417(StampsCode);
+```
+
+Подбор уникального случайного кода для карточки сотрудника в системе EME.WMS (из `Staff.txt`):
+
+```EME-L
+randoml = Object("Random");
+dsStaff = Object("dsDB", "Staff");
+value = 0;
+While (true)
+    'Случайный код в диапазоне 1000–99999'
+    value = randoml.GetInt(1000, 99999);
+    dsStaff.SetSkipMode();
+    dsStaff.GetCodeFld().MustBeEQ(value);
+    dsStaff.MustBeValid();
+    dsStaff.SetFirstLine();
+    If (~dsStaff.IsValidLine())
+        Break;
+    End If
+End Loop
 ```
 
 Генерация разнообразных строковых и числовых данных в EME-L:
@@ -144,9 +163,6 @@ fullName = random.GetFullnameString();
 
 'Случайный e-mail длиной 12 символов'
 email = random.GetEmailString(12);
-
-'Случайный адрес компании на английском языке (универсальный метод)'
-companyEn = random.GetString(10, 20, "Фирма", "eng");
 
 'Случайное вещественное число от 10.0 до 100.0'
 price = random.GetDouble(10.0, 100.0);

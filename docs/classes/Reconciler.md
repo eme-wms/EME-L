@@ -68,7 +68,7 @@ objReconciler = Object("Reconciler");
 USE_CPP_RECONCILER = objReconciler.GetVersion() >= 2.1;
 ```
 
-В языке EME-L базовый сценарий сверки двух запросов:
+В языке EME-L базовый сценарий сверки двух запросов. Метод `Join` требует, чтобы оба запроса были заданы заранее — вызывайте `SetPlanQuery` и `SetFactQuery` до `Join`:
 
 ```EME-L
 objReconciler = Object("Reconciler");
@@ -77,13 +77,13 @@ objReconciler = Object("Reconciler");
 objReconciler.MarkupQueryHeader(qryPlan);
 objReconciler.MarkupQueryHeader(qryFact);
 
+'Установка запросов — обязательна до Join'
+objReconciler.SetPlanQuery(qryPlan);
+objReconciler.SetFactQuery(qryFact);
+
 'Настройка полей связи'
 objReconciler.Join("GoodsItemRef");
 objReconciler.Join("TrueSignRef");
-
-'Установка запросов'
-objReconciler.SetPlanQuery(qryPlan);
-objReconciler.SetFactQuery(qryFact);
 
 'Основная сверка и сверка излишков'
 objReconciler.Reconcile();
@@ -108,15 +108,15 @@ m_FactQuery.Create();
 MarkupQueryHeader(m_PlanQuery);
 MarkupQueryHeader(m_FactQuery);
 
-'Настройка полей связи'
-Join("TrueSignRef");
-Join("GoodsItemRef");
-
-'Если используется C++ реконсилятор, передаём запросы в объект'
+'Установка запросов в объект Reconciler до настройки полей связи'
 If (USE_CPP_RECONCILER)
     m_Reconciler.SetPlanQuery(m_PlanQuery);
     m_Reconciler.SetFactQuery(m_FactQuery);
 End If
+
+'Настройка полей связи'
+Join("TrueSignRef");
+Join("GoodsItemRef");
 
 'Выполнение сверки'
 If (USE_CPP_RECONCILER)
